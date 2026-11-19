@@ -1,0 +1,333 @@
+---
+import Base from '../layouts/Base.astro';
+import ApiRow from '../components/ApiRow.astro';
+import AdSlot from '../components/AdSlot.astro';
+import {
+  apis,
+  categories,
+  popularCategories,
+  SITE_URL,
+  stats,
+} from '../lib/data.js';
+
+const title = '免费 API 中文索引 · 244 个可直接调用的公共接口';
+const description =
+  '给中文开发者的免费 API 目录：244 个公共接口，带中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例。';
+const hotCategories = popularCategories(3);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: '免费 API 中文索引',
+  numberOfItems: 50,
+  itemListElement: apis.slice(0, 50).map((api, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: api.name,
+    url: `${SITE_URL}/a/${api.slug}/`,
+  })),
+};
+---
+
+<Base title={title} description={description} canonicalPath="/" jsonLd={jsonLd}>
+  <div class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">免费 API 中文索引</h1>
+      <p class="hero-sub">
+        给中文开发者的免费 API 目录：每条都有中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例。
+      </p>
+      <div class="stat-bar" aria-label="数据概览">
+        <div class="stat"><strong>{stats.total}</strong><span>收录 API</span></div>
+        <div class="stat"><strong>{stats.ok}</strong><span>可直调</span></div>
+        <div class="stat"><strong>{stats.keyRequired}</strong><span>需要 Key</span></div>
+        <div class="stat"><strong>{stats.categories}</strong><span>分类</span></div>
+        <div class="stat"><strong>{stats.lastChecked}</strong><span>最后实测</span></div>
+      </div>
+    </section>
+
+    <div class="home-layout">
+      <aside class="sidebar" aria-labelledby="category-title">
+        <h2 class="sidebar-title" id="category-title">分类</h2>
+        <nav aria-label="API 分类">
+          <ul class="cat-list">
+            <li>
+              <a class="cat-link is-active" href="/" data-cat="all" data-name="全部">
+                全部 <span class="cat-count">{apis.length}</span>
+              </a>
+            </li>
+            {categories.map((category) => (
+              <li>
+                <a
+                  class="cat-link"
+                  href={`/c/${category.slug}/`}
+                  data-cat={category.slug}
+                  data-name={category.name}
+                >
+                  {category.name} <span class="cat-count">{category.count}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content-column" aria-labelledby="list-title">
+        <h2 class="visually-hidden" id="list-title">API 列表</h2>
+
+        <div class="toolbar">
+          <label class="search-field">
+            <span class="visually-hidden">搜索 API</span>
+            <input
+              id="api-search"
+              type="search"
+              placeholder="搜索 API、说明或分类，如「天气」/ weather"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </label>
+          <div class="filters" role="group" aria-label="筛选 API">
+            <button class="filter-btn" type="button" data-auth="all" aria-pressed="true">全部</button>
+            <button class="filter-btn" type="button" data-auth="none" aria-pressed="false">
+              无需认证
+            </button>
+            <button class="filter-btn" type="button" data-auth="key" aria-pressed="false">
+              需要 Key
+            </button>
+            <button class="filter-btn" type="button" id="quota-filter" aria-pressed="false">
+              只看有额度
+            </button>
+          </div>
+          <div class="toolbar-actions">
+            <button class="export-btn" type="button" id="export-csv">导出 CSV</button>
+          </div>
+        </div>
+
+        <div class="result-line">
+          <span id="result-count" aria-live="polite">共 {apis.length} 条</span>
+          <span id="active-category" hidden></span>
+        </div>
+
+        <ul class="api-list" id="api-list">
+          {apis.map((api, index) => (
+            <>
+              <ApiRow api={api} />
+              {index === 7 && (
+                <li class="ad-item" id="list-ad">
+                  <AdSlot />
+                </li>
+              )}
+            </>
+          ))}
+        </ul>
+
+        <div class="load-sentinel" id="load-sentinel" hidden>继续向下滚动加载更多</div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <h2>没有找到匹配的 API</h2>
+          <p>换个关键词，或从热门分类开始：</p>
+          <div class="popular-chips">
+            {hotCategories.map((category) => (
+              <a href={`/c/${category.slug}/`}>{category.name}</a>
+            ))}
+          </div>
+        </div>
+
+        <p class="list-end" id="list-end" hidden>已显示全部匹配结果</p>
+      </section>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      'use strict';
+
+      const PAGE_SIZE = 50;
+      const list = document.getElementById('api-list');
+      const rows = Array.from(list.querySelectorAll('.row'));
+      const adItem = document.getElementById('list-ad');
+      const searchInput = document.getElementById('api-search');
+      const authButtons = Array.from(document.querySelectorAll('.filter-btn[data-auth]'));
+      const quotaButton = document.getElementById('quota-filter');
+      const catLinks = Array.from(document.querySelectorAll('.cat-link'));
+      const resultCount = document.getElementById('result-count');
+      const activeCategory = document.getElementById('active-category');
+      const emptyState = document.getElementById('empty-state');
+      const sentinel = document.getElementById('load-sentinel');
+      const listEnd = document.getElementById('list-end');
+      const exportButton = document.getElementById('export-csv');
+      const validCats = new Set(catLinks.map((link) => link.dataset.cat));
+      const categoryNames = Object.fromEntries(
+        catLinks.map((link) => [link.dataset.cat, link.dataset.name]),
+      );
+      const haystacks = new WeakMap();
+      const siteUrl = 'https://public-apis.morio.cc';
+      const params = new URLSearchParams(window.location.search);
+
+      const state = {
+        q: params.get('q') || '',
+        auth: ['all', 'none', 'key'].includes(params.get('auth')) ? params.get('auth') : 'all',
+        lim: params.get('lim') === '1',
+        cat: validCats.has(params.get('cat')) ? params.get('cat') : 'all',
+      };
+
+      let visibleCount = PAGE_SIZE;
+      let matches = [];
+
+      searchInput.value = state.q;
+
+      function rowMatches(row) {
+        if (state.cat !== 'all' && row.dataset.cat !== state.cat) return false;
+        if (state.auth === 'none' && row.dataset.auth !== 'none') return false;
+        if (state.auth === 'key' && row.dataset.auth === 'none') return false;
+        if (state.lim) {
+          const free = freeTier(row);
+          if (!/\d/.test(free) || free.startsWith('按量付费')) return false;
+        }
+
+        if (!state.q.trim()) return true;
+        if (!haystacks.has(row)) {
+          haystacks.set(
+            row,
+            `${row.textContent} ${row.dataset.cat} ${categoryNames[row.dataset.cat] || ''} ${row.dataset.k || ''}`.toLowerCase(),
+          );
+        }
+        const tokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+        return tokens.every((token) => haystacks.get(row).includes(token));
+      }
+
+      function render(reset = false) {
+        if (reset) visibleCount = PAGE_SIZE;
+        matches = rows.filter(rowMatches);
+        const matchSet = new Set(matches);
+
+        rows.forEach((row) => {
+          const index = matches.indexOf(row);
+          const hide = !matchSet.has(row) || index >= visibleCount;
+          row.classList.toggle('is-hidden', hide);
+        });
+
+        const showAd = matches.length > 8 && visibleCount > 8;
+        adItem.classList.toggle('is-hidden', !showAd);
+        if (showAd) matches[7].after(adItem);
+
+        const shown = Math.min(matches.length, visibleCount);
+        resultCount.textContent = `共 ${matches.length} 条 · 已显示 ${shown} 条`;
+        emptyState.hidden = matches.length !== 0;
+        sentinel.hidden = matches.length <= visibleCount || matches.length === 0;
+        listEnd.hidden = matches.length === 0 || matches.length > visibleCount;
+
+        const currentCat = catLinks.find((link) => link.dataset.cat === state.cat);
+        if (state.cat !== 'all' && currentCat) {
+          activeCategory.hidden = false;
+          activeCategory.innerHTML = '';
+          const link = document.createElement('a');
+          link.className = 'category-page-link';
+          link.href = `/c/${state.cat}/`;
+          link.textContent = `查看「${currentCat.dataset.name}」分类页 →`;
+          activeCategory.appendChild(link);
+        } else {
+          activeCategory.hidden = true;
+          activeCategory.textContent = '';
+        }
+
+        catLinks.forEach((link) => {
+          link.classList.toggle('is-active', link.dataset.cat === state.cat);
+        });
+        authButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.dataset.auth === state.auth));
+        });
+        quotaButton.setAttribute('aria-pressed', String(state.lim));
+      }
+
+      function syncUrl() {
+        const next = new URLSearchParams();
+        if (state.q.trim()) next.set('q', state.q.trim());
+        if (state.cat !== 'all') next.set('cat', state.cat);
+        if (state.auth !== 'all') next.set('auth', state.auth);
+        if (state.lim) next.set('lim', '1');
+        const query = next.toString();
+        window.history.replaceState(null, '', query ? `/?${query}` : '/');
+      }
+
+      function update(reset = true) {
+        render(reset);
+        syncUrl();
+      }
+
+      searchInput.addEventListener('input', () => {
+        state.q = searchInput.value;
+        update(true);
+      });
+
+      authButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          state.auth = button.dataset.auth;
+          update(true);
+        });
+      });
+
+      quotaButton.addEventListener('click', () => {
+        state.lim = !state.lim;
+        update(true);
+      });
+
+      catLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          state.cat = link.dataset.cat;
+          update(true);
+          if (window.matchMedia('(max-width: 900px)').matches) {
+            list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      function csvCell(value) {
+        return `"${String(value).replace(/"/g, '""')}"`;
+      }
+
+      function freeTier(row) {
+        return row.querySelector('.quota').lastChild.textContent.trim();
+      }
+
+      exportButton.addEventListener('click', () => {
+        const header = ['名称', '说明', '认证', '免费额度', '状态', '链接'];
+        const lines = matches.map((row) => {
+          const nameLink = row.querySelector('.name');
+          return [
+            nameLink.textContent,
+            row.querySelector('.desc').textContent,
+            row.querySelector('.auth').textContent,
+            freeTier(row),
+            row.querySelector('.pill').textContent,
+            `${siteUrl}${nameLink.getAttribute('href')}`,
+          ]
+            .map(csvCell)
+            .join(',');
+        });
+        const csv = `\uFEFF${[header.map(csvCell).join(','), ...lines].join('\r\n')}`;
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'free-apis.csv';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries[0].isIntersecting || matches.length <= visibleCount) return;
+          visibleCount = Math.min(visibleCount + PAGE_SIZE, matches.length);
+          render(false);
+        },
+        { rootMargin: '320px 0px' },
+      );
+      observer.observe(sentinel);
+
+      render(true);
+    })();
+  </script>
+</Base>
