@@ -30,11 +30,23 @@
     color-scheme: light;
     background: var(--color-paper);
     scrollbar-color: var(--color-line-strong) var(--color-paper);
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply m-0 bg-paper font-sans text-[15px] leading-[1.65] text-ink subpixel-antialiased;
+    @apply m-0 bg-paper font-sans text-[15px] leading-[1.65] text-ink;
     caret-color: var(--color-accent);
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
     text-rendering: optimizeLegibility;
   }
 

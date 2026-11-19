@@ -128,6 +128,8 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 
 **Microtype floor:** no visible text below 11px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 600. Small text is never 400 weight.
 
+**Rendering:** set `-webkit-font-smoothing: subpixel-antialiased` on `html` and form controls, with `text-rendering: optimizeLegibility`. Do not use `antialiased` on the paper surface; it thins the text.
+
 ### Hierarchy
 - **Display** (600, clamp 42–68px, 1.02): the masthead.
 - **Page title** (600, 34–56px): category and detail headings.
