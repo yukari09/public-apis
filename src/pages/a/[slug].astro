@@ -1,0 +1,182 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import {
+  apis,
+  authLabel,
+  getCategory,
+  limitSourceLabel,
+  relatedApis,
+  SITE_URL,
+  statusOf,
+} from '../../lib/data.js';
+
+export function getStaticPaths() {
+  return apis.map((api) => ({
+    params: { slug: api.slug },
+    props: {
+      api,
+      related: relatedApis(api, 4),
+    },
+  }));
+}
+
+const { api, related } = Astro.props;
+const category = getCategory(api.category);
+const status = statusOf(api);
+const auth = authLabel(api);
+const title = `${api.name} 免费额度、认证方式与调用示例 · 免费 API 中文索引`;
+const description = `${api.name}：${api.description_zh}。${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
+const canonicalPath = `/a/${api.slug}/`;
+const officialHost = new URL(api.url).hostname;
+const correctionUrl = `https://github.com/yukari09/public-apis/issues/new?title=[纠错]%20${api.slug}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: api.name,
+  description: api.description_zh,
+  applicationCategory: category?.name ?? 'DeveloperApplication',
+  operatingSystem: 'Any',
+  url: `${SITE_URL}${canonicalPath}`,
+  offers: {
+    '@type': 'Offer',
+    price: 0,
+    priceCurrency: 'CNY',
+  },
+};
+---
+
+<Base title={title} description={description} canonicalPath={canonicalPath} jsonLd={jsonLd}>
+  <div class="container">
+    <Breadcrumb
+      items={[
+        { label: '首页', href: '/' },
+        { label: category.name, href: `/c/${category.slug}/` },
+        { label: api.name, href: canonicalPath },
+      ]}
+    />
+
+    {api.status === 'dead' && (
+      <div class="notice-banner" role="status">该接口疑似停止服务</div>
+    )}
+
+    <header class="detail-header">
+      <div>
+        <h1>{api.name}</h1>
+        <p class="detail-desc">{api.description_zh}</p>
+      </div>
+      <span class={`pill ${status.cls}`}>{status.label}</span>
+    </header>
+
+    <section class="detail-section" aria-labelledby="info-title">
+      <h2 id="info-title">基本信息</h2>
+      <table class="info-table">
+        <tbody>
+          <tr><th scope="row">认证</th><td>{auth}</td></tr>
+          <tr><th scope="row">免费额度</th><td>{api.free_tier}</td></tr>
+          <tr><th scope="row">额度来源</th><td>{limitSourceLabel(api)}</td></tr>
+          <tr><th scope="row">商用限制</th><td>{api.commercial?.trim() || '以官网为准'}</td></tr>
+          <tr>
+            <th scope="row">状态</th>
+            <td><span class={`pill ${status.cls}`}>{status.label}</span></td>
+          </tr>
+          <tr><th scope="row">最后检测时间</th><td>{api.checked_at}</td></tr>
+          <tr>
+            <th scope="row">分类</th>
+            <td>{category.name}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="detail-section" aria-labelledby="example-title">
+      <h2 id="example-title">调用示例</h2>
+      <div class="code-wrap">
+        <pre><code id="curl-example">{api.example}</code></pre>
+        <button class="copy-btn" type="button" data-copy>复制</button>
+      </div>
+      <p class="hint">
+        {api.auth === 'none' ? (
+          <>该接口无需认证，可直接把示例粘进终端；使用前请阅读
+            <a href={api.url} target="_blank" rel="noopener">官网说明</a>。
+          </>
+        ) : api.auth === 'api_key' ? (
+          <>去 <a href={api.url} target="_blank" rel="noopener">{officialHost}</a> 注册拿 Key，替换示例里的 KEY。</>
+        ) : (
+          <>按 <a href={api.url} target="_blank" rel="noopener">{officialHost}</a> 的说明完成授权或认证，再替换示例中的占位值。</>
+        )}
+      </p>
+    </section>
+
+    <div class="detail-actions">
+      <a class="official-link" href={api.url} target="_blank" rel="noopener">访问官网</a>
+      <a href={correctionUrl} target="_blank" rel="noopener">发现错误？提交纠错</a>
+    </div>
+
+    <div class="detail-ad">
+      <AdSlot />
+    </div>
+
+    <section class="detail-section" aria-labelledby="related-title">
+      <h2 id="related-title">同分类推荐</h2>
+      <div class="related-grid">
+        {related.map((item) => (
+          <a class="related-card" href={`/a/${item.slug}/`}>
+            <span class="related-name">{item.name}</span>
+            <span class="related-desc">{item.description_zh}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <script is:inline>
+    (() => {
+      'use strict';
+      const button = document.querySelector('[data-copy]');
+      const code = document.getElementById('curl-example');
+      if (!button || !code) return;
+
+      let timer;
+
+      function reset() {
+        window.clearTimeout(timer);
+        timer = window.setTimeout(() => {
+          button.textContent = '复制';
+          button.classList.remove('is-copied');
+        }, 2000);
+      }
+
+      function legacyCopy(text) {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        const ok = document.execCommand('copy');
+        area.remove();
+        return ok;
+      }
+
+      button.addEventListener('click', async () => {
+        const text = code.textContent;
+        try {
+          if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else if (!legacyCopy(text)) {
+            throw new Error('copy failed');
+          }
+          button.textContent = '已复制';
+          button.classList.add('is-copied');
+          reset();
+        } catch {
+          button.textContent = '复制失败';
+          reset();
+        }
+      });
+    })();
+  </script>
+</Base>

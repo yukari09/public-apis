@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = '免责声明 · 免费 API 中文索引';
+const description = '免费 API 中文索引只做目录索引，不代理请求，不保证第三方 API 的可用性。';
+---
+
+<Base title={title} description={description} canonicalPath="/disclaimer/">
+  <article class="container prose">
+    <h1>免责声明</h1>
+    <p>
+      本站只整理公开的 API 信息，方便开发者查找和比较。使用任何第三方接口前，请先阅读该厂商的服务条款、隐私政策与定价说明。
+    </p>
+    <ul>
+      <li>本站只做索引，不代理、不转发也不缓存任何 API 请求。</li>
+      <li>第三方 API 的可用性、价格、额度、限流与数据处理方式由各厂商决定，本站不保证其长期可用或适合特定用途。</li>
+      <li>所有 API 名称、产品名、Logo 与商标归各自所有者；本站不声称与任何厂商存在合作、关联或背书。</li>
+      <li>因使用第三方 API 产生的费用、数据损失、服务中断或其他后果，由使用者自行承担。</li>
+    </ul>
+    <p>
+      实测状态只能代表记录时间点的一次请求结果，不等于厂商对服务可用性的承诺。价格和额度请以厂商官网为准。
+    </p>
+  </article>
+</Base>

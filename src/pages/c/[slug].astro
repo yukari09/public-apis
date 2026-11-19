@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import ApiRow from '../../components/ApiRow.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import {
+  adjacentCategories,
+  categories,
+  categoryApis,
+  categoryIntro,
+} from '../../lib/data.js';
+
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { slug: category.slug },
+    props: {
+      category,
+      items: categoryApis(category.slug),
+    },
+  }));
+}
+
+const { category, items } = Astro.props;
+const intro = categoryIntro(category, items);
+const title = `${category.name} API 免费接口（${items.length} 个）· 免费 API 中文索引`;
+const adjacent = adjacentCategories(category.slug);
+---
+
+<Base
+  title={title}
+  description={intro}
+  canonicalPath={`/c/${category.slug}/`}
+>
+  <div class="container">
+    <Breadcrumb
+      items={[
+        { label: '首页', href: '/' },
+        { label: category.name, href: `/c/${category.slug}/` },
+      ]}
+    />
+
+    <header class="category-header">
+      <h1 class="category-title">{category.name} API</h1>
+      <p class="category-intro">{intro}</p>
+    </header>
+
+    <div class="result-line">
+      <span>共 <strong>{items.length}</strong> 条</span>
+      <a class="category-page-link" href="/">返回全部 API →</a>
+    </div>
+
+    <ul class="api-list">
+      {items.map((api) => <ApiRow api={api} />)}
+    </ul>
+
+    <nav class="category-adjacent" aria-label="相邻分类">
+      {adjacent.map((item) => (
+        <a href={`/c/${item.slug}/`}>
+          {item.slug === adjacent[0].slug ? '← ' : ''}{item.name}{item.slug === adjacent[1].slug ? ' →' : ''}
+        </a>
+      ))}
+    </nav>
+  </div>
+</Base>

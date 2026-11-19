@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import {
+  CONTACT_EMAIL,
+  GITHUB_URL,
+  sources,
+  stats,
+} from '../lib/data.js';
+
+const title = '关于 · 免费 API 中文索引';
+const description =
+  '免费 API 中文索引做什么、数据从哪里来、如何更新、收录标准与纠错方式。';
+const sourcesUrl = `${GITHUB_URL}/blob/main/data/sources.json`;
+---
+
+<Base title={title} description={description} canonicalPath="/about/">
+  <article class="container prose">
+    <h1>关于本站</h1>
+    <p>
+      「免费 API 中文索引」是一个给中文开发者用的公共 API 目录。它把分散在各处的免费接口整理到一起，并用中文写清楚说明、免费额度、认证方式、实测状态与可直接复制的 curl 示例。
+    </p>
+    <p>
+      目前收录 {stats.total} 个条目，分成 {stats.categories} 个分类；其中 {stats.ok} 个端点当前可直接调用，{stats.keyRequired} 个需要 Key，{stats.unreachable} 个本次暂不可达。
+    </p>
+
+    <h2 id="sources">数据来源</h2>
+    <p>
+      当前条目以本项目人工整理与端点实测为主。来源、许可与用途登记在
+      <a href={sourcesUrl} target="_blank" rel="noopener">data/sources.json</a>，完整署名与商标声明见仓库根目录的
+      <a href={`${GITHUB_URL}/blob/main/NOTICE`} target="_blank" rel="noopener">NOTICE</a>。
+    </p>
+    <ul class="source-list">
+      {sources.map((source) => (
+        <li>
+          {source.url ? (
+            <a href={source.url} target="_blank" rel="noopener"><strong>{source.name}</strong></a>
+          ) : (
+            <strong>{source.name}</strong>
+          )}
+          <small>{source.license} · {source.used_for}</small>
+        </li>
+      ))}
+    </ul>
+
+    <h2>更新机制</h2>
+    <p>
+      每 14 天复测一次端点可达性与部分免费额度，更新 status、status_code 与 checked_at 字段；历史结果追加到
+      <code>data/status-history.jsonl</code>。价格、额度与服务条款最终以各厂商官网为准。
+    </p>
+
+    <h2>收录标准</h2>
+    <p>收纳：</p>
+    <ul>
+      <li>有公开文档，端点可以被独立验证。</li>
+      <li>有永久免费层，或可持续使用的免费额度。</li>
+      <li>需要 Key 但提供免费额度，且不要求必须绑卡。</li>
+    </ul>
+    <p>不收纳：</p>
+    <ul>
+      <li>国内厂商（保留给专门的国内 API 目录）。</li>
+      <li>只有 7 天试用且必须绑卡的接口。</li>
+      <li>已停服、灰产或无法公开验证的接口。</li>
+    </ul>
+
+    <h2>纠错与下架</h2>
+    <p>
+      发现错误、链接失效或希望下架条目，请到
+      <a href={`${GITHUB_URL}/issues/new`} target="_blank" rel="noopener">GitHub Issues</a>
+      提交，或发邮件到 <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>。下架请求会在 7 天内处理。
+    </p>
+
+    <h2>许可</h2>
+    <p>
+      站点代码采用 MIT 许可，数据采用 CC BY 4.0 许可；转载数据需署名并链接回
+      <a href="https://public-apis.morio.cc/">public-apis.morio.cc</a>。
+    </p>
+  </article>
+</Base>
