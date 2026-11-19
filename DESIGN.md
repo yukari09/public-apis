@@ -58,8 +58,8 @@ components:
     padding: "8px 12px"
     typography: "{typography.body}"
   filter-chip-active:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.accent-ink}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper}"
     rounded: "{rounded.full}"
     padding: "8px 12px"
     typography: "{typography.body}"

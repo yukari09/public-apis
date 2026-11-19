@@ -46,7 +46,7 @@
       "refersTo": "filter-chip-active",
       "description": "Pill filter used for authentication and quota scopes.",
       "html": "<button class=\"ds-filter\">全部</button>",
-      "css": ".ds-filter { padding: 8px 12px; border: 1px solid #ff4d00; border-radius: 999px; color: #11100e; background: #ff4d00; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter:hover { filter: brightness(1.04); } .ds-filter:focus-visible { outline: 2px solid #ff4d00; outline-offset: 3px; }"
+      "css": ".ds-filter { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid #11100e; border-radius: 999px; color: #f3f0e7; background: #11100e; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter::before { content: ''; width: 4px; height: 4px; background: #ff4d00; } .ds-filter:focus-visible { outline: 2px solid #ff4d00; outline-offset: 3px; }"
     },
     {
       "name": "Export Button",

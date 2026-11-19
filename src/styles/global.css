@@ -302,7 +302,17 @@
   }
 
   .filter-btn[aria-pressed="true"] {
-    @apply border-accent bg-accent text-accent-ink;
+    @apply border-ink bg-ink text-paper;
+  }
+
+  .filter-btn[aria-pressed="true"]::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 6px;
+    background: var(--color-accent);
+    vertical-align: 1px;
   }
 
   .export-btn {
