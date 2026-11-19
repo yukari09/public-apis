@@ -37,7 +37,7 @@ Visitors arrive from search, bookmarks, or a colleague's link, usually while eva
 
 ## Brand Commitments
 
-The site name is 免费 API 中文索引. The voice is direct, specific, and useful to Chinese developers; it avoids hype and invented claims. The current Signal Deck visual system is documented in `DESIGN.md`.
+The site name is 免费 API 中文索引. The voice is direct, specific, and useful to Chinese developers; it avoids hype and invented claims. The current The Printed Index visual system is documented in `DESIGN.md`.
 
 ## Evidence on Hand
 

@@ -4,23 +4,22 @@
   "title": "Design System: 免费 API 中文索引",
   "extensions": {
     "colorMeta": {
-      "ink": { "role": "neutral", "displayName": "Deck Ink", "canonical": "#0a0b0d" },
-      "surface": { "role": "neutral", "displayName": "Deck Surface", "canonical": "#121417" },
-      "raised": { "role": "neutral", "displayName": "Raised Deck", "canonical": "#181b20" },
-      "copper": { "role": "primary", "displayName": "Burnished Copper", "canonical": "#d29a5d" },
-      "sky": { "role": "secondary", "displayName": "Slate Teal", "canonical": "#b4d4da" },
-      "coral": { "role": "tertiary", "displayName": "Coral Clay", "canonical": "#c98b7a" },
-      "bone": { "role": "neutral", "displayName": "Bone", "canonical": "#f3efe7" },
-      "muted": { "role": "neutral", "displayName": "Muted Signal", "canonical": "#b7b7b0" }
+      "paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#f3f0e7" },
+      "surface": { "role": "neutral", "displayName": "Card Paper", "canonical": "#fbf9f2" },
+      "raised": { "role": "neutral", "displayName": "Raised Paper", "canonical": "#ebe5d8" },
+      "ink": { "role": "neutral", "displayName": "Black Ink", "canonical": "#11100e" },
+      "muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#6c675d" },
+      "accent": { "role": "primary", "displayName": "Safety Orange", "canonical": "#ff4d00" },
+      "code": { "role": "neutral", "displayName": "Code Block", "canonical": "#12110f" }
     },
     "typographyMeta": {
-      "display": { "displayName": "Signal Display", "purpose": "Masthead and 404 statement." },
+      "display": { "displayName": "Index Display", "purpose": "Masthead." },
       "headline": { "displayName": "Section Headline", "purpose": "Section and empty-state headings." },
-      "body": { "displayName": "Working Grotesk", "purpose": "Descriptions, prose, and controls." },
+      "body": { "displayName": "Working Sans", "purpose": "Descriptions, prose, and controls." },
       "label": { "displayName": "Evidence Mono", "purpose": "Codes, counts, dates, and status." }
     },
     "motion": [
-      { "name": "state-shift", "value": "150ms ease", "purpose": "Entry hover and category/filter state changes." }
+      { "name": "state-shift", "value": "150ms ease", "purpose": "Card hover and category/filter state changes." }
     ],
     "breakpoints": [
       { "name": "rail-collapse", "value": "900px" },
@@ -34,12 +33,12 @@
   },
   "components": [
     {
-      "name": "Status Badge",
+      "name": "Status Stamp",
       "kind": "custom",
       "refersTo": "status-stamp",
-      "description": "Pill status with dot and text, used on API cards and the spec panel.",
+      "description": "Neutral paper stamp with a colored square and always-visible label.",
       "html": "<span class=\"ds-status\">需要 Key</span>",
-      "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #e2c06a; border-radius: 999px; color: #e2c06a; background: color-mix(in srgb, #e2c06a 9%, transparent); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; font-weight: 500; } .ds-status::before { content: ''; width: 4px; height: 4px; border-radius: 999px; background: currentColor; }"
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #9f9789; border-radius: 2px; color: #11100e; background: #f3f0e7; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; font-weight: 500; } .ds-status::before { content: ''; width: 4px; height: 4px; background: #9a5b00; }"
     },
     {
       "name": "Filter Chip",
@@ -47,43 +46,43 @@
       "refersTo": "filter-chip-active",
       "description": "Pill filter used for authentication and quota scopes.",
       "html": "<button class=\"ds-filter\">全部</button>",
-      "css": ".ds-filter { padding: 8px 12px; border: 1px solid #d29a5d; border-radius: 999px; color: #170d05; background: #d29a5d; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter:hover { filter: brightness(1.05); } .ds-filter:focus-visible { outline: 2px solid #d29a5d; outline-offset: 3px; }"
+      "css": ".ds-filter { padding: 8px 12px; border: 1px solid #ff4d00; border-radius: 999px; color: #11100e; background: #ff4d00; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter:hover { filter: brightness(1.04); } .ds-filter:focus-visible { outline: 2px solid #ff4d00; outline-offset: 3px; }"
     },
     {
       "name": "Export Button",
       "kind": "button",
       "refersTo": "export-button",
-      "description": "Outlined copper action for CSV export.",
+      "description": "Black action for CSV export.",
       "html": "<button class=\"ds-export\">导出 CSV</button>",
-      "css": ".ds-export { padding: 8px 14px; border: 1px solid #d29a5d; border-radius: 10px; color: #d29a5d; background: transparent; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.03em; cursor: pointer; } .ds-export:hover { color: #170d05; background: #d29a5d; } .ds-export:focus-visible { outline: 2px solid #d29a5d; outline-offset: 3px; }"
+      "css": ".ds-export { padding: 8px 14px; border: 1px solid #11100e; border-radius: 2px; color: #f3f0e7; background: #11100e; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.03em; cursor: pointer; } .ds-export:hover { border-color: #ff4d00; color: #11100e; background: #ff4d00; } .ds-export:focus-visible { outline: 2px solid #ff4d00; outline-offset: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "Signal Deck",
-    "overview": "A warm graphite directory console with one burnished copper action color, Space Grotesk lettering, and a live sample call in the first viewport. The interface stays a working tool: search, filters, evidence, and status are always standard and visible.",
+    "northStar": "The Printed Index",
+    "overview": "A warm-paper trade catalogue with black ink, a single safety-orange marker, hairline rules, and square API records. The interface stays a working directory: search, filters, pagination, and evidence are always standard and visible.",
     "keyCharacteristics": [
-      "Deck Ink ground with Burnished Copper actions and Slate Teal links.",
-      "Live sample panel proves the product with a real curl call.",
-      "Low-saturation category dots and low-tint active rows keep the directory scannable without a rainbow.",
+      "Paper ground with black ink and one safety-orange action color.",
+      "Instrument Sans display and working text with a system Chinese fallback.",
       "Twenty API cards per page in a two-column grid with explicit pagination.",
-      "Flat surfaces and hairline borders."
+      "Neutral category markers; only the active category becomes an ink block."
     ],
     "rules": [
-      { "name": "The One Signal Rule", "body": "Only one copper fill is visible per functional region; other color is category or status information.", "section": "colors" },
-      { "name": "The Proof First Rule", "body": "The first viewport shows a real callable example from the data, not a decorative illustration.", "section": "layout" },
-      { "name": "The Card Record Rule", "body": "Every API card uses the same evidence slots and a bottom-anchored footer; hover changes surface and border, not geometry.", "section": "layout" }
+      { "name": "The Orange Registration Rule", "body": "Safety Orange marks action, current state, and one masthead square. It never becomes a background wash.", "section": "colors" },
+      { "name": "The Paper Rule", "body": "Surfaces stay paper-like; do not reintroduce dark dashboard chrome or neon accents.", "section": "colors" },
+      { "name": "The Card Record Rule", "body": "Every API card uses the same evidence slots and a bottom-anchored footer; hover changes surface and border, not geometry.", "section": "layout" },
+      { "name": "The Explicit Page Rule", "body": "The directory paginates at 20 records; no infinite scroll.", "section": "layout" }
     ],
     "dos": [
-      "Use Space Grotesk and system Chinese fallback together.",
-      "Use Tailwind 4 theme tokens for color, type, and radius.",
-      "Keep status text and category dots visible.",
-      "Let long curl lines wrap on narrow columns."
+      "Use Instrument Sans and the system Chinese fallback together.",
+      "Keep status labels visible and use the square as a second signal.",
+      "Keep the pagination URL state.",
+      "Let the paper and rules carry the composition."
     ],
     "donts": [
-      "Don't introduce decorative gradients, glow shadows, or glass.",
-      "Don't use category color as a full panel fill.",
-      "Don't turn the search deck into a modal or command palette.",
-      "Don't remove the live sample from the masthead."
+      "Don't reintroduce neon accents or multicolor category systems.",
+      "Don't use decorative shadows, gradients, or glass.",
+      "Don't turn cards into decorative tiles.",
+      "Don't replace the pagination with infinite scroll."
     ]
   }
 }

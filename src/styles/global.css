@@ -1,25 +1,23 @@
-@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/instrument-sans";
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0a0b0d;
-  --color-surface: #121417;
-  --color-raised: #181b20;
-  --color-line: #262b32;
-  --color-line-strong: #3a414b;
-  --color-bone: #f3efe7;
-  --color-muted: #b7b7b0;
-  --color-copper: #d29a5d;
-  --color-copper-ink: #170d05;
-  --color-sky: #b4d4da;
-  --color-blue: #8fa7c4;
-  --color-coral: #c98b7a;
-  --color-ok: #9bd2aa;
-  --color-key: #e2c06a;
-  --color-bad: #e09292;
-  --radius-control: 10px;
-  --radius-panel: 16px;
-  --font-sans: "Space Grotesk Variable", -apple-system, "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", system-ui, sans-serif;
+  --color-paper: #f3f0e7;
+  --color-surface: #fbf9f2;
+  --color-raised: #ebe5d8;
+  --color-ink: #11100e;
+  --color-muted: #6c675d;
+  --color-line: #d6cfc2;
+  --color-line-strong: #9f9789;
+  --color-accent: #ff4d00;
+  --color-accent-ink: #11100e;
+  --color-code: #12110f;
+  --color-ok: #1d7a4a;
+  --color-key: #9a5b00;
+  --color-bad: #b3261e;
+  --radius-control: 2px;
+  --radius-panel: 2px;
+  --font-sans: "Instrument Sans Variable", -apple-system, "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", system-ui, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
@@ -29,14 +27,14 @@
   }
 
   html {
-    color-scheme: dark;
-    background: var(--color-ink);
-    scrollbar-color: var(--color-line-strong) var(--color-ink);
+    color-scheme: light;
+    background: var(--color-paper);
+    scrollbar-color: var(--color-line-strong) var(--color-paper);
   }
 
   body {
-    @apply m-0 bg-ink font-sans text-[15px] leading-[1.65] text-bone antialiased;
-    caret-color: var(--color-copper);
+    @apply m-0 bg-paper font-sans text-[15px] leading-[1.65] text-ink antialiased;
+    caret-color: var(--color-accent);
     text-rendering: optimizeLegibility;
   }
 
@@ -54,12 +52,12 @@
   }
 
   a {
-    @apply text-sky no-underline;
+    @apply text-ink no-underline;
     text-underline-offset: 3px;
   }
 
   a:hover {
-    @apply text-bone underline;
+    @apply text-ink underline;
     text-decoration-thickness: 1px;
   }
 
@@ -73,14 +71,14 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-copper);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
     border-radius: 4px;
   }
 
   ::selection {
-    color: var(--color-copper-ink);
-    background: var(--color-copper);
+    color: var(--color-accent-ink);
+    background: var(--color-accent);
   }
 
   ::placeholder {
@@ -95,7 +93,7 @@
   }
 
   .skip-link {
-    @apply fixed left-2 top-2 z-50 rounded-md bg-copper px-4 py-2 text-copper-ink;
+    @apply fixed left-2 top-2 z-50 rounded-md bg-accent px-4 py-2 text-accent-ink;
     transform: translateY(-160%);
   }
 
@@ -104,7 +102,7 @@
   }
 
   .site-header {
-    @apply border-b border-line bg-ink;
+    @apply border-b border-line-strong bg-paper;
   }
 
   .header-inner {
@@ -112,11 +110,11 @@
   }
 
   .brand {
-    @apply inline-flex items-center gap-2.5 font-semibold tracking-tight text-bone;
+    @apply inline-flex items-center gap-2.5 font-semibold tracking-tight text-ink;
   }
 
   .brand:hover {
-    @apply text-bone no-underline;
+    @apply text-ink no-underline;
   }
 
   .brand-mark {
@@ -129,15 +127,15 @@
   }
 
   .brand-mark i:nth-child(1) {
-    @apply bg-copper;
+    @apply bg-accent;
   }
 
   .brand-mark i:nth-child(2) {
-    @apply bg-sky;
+    @apply bg-ink;
   }
 
   .brand-mark i:nth-child(4) {
-    @apply bg-coral;
+    @apply bg-line-strong;
   }
 
   .site-nav {
@@ -149,11 +147,11 @@
   }
 
   .site-nav a:hover {
-    @apply text-bone no-underline;
+    @apply text-ink no-underline;
   }
 
   .site-nav a[aria-current="page"] {
-    @apply border-copper text-bone;
+    @apply border-accent text-ink;
   }
 
   .page-main {
@@ -189,7 +187,7 @@
   }
 
   .hero-mark {
-    @apply ml-2 inline-block h-[0.16em] w-[0.16em] rounded-[2px] bg-copper align-[0.12em];
+    @apply ml-2 inline-block h-[0.16em] w-[0.16em] rounded-[2px] bg-accent align-[0.12em];
   }
 
   .lede {
@@ -209,7 +207,7 @@
   }
 
   .status-item strong {
-    @apply font-mono text-[14px] font-medium text-bone;
+    @apply font-mono text-[14px] font-medium text-ink;
   }
 
   .status-item.is-live {
@@ -217,33 +215,45 @@
   }
 
   .status-item.is-live i {
-    @apply block h-1.5 w-1.5 rounded-full bg-copper;
+    @apply block h-1.5 w-1.5 rounded-full bg-accent;
   }
 
   .sample-panel {
-    @apply overflow-hidden rounded-panel border border-line-strong bg-surface;
+    @apply overflow-hidden rounded-panel border border-ink bg-code text-paper;
   }
 
   .sample-head {
-    @apply flex items-center gap-2 border-b border-line px-4 py-3.5;
+    @apply flex items-center gap-2 border-b border-[#2a2824] px-4 py-3.5;
   }
 
   .sample-name {
-    @apply truncate font-semibold text-bone;
+    @apply truncate font-semibold text-paper;
   }
 
   .sample-kicker {
-    @apply ml-auto font-mono text-[9px] tracking-[0.16em] text-muted;
+    @apply ml-auto font-mono text-[9px] tracking-[0.16em] text-[#b8b1a5];
   }
 
   .sample-code {
-    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] leading-[1.75] text-bone;
+    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] leading-[1.75] text-paper;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
   }
 
   .sample-foot {
-    @apply flex items-center justify-between gap-4 border-t border-line px-4 py-3 text-[12px] text-muted;
+    @apply flex items-center justify-between gap-4 border-t border-[#2a2824] px-4 py-3 text-[12px] text-[#b8b1a5];
+  }
+
+  .sample-head .cat-dot {
+    @apply bg-accent;
+  }
+
+  .sample-foot a {
+    @apply text-accent no-underline;
+  }
+
+  .sample-foot a:hover {
+    @apply text-paper underline;
   }
 
   .search-deck {
@@ -251,12 +261,12 @@
   }
 
   .search-field {
-    @apply flex h-[52px] min-w-0 flex-1 basis-[320px] items-center gap-2.5 rounded-control border border-line bg-ink px-3;
+    @apply flex h-[52px] min-w-0 flex-1 basis-[320px] items-center gap-2.5 rounded-control border border-line bg-paper px-3;
   }
 
   .search-field:focus-within {
-    @apply border-copper;
-    box-shadow: 0 0 0 2px rgb(210 154 93 / 0.2);
+    @apply border-accent;
+    box-shadow: 0 0 0 2px rgb(255 77 0 / 0.16);
   }
 
   .search-icon {
@@ -264,7 +274,7 @@
   }
 
   .search-field input {
-    @apply h-full min-w-0 flex-1 border-0 bg-transparent text-[14.5px] text-bone outline-0;
+    @apply h-full min-w-0 flex-1 border-0 bg-transparent text-[14.5px] text-ink outline-0;
   }
 
   .filters {
@@ -276,19 +286,19 @@
   }
 
   .filter-btn:hover {
-    @apply border-line-strong text-bone;
+    @apply border-line-strong text-ink;
   }
 
   .filter-btn[aria-pressed="true"] {
-    @apply border-copper bg-copper text-copper-ink;
+    @apply border-accent bg-accent text-accent-ink;
   }
 
   .export-btn {
-    @apply h-10 cursor-pointer rounded-control border border-copper bg-transparent px-3.5 font-mono text-[10.5px] tracking-[0.03em] text-copper;
+    @apply h-10 cursor-pointer rounded-control border border-ink bg-ink px-3.5 font-mono text-[10.5px] tracking-[0.03em] text-paper;
   }
 
   .export-btn:hover {
-    @apply bg-copper text-copper-ink;
+    @apply border-accent bg-accent text-accent-ink;
   }
 
   .index-layout {
@@ -308,22 +318,24 @@
   }
 
   .cat-link {
-    @apply grid grid-cols-[8px_24px_minmax(0,1fr)_auto] items-center gap-2 rounded-lg border border-transparent px-2.5 py-2 text-[13px] text-muted;
+    @apply grid grid-cols-[8px_24px_minmax(0,1fr)_auto] items-center gap-2 rounded-[2px] border border-transparent px-2.5 py-2 text-[13px] text-muted;
     transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
   }
 
   .cat-link:hover {
-    @apply border-line bg-surface text-bone no-underline;
+    @apply border-line bg-surface text-ink no-underline;
   }
 
   .cat-link.is-active {
-    border-color: color-mix(in srgb, var(--cat) 42%, var(--color-line));
-    background: color-mix(in srgb, var(--cat) 11%, var(--color-ink));
-    color: var(--color-bone);
+    @apply border-ink bg-ink text-paper;
   }
 
   .cat-dot {
-    @apply block h-1.5 w-1.5 rounded-full bg-[var(--cat)];
+    @apply block h-1.5 w-1.5 rounded-[1px] bg-line-strong;
+  }
+
+  .cat-link.is-active .cat-dot {
+    @apply bg-accent;
   }
 
   .cat-code,
@@ -332,7 +344,11 @@
   }
 
   .cat-link.is-active .cat-code {
-    color: var(--cat);
+    @apply text-accent;
+  }
+
+  .cat-link.is-active .cat-count {
+    @apply text-paper;
   }
 
   .cat-count {
@@ -348,11 +364,12 @@
   }
 
   .result-line strong {
-    @apply font-medium text-bone;
+    @apply font-medium text-ink;
   }
 
   .category-page-link {
-    @apply text-sky;
+    @apply text-ink underline;
+    text-decoration-color: var(--color-line-strong);
   }
 
   .entry-list {
@@ -360,7 +377,7 @@
   }
 
   .entry {
-    @apply relative flex h-full min-h-[136px] flex-col gap-2 rounded-[14px] border border-line bg-surface p-4;
+    @apply relative flex h-full min-h-[136px] flex-col gap-2 rounded-panel border border-line bg-surface p-4;
     transition: background-color 150ms ease, border-color 150ms ease;
   }
 
@@ -374,16 +391,17 @@
   }
 
   .name {
-    @apply block pr-[96px] font-sans text-[18px] font-semibold leading-[1.35] tracking-[-0.015em] text-bone;
+    @apply block pr-[96px] font-sans text-[18px] font-semibold leading-[1.35] tracking-[-0.015em] text-ink;
   }
 
   .name::before {
-    @apply mr-2.5 inline-block h-1.5 w-1.5 rounded-full align-[2px] bg-[var(--cat)];
+    @apply mr-2.5 inline-block h-1.5 w-1.5 rounded-[1px] bg-ink align-[2px];
     content: "";
   }
 
   .name:hover {
-    @apply text-copper;
+    @apply text-ink underline;
+    text-decoration-color: var(--color-accent);
   }
 
   .desc {
@@ -405,24 +423,28 @@
   }
 
   .stamp {
-    @apply absolute right-4 top-4 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-line-strong bg-ink px-2.5 py-1 font-mono text-[10.5px] font-medium tracking-[0.02em] text-muted;
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-[2px] border border-line-strong bg-paper px-2.5 py-1 font-mono text-[10.5px] font-medium tracking-[0.02em] text-ink;
+  }
+
+  .entry > .stamp {
+    @apply absolute right-4 top-4;
   }
 
   .stamp::before {
-    @apply block h-1 w-1 rounded-full bg-current;
+    @apply block h-1 w-1 rounded-[1px] bg-line-strong;
     content: "";
   }
 
-  .stamp.ok {
-    @apply text-ok;
+  .stamp.ok::before {
+    @apply bg-ok;
   }
 
-  .stamp.key {
-    @apply text-key;
+  .stamp.key::before {
+    @apply bg-key;
   }
 
-  .stamp.bad {
-    @apply text-bad;
+  .stamp.bad::before {
+    @apply bg-bad;
   }
 
   .ad-item {
@@ -447,15 +469,15 @@
   }
 
   .page-btn {
-    @apply inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-line px-2 font-mono text-[10.5px] text-muted;
+    @apply inline-flex h-9 min-w-9 items-center justify-center rounded-[2px] border border-line px-2 font-mono text-[10.5px] text-muted;
   }
 
   .page-btn:hover {
-    @apply border-line-strong text-bone no-underline;
+    @apply border-line-strong text-ink no-underline;
   }
 
   .page-btn.is-current {
-    @apply border-copper bg-copper text-copper-ink;
+    @apply border-accent bg-accent text-accent-ink;
   }
 
   .page-btn.is-disabled {
@@ -471,7 +493,7 @@
   }
 
   .empty-state h2 {
-    @apply mb-1.5 mt-0 text-[24px] font-semibold tracking-tight text-bone;
+    @apply mb-1.5 mt-0 text-[24px] font-semibold tracking-tight text-ink;
   }
 
   .empty-state p {
@@ -483,11 +505,11 @@
   }
 
   .popular-chips a {
-    @apply rounded-full border border-line-strong px-3 py-1.5 text-[12.5px] text-bone;
+    @apply rounded-full border border-line-strong px-3 py-1.5 text-[12.5px] text-ink;
   }
 
   .popular-chips a:hover {
-    @apply border-copper text-copper no-underline;
+    @apply border-accent text-accent no-underline;
   }
 
   .breadcrumb {
@@ -520,9 +542,7 @@
   }
 
   .category-code {
-    @apply inline-block flex-none rounded-md border px-2 py-0.5 font-mono text-[11px] font-medium;
-    border-color: var(--cat, var(--color-copper));
-    color: var(--cat, var(--color-copper));
+    @apply inline-block flex-none rounded-[2px] border border-accent bg-accent px-2 py-0.5 font-mono text-[11px] font-medium text-accent-ink;
   }
 
   .category-intro {
@@ -538,11 +558,11 @@
   }
 
   .adj-code {
-    @apply font-mono text-[10px] text-copper;
+    @apply font-mono text-[10px] text-accent;
   }
 
   .notice-banner {
-    @apply mb-6 rounded-control border border-key bg-[#1c180d] px-3.5 py-2.5 text-[13px] text-key;
+    @apply mb-6 rounded-control border border-key bg-[#fff4e6] px-3.5 py-2.5 text-[13px] text-[#6b3f00];
   }
 
   .detail-shell {
@@ -566,16 +586,15 @@
   }
 
   .detail-category:hover {
-    @apply border-copper text-copper no-underline;
+    @apply border-accent text-ink no-underline;
   }
 
   .detail-category .category-code {
     @apply border-0 p-0 text-[10px];
-    color: var(--cat, var(--color-copper));
   }
 
   .detail-category .cat-dot {
-    @apply h-1.5 w-1.5;
+    @apply h-1.5 w-1.5 bg-accent;
   }
 
   .detail-desc {
@@ -599,7 +618,7 @@
   }
 
   .detail-section h2 {
-    @apply mb-3 mt-0 text-[19px] font-semibold tracking-tight text-bone;
+    @apply mb-3 mt-0 text-[19px] font-semibold tracking-tight text-ink;
   }
 
   .spec-panel {
@@ -623,16 +642,16 @@
   }
 
   .spec-grid dd {
-    @apply m-0 mt-1 text-[14px] text-bone;
+    @apply m-0 mt-1 text-[14px] text-ink;
     overflow-wrap: anywhere;
   }
 
   .code-wrap {
-    @apply relative overflow-hidden rounded-panel border border-line-strong bg-[#05070a];
+    @apply relative overflow-hidden rounded-panel border border-ink bg-code;
   }
 
   .code-wrap pre {
-    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] leading-[1.75] text-[#e2dfd6];
+    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] leading-[1.75] text-paper;
     padding-right: 108px;
     tab-size: 2;
     white-space: pre-wrap;
@@ -644,16 +663,15 @@
   }
 
   .copy-btn {
-    @apply absolute right-2.5 top-2.5 cursor-pointer rounded-md border border-line-strong px-2.5 py-1.5 font-mono text-[10px] text-muted;
-    background: var(--color-surface);
+    @apply absolute right-2.5 top-2.5 cursor-pointer rounded-[2px] border border-paper/30 bg-code px-2.5 py-1.5 font-mono text-[10px] text-paper;
   }
 
   .copy-btn:hover {
-    @apply border-copper text-copper;
+    @apply border-accent text-accent;
   }
 
   .copy-btn.is-copied {
-    @apply border-copper bg-copper text-copper-ink;
+    @apply border-accent bg-accent text-accent-ink;
   }
 
   .hint {
@@ -662,8 +680,8 @@
 
   .hint a,
   .prose a {
-    @apply text-sky underline;
-    text-decoration-color: color-mix(in srgb, var(--color-sky) 55%, transparent);
+    @apply text-ink underline;
+    text-decoration-color: color-mix(in srgb, var(--color-ink) 55%, transparent);
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
@@ -680,7 +698,7 @@
   .official-link,
   .detail-actions a {
     @apply underline;
-    text-decoration-color: color-mix(in srgb, var(--color-sky) 50%, transparent);
+    text-decoration-color: color-mix(in srgb, var(--color-ink) 50%, transparent);
     text-underline-offset: 3px;
   }
 
@@ -697,15 +715,16 @@
   }
 
   .related-link:hover {
-    @apply border-line-strong no-underline;
+    @apply border-line-strong bg-raised no-underline;
   }
 
   .related-name {
-    @apply block text-[16px] font-semibold text-bone;
+    @apply block text-[16px] font-semibold text-ink;
   }
 
   .related-link:hover .related-name {
-    @apply text-copper;
+    @apply text-ink underline;
+    text-decoration-color: var(--color-accent);
   }
 
   .related-desc {
@@ -726,7 +745,7 @@
 
   .prose p,
   .prose li {
-    @apply text-[#d1cfc6];
+    @apply text-[#3f3b34];
   }
 
   .prose ul {
@@ -738,7 +757,7 @@
   }
 
   .prose code {
-    @apply rounded border border-line bg-surface px-1.5 py-0.5 font-mono text-[0.9em] text-[#e2dfd6];
+    @apply rounded-[2px] border border-line bg-surface px-1.5 py-0.5 font-mono text-[0.9em] text-ink;
   }
 
   .source-list {
@@ -750,7 +769,7 @@
   }
 
   .source-list strong {
-    @apply text-bone;
+    @apply text-ink;
   }
 
   .source-list small {
@@ -762,7 +781,7 @@
   }
 
   .not-found-code {
-    @apply m-0 font-mono text-[12px] tracking-[0.14em] text-copper;
+    @apply m-0 inline-block bg-accent px-1.5 py-0.5 font-mono text-[12px] tracking-[0.14em] text-accent-ink;
   }
 
   .not-found h1 {
@@ -883,7 +902,7 @@
     }
 
     .entry {
-      @apply min-h-0 rounded-[12px] p-4;
+      @apply min-h-0 rounded-panel p-4;
     }
 
     .name {

@@ -6,7 +6,6 @@ import {
   apis,
   categories,
   categoryCode,
-  categoryColor,
   popularCategories,
   SITE_URL,
   stats,
@@ -57,7 +56,7 @@ const jsonLd = {
 
         <aside class="sample-panel" aria-label="示例调用">
           <div class="sample-head">
-            <span class="cat-dot" style={`--cat:${categoryColor(spotlight.category)}`}></span>
+            <span class="cat-dot"></span>
             <span class="sample-name">{spotlight.name}</span>
             <span class="sample-kicker">SAMPLE CALL</span>
           </div>
@@ -105,7 +104,6 @@ const jsonLd = {
                 href="/"
                 data-cat="all"
                 data-name="全部"
-                style="--cat:var(--color-copper)"
               >
                 <span class="cat-dot"></span>
                 <span class="cat-code">00</span>
@@ -120,7 +118,6 @@ const jsonLd = {
                   href={`/c/${category.slug}/`}
                   data-cat={category.slug}
                   data-name={category.name}
-                  style={`--cat:${categoryColor(category.slug)}`}
                 >
                   <span class="cat-dot"></span>
                   <span class="cat-code">{categoryCode(category.slug)}</span>

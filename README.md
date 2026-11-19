@@ -9,7 +9,7 @@
 - 244 条 API，17 个分类
 - 语义友好的分类页与详情页，支持搜索、认证筛选、额度筛选、20 条/页分页与 CSV 导出
 - 静态 JSON 接口：`/api/all.json`、`/api/category/{slug}.json`
-- 深色 Signal Deck 主题，Astro 5 + Tailwind CSS 4，无前端框架、无运行时后端
+- 暖纸色 The Printed Index 主题，Astro 5 + Tailwind CSS 4，无前端框架、无运行时后端
 - 每 14 天复测端点状态
 
 ## 本地开发

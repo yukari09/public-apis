@@ -6,7 +6,6 @@ import {
   apis,
   authLabel,
   categoryCode,
-  categoryColor,
   getCategory,
   limitSourceLabel,
   relatedApis,
@@ -69,9 +68,8 @@ const jsonLd = {
         <a
           class="detail-category"
           href={`/c/${category.slug}/`}
-          style={`--cat:${categoryColor(category.slug)}`}
         >
-          <span class="cat-dot" style={`--cat:${categoryColor(category.slug)}`}></span>
+          <span class="cat-dot"></span>
           {category.name}
           <span class="category-code">{categoryCode(category.slug)}</span>
         </a>

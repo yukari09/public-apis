@@ -34,26 +34,6 @@ export const categoryCodes = new Map(
   categories.map((category, index) => [category.slug, String(index + 1).padStart(2, '0')]),
 );
 
-const CATEGORY_COLOR = {
-  ai: '#d29a5d',
-  devtools: '#d29a5d',
-  finance: '#d29a5d',
-  weather: '#84b8b1',
-  geo: '#84b8b1',
-  transport: '#84b8b1',
-  'open-data': '#9fb38d',
-  'public-data': '#9fb38d',
-  science: '#9fb38d',
-  sports: '#9fb38d',
-  news: '#b29cc2',
-  media: '#b29cc2',
-  music: '#b29cc2',
-  fun: '#b29cc2',
-  lifestyle: '#b29cc2',
-  security: '#cf8a8a',
-  utilities: '#9aa0a6',
-};
-
 export const stats = {
   total: apis.length,
   ok: apis.filter((api) => api.status === 'ok').length,
@@ -77,10 +57,6 @@ export function getCategory(slug) {
 
 export function categoryCode(slug) {
   return categoryCodes.get(slug) ?? '00';
-}
-
-export function categoryColor(slug) {
-  return CATEGORY_COLOR[slug] ?? '#94a3b8';
 }
 
 export function getApi(slug) {
