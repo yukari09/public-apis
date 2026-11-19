@@ -50,7 +50,7 @@ const jsonLd = {
 ---
 
 <Base title={title} description={description} canonicalPath={canonicalPath} jsonLd={jsonLd}>
-  <div class="container detail-shell">
+  <div class="shell detail-shell">
     <Breadcrumb
       items={[
         { label: '首页', href: '/' },
@@ -120,16 +120,16 @@ const jsonLd = {
             )}
           </p>
         </section>
+
+        <div class="detail-ad">
+          <AdSlot />
+        </div>
       </aside>
     </div>
 
     <div class="detail-actions">
       <a class="official-link" href={api.url} target="_blank" rel="noopener">访问官网</a>
       <a href={correctionUrl} target="_blank" rel="noopener">发现错误？提交纠错</a>
-    </div>
-
-    <div class="detail-ad">
-      <AdSlot />
     </div>
 
     <section class="detail-section" aria-labelledby="related-title">

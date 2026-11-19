@@ -95,6 +95,7 @@ The signature move is the **live sample panel** in the masthead: the first scree
 - Near-black instrument surface with a single fluorescent lime action/selection color.
 - Space Grotesk for display and working text; system Chinese fallback; mono for codes and evidence.
 - Category color is a small signal (dot, active tint), never a full-page wash.
+- A 3px proportional category spectrum under the hero stats shows the composition of the index.
 - A page-sized search deck and a real sample call lead the experience.
 - Flat surfaces with hairline borders and controlled 10/16px radii.
 
@@ -164,6 +165,7 @@ Controls use a 10px radius; panels use 16px; filters and status badges use the f
 ## Components
 
 - **Masthead:** large Space Grotesk title, status rail, and a live sample panel showing a real curl from `data/apis.json`.
+- **Category spectrum:** a 3px proportional strip of all 17 category hues, with each segment weighted by its entry count.
 - **Search deck:** the primary control; search icon, large input, pill filters, and an outlined CSV export.
 - **Category rail:** category dot, code, name, count. Active state uses the category hue as a 1px border and 11% background tint.
 - **Entry ledger:** API name with category dot, Chinese description, quota/auth evidence, status badge. Hover raises the surface and turns the name lime.

@@ -36,7 +36,7 @@ const jsonLd = {
 ---
 
 <Base title={title} description={description} canonicalPath="/" jsonLd={jsonLd}>
-  <div class="container">
+  <div class="shell">
     <section class="masthead" aria-labelledby="page-title">
       <div class="hero-grid">
         <div class="hero-copy">
@@ -50,6 +50,17 @@ const jsonLd = {
             <span class="status-item"><strong>{stats.keyRequired}</strong> 需 Key</span>
             <span class="status-item"><strong>{stats.categories}</strong> 分类</span>
             <span class="status-item is-live"><i></i>{stats.lastChecked} 实测</span>
+          </div>
+          <div
+            class="category-spectrum"
+            role="img"
+            aria-label={`分类构成：${categories.map((category) => `${category.name} ${category.count} 条`).join('，')}`}
+          >
+            {categories.map((category) => (
+              <span
+                style={`--cat:${categoryColor(category.slug)};--w:${category.count}`}
+              ></span>
+            ))}
           </div>
         </div>
 
@@ -78,7 +89,7 @@ const jsonLd = {
         <input
           id="api-search"
           type="search"
-          placeholder="搜索 API、说明或分类，如「天气」/ weather"
+          placeholder="搜索 API、说明或分类"
           autocomplete="off"
           spellcheck="false"
         />
@@ -98,8 +109,14 @@ const jsonLd = {
         <nav aria-label="API 分类">
           <ul class="cat-list">
             <li>
-              <a class="cat-link is-active" href="/" data-cat="all" data-name="全部">
-                <span class="cat-dot" style="--cat:var(--color-lime)"></span>
+              <a
+                class="cat-link is-active"
+                href="/"
+                data-cat="all"
+                data-name="全部"
+                style="--cat:var(--color-lime)"
+              >
+                <span class="cat-dot"></span>
                 <span class="cat-code">00</span>
                 <span class="cat-name">全部</span>
                 <span class="cat-count">{apis.length}</span>
@@ -112,8 +129,9 @@ const jsonLd = {
                   href={`/c/${category.slug}/`}
                   data-cat={category.slug}
                   data-name={category.name}
+                  style={`--cat:${categoryColor(category.slug)}`}
                 >
-                  <span class="cat-dot" style={`--cat:${categoryColor(category.slug)}`}></span>
+                  <span class="cat-dot"></span>
                   <span class="cat-code">{categoryCode(category.slug)}</span>
                   <span class="cat-name">{category.name}</span>
                   <span class="cat-count">{category.count}</span>

@@ -90,7 +90,7 @@
 }
 
 @layer components {
-  .container {
+  .shell {
     @apply mx-auto w-full max-w-[1240px] px-5;
   }
 
@@ -218,6 +218,15 @@
 
   .status-item.is-live i {
     @apply block h-1.5 w-1.5 rounded-full bg-lime;
+  }
+
+  .category-spectrum {
+    @apply mt-6 flex h-[3px] max-w-[640px] gap-0.5 overflow-hidden rounded-full;
+  }
+
+  .category-spectrum span {
+    @apply block bg-[var(--cat)] opacity-90;
+    flex: var(--w) 1 0;
   }
 
   .sample-panel {
@@ -517,7 +526,7 @@
   }
 
   .category-intro {
-    @apply mt-3 max-w-[78ch] text-muted;
+    @apply mt-3 max-w-[70ch] text-muted;
   }
 
   .category-adjacent {
@@ -809,7 +818,7 @@
   }
 
   @media (max-width: 640px) {
-    .container {
+    .shell {
       @apply px-4;
     }
 
