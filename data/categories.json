@@ -1,0 +1,104 @@
+[
+ {
+  "slug": "ai",
+  "name": "AI 与大模型",
+  "description": "模型推理、语音、图像生成、嵌入；免费额度最实用的都在这里。",
+  "count": 22
+ },
+ {
+  "slug": "weather",
+  "name": "天气与环境",
+  "description": "当前天气、预报、历史气候与空气质量。",
+  "count": 11
+ },
+ {
+  "slug": "geo",
+  "name": "地图与地理",
+  "description": "地理编码、路线规划、IP 归属地、国家与邮编数据。",
+  "count": 15
+ },
+ {
+  "slug": "news",
+  "name": "新闻与内容",
+  "description": "全球新闻聚合、技术社区、RSS 与航天资讯。",
+  "count": 10
+ },
+ {
+  "slug": "finance",
+  "name": "金融与加密",
+  "description": "行情、财报、宏观指标、汇率与链上数据。",
+  "count": 19
+ },
+ {
+  "slug": "open-data",
+  "name": "开放数据与政府",
+  "description": "各国政府数据门户、统计、企业与监管数据。",
+  "count": 14
+ },
+ {
+  "slug": "science",
+  "name": "科学与学术",
+  "description": "论文检索、引用图谱、太空与地球科学。",
+  "count": 15
+ },
+ {
+  "slug": "media",
+  "name": "图像与视频",
+  "description": "图库、GIF、截图、二维码与影视元数据。",
+  "count": 16
+ },
+ {
+  "slug": "music",
+  "name": "音乐",
+  "description": "曲库、歌词、听歌记录与音效素材。",
+  "count": 8
+ },
+ {
+  "slug": "devtools",
+  "name": "开发工具",
+  "description": "代码托管、包管理、CI、邮件发送与机器人接口。",
+  "count": 20
+ },
+ {
+  "slug": "utilities",
+  "name": "实用工具",
+  "description": "邮箱校验、时区、短链、Logo 与语法检查。",
+  "count": 11
+ },
+ {
+  "slug": "fun",
+  "name": "娱乐与游戏",
+  "description": "宝可梦、动漫、笑话、冷知识这类免 key 小接口。",
+  "count": 15
+ },
+ {
+  "slug": "sports",
+  "name": "体育",
+  "description": "足球、篮球、F1 与运动轨迹。",
+  "count": 6
+ },
+ {
+  "slug": "transport",
+  "name": "交通",
+  "description": "航班、铁路、充电桩与城市交通状态。",
+  "count": 5
+ },
+ {
+  "slug": "lifestyle",
+  "name": "图书与生活",
+  "description": "图书、菜谱、食品成分与测试用电商数据。",
+  "count": 7
+ },
+ {
+  "slug": "security",
+  "name": "安全",
+  "description": "查毒、威胁情报、泄露查询与设备搜索。",
+  "count": 6
+ },
+ {
+  "slug": "public-data",
+  "name": "公共数据",
+  "description": "联合国、世界银行、OECD、Eurostat 与各国开放平台。",
+  "count": 44
+ }
+]

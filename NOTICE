@@ -1,0 +1,64 @@
+免费 API 中文索引（public-apis.morio.cc）
+Copyright (c) 2026 Kari
+
+授权
+====
+
+1. 代码与站点模板：MIT License。
+2. 数据文件（data/*.json）：CC BY 4.0，转载需署名并链回 https://public-apis.morio.cc。
+
+数据来源登记
+============
+
+完整清单见 `data/sources.json`（9 个来源，含许可与用途）。外部来源署名如下：
+
+- public-apis/public-apis
+  MIT License, Copyright (c) 2022 public-apis
+  https://github.com/public-apis/public-apis
+  用途：M2 扩量种子；已并入 2,283 条备选池中的 2,039 条。
+
+- public-api-lists/public-api-lists
+  MIT License, Copyright (c) 2020 Public API Lists
+  https://github.com/public-api-lists/public-api-lists
+  用途：交叉校验与补漏，837 条 JSON。
+
+- marcelscruz/public-apis
+  MIT License, Copyright (c) Marcel Cruz
+  https://github.com/marcelscruz/public-apis
+  用途：交叉校验，2,122 条机读数据。
+
+- APIs-guru/openapi-directory
+  CC0-1.0（公共领域）
+  https://github.com/APIs-guru/openapi-directory
+  用途：补端点与参数说明，2,529 个 OpenAPI 规范。
+
+- mnfst/awesome-free-llm-apis
+  CC0-1.0（公共领域）
+  https://github.com/mnfst/awesome-free-llm-apis
+  用途：AI 类条目额度交叉核对。
+
+- ripienaar/free-for-dev
+  仓库未声明许可证。
+  https://github.com/ripienaar/free-for-dev
+  用途：仅作线索参考，不复用其文本与数据。
+
+- 各厂商官方文档与定价页
+  归属各自服务条款。
+  用途：`free_tier`、`commercial` 字段的唯一权威依据。
+
+本仓库不复制上述清单的排版与原始文案；中文说明、额度归类、实测状态与调用示例为本项目整理或实测所得。每条记录的 `source` 字段标明来源类别（manual / public-apis / public-api-lists / user）。
+
+商标声明
+========
+
+所有 API 名称、产品名与 Logo 归各自所有者。本站只做索引，不声称与任何厂商存在关联、合作或背书。
+
+免责声明
+========
+
+本仓库与站点不代理、不转发任何 API 请求。第三方 API 的可用性、条款、价格与数据处理方式由各厂商决定，本项目不保证其长期可用或适合特定用途。使用前请阅读对应厂商的服务条款。
+
+下架请求
+========
+
+如厂商希望移除某条目，请发信至 hello@morio.cc，7 天内处理。

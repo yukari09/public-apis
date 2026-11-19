@@ -1,0 +1,101 @@
+[
+ {
+  "id": "manual",
+  "name": "本项目人工整理",
+  "url": "https://public-apis.morio.cc",
+  "license": "CC BY 4.0",
+  "type": "primary",
+  "what": "手工挑选的 200 条精选 + 44 条公共数据，中文说明、额度、认证、示例均为本项目整理",
+  "used_for": "M1 全部 244 条",
+  "entries": 244,
+  "reuse": "原创"
+ },
+ {
+  "id": "public-apis",
+  "name": "public-apis/public-apis",
+  "url": "https://github.com/public-apis/public-apis",
+  "license": "MIT",
+  "type": "directory",
+  "what": "约 2.4k 条免费 API 的英文清单，Markdown 表格，无额度字段",
+  "used_for": "M2 扩量种子；已并入 2,283 条备选池中的 2,039 条",
+  "entries": 2039,
+  "reuse": "可复用，需署名"
+ },
+ {
+  "id": "public-api-lists",
+  "name": "public-api-lists/public-api-lists",
+  "url": "https://github.com/public-api-lists/public-api-lists",
+  "license": "MIT",
+  "type": "directory",
+  "what": "837 条，48 分类，提供 JSON API（api/all.json）",
+  "used_for": "M2 交叉校验与补漏，候选池",
+  "entries": 0,
+  "reuse": "可复用，需署名"
+ },
+ {
+  "id": "marcelscruz",
+  "name": "marcelscruz/public-apis",
+  "url": "https://github.com/marcelscruz/public-apis",
+  "license": "MIT",
+  "type": "directory",
+  "what": "2,122 条，db/resources.json 机读格式，字段含 API/Description/Auth/Cors/Category",
+  "used_for": "M2 交叉校验，重点比对 auth 与分类",
+  "entries": 0,
+  "reuse": "可复用，需署名"
+ },
+ {
+  "id": "apis-guru",
+  "name": "APIs-guru/openapi-directory",
+  "url": "https://github.com/APIs-guru/openapi-directory",
+  "license": "CC0-1.0",
+  "type": "spec",
+  "what": "2,529 个 API 的 OpenAPI 规范，含端点、参数、响应结构",
+  "used_for": "给条目补端点与参数说明（M2）",
+  "entries": 0,
+  "reuse": "公共领域，可自由使用"
+ },
+ {
+  "id": "awesome-free-llm-apis",
+  "name": "mnfst/awesome-free-llm-apis",
+  "url": "https://github.com/mnfst/awesome-free-llm-apis",
+  "license": "CC0-1.0",
+  "type": "directory",
+  "what": "免费 LLM API key 清单，覆盖各家模型的免费档",
+  "used_for": "AI 类条目的额度交叉核对（M2）",
+  "entries": 0,
+  "reuse": "公共领域，可自由使用"
+ },
+ {
+  "id": "free-for-dev",
+  "name": "ripienaar/free-for-dev",
+  "url": "https://github.com/ripienaar/free-for-dev",
+  "license": "无（未声明）",
+  "type": "directory",
+  "what": "SaaS/PaaS 的免费额度清单，14 万星，但不是 API 目录",
+  "used_for": "只作线索参考，不复用其文本",
+  "entries": 0,
+  "reuse": "禁止复用，仅参考"
+ },
+ {
+  "id": "official-docs",
+  "name": "各厂商官方文档 / 定价页",
+  "url": "",
+  "license": "各自服务条款",
+  "type": "primary",
+  "what": "免费额度、限流、商用限制的唯一权威来源",
+  "used_for": "所有 free_tier 与 commercial 字段的核对依据",
+  "entries": 0,
+  "reuse": "引用事实数据，遵循各站条款"
+ },
+ {
+  "id": "probe",
+  "name": "本机端点实测",
+  "url": "",
+  "license": "本项目",
+  "type": "measurement",
+  "what": "对 probe 字段发起真实 GET，记录 HTTP 码与可达性",
+  "used_for": "status / status_code / checked_at 字段",
+  "entries": 244,
+  "reuse": "原创数据"
+ }
+]

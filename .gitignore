@@ -1,0 +1,24 @@
+# deps / build
+node_modules/
+dist/
+.astro/
+package-lock.json.bak
+
+# logs
+*.log
+npm-debug.log*
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# local env
+.env
+.env.*
+!.env.example
+
+# probe artefacts（临时，不提交）
+data/probe-*.json
+!data/status-history.jsonl

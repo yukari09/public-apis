@@ -1,0 +1,54 @@
+# 数据说明
+
+本目录是四个文件：
+
+- `apis.json` — 244 条 API 条目，字段定义见需求文档 §7.1。
+- `categories.json` — 17 个分类，含 slug、中文名、说明与条数。
+- `sources.json` — 9 个数据来源的登记表，含许可、用途、贡献条数。
+- `README.md` — 本文件。
+
+## 每条记录的来源
+
+`source` 字段只有四种取值：
+
+| 值 | 含义 |
+|---|---|
+| `manual` | 本项目人工整理（当前 244 条全部是这一类） |
+| `public-apis` | 来自 public-apis/public-apis（MIT），M2 扩量时使用 |
+| `public-api-lists` | 来自 public-api-lists/public-api-lists（MIT），M2 扩量时使用 |
+| `user` | 外部贡献者提交 |
+
+## 字段口径
+
+- `free_tier`：免费额度。写具体数字（`1000 次/天`），没有公开数字就写 `以官网为准`，不许留空。
+- `limit_source`：`manual`（人工核实）/ `scraped`（官网原文摘录）/ `none`（未标注）。
+- `status`：`ok`（可直接调）/ `key_required`（需要 Key）/ `unreachable`（本次连不上）/ `dead`（连续 3 次失败）。
+- `checked_at`：最后一次实测日期，格式 `YYYY-MM-DD`。
+- `probe`：实际探测的端点，`example` 由它生成。
+- `example`：可复制的 curl，密钥一律写成 `KEY`。
+
+## 数据从哪来
+
+1. 精选 200 条：`~/Assets/data/api-lists/200个知名免费API清单.csv`（人工整理，含中文说明、额度、HTTP 实测码、探测端点）。
+2. 公共数据 44 条：`~/.hermes/cache/scratch/api-big/add_public.json`（联合国、世界银行、OECD、Eurostat 等官方端点，逐个探测过）。
+3. M2 备选池：`~/Assets/data/api-lists/免费API大全-2283-含限额.csv`，2,283 条，其中 504 条有明确额度。
+
+## 当前状态（2026-11-18 实测）
+
+| 项 | 数量 |
+|---|---|
+| 条目总数 | 244 |
+| 免 key 可直接调（status=ok） | 140 |
+| 需要 Key（key_required） | 96 |
+| 本次连不上（unreachable） | 8 |
+| 认证方式：无需认证 | 117 |
+| 认证方式：API Key | 119 |
+| 认证方式：OAuth | 4 |
+
+## 更新
+
+每 14 天复测一次，结果追加到 `status-history.jsonl`，规则见需求文档 §15。
+
+## 许可
+
+数据 CC BY 4.0，代码 MIT。第三方来源与商标声明见仓库根目录 `NOTICE`。
