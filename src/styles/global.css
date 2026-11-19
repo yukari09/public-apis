@@ -318,7 +318,7 @@
   }
 
   .cat-link {
-    @apply grid grid-cols-[8px_24px_minmax(0,1fr)_auto] items-center gap-2 rounded-[2px] border border-transparent px-2.5 py-2 text-[13px] font-medium text-muted;
+    @apply grid grid-cols-[8px_24px_minmax(0,1fr)_auto] items-center gap-2 rounded-[2px] border border-transparent px-2.5 py-2 text-[13px] font-normal text-muted;
     transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
   }
 
@@ -340,7 +340,7 @@
 
   .cat-code,
   .cat-count {
-    @apply font-mono text-[12px] font-semibold tabular-nums text-muted;
+    @apply font-mono text-[12px] font-medium tabular-nums text-muted;
   }
 
   .cat-name {
