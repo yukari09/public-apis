@@ -14,7 +14,6 @@
 | `data/categories.json` | 17 个分类与说明 |
 | `data/sources.json` | 9 个数据来源的登记表（含许可） |
 | `data/README.md` | 字段口径与来源说明 |
-| `REQUIREMENTS.md` | 需求文档 v0.3（含 M1 基础数据附录） |
 | `NOTICE` | 第三方署名、商标与免责声明 |
 
 ## 数据概况（2026-11-18 实测）

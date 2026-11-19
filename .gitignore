@@ -19,6 +19,9 @@ Thumbs.db
 .env.*
 !.env.example
 
+# 内部文档，不随仓库发布
+REQUIREMENTS.md
+
 # probe artefacts（临时，不提交）
 data/probe-*.json
 !data/status-history.jsonl
