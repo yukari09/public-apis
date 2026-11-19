@@ -5,6 +5,7 @@ import AdSlot from '../components/AdSlot.astro';
 import {
   apis,
   categories,
+  categoryCode,
   popularCategories,
   SITE_URL,
   stats,
@@ -30,28 +31,30 @@ const jsonLd = {
 
 <Base title={title} description={description} canonicalPath="/" jsonLd={jsonLd}>
   <div class="container">
-    <section class="hero" aria-labelledby="page-title">
+    <section class="masthead" aria-labelledby="page-title">
       <h1 id="page-title">免费 API 中文索引</h1>
-      <p class="hero-sub">
+      <p class="lede">
         给中文开发者的免费 API 目录：每条都有中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例。
       </p>
-      <div class="stat-bar" aria-label="数据概览">
-        <div class="stat"><strong>{stats.total}</strong><span>收录 API</span></div>
-        <div class="stat"><strong>{stats.ok}</strong><span>可直调</span></div>
-        <div class="stat"><strong>{stats.keyRequired}</strong><span>需要 Key</span></div>
-        <div class="stat"><strong>{stats.categories}</strong><span>分类</span></div>
-        <div class="stat"><strong>{stats.lastChecked}</strong><span>最后实测</span></div>
+      <div class="edition" aria-label="数据概览">
+        <div class="edition-item"><strong>{stats.total}</strong><span>收录 API</span></div>
+        <div class="edition-item"><strong>{stats.ok}</strong><span>可直调</span></div>
+        <div class="edition-item"><strong>{stats.keyRequired}</strong><span>需要 Key</span></div>
+        <div class="edition-item"><strong>{stats.categories}</strong><span>分类</span></div>
+        <div class="edition-item"><strong>{stats.lastChecked}</strong><span>最后实测</span></div>
       </div>
     </section>
 
-    <div class="home-layout">
-      <aside class="sidebar" aria-labelledby="category-title">
-        <h2 class="sidebar-title" id="category-title">分类</h2>
+    <div class="index-layout">
+      <aside class="index-rail" aria-labelledby="category-title">
+        <h2 class="rail-label" id="category-title">分类索引</h2>
         <nav aria-label="API 分类">
           <ul class="cat-list">
             <li>
               <a class="cat-link is-active" href="/" data-cat="all" data-name="全部">
-                全部 <span class="cat-count">{apis.length}</span>
+                <span class="cat-code">00</span>
+                <span class="cat-name">全部</span>
+                <span class="cat-count">{apis.length}</span>
               </a>
             </li>
             {categories.map((category) => (
@@ -62,7 +65,9 @@ const jsonLd = {
                   data-cat={category.slug}
                   data-name={category.name}
                 >
-                  {category.name} <span class="cat-count">{category.count}</span>
+                  <span class="cat-code">{categoryCode(category.slug)}</span>
+                  <span class="cat-name">{category.name}</span>
+                  <span class="cat-count">{category.count}</span>
                 </a>
               </li>
             ))}
@@ -75,11 +80,12 @@ const jsonLd = {
 
         <div class="toolbar">
           <label class="search-field">
+            <span class="search-word" aria-hidden="true">查词</span>
             <span class="visually-hidden">搜索 API</span>
             <input
               id="api-search"
               type="search"
-              placeholder="搜索 API、说明或分类，如「天气」/ weather"
+              placeholder="API、说明或分类，如「天气」/ weather"
               autocomplete="off"
               spellcheck="false"
             />
@@ -102,11 +108,17 @@ const jsonLd = {
         </div>
 
         <div class="result-line">
-          <span id="result-count" aria-live="polite">共 {apis.length} 条</span>
+          <span id="result-count" aria-live="polite">共 {apis.length} 条词条</span>
           <span id="active-category" hidden></span>
         </div>
 
-        <ul class="api-list" id="api-list">
+        <div class="entry-head" aria-hidden="true">
+          <span>词条</span>
+          <span>免费额度 / 认证</span>
+          <span>状态</span>
+        </div>
+
+        <ul class="entry-list" id="api-list">
           {apis.map((api, index) => (
             <>
               <ApiRow api={api} />
@@ -122,8 +134,8 @@ const jsonLd = {
         <div class="load-sentinel" id="load-sentinel" hidden>继续向下滚动加载更多</div>
 
         <div class="empty-state" id="empty-state" hidden>
-          <h2>没有找到匹配的 API</h2>
-          <p>换个关键词，或从热门分类开始：</p>
+          <h2>未检得匹配词条</h2>
+          <p>换个关键词，或从这些分类继续：</p>
           <div class="popular-chips">
             {hotCategories.map((category) => (
               <a href={`/c/${category.slug}/`}>{category.name}</a>
@@ -142,7 +154,7 @@ const jsonLd = {
 
       const PAGE_SIZE = 50;
       const list = document.getElementById('api-list');
-      const rows = Array.from(list.querySelectorAll('.row'));
+      const rows = Array.from(list.querySelectorAll('.entry'));
       const adItem = document.getElementById('list-ad');
       const searchInput = document.getElementById('api-search');
       const authButtons = Array.from(document.querySelectorAll('.filter-btn[data-auth]'));
@@ -210,7 +222,7 @@ const jsonLd = {
         if (showAd) matches[7].after(adItem);
 
         const shown = Math.min(matches.length, visibleCount);
-        resultCount.textContent = `共 ${matches.length} 条 · 已显示 ${shown} 条`;
+        resultCount.textContent = `共 ${matches.length} 条词条 · 已显示 ${shown} 条`;
         emptyState.hidden = matches.length !== 0;
         sentinel.hidden = matches.length <= visibleCount || matches.length === 0;
         listEnd.hidden = matches.length === 0 || matches.length > visibleCount;
@@ -299,7 +311,7 @@ const jsonLd = {
             row.querySelector('.desc').textContent,
             row.querySelector('.auth').textContent,
             freeTier(row),
-            row.querySelector('.pill').textContent,
+            row.querySelector('.stamp').textContent,
             `${siteUrl}${nameLink.getAttribute('href')}`,
           ]
             .map(csvCell)

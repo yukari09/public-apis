@@ -30,6 +30,9 @@ export const LIMIT_SOURCE_LABEL = {
 
 export const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
 export const apiBySlug = new Map(apis.map((api) => [api.slug, api]));
+export const categoryCodes = new Map(
+  categories.map((category, index) => [category.slug, String(index + 1).padStart(2, '0')]),
+);
 
 export const stats = {
   total: apis.length,
@@ -50,6 +53,10 @@ export const dataGeneratedAt = `${stats.lastChecked}T00:00:00Z`;
 
 export function getCategory(slug) {
   return categoryBySlug.get(slug);
+}
+
+export function categoryCode(slug) {
+  return categoryCodes.get(slug) ?? '00';
 }
 
 export function getApi(slug) {

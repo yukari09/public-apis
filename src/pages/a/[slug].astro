@@ -5,6 +5,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import {
   apis,
   authLabel,
+  categoryCode,
   getCategory,
   limitSourceLabel,
   relatedApis,
@@ -48,7 +49,7 @@ const jsonLd = {
 ---
 
 <Base title={title} description={description} canonicalPath={canonicalPath} jsonLd={jsonLd}>
-  <div class="container">
+  <div class="container detail-shell">
     <Breadcrumb
       items={[
         { label: '首页', href: '/' },
@@ -62,32 +63,31 @@ const jsonLd = {
     )}
 
     <header class="detail-header">
-      <div>
-        <h1>{api.name}</h1>
-        <p class="detail-desc">{api.description_zh}</p>
+      <h1>{api.name}</h1>
+      <div class="detail-meta">
+        <a class="detail-category" href={`/c/${category.slug}/`}>
+          <span class="category-code">{categoryCode(category.slug)}</span>
+          {category.name}
+        </a>
+        <span class={`stamp ${status.cls}`}>{status.label}</span>
       </div>
-      <span class={`pill ${status.cls}`}>{status.label}</span>
+      <p class="detail-desc">{api.description_zh}</p>
     </header>
 
     <section class="detail-section" aria-labelledby="info-title">
-      <h2 id="info-title">基本信息</h2>
-      <table class="info-table">
-        <tbody>
-          <tr><th scope="row">认证</th><td>{auth}</td></tr>
-          <tr><th scope="row">免费额度</th><td>{api.free_tier}</td></tr>
-          <tr><th scope="row">额度来源</th><td>{limitSourceLabel(api)}</td></tr>
-          <tr><th scope="row">商用限制</th><td>{api.commercial?.trim() || '以官网为准'}</td></tr>
-          <tr>
-            <th scope="row">状态</th>
-            <td><span class={`pill ${status.cls}`}>{status.label}</span></td>
-          </tr>
-          <tr><th scope="row">最后检测时间</th><td>{api.checked_at}</td></tr>
-          <tr>
-            <th scope="row">分类</th>
-            <td>{category.name}</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2 id="info-title">条目信息</h2>
+      <dl class="spec-grid">
+        <div><dt>认证</dt><dd>{auth}</dd></div>
+        <div><dt>免费额度</dt><dd>{api.free_tier}</dd></div>
+        <div><dt>额度来源</dt><dd>{limitSourceLabel(api)}</dd></div>
+        <div><dt>商用限制</dt><dd>{api.commercial?.trim() || '以官网为准'}</dd></div>
+        <div>
+          <dt>状态</dt>
+          <dd><span class={`stamp ${status.cls}`}>{status.label}</span></dd>
+        </div>
+        <div><dt>最后检测时间</dt><dd>{api.checked_at}</dd></div>
+        <div><dt>分类</dt><dd>{category.name}</dd></div>
+      </dl>
     </section>
 
     <section class="detail-section" aria-labelledby="example-title">
@@ -119,15 +119,17 @@ const jsonLd = {
     </div>
 
     <section class="detail-section" aria-labelledby="related-title">
-      <h2 id="related-title">同分类推荐</h2>
-      <div class="related-grid">
+      <h2 id="related-title">参见</h2>
+      <ul class="related-list">
         {related.map((item) => (
-          <a class="related-card" href={`/a/${item.slug}/`}>
-            <span class="related-name">{item.name}</span>
-            <span class="related-desc">{item.description_zh}</span>
-          </a>
+          <li>
+            <a class="related-link" href={`/a/${item.slug}/`}>
+              <span class="related-name">{item.name}</span>
+              <span class="related-desc">{item.description_zh}</span>
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   </div>
 

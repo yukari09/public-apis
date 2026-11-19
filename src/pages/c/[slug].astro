@@ -6,6 +6,7 @@ import {
   adjacentCategories,
   categories,
   categoryApis,
+  categoryCode,
   categoryIntro,
 } from '../../lib/data.js';
 
@@ -39,23 +40,33 @@ const adjacent = adjacentCategories(category.slug);
     />
 
     <header class="category-header">
-      <h1 class="category-title">{category.name} API</h1>
+      <h1 class="category-title">
+        <span class="category-code">{categoryCode(category.slug)}</span>
+        {category.name} API
+      </h1>
       <p class="category-intro">{intro}</p>
     </header>
 
     <div class="result-line">
-      <span>共 <strong>{items.length}</strong> 条</span>
+      <span>共 <strong>{items.length}</strong> 条词条</span>
       <a class="category-page-link" href="/">返回全部 API →</a>
     </div>
 
-    <ul class="api-list">
+    <div class="entry-head" aria-hidden="true">
+      <span>词条</span>
+      <span>免费额度 / 认证</span>
+      <span>状态</span>
+    </div>
+
+    <ul class="entry-list">
       {items.map((api) => <ApiRow api={api} />)}
     </ul>
 
     <nav class="category-adjacent" aria-label="相邻分类">
       {adjacent.map((item) => (
         <a href={`/c/${item.slug}/`}>
-          {item.slug === adjacent[0].slug ? '← ' : ''}{item.name}{item.slug === adjacent[1].slug ? ' →' : ''}
+          <span class="adj-code">{categoryCode(item.slug)}</span>
+          {item.name}
         </a>
       ))}
     </nav>

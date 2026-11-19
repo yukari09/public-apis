@@ -12,20 +12,18 @@ const href = `/a/${api.slug}/`;
 ---
 
 <li
-  class="row"
+  class="entry"
   data-cat={api.category}
   data-auth={api.auth}
   data-k={api.tags.length ? api.tags.join(' ') : undefined}
 >
-  <div class="top">
-    <a class="name" href={href}>{api.name}</a>
-    <span class={`pill ${status.cls}`}>{status.label}</span>
-  </div>
+  <a class="name" href={href}>{api.name}</a>
   <p class="desc">{api.description_zh}</p>
-  <p class="meta">
+  <div class="entry-quota">
     <span class="quota">
       <span class="source">{limitSourceLabel(api)}</span>{api.free_tier}
     </span>
     <span class="auth">{auth}</span>
-  </p>
+  </div>
+  <span class={`stamp ${status.cls}`}>{status.label}</span>
 </li>
