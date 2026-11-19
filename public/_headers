@@ -1,0 +1,8 @@
+/api/all.json
+  Content-Type: application/json; charset=utf-8
+
+/api/category/*
+  Content-Type: application/json; charset=utf-8
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
