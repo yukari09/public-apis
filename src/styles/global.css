@@ -513,7 +513,7 @@
   }
 
   .breadcrumb {
-    @apply mb-6 font-mono text-[10.5px] text-muted;
+    @apply mb-6 mt-4 font-mono text-[11.5px] text-muted;
   }
 
   .breadcrumb ol {
@@ -527,6 +527,18 @@
   .breadcrumb li:not(:last-child)::after {
     content: "/";
     color: var(--color-line-strong);
+  }
+
+  .breadcrumb a {
+    @apply text-muted no-underline;
+  }
+
+  .breadcrumb a:hover {
+    @apply text-ink underline;
+  }
+
+  .breadcrumb .is-current {
+    @apply font-medium text-ink;
   }
 
   .category-header {
