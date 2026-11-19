@@ -93,7 +93,7 @@
   }
 
   .skip-link {
-    @apply fixed left-2 top-2 z-50 rounded-md bg-accent px-4 py-2 text-accent-ink;
+    @apply fixed left-2 top-2 z-50 rounded-md bg-accent px-4 py-2 font-medium text-accent-ink;
     transform: translateY(-160%);
   }
 
@@ -191,7 +191,7 @@
   }
 
   .lede {
-    @apply mt-4 max-w-[58ch] text-[15.5px] font-medium leading-[1.7] text-muted;
+    @apply mt-4 max-w-[58ch] text-[16px] font-medium leading-[1.7] text-muted;
   }
 
   .status-rail {
@@ -231,7 +231,7 @@
   }
 
   .sample-kicker {
-    @apply ml-auto font-mono text-[10.5px] font-medium tracking-[0.12em] text-[#b8b1a5];
+    @apply ml-auto font-mono text-[11px] font-medium tracking-[0.12em] text-[#b8b1a5];
   }
 
   .sample-code {
@@ -340,7 +340,11 @@
 
   .cat-code,
   .cat-count {
-    @apply font-mono text-[12px] font-semibold tabular-nums text-ink;
+    @apply font-mono text-[12px] font-semibold tabular-nums text-muted;
+  }
+
+  .cat-name {
+    @apply text-ink;
   }
 
   .cat-link.is-active .cat-code {
@@ -348,6 +352,10 @@
   }
 
   .cat-link.is-active .cat-count {
+    @apply text-paper;
+  }
+
+  .cat-link.is-active .cat-name {
     @apply text-paper;
   }
 
@@ -461,7 +469,7 @@
   }
 
   .ad-note {
-    @apply mt-1 font-mono text-[10px] font-medium tracking-[0.08em] text-muted;
+    @apply mt-1 font-mono text-[11px] font-medium tracking-[0.08em] text-muted;
   }
 
   .pagination {
@@ -510,7 +518,7 @@
   }
 
   .popular-chips a:hover {
-    @apply border-accent text-accent no-underline;
+    @apply border-accent bg-accent text-accent-ink no-underline;
   }
 
   .breadcrumb {

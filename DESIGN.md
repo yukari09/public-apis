@@ -126,7 +126,7 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 
 **Character:** Instrument Sans gives the page a contemporary but neutral editorial voice; the mono layer reads as evidence, not decoration. The Chinese fallback stays plain and legible. Interface and evidence text runs at 500 with subpixel antialiasing; long-form prose stays at 400. 400 is not used for visible UI labels or controls.
 
-**Microtype floor:** no supporting text below 10px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 600. Small text is never 400 weight.
+**Microtype floor:** no visible text below 11px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 600. Small text is never 400 weight.
 
 ### Hierarchy
 - **Display** (600, clamp 42–68px, 1.02): the masthead.
@@ -135,7 +135,7 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 - **Entry name** (600, 17–18px): API names in the cards.
 - **UI text** (500, 13.5–16px): descriptions, controls, navigation, and evidence.
 - **Long-form prose** (400, 15px, 1.65): About, disclaimer, and privacy pages only.
-- **Label** (500, 9–12px mono or tracked sans): counts, source tags, status, and column labels.
+- **Label** (500, 11–12px mono or tracked sans): counts, source tags, status, and column labels.
 - **Numeric metadata** (600, 12px mono, ink): category codes and counts. The result line and pagination use 12px mono at 500 weight.
 
 ## Layout
