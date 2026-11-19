@@ -4,14 +4,14 @@
   "title": "Design System: 免费 API 中文索引",
   "extensions": {
     "colorMeta": {
-      "ink": { "role": "neutral", "displayName": "Deck Ink", "canonical": "#07090d" },
-      "surface": { "role": "neutral", "displayName": "Deck Surface", "canonical": "#0c1118" },
-      "raised": { "role": "neutral", "displayName": "Raised Deck", "canonical": "#121926" },
-      "lime": { "role": "primary", "displayName": "Signal Lime", "canonical": "#c8ff3d" },
-      "sky": { "role": "secondary", "displayName": "Signal Sky", "canonical": "#6ed9f5" },
-      "coral": { "role": "tertiary", "displayName": "Coral Signal", "canonical": "#ff7a59" },
-      "bone": { "role": "neutral", "displayName": "Bone", "canonical": "#eef3f8" },
-      "muted": { "role": "neutral", "displayName": "Muted Signal", "canonical": "#8d9aae" }
+      "ink": { "role": "neutral", "displayName": "Deck Ink", "canonical": "#0a0b0d" },
+      "surface": { "role": "neutral", "displayName": "Deck Surface", "canonical": "#121417" },
+      "raised": { "role": "neutral", "displayName": "Raised Deck", "canonical": "#181b20" },
+      "copper": { "role": "primary", "displayName": "Burnished Copper", "canonical": "#d29a5d" },
+      "sky": { "role": "secondary", "displayName": "Slate Teal", "canonical": "#a3bcc2" },
+      "coral": { "role": "tertiary", "displayName": "Coral Clay", "canonical": "#c98b7a" },
+      "bone": { "role": "neutral", "displayName": "Bone", "canonical": "#ebe7de" },
+      "muted": { "role": "neutral", "displayName": "Muted Signal", "canonical": "#969996" }
     },
     "typographyMeta": {
       "display": { "displayName": "Signal Display", "purpose": "Masthead and 404 statement." },
@@ -39,7 +39,7 @@
       "refersTo": "status-stamp",
       "description": "Pill status with dot and text, used in the ledger and spec panel.",
       "html": "<span class=\"ds-status\">需要 Key</span>",
-      "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #fbbf24; border-radius: 999px; color: #fbbf24; background: color-mix(in srgb, #fbbf24 9%, transparent); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; font-weight: 500; } .ds-status::before { content: ''; width: 4px; height: 4px; border-radius: 999px; background: currentColor; }"
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #d6b25e; border-radius: 999px; color: #d6b25e; background: color-mix(in srgb, #d6b25e 9%, transparent); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; font-weight: 500; } .ds-status::before { content: ''; width: 4px; height: 4px; border-radius: 999px; background: currentColor; }"
     },
     {
       "name": "Filter Chip",
@@ -47,28 +47,28 @@
       "refersTo": "filter-chip-active",
       "description": "Pill filter used for authentication and quota scopes.",
       "html": "<button class=\"ds-filter\">全部</button>",
-      "css": ".ds-filter { padding: 8px 12px; border: 1px solid #c8ff3d; border-radius: 999px; color: #080c02; background: #c8ff3d; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter:hover { filter: brightness(1.05); } .ds-filter:focus-visible { outline: 2px solid #c8ff3d; outline-offset: 3px; }"
+      "css": ".ds-filter { padding: 8px 12px; border: 1px solid #d29a5d; border-radius: 999px; color: #170d05; background: #d29a5d; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter:hover { filter: brightness(1.05); } .ds-filter:focus-visible { outline: 2px solid #d29a5d; outline-offset: 3px; }"
     },
     {
       "name": "Export Button",
       "kind": "button",
       "refersTo": "export-button",
-      "description": "Outlined lime action for CSV export.",
+      "description": "Outlined copper action for CSV export.",
       "html": "<button class=\"ds-export\">导出 CSV</button>",
-      "css": ".ds-export { padding: 8px 14px; border: 1px solid #c8ff3d; border-radius: 10px; color: #c8ff3d; background: transparent; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.03em; cursor: pointer; } .ds-export:hover { color: #080c02; background: #c8ff3d; } .ds-export:focus-visible { outline: 2px solid #c8ff3d; outline-offset: 3px; }"
+      "css": ".ds-export { padding: 8px 14px; border: 1px solid #d29a5d; border-radius: 10px; color: #d29a5d; background: transparent; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.03em; cursor: pointer; } .ds-export:hover { color: #170d05; background: #d29a5d; } .ds-export:focus-visible { outline: 2px solid #d29a5d; outline-offset: 3px; }"
     }
   ],
   "narrative": {
     "northStar": "Signal Deck",
-    "overview": "A dark, high-signal directory console with a fluorescent lime action color, Space Grotesk lettering, and a live sample call in the first viewport. The interface stays a working tool: search, filters, evidence, and status are always standard and visible.",
+    "overview": "A warm graphite directory console with one burnished copper action color, Space Grotesk lettering, and a live sample call in the first viewport. The interface stays a working tool: search, filters, evidence, and status are always standard and visible.",
     "keyCharacteristics": [
-      "Deck Ink ground with Signal Lime actions and Signal Sky links.",
+      "Deck Ink ground with Burnished Copper actions and Slate Teal links.",
       "Live sample panel proves the product with a real curl call.",
-      "Category dots and low-tint active rows carry the directory's color spectrum.",
+      "Low-saturation category dots and low-tint active rows keep the directory scannable without a rainbow.",
       "Dense ledger rows, flat surfaces, and hairline borders."
     ],
     "rules": [
-      { "name": "The One Signal Rule", "body": "Only one high-energy lime fill is visible per functional region; other color is category or status information.", "section": "colors" },
+      { "name": "The One Signal Rule", "body": "Only one copper fill is visible per functional region; other color is category or status information.", "section": "colors" },
       { "name": "The Proof First Rule", "body": "The first viewport shows a real callable example from the data, not a decorative illustration.", "section": "layout" },
       { "name": "The Ledger Rule", "body": "API entries are ruled rows, not a card grid; hover changes the surface, not the geometry.", "section": "layout" }
     ],

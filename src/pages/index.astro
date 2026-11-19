@@ -40,7 +40,9 @@ const jsonLd = {
     <section class="masthead" aria-labelledby="page-title">
       <div class="hero-grid">
         <div class="hero-copy">
-          <h1 class="hero-title" id="page-title">免费 API <span>中文索引</span></h1>
+          <h1 class="hero-title" id="page-title">
+            免费 API 中文索引<span class="hero-mark" aria-hidden="true"></span>
+          </h1>
           <p class="lede">
             给中文开发者的免费 API 目录。中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例，都在一条词条里。
           </p>
@@ -50,17 +52,6 @@ const jsonLd = {
             <span class="status-item"><strong>{stats.keyRequired}</strong> 需 Key</span>
             <span class="status-item"><strong>{stats.categories}</strong> 分类</span>
             <span class="status-item is-live"><i></i>{stats.lastChecked} 实测</span>
-          </div>
-          <div
-            class="category-spectrum"
-            role="img"
-            aria-label={`分类构成：${categories.map((category) => `${category.name} ${category.count} 条`).join('，')}`}
-          >
-            {categories.map((category) => (
-              <span
-                style={`--cat:${categoryColor(category.slug)};--w:${category.count}`}
-              ></span>
-            ))}
           </div>
         </div>
 
@@ -114,7 +105,7 @@ const jsonLd = {
                 href="/"
                 data-cat="all"
                 data-name="全部"
-                style="--cat:var(--color-lime)"
+                style="--cat:var(--color-copper)"
               >
                 <span class="cat-dot"></span>
                 <span class="cat-code">00</span>
