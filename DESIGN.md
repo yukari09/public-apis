@@ -87,7 +87,7 @@ components:
 
 **Creative North Star: "Signal Deck"**
 
-The index behaves like a live console for finding a usable API: one high-signal view with a real curl sample on display, a search field that owns the center, and a dense ledger of evidence below. The palette is dark and instrument-like, but it is not a terminal costume. The visual energy comes from sharp Space Grotesk lettering, one burnished copper action color, soft slate-teal links, and low-saturation category dots.
+The index behaves like a live console for finding a usable API: one high-signal view with a real curl sample on display, a search field that owns the center, and a paginated card directory below. The palette is dark and instrument-like, but it is not a terminal costume. The visual energy comes from sharp Space Grotesk lettering, one burnished copper action color, soft slate-teal links, and low-saturation category dots.
 
 The signature move is the **live sample panel** in the masthead: the first screen proves the product by showing a runnable call from the data, not by describing it. Supporting moves are the category color dots and the copper focus/action language. Tailwind CSS 4 supplies the token layer and utilities; the components remain standard web controls.
 
@@ -96,6 +96,7 @@ The signature move is the **live sample panel** in the masthead: the first scree
 - Space Grotesk for display and working text; system Chinese fallback; mono for codes and evidence.
 - Category color is a small signal (dot, active tint), never a full-page wash.
 - A page-sized search deck and a real sample call lead the experience.
+- Twenty API records per page in a two-column card grid with explicit pagination.
 - Flat surfaces with hairline borders and controlled 10/16px radii.
 
 ## Colors
@@ -127,7 +128,7 @@ The palette is a warm graphite console with one burnished copper signal.
 - **Muted Red** (#e09292): unreachable or dead.
 
 ### Category Spectrum
-Category dots use six muted families: copper for AI/devtools/finance, slate teal for weather/geo/transport, sage for open data/science/sports, mauve for news/media/music/fun/lifestyle, muted red for security, and slate for utilities. The dot is 6px and appears beside category names and entries; active rows tint the background at 11% of the category hue.
+Category dots use six muted families: copper for AI/devtools/finance, slate teal for weather/geo/transport, sage for open data/science/sports, mauve for news/media/music/fun/lifestyle, muted red for security, and slate for utilities. The dot is 6px and appears beside category names and entries; active categories tint the background at 11% of the category hue.
 
 ## Typography
 
@@ -141,32 +142,33 @@ Category dots use six muted families: copper for AI/devtools/finance, slate teal
 - **Display** (600, clamp 46–82px, 0.98): the masthead and 404 statement.
 - **Page title** (600, 34–62px): category and detail headings.
 - **Headline** (600, 19–24px): section headings and empty states.
-- **Entry name** (600, 17–18px): API names in the ledger.
+- **Entry name** (600, 17–18px): API names in the cards.
 - **Body** (400, 13.5–16.5px): descriptions, prose, and controls.
 - **Label** (500, 9–12px mono or tracked sans): counts, source tags, status, column labels.
 
 ## Layout
 
-The shell is 1240px wide with 20px mobile gutters. The masthead is a two-column composition: the title and status rail on the left, a live sample panel on the right. The search deck spans the content width below it. The index is a 220px category rail plus a flexible ledger on desktop.
+The shell is 1180px wide with 20px mobile gutters. The masthead is a two-column composition: the title and status rail on the left, a live sample panel on the right. The search deck spans the content width below it. The index is a 210px category rail plus a flexible content area on desktop.
 
-The ledger uses three columns: entry, quota/authentication, and status. The detail page uses a 1fr + 360px split, with the call example sticky on desktop and stacked on mobile. Category pages use a 1080px shell. 375px is the narrow test width; no viewport may scroll horizontally.
+The content area uses a two-column card grid at 640px and above, one column on mobile. Each page shows 20 records. Pagination controls sit after the grid, with previous/next and a compact page sequence. Category pages use the same grid and pagination inside a 1080px shell. The detail page uses a 1fr + 360px split, with the call example sticky on desktop and stacked on mobile. 375px is the narrow test width; no viewport may scroll horizontally.
 
-Spacing follows a 4/8 rhythm with 16–24px inside repeated rows and 32–40px between major regions.
+Spacing follows a 4/8 rhythm with 16px inside cards, 12px between cards, and 32–40px between major regions.
 
 ## Elevation & Depth
 
-Flat. There are no decorative shadows. Depth comes from surface changes (`ink` → `surface` → `raised`), 1px borders, and the sample panel's inset relationship to the masthead. Hover is a surface change, not a lift.
+Flat. There are no decorative shadows. Depth comes from surface changes (`ink` → `surface` → `raised`), 1px borders, and the sample panel's inset relationship to the masthead. Card hover is a surface and border change, not a lift.
 
 ## Shapes
 
-Controls use a 10px radius; panels use 16px; filters and status badges use the full pill radius because they are small state controls. The entry ledger is not a card grid: rows are separated by hairlines and only gain a border/background on hover. Buttons are either pill filters, a 10px outlined export action, or a compact copy control.
+Controls use a 10px radius; panels use 16px; API cards use 14px; filters and status badges use the full pill radius because they are small state controls. API cards are equal-height records with a footer anchored to the bottom. Buttons are either pill filters, a 10px outlined export action, or a compact copy control.
 
 ## Components
 
 - **Masthead:** large Space Grotesk title, status rail, and a live sample panel showing a real curl from `data/apis.json`.
 - **Search deck:** the primary control; search icon, large input, pill filters, and an outlined CSV export.
 - **Category rail:** category dot, code, name, count. Active state uses the category hue as a 1px border and 11% background tint.
-- **Entry ledger:** API name with category dot, Chinese description, quota/auth evidence, status badge. Hover raises the surface and turns the name copper.
+- **API card:** API name with category dot, Chinese description, quota/auth evidence, and a status badge in the top-right. The footer is anchored to the bottom; hover changes surface and border and turns the name copper.
+- **Pagination:** previous/next plus a compact page sequence, 20 records per page. Current page uses the copper fill; disabled controls drop to low emphasis.
 - **Status badge:** pill with a dot, colored text, and a tinted background; text is always present.
 - **Spec panel:** 16px surface panel with a two-column definition grid on desktop and one column on mobile.
 - **Call example:** dark code surface with a copper copy success state; wraps long curl lines.
@@ -179,5 +181,5 @@ Controls use a 10px radius; panels use 16px; filters and status badges use the f
 - Do keep the search deck and sample call above the fold.
 - Do keep Tailwind 4 tokens in `@theme` and use utilities or `@apply` for component styling.
 - Don't add decorative gradients, glass, glow shadows, or icon libraries.
-- Don't turn the entry ledger into a grid of equal cards.
+- Don't let API cards become decorative tiles; every card remains a working record with the same evidence slots.
 - Don't remove text from status badges or rely on category color alone.

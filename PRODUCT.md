@@ -29,7 +29,7 @@ Visitors arrive from search, bookmarks, or a colleague's link, usually while eva
 ## Capabilities and Constraints
 
 - 244 API entries across 17 categories; `data/*.json` is read-only product data.
-- Home search, category browsing, authentication filter, explicit-quota filter, CSV export, and JSON feeds are in scope.
+- Home search, category browsing, authentication filter, explicit-quota filter, 20-per-page pagination, CSV export, and JSON feeds are in scope.
 - Each entry has a stable `slug`, Chinese description, free tier, authentication method, measured status, last-checked date, and curl example.
 - The site is static, deployable to Cloudflare Pages with `npm ci && npm run build`.
 - No user accounts, comments, admin surface, API proxy, English edition, or runtime backend.

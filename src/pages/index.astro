@@ -25,8 +25,8 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: '免费 API 中文索引',
-  numberOfItems: 50,
-  itemListElement: apis.slice(0, 50).map((api, index) => ({
+  numberOfItems: 30,
+  itemListElement: apis.slice(0, 30).map((api, index) => ({
     '@type': 'ListItem',
     position: index + 1,
     name: api.name,
@@ -141,12 +141,6 @@ const jsonLd = {
           <span id="active-category" hidden></span>
         </div>
 
-        <div class="entry-head" aria-hidden="true">
-          <span>词条</span>
-          <span>免费额度 / 认证</span>
-          <span>状态</span>
-        </div>
-
         <ul class="entry-list" id="api-list">
           {apis.map((api, index) => (
             <>
@@ -160,8 +154,6 @@ const jsonLd = {
           ))}
         </ul>
 
-        <div class="load-sentinel" id="load-sentinel" hidden>继续向下滚动加载更多</div>
-
         <div class="empty-state" id="empty-state" hidden>
           <h2>没有匹配的 API</h2>
           <p>换个关键词，或从这些分类继续：</p>
@@ -172,7 +164,7 @@ const jsonLd = {
           </div>
         </div>
 
-        <p class="list-end" id="list-end" hidden>已显示全部匹配结果</p>
+        <nav class="pagination" id="pagination" aria-label="API 分页" hidden></nav>
       </section>
     </div>
   </div>
@@ -181,7 +173,7 @@ const jsonLd = {
     (() => {
       'use strict';
 
-      const PAGE_SIZE = 50;
+      const PAGE_SIZE = 20;
       const list = document.getElementById('api-list');
       const rows = Array.from(list.querySelectorAll('.entry'));
       const adItem = document.getElementById('list-ad');
@@ -192,8 +184,7 @@ const jsonLd = {
       const resultCount = document.getElementById('result-count');
       const activeCategory = document.getElementById('active-category');
       const emptyState = document.getElementById('empty-state');
-      const sentinel = document.getElementById('load-sentinel');
-      const listEnd = document.getElementById('list-end');
+      const pagination = document.getElementById('pagination');
       const exportButton = document.getElementById('export-csv');
       const validCats = new Set(catLinks.map((link) => link.dataset.cat));
       const categoryNames = Object.fromEntries(
@@ -201,19 +192,20 @@ const jsonLd = {
       );
       const haystacks = new WeakMap();
       const siteUrl = 'https://public-apis.morio.cc';
-      const params = new URLSearchParams(window.location.search);
 
-      const state = {
-        q: params.get('q') || '',
-        auth: ['all', 'none', 'key'].includes(params.get('auth')) ? params.get('auth') : 'all',
-        lim: params.get('lim') === '1',
-        cat: validCats.has(params.get('cat')) ? params.get('cat') : 'all',
-      };
-
-      let visibleCount = PAGE_SIZE;
+      const state = { q: '', auth: 'all', lim: false, cat: 'all', page: 1 };
       let matches = [];
 
-      searchInput.value = state.q;
+      function readStateFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const page = Number.parseInt(params.get('page') || '1', 10);
+        state.q = params.get('q') || '';
+        state.auth = ['all', 'none', 'key'].includes(params.get('auth')) ? params.get('auth') : 'all';
+        state.lim = params.get('lim') === '1';
+        state.cat = validCats.has(params.get('cat')) ? params.get('cat') : 'all';
+        state.page = Number.isFinite(page) && page > 0 ? page : 1;
+        searchInput.value = state.q;
+      }
 
       function rowMatches(row) {
         if (state.cat !== 'all' && row.dataset.cat !== state.cat) return false;
@@ -235,26 +227,92 @@ const jsonLd = {
         return tokens.every((token) => haystacks.get(row).includes(token));
       }
 
-      function render(reset = false) {
-        if (reset) visibleCount = PAGE_SIZE;
+      function buildQuery(page = state.page) {
+        const next = new URLSearchParams();
+        if (state.q.trim()) next.set('q', state.q.trim());
+        if (state.cat !== 'all') next.set('cat', state.cat);
+        if (state.auth !== 'all') next.set('auth', state.auth);
+        if (state.lim) next.set('lim', '1');
+        if (page > 1) next.set('page', String(page));
+        return next.toString();
+      }
+
+      function syncUrl(push = false) {
+        const query = buildQuery(state.page);
+        const url = query ? `/?${query}` : '/';
+        if (push) window.history.pushState({ page: state.page }, '', url);
+        else window.history.replaceState(null, '', url);
+      }
+
+      function pageSequence(current, total) {
+        if (total <= 7) return Array.from({ length: total }, (_, index) => index + 1);
+        const pages = [1];
+        const start = Math.max(2, current - 1);
+        const end = Math.min(total - 1, current + 1);
+        if (start > 2) pages.push('...');
+        for (let page = start; page <= end; page += 1) pages.push(page);
+        if (end < total - 1) pages.push('...');
+        pages.push(total);
+        return pages;
+      }
+
+      function makePageControl(label, page, current, disabled) {
+        const passive = current || disabled;
+        const element = document.createElement(passive ? 'span' : 'a');
+        element.className = `page-btn${current ? ' is-current' : ''}${disabled ? ' is-disabled' : ''}`;
+        element.textContent = label;
+        if (current) element.setAttribute('aria-current', 'page');
+        if (disabled) element.setAttribute('aria-disabled', 'true');
+        if (!passive) {
+          element.href = `/?${buildQuery(page)}`;
+          element.dataset.page = String(page);
+        }
+        return element;
+      }
+
+      function renderPagination(totalPages) {
+        pagination.innerHTML = '';
+        pagination.append(makePageControl('上一页', state.page - 1, false, state.page === 1));
+        for (const item of pageSequence(state.page, totalPages)) {
+          if (item === '...') {
+            const gap = document.createElement('span');
+            gap.className = 'page-gap';
+            gap.textContent = '…';
+            pagination.append(gap);
+          } else {
+            pagination.append(makePageControl(String(item), item, item === state.page, false));
+          }
+        }
+        pagination.append(
+          makePageControl('下一页', state.page + 1, false, state.page === totalPages),
+        );
+      }
+
+      function render() {
         matches = rows.filter(rowMatches);
-        const matchSet = new Set(matches);
+        const totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
+        state.page = Math.min(Math.max(1, state.page), totalPages);
+        const start = (state.page - 1) * PAGE_SIZE;
+        const visible = matches.slice(start, start + PAGE_SIZE);
+        const visibleSet = new Set(visible);
 
         rows.forEach((row) => {
-          const index = matches.indexOf(row);
-          const hide = !matchSet.has(row) || index >= visibleCount;
-          row.classList.toggle('is-hidden', hide);
+          row.classList.toggle('is-hidden', !visibleSet.has(row));
         });
 
-        const showAd = matches.length > 8 && visibleCount > 8;
+        const showAd = visible.length > 8;
         adItem.classList.toggle('is-hidden', !showAd);
-        if (showAd) matches[7].after(adItem);
+        if (showAd) visible[7].after(adItem);
 
-        const shown = Math.min(matches.length, visibleCount);
-        resultCount.textContent = `共 ${matches.length} 条 · 已显示 ${shown} 条`;
+        const shownStart = matches.length === 0 ? 0 : start + 1;
+        const shownEnd = start + visible.length;
+        resultCount.textContent =
+          matches.length === 0
+            ? '共 0 条'
+            : `共 ${matches.length} 条 · 第 ${shownStart}–${shownEnd} 条`;
         emptyState.hidden = matches.length !== 0;
-        sentinel.hidden = matches.length <= visibleCount || matches.length === 0;
-        listEnd.hidden = matches.length === 0 || matches.length > visibleCount;
+        pagination.hidden = matches.length === 0 || totalPages <= 1;
+        renderPagination(totalPages);
 
         const currentCat = catLinks.find((link) => link.dataset.cat === state.cat);
         if (state.cat !== 'all' && currentCat) {
@@ -279,19 +337,14 @@ const jsonLd = {
         quotaButton.setAttribute('aria-pressed', String(state.lim));
       }
 
-      function syncUrl() {
-        const next = new URLSearchParams();
-        if (state.q.trim()) next.set('q', state.q.trim());
-        if (state.cat !== 'all') next.set('cat', state.cat);
-        if (state.auth !== 'all') next.set('auth', state.auth);
-        if (state.lim) next.set('lim', '1');
-        const query = next.toString();
-        window.history.replaceState(null, '', query ? `/?${query}` : '/');
+      function update(resetPage = true) {
+        if (resetPage) state.page = 1;
+        render();
+        syncUrl(false);
       }
 
-      function update(reset = true) {
-        render(reset);
-        syncUrl();
+      function scrollToList() {
+        list.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
       searchInput.addEventListener('input', () => {
@@ -317,10 +370,23 @@ const jsonLd = {
           event.preventDefault();
           state.cat = link.dataset.cat;
           update(true);
-          if (window.matchMedia('(max-width: 900px)').matches) {
-            list.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          if (window.matchMedia('(max-width: 900px)').matches) scrollToList();
         });
+      });
+
+      pagination.addEventListener('click', (event) => {
+        const link = event.target.closest('a[data-page]');
+        if (!link) return;
+        event.preventDefault();
+        state.page = Number(link.dataset.page);
+        render();
+        syncUrl(true);
+        scrollToList();
+      });
+
+      window.addEventListener('popstate', () => {
+        readStateFromUrl();
+        render();
       });
 
       function csvCell(value) {
@@ -358,17 +424,8 @@ const jsonLd = {
         window.setTimeout(() => URL.revokeObjectURL(url), 1000);
       });
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (!entries[0].isIntersecting || matches.length <= visibleCount) return;
-          visibleCount = Math.min(visibleCount + PAGE_SIZE, matches.length);
-          render(false);
-        },
-        { rootMargin: '320px 0px' },
-      );
-      observer.observe(sentinel);
-
-      render(true);
+      readStateFromUrl();
+      render();
     })();
   </script>
 </Base>

@@ -24,7 +24,7 @@
     ],
     "breakpoints": [
       { "name": "rail-collapse", "value": "900px" },
-      { "name": "ledger-single-column", "value": "640px" }
+      { "name": "cards-single-column", "value": "640px" }
     ],
     "tailwind": {
       "version": "4",
@@ -37,7 +37,7 @@
       "name": "Status Badge",
       "kind": "custom",
       "refersTo": "status-stamp",
-      "description": "Pill status with dot and text, used in the ledger and spec panel.",
+      "description": "Pill status with dot and text, used on API cards and the spec panel.",
       "html": "<span class=\"ds-status\">需要 Key</span>",
       "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #e2c06a; border-radius: 999px; color: #e2c06a; background: color-mix(in srgb, #e2c06a 9%, transparent); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; font-weight: 500; } .ds-status::before { content: ''; width: 4px; height: 4px; border-radius: 999px; background: currentColor; }"
     },
@@ -65,12 +65,13 @@
       "Deck Ink ground with Burnished Copper actions and Slate Teal links.",
       "Live sample panel proves the product with a real curl call.",
       "Low-saturation category dots and low-tint active rows keep the directory scannable without a rainbow.",
-      "Dense ledger rows, flat surfaces, and hairline borders."
+      "Twenty API cards per page in a two-column grid with explicit pagination.",
+      "Flat surfaces and hairline borders."
     ],
     "rules": [
       { "name": "The One Signal Rule", "body": "Only one copper fill is visible per functional region; other color is category or status information.", "section": "colors" },
       { "name": "The Proof First Rule", "body": "The first viewport shows a real callable example from the data, not a decorative illustration.", "section": "layout" },
-      { "name": "The Ledger Rule", "body": "API entries are ruled rows, not a card grid; hover changes the surface, not the geometry.", "section": "layout" }
+      { "name": "The Card Record Rule", "body": "Every API card uses the same evidence slots and a bottom-anchored footer; hover changes surface and border, not geometry.", "section": "layout" }
     ],
     "dos": [
       "Use Space Grotesk and system Chinese fallback together.",
