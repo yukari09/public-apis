@@ -33,7 +33,7 @@
   }
 
   body {
-    @apply m-0 bg-paper font-sans text-[15px] leading-[1.65] text-ink antialiased;
+    @apply m-0 bg-paper font-sans text-[15px] font-medium leading-[1.65] text-ink subpixel-antialiased;
     caret-color: var(--color-accent);
     text-rendering: optimizeLegibility;
   }

@@ -75,6 +75,7 @@
     ],
     "dos": [
       "Use Instrument Sans and the system Chinese fallback together.",
+      "Keep the baseline at 500 weight with subpixel antialiasing; no 400-weight UI text.",
       "Keep status labels visible and use the square as a second signal.",
       "Keep the pagination URL state.",
       "Let the paper and rules carry the composition."

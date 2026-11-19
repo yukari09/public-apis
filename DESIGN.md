@@ -31,7 +31,7 @@ typography:
   body:
     fontFamily: "Instrument Sans Variable, PingFang SC, Noto Sans CJK SC, system-ui, sans-serif"
     fontSize: "15px"
-    fontWeight: 400
+    fontWeight: 500
     lineHeight: 1.65
     letterSpacing: "normal"
   label:
@@ -124,7 +124,7 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 **Body Font:** Instrument Sans Variable with the same Chinese fallback
 **Mono Font:** system ui-monospace for codes, counts, dates, and curl
 
-**Character:** Instrument Sans gives the page a contemporary but neutral editorial voice; the mono layer reads as evidence, not decoration. The Chinese fallback stays plain and legible.
+**Character:** Instrument Sans gives the page a contemporary but neutral editorial voice; the mono layer reads as evidence, not decoration. The Chinese fallback stays plain and legible. The whole baseline runs at 500 weight with subpixel antialiasing; 400 is not used for visible interface text.
 
 **Microtype floor:** no supporting text below 10px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 600. Small text is never 400 weight.
 
@@ -133,7 +133,7 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 - **Page title** (600, 34–56px): category and detail headings.
 - **Headline** (600, 19–24px): section headings and empty states.
 - **Entry name** (600, 17–18px): API names in the cards.
-- **Body** (400, 13.5–16px): descriptions, prose, and controls.
+- **Body** (500, 13.5–16px): descriptions, prose, and controls.
 - **Label** (500, 9–12px mono or tracked sans): counts, source tags, status, and column labels.
 - **Numeric metadata** (600, 12px mono, ink): category codes and counts. The result line and pagination use 12px mono at 500 weight.
 
