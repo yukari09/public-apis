@@ -2,18 +2,40 @@
 
 给中文开发者用的免费 API 目录：每条带中文说明、免费额度、认证方式、实测状态和可复制的调用示例。
 
-站点（建设中）：https://public-apis.morio.cc
-
-> 本 README 是临时版本。M1 开工后会由 `scripts/build-readme.mjs` 从 `data/apis.json` 生成，不再手写。
+站点：https://public-apis.morio.cc
 
 ## 现在有什么
 
-| 文件 | 内容 |
+- 244 条 API，17 个分类
+- 语义友好的分类页与详情页，支持搜索、认证筛选、额度筛选与 CSV 导出
+- 静态 JSON 接口：`/api/all.json`、`/api/category/{slug}.json`
+- 深色单主题，无前端框架、无 Tailwind、无运行时后端
+- 每 14 天复测端点状态
+
+## 本地开发
+
+需要 Node 22。
+
+```bash
+npm ci
+npm run dev      # http://localhost:4321
+npm run build    # 输出 dist/
+npm run preview  # 预览 dist/
+```
+
+Cloudflare Pages 使用 `npm ci && npm run build` 构建，输出目录为 `dist`。
+
+## 目录
+
+| 路径 | 内容 |
 |---|---|
 | `data/apis.json` | 244 条 API 条目，17 个字段 |
 | `data/categories.json` | 17 个分类与说明 |
 | `data/sources.json` | 9 个数据来源的登记表（含许可） |
 | `data/README.md` | 字段口径与来源说明 |
+| `src/pages/` | 首页、分类、详情、关于、免责、隐私、404 与 JSON API |
+| `src/lib/data.js` | 数据读取、标签映射与页面辅助函数 |
+| `src/styles/global.css` | 全站样式 |
 | `NOTICE` | 第三方署名、商标与免责声明 |
 
 ## 数据概况（2026-11-18 实测）
