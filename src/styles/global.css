@@ -631,7 +631,36 @@
   }
 
   .detail-desc {
-    @apply mt-4 max-w-[70ch] text-[16px] font-medium text-muted;
+    @apply mt-3 max-w-[70ch] text-[14px] font-medium text-muted;
+  }
+
+  .detail-intro {
+    @apply mt-4 max-w-[72ch] text-[16px] font-medium leading-[1.75] text-[#3f3b34];
+  }
+
+  .best-for {
+    @apply mt-4 flex max-w-[72ch] flex-wrap items-baseline gap-2 text-[13px] font-medium text-ink;
+  }
+
+  .best-for span {
+    @apply inline-block bg-accent px-1.5 py-0.5 font-mono text-[11px] font-medium text-accent-ink;
+  }
+
+  .capability-list {
+    @apply m-0 grid list-none grid-cols-1 gap-x-8 p-0 sm:grid-cols-2;
+  }
+
+  .capability-list li {
+    @apply flex items-start gap-2 border-b border-line py-2 text-[14px] font-medium text-ink;
+  }
+
+  .capability-list li::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 5px;
+    height: 5px;
+    margin-top: 7px;
+    background: var(--color-accent);
   }
 
   .detail-body {
@@ -684,8 +713,8 @@
   }
 
   .code-wrap pre {
-    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] font-medium leading-[1.75] text-paper;
-    padding-right: 108px;
+    @apply m-0 overflow-x-auto px-4 pb-5 pt-11 font-mono text-[12px] font-medium leading-[1.75] text-paper;
+    padding-right: 16px;
     tab-size: 2;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
@@ -964,10 +993,6 @@
 
     .detail-header h1 {
       @apply text-[34px];
-    }
-
-    .detail-desc {
-      @apply text-[15px];
     }
 
     .spec-grid {

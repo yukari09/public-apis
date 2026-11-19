@@ -167,6 +167,8 @@ Controls, cards, status stamps, and pagination use a 2px radius. Filters use the
 - **Status stamp:** paper ground, strong hairline, black text, and a 4px semantic square. Text is always present.
 - **Pagination:** square 36px previous/next/page controls at 12px/500 mono; current page uses safety orange with ink text, disabled controls stay muted but readable.
 - **Spec panel:** paper surface with a two-column definition grid on desktop and one column on mobile.
+- **Detail intro:** the short `description_zh` label stays muted; `intro` is a 16px/500 reading paragraph; `best_for` follows with an orange `适合` label.
+- **Capability list:** a two-column ruled list with 5px orange squares, max four items.
 - **Call example:** black code surface with paper text; copy feedback uses the orange fill.
 - **Related links:** two-column paper records with a hairline border and a surface hover.
 

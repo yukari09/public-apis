@@ -16,7 +16,15 @@
   "example": "curl -s \"https://api.openai.com/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenAI 的模型平台，提供对话补全、文本嵌入、语音转写与合成、图像生成和微调等接口，全部走 api.openai.com 一个域名。计费按输入输出 token 分开算，新账号偶尔有试用额度。",
+  "capabilities": [
+   "对话与函数调用",
+   "文本嵌入与检索",
+   "Whisper 语音转写",
+   "图像生成与编辑"
+  ],
+  "best_for": "用一套 SDK 覆盖对话、检索和语音的产品。"
  },
  {
   "slug": "anthropic-claude-api",
@@ -35,7 +43,15 @@
   "example": "curl -s \"https://api.anthropic.com/v1/messages\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Anthropic 的 Claude 接口，核心是 Messages 端点，支持超长上下文、工具调用、视觉输入和提示缓存。适合处理整份合同、代码库或多轮 agent 任务；按 token 计费，无长期免费层。",
+  "capabilities": [
+   "长上下文阅读",
+   "工具调用与 Agent",
+   "视觉输入",
+   "提示缓存降本"
+  ],
+  "best_for": "要读长文档或搭 Agent 流程的团队。"
  },
  {
   "slug": "google-gemini-api",
@@ -54,7 +70,15 @@
   "example": "curl -s \"https://generativelanguage.googleapis.com/v1beta/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Google AI Studio 提供的 Gemini 接口，支持文本、图像、音频、视频四类输入，长上下文型号能一次读完整本书或一段长视频。免费档按模型给每日配额，超量需绑定结算。",
+  "capabilities": [
+   "多模态理解",
+   "超长上下文",
+   "结构化 JSON 输出",
+   "函数调用"
+  ],
+  "best_for": "需要读图读视频，或处理超长材料。"
  },
  {
   "slug": "groq-cloud",
@@ -73,7 +97,15 @@
   "example": "curl -s \"https://api.groq.com/openai/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Groq 用自研 LPU 跑开源模型，卖点是极低的首字延迟和很高的输出速度。接口完全兼容 OpenAI 的 chat/completions，换 base_url 就能接；免费档按模型限 RPM/TPM。",
+  "capabilities": [
+   "低延迟对话",
+   "OpenAI 协议兼容",
+   "流式输出",
+   "多模型切换"
+  ],
+  "best_for": "实时语音助手、聊天和需要快响应的场景。"
  },
  {
   "slug": "mistral-ai",
@@ -92,7 +124,15 @@
   "example": "curl -s \"https://api.mistral.ai/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "法国 Mistral 的模型平台，产品线分通用对话、代码补全 Codestral、嵌入和 OCR，部分模型权重开源可下载自托管。API 兼容 OpenAI 格式，有免费实验档。",
+  "capabilities": [
+   "通用对话",
+   "代码补全",
+   "文本嵌入",
+   "开源权重"
+  ],
+  "best_for": "想要欧洲合规选项或自托管权重的团队。"
  },
  {
   "slug": "cohere",
@@ -111,7 +151,15 @@
   "example": "curl -s \"https://api.cohere.com/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Cohere 面向企业搜索和 RAG，提供 Command 对话、Embed 向量和 Rerank 重排三类模型，重排能把召回结果按相关性重新排序，对检索质量提升明显。有试用额度。",
+  "capabilities": [
+   "检索增强对话",
+   "多语言嵌入",
+   "结果重排",
+   "私有部署选项"
+  ],
+  "best_for": "做站内搜索、知识库问答的团队。"
  },
  {
   "slug": "hugging-face-inference",
@@ -130,7 +178,15 @@
   "example": "curl -s \"https://huggingface.co/api/models?limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Hugging Face 的推理服务，把几十万个开源模型统一成一个调用入口，文本、图像、语音都有，背后路由到多家推理提供商。免费额度按小时限速，适合选型阶段横向试模型。",
+  "capabilities": [
+   "开源模型推理",
+   "文生图与语音",
+   "多 Provider 路由",
+   "模型与数据集检索"
+  ],
+  "best_for": "选型阶段快速对比开源模型效果。"
  },
  {
   "slug": "openrouter",
@@ -149,7 +205,15 @@
   "example": "curl -s \"https://openrouter.ai/api/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenRouter 把 OpenAI、Anthropic、Google 和各家开源模型聚到一个兼容端点，一个 Key 调所有模型，按 token 计费并加少量手续费。面板能看到每个模型的实时价格和可用性。",
+  "capabilities": [
+   "单 Key 多模型",
+   "价格与可用性对比",
+   "失败自动回退",
+   "用量与花费统计"
+  ],
+  "best_for": "想低成本试多家模型，或做多模型路由。"
  },
  {
   "slug": "together-ai",
@@ -168,7 +232,15 @@
   "example": "curl -s \"https://api.together.xyz/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Together 托管 Llama、Qwen、DeepSeek 等开放权重模型，提供按 token 的推理、微调和专用部署。适合不想自己维护 GPU 集群、又要跑开源模型的团队。",
+  "capabilities": [
+   "开源模型推理",
+   "微调训练",
+   "专用端点",
+   "批量推理"
+  ],
+  "best_for": "要把开源模型跑成稳定生产服务。"
  },
  {
   "slug": "deepseek-api",
@@ -187,7 +259,15 @@
   "example": "curl -s \"https://api.deepseek.com/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "DeepSeek 的官方 API，主力是通用对话和推理模型，接口兼容 OpenAI 格式。价格按 token 计，缓存命中的输入更便宜，国内可直连，也有海外节点。",
+  "capabilities": [
+   "对话与推理",
+   "代码生成",
+   "上下文缓存",
+   "OpenAI 兼容"
+  ],
+  "best_for": "成本敏感、需要中文和代码能力。"
  },
  {
   "slug": "xai-grok-api",
@@ -206,7 +286,15 @@
   "example": "curl -s \"https://api.x.ai/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "xAI 的 Grok 接口，兼容 OpenAI 协议，覆盖对话、图像生成、语音和工具调用，Key 在 xAI 控制台创建。模型偏实时信息和推理，适合做多模型对比。",
+  "capabilities": [
+   "对话与推理",
+   "图像生成",
+   "语音",
+   "工具调用"
+  ],
+  "best_for": "想接 Grok 或做模型横评。"
  },
  {
   "slug": "replicate",
@@ -225,7 +313,15 @@
   "example": "curl -s \"https://api.replicate.com/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Replicate 把开源模型封装成 HTTP 接口，图像生成、视频、语音、超分、微调都能一条请求跑起来，按运行秒数计费，也能上传自己的模型或 Cog 包。",
+  "capabilities": [
+   "图像与视频生成",
+   "语音与音乐",
+   "模型微调",
+   "自定义模型托管"
+  ],
+  "best_for": "要现成开源模型、不想配环境。"
  },
  {
   "slug": "ollama",
@@ -244,7 +340,15 @@
   "example": "curl -s \"https://ollama.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Ollama 在本机拉取和运行开源模型，一条命令起服务，暴露 OpenAI 兼容的本地端口，数据不出机器。支持 CPU 与 GPU 自动切换，适合开发和隐私敏感场景。",
+  "capabilities": [
+   "本地模型运行",
+   "OpenAI 兼容端口",
+   "模型拉取与管理",
+   "离线可用"
+  ],
+  "best_for": "本地开发、离线环境或数据不能外发。"
  },
  {
   "slug": "stability-ai",
@@ -263,7 +367,15 @@
   "example": "curl -s \"https://api.stability.ai/v1/user/account\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Stability 的生成接口，主打 Stable Diffusion 系列文生图、图生图、局部重绘和放大，另有 3D 与音频模型。注册赠少量 credits，之后按张或按秒计费。",
+  "capabilities": [
+   "文生图",
+   "图生图与重绘",
+   "超分放大",
+   "3D 生成"
+  ],
+  "best_for": "做图像生成功能、需要可控风格。"
  },
  {
   "slug": "elevenlabs",
@@ -282,7 +394,15 @@
   "example": "curl -s \"https://api.elevenlabs.io/v1/voices\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ElevenLabs 做语音合成与声音克隆，音色自然、支持多语种和情感控制，也能做语音转写和对话式语音 Agent。按字符计费，每月有免费额度。",
+  "capabilities": [
+   "多语种语音合成",
+   "声音克隆",
+   "语音转写",
+   "实时语音对话"
+  ],
+  "best_for": "做有声内容、配音或语音助手。"
  },
  {
   "slug": "assemblyai",
@@ -301,7 +421,15 @@
   "example": "curl -s \"https://api.assemblyai.com/v2/transcript\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "AssemblyAI 专注语音理解，除转写外还提供说话人分离、情感分析、章节摘要、实体识别和实时流式转写，按音频时长计费，有免费额度。",
+  "capabilities": [
+   "语音转写",
+   "说话人分离",
+   "章节与摘要",
+   "实时流式"
+  ],
+  "best_for": "播客、会议转写，或要给音频做结构化。"
  },
  {
   "slug": "deepgram",
@@ -320,7 +448,15 @@
   "example": "curl -s \"https://api.deepgram.com/v1/projects\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Deepgram 提供语音识别与合成，主打低延迟和按量计费，支持多语种、说话人分离、关键词和实时流，常见于呼叫中心与语音 Agent。注册赠额度。",
+  "capabilities": [
+   "实时转写",
+   "多语种识别",
+   "语音合成",
+   "关键词与摘要"
+  ],
+  "best_for": "实时语音应用、电话机器人。"
  },
  {
   "slug": "cloudflare-workers-ai",
@@ -339,7 +475,15 @@
   "example": "curl -s \"https://api.cloudflare.com/client/v4/user\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Cloudflare 的边缘推理，模型跑在自家 GPU 网络，通过 Workers 绑定或 REST 调用，按 Neurons 计费、每天有免费额度。优势是和站点同网，延迟低。",
+  "capabilities": [
+   "边缘推理",
+   "文本与图像模型",
+   "Workers 绑定",
+   "低延迟"
+  ],
+  "best_for": "已经在用 Workers、想让推理就近跑。"
  },
  {
   "slug": "fireworks-ai",
@@ -358,7 +502,15 @@
   "example": "curl -s \"https://api.fireworks.ai/inference/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Fireworks 托管开源模型并做推理优化，支持专用部署、微调、函数调用和批量推理，接口兼容 OpenAI。按 token 计费，新户有赠额。",
+  "capabilities": [
+   "开源模型推理",
+   "专用部署",
+   "微调",
+   "批量任务"
+  ],
+  "best_for": "要把开源模型跑成生产服务。"
  },
  {
   "slug": "cerebras-inference",
@@ -377,7 +529,15 @@
   "example": "curl -s \"https://api.cerebras.ai/v1/models\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Cerebras 用晶圆级芯片做推理，输出速度比常见 GPU 服务快很多，接口兼容 OpenAI。免费档按模型限速，适合对吞吐敏感的批处理和实时场景。",
+  "capabilities": [
+   "高速推理",
+   "OpenAI 兼容",
+   "流式输出",
+   "代码生成"
+  ],
+  "best_for": "对速度和吞吐要求高的场景。"
  },
  {
   "slug": "perplexity-api",
@@ -396,7 +556,15 @@
   "example": "curl -s \"https://api.perplexity.ai/chat/completions\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Perplexity 的搜索增强接口，回答前先联网检索，返回带引用来源的答案，另有独立的 Search 和 Embeddings 端点。按请求计费，注册赠少量额度。",
+  "capabilities": [
+   "联网问答",
+   "引用来源",
+   "搜索 API",
+   "嵌入"
+  ],
+  "best_for": "做需要实时信息并标注来源的助手。"
  },
  {
   "slug": "wolframalpha-api",
@@ -415,7 +583,15 @@
   "example": "curl -s \"https://api.wolframalpha.com/v2/query?input=2%2B2\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "WolframAlpha 的计算知识引擎接口，能解方程、求积分、做单位换算、查物理常数和实时数据，返回结构化结果或纯文本。免费档每月 2000 次。",
+  "capabilities": [
+   "数学与符号计算",
+   "单位换算",
+   "知识查询",
+   "结构化结果"
+  ],
+  "best_for": "需要可靠计算、不想自己写求解器。"
  },
  {
   "slug": "openweathermap",
@@ -434,7 +610,15 @@
   "example": "curl -s \"https://api.openweathermap.org/data/2.5/weather?q=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenWeatherMap 是老牌天气服务，One Call 一次返回当前天气、分钟级降水、逐小时与逐日预报和预警，另有历史数据与地图图层。免费档 1000 次/天、60 次/分。",
+  "capabilities": [
+   "当前与预报",
+   "分钟级降水",
+   "历史天气",
+   "天气地图图层"
+  ],
+  "best_for": "通用天气展示、多城市批量查询。"
  },
  {
   "slug": "open-meteo",
@@ -453,7 +637,15 @@
   "example": "curl -s \"https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Open-Meteo 是开源天气 API，聚合 30 多个气象模式，提供 1–16 公里分辨率预报、1940 年至今的历史再分析和空气质量。免 Key，非商用免费。",
+  "capabilities": [
+   "逐小时预报",
+   "历史再分析",
+   "空气质量",
+   "多模式对比"
+  ],
+  "best_for": "做天气工具、回测，或不想处理 Key。"
  },
  {
   "slug": "weatherapi-com",
@@ -472,7 +664,15 @@
   "example": "curl -s \"https://api.weatherapi.com/v1/current.json?q=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "WeatherAPI 用一个 Key 提供实时天气、15 分钟级预报、2010 年至今的历史、海洋、空气质量、花粉和天文数据，免费档每月 100 万次，适合调用量大的小项目。",
+  "capabilities": [
+   "实时与预报",
+   "历史天气",
+   "空气质量",
+   "天文与海洋"
+  ],
+  "best_for": "功能要全、月调用量又大。"
  },
  {
   "slug": "wttr-in",
@@ -491,7 +691,15 @@
   "example": "curl -s \"https://wttr.in/London?format=3\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "wttr.in 是给终端用的天气服务，curl 一条命令就能拿到纯文本、彩色终端或 PNG 天气图，支持指定城市和格式串，免 Key。",
+  "capabilities": [
+   "终端天气图",
+   "纯文本输出",
+   "自定义格式",
+   "多语言"
+  ],
+  "best_for": "写脚本、终端小工具或机器人播报。"
  },
  {
   "slug": "pirate-weather",
@@ -510,7 +718,15 @@
   "example": "curl -s \"https://api.pirateweather.net/forecast/demo/40.7,-74\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Pirate Weather 把公开气象数据整理成 Dark Sky 兼容格式，字段与老 Dark Sky API 一致，方便老项目平迁。提供 REST 和 MCP 两种接入方式。",
+  "capabilities": [
+   "Dark Sky 兼容字段",
+   "逐小时预报",
+   "天气预警",
+   "MCP 接入"
+  ],
+  "best_for": "从 Dark Sky 迁移，或要熟悉的字段结构。"
  },
  {
   "slug": "tomorrow-io",
@@ -529,7 +745,15 @@
   "example": "curl -s \"https://api.tomorrow.io/v4/weather/realtime?location=NYC\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Tomorrow.io 主打分钟级降水与天气智能，提供实时、短期预报和历史数据，企业版还有气候风险分析。免费档 500 次/天，适合出行和物流场景。",
+  "capabilities": [
+   "分钟级降水",
+   "短期预报",
+   "历史数据",
+   "天气图层"
+  ],
+  "best_for": "出行、配送这类对短时降水敏感的产品。"
  },
  {
   "slug": "visual-crossing",
@@ -548,7 +772,15 @@
   "example": "curl -s \"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Visual Crossing 强在历史天气，提供 1970 年至今的逐日和逐小时数据、长期气候平均，也支持一次查多个地点，免 Key 可先试。",
+  "capabilities": [
+   "历史天气",
+   "长期气候平均",
+   "多地点批量",
+   "预报数据"
+  ],
+  "best_for": "做气候分析、历史回测。"
  },
  {
   "slug": "weatherstack",
@@ -567,7 +799,15 @@
   "example": "curl -s \"https://api.weatherstack.com/current?access_key=demo&query=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Weatherstack 提供实时、历史和预报天气，返回精简 JSON，免费档每月 1000 次且只支持 HTTP。适合做简单展示，不建议用于生产前端。",
+  "capabilities": [
+   "实时天气",
+   "历史天气",
+   "多地点查询",
+   "轻量 JSON"
+  ],
+  "best_for": "简单天气展示、原型阶段。"
  },
  {
   "slug": "qweather",
@@ -586,7 +826,15 @@
   "example": "curl -s \"https://devapi.qweather.com/v7/weather/now?location=101010100\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "和风天气是国内团队的商业天气服务，提供实时观测、逐小时与逐日预报、灾害预警、空气质量、台风路径、潮汐和生活指数，字段和文档全中文。免费开发版有调用上限，商用需付费。",
+  "capabilities": [
+   "中文天气数据",
+   "灾害预警推送",
+   "空气质量",
+   "生活与海洋指数"
+  ],
+  "best_for": "面向中文用户的天气应用。"
  },
  {
   "slug": "aqicn-waqi",
@@ -605,7 +853,15 @@
   "example": "curl -s \"https://api.waqi.info/feed/beijing/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "世界空气质量指数项目 WAQI 汇总 100 多个国家、上万监测站的实时数据，按城市或坐标返回 AQI 与 PM2.5、臭氧等分项，需免费 Token。",
+  "capabilities": [
+   "实时 AQI",
+   "污染物分项",
+   "全球站点",
+   "城市排名"
+  ],
+  "best_for": "做空气质量地图或环保应用。"
  },
  {
   "slug": "openaq",
@@ -624,7 +880,15 @@
   "example": "curl -s \"https://api.openaq.org/v3/locations?limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenAQ 汇总各国官方监测站的原始测量值，可按地点、参数和时间范围拉取，保留历史记录，需免费 Key。数据偏科研用途，覆盖度和更新频率取决于源站。",
+  "capabilities": [
+   "监测站原始数据",
+   "历史序列",
+   "多参数查询",
+   "开放许可"
+  ],
+  "best_for": "做空气质量长期分析或研究。"
  },
  {
   "slug": "google-maps-platform",
@@ -643,7 +907,15 @@
   "example": "curl -s \"https://maps.googleapis.com/maps/api/geocode/json?address=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Google Maps Platform 按产品拆成地理编码、路线、地点搜索、地图瓦片、3D 地图等独立 SKU，各自有月度免费额度，超出按量计费。全球覆盖是强项，账单要自己设预算告警。",
+  "capabilities": [
+   "地理编码",
+   "路线与路况",
+   "地点搜索",
+   "地图与 3D 瓦片"
+  ],
+  "best_for": "商用级地图、能接受按量计费。"
  },
  {
   "slug": "mapbox",
@@ -662,7 +934,15 @@
   "example": "curl -s \"https://api.mapbox.com/geocoding/v5/mapbox.places/London.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Mapbox 提供地图瓦片、样式设计、地理编码、路线规划和导航 SDK，前端库成熟、样式可完全自定义。免费 5 万次/月，适合对地图观感有要求的产品。",
+  "capabilities": [
+   "自定义地图样式",
+   "地理编码",
+   "路线与导航",
+   "静态地图"
+  ],
+  "best_for": "要好看、可定制地图的前端产品。"
  },
  {
   "slug": "openstreetmap-nominatim",
@@ -681,7 +961,15 @@
   "example": "curl -s \"https://nominatim.openstreetmap.org/search?q=London&format=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenStreetMap 的官方地理编码服务，地址和坐标可以互查，支持多语言返回。公共实例限 1 次/秒，必须带自定义 User-Agent，禁止批量抓取，量大要自建。",
+  "capabilities": [
+   "地址转坐标",
+   "坐标转地址",
+   "多语言结果",
+   "OSM 数据"
+  ],
+  "best_for": "低频地理编码、内部工具或原型。"
  },
  {
   "slug": "opencage",
@@ -700,7 +988,15 @@
   "example": "curl -s \"https://api.opencagedata.com/geocode/v1/json?q=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenCage 包装多个开源地理数据源，提供正向和反向地理编码，返回结构化地址、置信度和时区，免费 2500 次/天，要求页面署名。",
+  "capabilities": [
+   "正向地理编码",
+   "反向地理编码",
+   "置信度评分",
+   "多语言"
+  ],
+  "best_for": "要稳定地理编码、又不想自建 Nominatim。"
  },
  {
   "slug": "here-maps",
@@ -719,7 +1015,15 @@
   "example": "curl -s \"https://geocode.search.hereapi.com/v1/geocode?q=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "HERE 是老牌地图数据商，接口覆盖地理编码、路线、交通流、地图瓦片、车队追踪和室内地图，免费 1000 次/天。车机和物流场景积累深。",
+  "capabilities": [
+   "地理编码",
+   "路线与交通流",
+   "地图瓦片",
+   "车队定位"
+  ],
+  "best_for": "物流、车载或需要交通流数据。"
  },
  {
   "slug": "locationiq",
@@ -738,7 +1042,15 @@
   "example": "curl -s \"https://us1.locationiq.com/v1/search?q=London&format=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "LocationIQ 基于 OpenStreetMap 做商业封装，提供地理编码、反向编码、地址自动补全和静态地图，接口习惯接近 Nominatim，迁移成本低，免费 5000 次/天。",
+  "capabilities": [
+   "地理编码",
+   "地址自动补全",
+   "静态地图",
+   "批量查询"
+  ],
+  "best_for": "想沿用 Nominatim 接口又要配额和稳定性。"
  },
  {
   "slug": "geoapify",
@@ -757,7 +1069,15 @@
   "example": "curl -s \"https://api.geoapify.com/v1/geocode/search?text=London\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Geoapify 提供地理编码、POI 搜索、路线规划和等时圈分析，数据来自 OSM，前端有现成组件，免费 3000 次/天。适合门店查询、配送范围这类应用。",
+  "capabilities": [
+   "地理编码",
+   "POI 搜索",
+   "路线规划",
+   "等时圈分析"
+  ],
+  "best_for": "做门店查询、配送范围这类位置应用。"
  },
  {
   "slug": "openrouteservice",
@@ -776,7 +1096,15 @@
   "example": "curl -s \"https://api.openrouteservice.org/v2/directions/driving-car\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenRouteService 由海德堡大学团队维护，提供驾车、步行、骑行、轮椅多种模式的路线，以及等时圈、距离矩阵和路径优化，免费 2000 次/天，也开源可自建。",
+  "capabilities": [
+   "多模式路线",
+   "等时圈",
+   "距离矩阵",
+   "路径优化"
+  ],
+  "best_for": "做运动、配送或可达性分析。"
  },
  {
   "slug": "graphhopper",
@@ -795,7 +1123,15 @@
   "example": "curl -s \"https://graphhopper.com/api/1/route\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "GraphHopper 的路线引擎基于 OSM，提供路线规划、路径优化、矩阵计算和地图匹配，云端免费 500 次/天，核心开源、可自托管。",
+  "capabilities": [
+   "路线规划",
+   "路径优化",
+   "距离矩阵",
+   "可自托管"
+  ],
+  "best_for": "要自己掌控路线算法，或调用量不大。"
  },
  {
   "slug": "ipinfo-io",
@@ -814,7 +1150,15 @@
   "example": "curl -s \"https://ipinfo.io/json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ipinfo 的 IP 数据接口，返回归属地、ASN、所属公司、VPN 与代理标记、经纬度等字段，免费 5 万次/月。常用于风控、日志分析和地域分流。",
+  "capabilities": [
+   "IP 归属地",
+   "ASN 与公司",
+   "代理与 VPN 识别",
+   "批量查询"
+  ],
+  "best_for": "做风控、日志分析或地域分流。"
  },
  {
   "slug": "ipapi-co",
@@ -833,7 +1177,15 @@
   "example": "curl -s \"https://ipapi.co/json/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ipapi.co 提供 IP 地理位置查询，返回国家、城市、时区、货币、经纬度和网络信息，免注册就能试，每天 1000 次免费。",
+  "capabilities": [
+   "IP 定位",
+   "时区与货币",
+   "网络信息",
+   "免注册试用"
+  ],
+  "best_for": "轻量地域判断、原型阶段。"
  },
  {
   "slug": "ip-api-com",
@@ -852,7 +1204,15 @@
   "example": "curl -s \"http://ip-api.com/json/8.8.8.8\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ip-api 是最常见的免费 IP 定位接口，返回国家、城市、ISP、经纬度、时区，免 Key。免费档限非商用、45 次/分，而且只支持 HTTP，不适合直接放前端。",
+  "capabilities": [
+   "IP 定位",
+   "ISP 识别",
+   "经纬度与时区",
+   "批量查询"
+  ],
+  "best_for": "非商用项目、内网工具。"
  },
  {
   "slug": "ipify",
@@ -871,7 +1231,15 @@
   "example": "curl -s \"https://api.ipify.org?format=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ipify 只做一件事：返回请求方的公网 IP，可输出纯文本、JSON 或 JSONP，IPv4 和 IPv6 都支持，免 Key、多节点。",
+  "capabilities": [
+   "查公网 IP",
+   "多格式输出",
+   "IPv4 与 IPv6",
+   "多节点容灾"
+  ],
+  "best_for": "脚本判断出口 IP、做 DDNS。"
  },
  {
   "slug": "rest-countries",
@@ -890,7 +1258,15 @@
   "example": "curl -s \"https://restcountries.com/v3.1/all?fields=name\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "REST Countries 提供 250 多个国家的结构化数据，每个国家 90 多个字段，含人口、首都、货币、语言、时区、旗帜和邻国，免 Key，适合做国家选择器或地区展示。",
+  "capabilities": [
+   "国家基础信息",
+   "货币与语言",
+   "旗帜与地图",
+   "邻国关系"
+  ],
+  "best_for": "做国家选择器、汇率或地区展示。"
  },
  {
   "slug": "postcodes-io",
@@ -909,7 +1285,15 @@
   "example": "curl -s \"https://api.postcodes.io/postcodes/SW1A1AA\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Postcodes.io 是英国邮编接口，支持邮编查坐标、反查最近邮编、批量查询、行政区与人口统计，数据来自 ONS，免 Key，覆盖全英。",
+  "capabilities": [
+   "邮编转坐标",
+   "最近邮编",
+   "批量查询",
+   "行政区信息"
+  ],
+  "best_for": "做英国地址表单或配送范围。"
  },
  {
   "slug": "newsapi",
@@ -928,7 +1312,15 @@
   "example": "curl -s \"https://newsapi.org/v2/top-headlines?country=us\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "NewsAPI 聚合全球新闻与博客，可按关键词、来源、语言和时间范围搜索，返回标题、摘要和原链接。免费开发档 100 次/天，仅限开发环境，不能直接上线生产。",
+  "capabilities": [
+   "关键词搜索",
+   "头条列表",
+   "来源与语言过滤",
+   "时间范围"
+  ],
+  "best_for": "做新闻聚合原型或内部监控。"
  },
  {
   "slug": "gnews",
@@ -947,7 +1339,15 @@
   "example": "curl -s \"https://gnews.io/api/v4/top-headlines?lang=en\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "GNews 覆盖 8 万多个来源、41 种语言和 71 个国家，支持按关键词搜文章、按分类取头条，还能指定国家和语言，免费 100 次/天。",
+  "capabilities": [
+   "多语种新闻",
+   "分类头条",
+   "关键词搜索",
+   "国家过滤"
+  ],
+  "best_for": "做多语言资讯站或舆情监控。"
  },
  {
   "slug": "newsdata-io",
@@ -966,7 +1366,15 @@
   "example": "curl -s \"https://newsdata.io/api/1/news?apikey=demo\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "NewsData.io 提供全球新闻检索，可按国家、语言、分类、关键词和时间过滤，返回标题、摘要与发布时间，免费 200 次/天，适合做地区资讯聚合。",
+  "capabilities": [
+   "新闻检索",
+   "国家与语言过滤",
+   "分类聚合",
+   "时间范围"
+  ],
+  "best_for": "做地区性资讯或内容聚合。"
  },
  {
   "slug": "the-guardian-open-platform",
@@ -985,7 +1393,15 @@
   "example": "curl -s \"https://content.guardianapis.com/search\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "卫报的开放平台开放 200 多万篇内容，可按标签、栏目、作者和日期检索文章与元数据，含测试 Key，正式使用需申请。数据质量高，适合做语料。",
+  "capabilities": [
+   "全文检索",
+   "栏目与标签",
+   "历史存档",
+   "文章元数据"
+  ],
+  "best_for": "做媒体分析、语料库或内容策展。"
  },
  {
   "slug": "new-york-times-api",
@@ -1004,7 +1420,15 @@
   "example": "curl -s \"https://api.nytimes.com/svc/topstories/v2/home.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "纽约时报开放多个数据集：头条、书评、影评、归档和 Most Popular，按数据集分端点，免费 500 次/天。适合做英文内容聚合或媒体研究。",
+  "capabilities": [
+   "头条与归档",
+   "书评与影评",
+   "热门榜",
+   "文章元数据"
+  ],
+  "best_for": "做媒体研究或英文内容聚合。"
  },
  {
   "slug": "hacker-news-api",
@@ -1023,7 +1447,15 @@
   "example": "curl -s \"https://hacker-news.firebaseio.com/v0/topstories.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Hacker News 官方 Firebase 接口，按 ID 取故事、评论、用户和招聘信息，免 Key、无官方限流。数据结构简单，适合做聚合阅读器或技术资讯机器人。",
+  "capabilities": [
+   "榜单与条目",
+   "评论树",
+   "用户信息",
+   "实时榜单"
+  ],
+  "best_for": "做 HN 客户端或技术资讯聚合。"
  },
  {
   "slug": "hn-algolia-search",
@@ -1042,7 +1474,15 @@
   "example": "curl -s \"https://hn.algolia.com/api/v1/search?query=api\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Algolia 为 Hacker News 做的搜索接口，支持全文搜索、按时间和热度排序、按作者过滤，返回高亮片段和评论，免 Key，适合查历史讨论。",
+  "capabilities": [
+   "全文搜索",
+   "时间排序",
+   "作者过滤",
+   "高亮片段"
+  ],
+  "best_for": "搜 HN 历史讨论，而不只是看最新榜。"
  },
  {
   "slug": "reddit-api",
@@ -1061,7 +1501,15 @@
   "example": "curl -s \"https://www.reddit.com/r/programming.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Reddit 官方接口，可读帖子、评论、子版块和用户数据，写操作需 OAuth。2023 年后免费档限 100 QPM，并要求自定义 User-Agent，商用需申请。",
+  "capabilities": [
+   "帖子与评论",
+   "子版块列表",
+   "搜索",
+   "OAuth 写操作"
+  ],
+  "best_for": "做社区内容聚合或舆情观察。"
  },
  {
   "slug": "dev-community-api",
@@ -1080,7 +1528,15 @@
   "example": "curl -s \"https://dev.to/api/articles?per_page=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "DEV Community 的公开接口，可读文章、标签、用户和评论，也能用 API Key 发文章。只读部分免 Key，适合做开发者内容聚合或自动发布。",
+  "capabilities": [
+   "文章列表",
+   "标签与用户",
+   "评论",
+   "发布文章"
+  ],
+  "best_for": "做开发者内容聚合或自动发布。"
  },
  {
   "slug": "spaceflight-news-api",
@@ -1099,7 +1555,15 @@
   "example": "curl -s \"https://api.spaceflightnewsapi.net/v4/articles?limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Spaceflight News 聚合全球航天新闻，提供文章、博客和报道三类资源，支持按站点、日期和关键词搜索，免 Key。适合做航天资讯站或新闻机器人。",
+  "capabilities": [
+   "航天新闻",
+   "按站点过滤",
+   "搜索",
+   "多来源聚合"
+  ],
+  "best_for": "做航天资讯站或新闻机器人。"
  },
  {
   "slug": "alpha-vantage",
@@ -1118,7 +1582,15 @@
   "example": "curl -s \"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Alpha Vantage 提供股票、外汇、加密货币和部分基本面数据的 REST 接口，返回 JSON 或 CSV，文档里每个端点都能直接在浏览器试。免费档 25 次/天，适合学习和小规模分析。",
+  "capabilities": [
+   "股票日线与分钟线",
+   "外汇与加密",
+   "技术指标",
+   "基本面数据"
+  ],
+  "best_for": "做行情 demo 或小规模数据分析。"
  },
  {
   "slug": "finnhub",
@@ -1137,7 +1609,15 @@
   "example": "curl -s \"https://finnhub.io/api/v1/quote?symbol=AAPL\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Finnhub 覆盖全球股票的实时报价、公司基本面、财报日历、新闻和另类数据，WebSocket 可推实时成交。免费档 60 次/分，美股权限最全。",
+  "capabilities": [
+   "实时报价",
+   "公司基本面",
+   "财报日历",
+   "WebSocket 推送"
+  ],
+  "best_for": "做美股行情面板或财报跟踪。"
  },
  {
   "slug": "twelve-data",
@@ -1156,7 +1636,15 @@
   "example": "curl -s \"https://api.twelvedata.com/price?symbol=AAPL\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Twelve Data 提供股票、外汇、加密和基金的时间序列，含 100 多个技术指标、实时报价和批量查询，接口统一。免费档 800 次/天、8 次/分，适合做多市场图表。",
+  "capabilities": [
+   "时间序列",
+   "技术指标",
+   "多市场行情",
+   "批量查询"
+  ],
+  "best_for": "做多市场行情图表。"
  },
  {
   "slug": "polygon-io",
@@ -1175,7 +1663,15 @@
   "example": "curl -s \"https://api.polygon.io/v2/aggs/ticker/AAPL/prev\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Polygon 提供美股、期权、外汇和加密的逐笔成交、分钟聚合和日线，REST 与 WebSocket 都有，数据质量在免费档里偏高。免费 5 次/分，适合做回测和小工具。",
+  "capabilities": [
+   "逐笔成交",
+   "分钟聚合",
+   "期权链",
+   "WebSocket"
+  ],
+  "best_for": "做量化回测或需要细粒度数据。"
  },
  {
   "slug": "financial-modeling-prep",
@@ -1194,7 +1690,15 @@
   "example": "curl -s \"https://financialmodelingprep.com/api/v3/quote/AAPL\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "FMP 提供三大财务报表、估值比率、分析师预期、分红拆股和股票列表，端点以美股为主，免费 250 次/天。适合做基本面筛选和财报展示。",
+  "capabilities": [
+   "三大报表",
+   "估值比率",
+   "分析师预期",
+   "股票筛选"
+  ],
+  "best_for": "做基本面选股或财报展示。"
  },
  {
   "slug": "alpaca",
@@ -1213,7 +1717,15 @@
   "example": "curl -s \"https://api.alpaca.markets/v2/account\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Alpaca 提供美股与加密的交易接口和行情，注册即可用模拟盘 paper trading 跑策略，实盘需另开户并完成 KYC。SDK 覆盖 Python、JS、Go。",
+  "capabilities": [
+   "模拟交易",
+   "下单与持仓",
+   "行情与 WebSocket",
+   "多语言 SDK"
+  ],
+  "best_for": "做交易策略验证或自动交易原型。"
  },
  {
   "slug": "fred",
@@ -1232,7 +1744,15 @@
   "example": "curl -s \"https://api.stlouisfed.org/fred/series?series_id=GDP\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "FRED 是圣路易斯联储的经济数据库，80 多万条时间序列，覆盖 GDP、CPI、利率、就业、房价等宏观指标，免费 Key、无调用费。每个序列都有元数据和更新频率。",
+  "capabilities": [
+   "宏观经济序列",
+   "利率与通胀",
+   "就业与产出",
+   "元数据与更新频率"
+  ],
+  "best_for": "做宏观分析或经济数据看板。"
  },
  {
   "slug": "yahoo-finance",
@@ -1251,7 +1771,15 @@
   "example": "curl -s \"https://query1.finance.yahoo.com/v8/finance/chart/AAPL\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Yahoo Finance 没有官方公开 API，社区用 chart、quote 等内部端点取行情，免 Key，但没有 SLA、随时可能变更或限流。只适合个人项目和非关键用途。",
+  "capabilities": [
+   "历史 K 线",
+   "实时报价",
+   "基本面摘要",
+   "非官方"
+  ],
+  "best_for": "个人项目快速拿行情，且能接受不稳定。"
  },
  {
   "slug": "coingecko",
@@ -1270,7 +1798,15 @@
   "example": "curl -s \"https://api.coingecko.com/api/v3/ping\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "CoinGecko 提供币价、市值、交易量、交易所、公链和 NFT 数据，公共档 30 次/分，免费 Demo Key 有 1 万次/月。币种覆盖广，适合做行情站。",
+  "capabilities": [
+   "币价与市值",
+   "交易所数据",
+   "历史走势",
+   "分类与排名"
+  ],
+  "best_for": "做币价展示或行情对比。"
  },
  {
   "slug": "coincap-v3",
@@ -1289,7 +1825,15 @@
   "example": "curl -s \"https://rest.coincap.io/v3/assets\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "CoinCap 提供加密资产实时价格、市值排名和历史数据，v3 起需要 API Key，旧 v2 的公共端点已经下线。适合做轻量币价展示。",
+  "capabilities": [
+   "实时价格",
+   "市值排名",
+   "历史数据",
+   "资产详情"
+  ],
+  "best_for": "做轻量币价展示。"
  },
  {
   "slug": "coinmarketcap",
@@ -1308,7 +1852,15 @@
   "example": "curl -s \"https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "CoinMarketCap 是币价与排名的标准数据源，提供币种列表、实时行情、交易所、链上指标和历史快照，免费档每月 1 万 credit，按端点消耗。",
+  "capabilities": [
+   "币种排名",
+   "实时行情",
+   "交易所数据",
+   "历史快照"
+  ],
+  "best_for": "做币种列表或市值排行。"
  },
  {
   "slug": "binance-api",
@@ -1327,7 +1879,15 @@
   "example": "curl -s \"https://api.binance.com/api/v3/ping\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Binance 的现货与合约接口，提供行情、K 线、深度、账户和交易，公共端点免 Key、私有操作需签名。按权重限速，部分国家和地区返回 451。",
+  "capabilities": [
+   "K 线与深度",
+   "现货与合约",
+   "账户交易",
+   "WebSocket"
+  ],
+  "best_for": "做交易所行情或量化机器人。"
  },
  {
   "slug": "kraken-api",
@@ -1346,7 +1906,15 @@
   "example": "curl -s \"https://api.kraken.com/0/public/Time\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Kraken 提供现货、合约和场外交易的 REST 与 WebSocket 接口，公共行情端点免 Key，私有操作需 API Key 签名，文档里有限速与错误码说明。",
+  "capabilities": [
+   "行情与深度",
+   "现货交易",
+   "WebSocket",
+   "历史数据"
+  ],
+  "best_for": "做加密交易或行情聚合。"
  },
  {
   "slug": "coinbase-api",
@@ -1365,7 +1933,15 @@
   "example": "curl -s \"https://api.coinbase.com/v2/prices/BTC-USD/spot\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Coinbase 的开发者接口分交易所、钱包和链上三类，公共价格端点免 Key，交易与账户接口需 OAuth 或 API Key。适合做法币入金和链上应用。",
+  "capabilities": [
+   "价格查询",
+   "账户与交易",
+   "链上数据",
+   "Webhook"
+  ],
+  "best_for": "做法币入金或链上应用。"
  },
  {
   "slug": "cryptocompare",
@@ -1384,7 +1960,15 @@
   "example": "curl -s \"https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "CryptoCompare 聚合多家交易所的行情，提供价格、历史 K 线、社交指标和新闻，免费档 10 万次/月。适合做跨交易所比价或市场概览。",
+  "capabilities": [
+   "多交易所聚合",
+   "历史 K 线",
+   "社交指标",
+   "新闻"
+  ],
+  "best_for": "做跨交易所比价。"
  },
  {
   "slug": "defillama",
@@ -1403,7 +1987,15 @@
   "example": "curl -s \"https://api.llama.fi/protocols\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "DefiLlama 提供 DeFi 协议的 TVL、收益率池、交易量、费用和稳定币数据，端点免 Key、无硬性配额，是 DeFi 数据最全的免费源之一。",
+  "capabilities": [
+   "协议 TVL",
+   "收益率池",
+   "链上费用",
+   "稳定币数据"
+  ],
+  "best_for": "做 DeFi 数据看板或研究。"
  },
  {
   "slug": "etherscan",
@@ -1422,7 +2014,15 @@
   "example": "curl -s \"https://api.etherscan.io/api?module=stats&action=ethsupply\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Etherscan 是以太坊浏览器接口，可查地址余额、交易、合约 ABI、事件日志和 Gas 价格，免费 Key 5 次/秒，多链要分别申请对应浏览器的 Key。",
+  "capabilities": [
+   "地址与交易",
+   "合约 ABI",
+   "事件日志",
+   "Gas 价格"
+  ],
+  "best_for": "做链上查询或钱包工具。"
  },
  {
   "slug": "frankfurter",
@@ -1441,7 +2041,15 @@
   "example": "curl -s \"https://api.frankfurter.app/latest\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Frankfurter 是开源汇率接口，覆盖 200 多种货币，数据来自 112 家央行与官方源，免 Key、无配额，支持历史汇率和按日查询。",
+  "capabilities": [
+   "实时汇率",
+   "历史汇率",
+   "多币种",
+   "按日历史查询"
+  ],
+  "best_for": "做汇率换算或财务工具。"
  },
  {
   "slug": "exchangerate-api",
@@ -1460,7 +2068,15 @@
   "example": "curl -s \"https://open.er-api.com/v6/latest/USD\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ExchangeRate-API 提供 160 多种货币的汇率，含历史、批量换算和货币元数据，免费档 1500 次/月，返回结构简单。",
+  "capabilities": [
+   "实时汇率",
+   "历史汇率",
+   "批量换算",
+   "货币元数据"
+  ],
+  "best_for": "做电商多币种定价。"
  },
  {
   "slug": "data-gov",
@@ -1479,7 +2095,15 @@
   "example": "curl -s \"https://api.data.gov/ed/collegescorecard/v1/schools\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Data.gov 是美国联邦开放数据总入口，聚合能源、农业、气候、教育等几十万个数据集，通过 api.data.gov 统一鉴权，DEMO_KEY 可先试，正式用需免费 Key。",
+  "capabilities": [
+   "联邦数据集检索",
+   "多领域覆盖",
+   "统一鉴权",
+   "元数据"
+  ],
+  "best_for": "找美国官方数据做分析。"
  },
  {
   "slug": "world-bank-open-data",
@@ -1498,7 +2122,15 @@
   "example": "curl -s \"https://api.worldbank.org/v2/country/US?format=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "世界银行的开放数据接口，提供 200 多个国家的 GDP、人口、教育、健康、环境和性别等指标，按国家、指标、年份查询，免 Key，可回溯几十年。",
+  "capabilities": [
+   "国家发展指标",
+   "时间序列",
+   "多语言",
+   "国别指标检索"
+  ],
+  "best_for": "做国别对比或发展研究。"
  },
  {
   "slug": "us-census-bureau",
@@ -1517,7 +2149,15 @@
   "example": "curl -s \"https://api.census.gov/data/2020/dec/pl?get=NAME&for=state:36\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国人口普查局的 API，提供人口、住房、收入和商业统计，按州、县、邮编等地理层级查询，免费 Key，覆盖 ACS 与十年普查。",
+  "capabilities": [
+   "人口统计",
+   "ACS 指标",
+   "地理层级",
+   "数据集目录"
+  ],
+  "best_for": "做美国市场分析或人口研究。"
  },
  {
   "slug": "uk-companies-house",
@@ -1536,7 +2176,15 @@
   "example": "curl -s \"https://api.company-information.service.gov.uk/company/00000006\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "英国公司注册局接口，可按公司名或编号查注册信息、董事、股东、财报文件和变更记录，免费 Key，速率限制较严。",
+  "capabilities": [
+   "公司注册信息",
+   "董事与股东",
+   "财报文件",
+   "变更历史"
+  ],
+  "best_for": "做企业尽调或英国公司查询。"
  },
  {
   "slug": "opencorporates",
@@ -1555,7 +2203,15 @@
   "example": "curl -s \"https://api.opencorporates.com/v0.4/companies/search?q=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenCorporates 收录 200 多个司法辖区的 2 亿多家公司，可按名称、编号、辖区检索，返回公司关联与状态。免费档有限额，商用需授权。",
+  "capabilities": [
+   "全球公司库",
+   "跨辖区检索",
+   "公司关联",
+   "开放数据"
+  ],
+  "best_for": "做跨境企业查询。"
  },
  {
   "slug": "opensanctions",
@@ -1574,7 +2230,15 @@
   "example": "curl -s \"https://api.opensanctions.org/search/default?q=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenSanctions 汇总制裁名单、政治人物和涉案实体，提供搜索与批量筛查接口，数据每日更新。非商用免费，商用需订阅。",
+  "capabilities": [
+   "制裁名单",
+   "PEP 数据",
+   "批量筛查",
+   "每日更新"
+  ],
+  "best_for": "做 KYC 或合规筛查。"
  },
  {
   "slug": "fec-api",
@@ -1593,7 +2257,15 @@
   "example": "curl -s \"https://api.open.fec.gov/v1/candidates/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国联邦选举委员会接口，提供候选人、委员会、捐款和支出数据，按选举周期和州查询，免费 Key，DEMO_KEY 可先试。",
+  "capabilities": [
+   "竞选捐款",
+   "候选人",
+   "委员会",
+   "支出明细"
+  ],
+  "best_for": "做政治献金分析或数据新闻。"
  },
  {
   "slug": "federal-register",
@@ -1612,7 +2284,15 @@
   "example": "curl -s \"https://www.federalregister.gov/api/v1/documents.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国联邦公报接口，可查每日规则、拟议规则、公告和行政命令，支持全文检索、机构和日期过滤，免 Key。适合跟踪监管变化。",
+  "capabilities": [
+   "规则与公告",
+   "全文检索",
+   "机构与日期过滤",
+   "文档全文"
+  ],
+  "best_for": "跟踪美国监管变化。"
  },
  {
   "slug": "usaspending",
@@ -1631,7 +2311,15 @@
   "example": "curl -s \"https://api.usaspending.gov/api/v2/references/toptier_agencies/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "USAspending 提供联邦支出数据，可查合同、拨款、机构和受助方，按财年、部门和地理聚合，免 Key。适合做政府采购和预算分析。",
+  "capabilities": [
+   "联邦合同",
+   "拨款数据",
+   "机构支出",
+   "地理分布"
+  ],
+  "best_for": "做政府采购分析。"
  },
  {
   "slug": "nyc-open-data-socrata",
@@ -1650,7 +2338,15 @@
   "example": "curl -s \"https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "纽约市开放数据基于 Socrata 平台，可用 SODA 查询 311 投诉、出租车、住房、犯罪等数据集，支持类 SQL 参数和地理筛选，免费 App Token。",
+  "capabilities": [
+   "311 投诉",
+   "市政数据集",
+   "SODA 查询",
+   "地理筛选"
+  ],
+  "best_for": "做城市数据可视化。"
  },
  {
   "slug": "wikidata",
@@ -1669,7 +2365,15 @@
   "example": "curl -s \"https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q42&format=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Wikidata 是结构化知识库，实体、属性、声明和多语言标签都能用 MediaWiki API 或 SPARQL 查询，免 Key。适合做知识图谱和实体对齐。",
+  "capabilities": [
+   "实体查询",
+   "SPARQL",
+   "多语言标签",
+   "实体关系"
+  ],
+  "best_for": "做知识图谱或实体对齐。"
  },
  {
   "slug": "wikipedia-rest-api",
@@ -1688,7 +2392,15 @@
   "example": "curl -s \"https://en.wikipedia.org/api/rest_v1/page/summary/API\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Wikipedia 的 REST 接口，按标题取摘要、正文、图片、相关条目和编辑历史，免 Key，需自定义 User-Agent。适合做百科卡片或术语解释。",
+  "capabilities": [
+   "词条摘要",
+   "正文与图片",
+   "多语言",
+   "编辑历史"
+  ],
+  "best_for": "做百科卡片或术语解释。"
  },
  {
   "slug": "kaggle-api",
@@ -1707,7 +2419,15 @@
   "example": "curl -s \"https://www.kaggle.com/api/v1/datasets/list\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Kaggle 提供数据集与竞赛的下载接口，用账号 Token 认证，可命令行拉数据集、提交竞赛结果、查排行榜。适合做机器学习数据准备。",
+  "capabilities": [
+   "数据集下载",
+   "竞赛提交",
+   "排行榜",
+   "Token 认证"
+  ],
+  "best_for": "做机器学习数据准备。"
  },
  {
   "slug": "internet-archive",
@@ -1726,7 +2446,15 @@
   "example": "curl -s \"https://archive.org/advancedsearch.php?q=test&fl[]=identifier&rows=1&output=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Internet Archive 的检索接口，能查网页存档（Wayback）、图书、音频、视频和软件的元数据与文件地址，免 Key，支持高级搜索语法和批量抓取。适合做历史网页查询或数字资料检索。",
+  "capabilities": [
+   "网页存档",
+   "数字图书",
+   "音视频",
+   "高级检索"
+  ],
+  "best_for": "做历史网页查询或数字资料检索。"
  },
  {
   "slug": "nasa-api",
@@ -1745,7 +2473,15 @@
   "example": "curl -s \"https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "NASA 的开放接口合集，含每日天文图 APOD、火星车照片、地球影像、近地天体和 NASA 图片库，免费 Key，DEMO_KEY 可先试但限额更低。",
+  "capabilities": [
+   "每日天文图",
+   "火星车照片",
+   "地球影像",
+   "近地天体"
+  ],
+  "best_for": "做天文科普或太空主题站点。"
  },
  {
   "slug": "spacex-api",
@@ -1764,7 +2500,15 @@
   "example": "curl -s \"https://api.spacexdata.com/v4/launches/latest\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "社区维护的开源 REST 接口，提供 SpaceX 的发射记录、火箭、核心舱、星链卫星、发射台和着陆场数据，免 Key。数据来自公开信息，源站偶有不稳。",
+  "capabilities": [
+   "发射记录",
+   "火箭与核心",
+   "星链卫星",
+   "发射台"
+  ],
+  "best_for": "做航天数据展示或发射追踪。"
  },
  {
   "slug": "open-notify",
@@ -1783,7 +2527,14 @@
   "example": "curl -s \"http://api.open-notify.org/iss-now.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Open Notify 是两个极简太空接口：查当前在轨宇航员名单，以及国际空间站的实时经纬度。免 Key，数据来自 NASA 公开源。",
+  "capabilities": [
+   "在轨宇航员",
+   "ISS 实时位置",
+   "轻量 JSON"
+  ],
+  "best_for": "做 ISS 追踪小工具或教学示例。"
  },
  {
   "slug": "launch-library-2",
@@ -1802,7 +2553,15 @@
   "example": "curl -s \"https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Launch Library 2 是全球火箭发射计划数据库，含发射时间、状态、火箭、任务、发射场和运营方，免 Key 有速率限制，社区持续更新。",
+  "capabilities": [
+   "发射日程",
+   "火箭与任务",
+   "发射场",
+   "状态更新"
+  ],
+  "best_for": "做发射日历或航天新闻应用。"
  },
  {
   "slug": "arxiv-api",
@@ -1821,7 +2580,15 @@
   "example": "curl -s \"http://export.arxiv.org/api/query?search_query=all:api&max_results=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "arXiv 的预印本检索接口，按作者、分类、关键词查论文元数据与摘要，返回 Atom XML。免 Key，但要求限速，批量抓取要自己加延时。",
+  "capabilities": [
+   "论文检索",
+   "分类浏览",
+   "Atom 返回",
+   "摘要"
+  ],
+  "best_for": "做论文聚合或研究热点追踪。"
  },
  {
   "slug": "crossref-api",
@@ -1840,7 +2607,15 @@
   "example": "curl -s \"https://api.crossref.org/works?rows=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Crossref 是学术出版元数据的基础设施，按 DOI、标题、作者查文献与引用信息，覆盖期刊、会议和预印本，免 Key。建议带 mailto 进入礼貌池。",
+  "capabilities": [
+   "DOI 元数据",
+   "文献检索",
+   "引用关系",
+   "出版商覆盖"
+  ],
+  "best_for": "做文献管理或引用统计。"
  },
  {
   "slug": "openalex",
@@ -1859,7 +2634,15 @@
   "example": "curl -s \"https://api.openalex.org/works?per-page=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenAlex 是开放学术知识图谱，覆盖 2.5 亿篇论文、作者、机构、资助方和概念，免 Key、无硬配额（仍建议限速）。查询参数灵活，常用来替代微软学术。",
+  "capabilities": [
+   "论文与作者",
+   "机构统计",
+   "引用网络",
+   "概念分类"
+  ],
+  "best_for": "做科研产出分析或学术搜索。"
  },
  {
   "slug": "semantic-scholar",
@@ -1878,7 +2661,15 @@
   "example": "curl -s \"https://api.semanticscholar.org/graph/v1/paper/search?query=api&limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Semantic Scholar 的学术图谱接口，提供论文摘要、引用与被引、参考文献、作者影响力和推荐，免费 Key 配额更高。适合做文献推荐或引用分析。",
+  "capabilities": [
+   "论文检索",
+   "引用与被引",
+   "摘要",
+   "影响力指标"
+  ],
+  "best_for": "做文献推荐或引用分析。"
  },
  {
   "slug": "pubmed-e-utilities",
@@ -1897,7 +2688,15 @@
   "example": "curl -s \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=api&retmode=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "NCBI 的 E-utilities 接口，按关键词、作者、期刊检索 PubMed 生物医学文献，取摘要、MeSH 主题词和全文链接，免 Key，限 3 次/秒。",
+  "capabilities": [
+   "医学文献",
+   "MeSH 检索",
+   "摘要与全文链接",
+   "批量查询"
+  ],
+  "best_for": "做医学文献检索或循证工具。"
  },
  {
   "slug": "europe-pmc",
@@ -1916,7 +2715,15 @@
   "example": "curl -s \"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=api&format=json&pageSize=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Europe PMC 的接口，支持生物医学文献全文检索、引用数据、预印本和基金信息，免 Key。覆盖比 PubMed 多了欧洲来源和预印本。",
+  "capabilities": [
+   "全文检索",
+   "预印本",
+   "引用数据",
+   "基金信息"
+  ],
+  "best_for": "做生物医学文献分析。"
  },
  {
   "slug": "unpaywall",
@@ -1935,7 +2742,15 @@
   "example": "curl -s \"https://api.unpaywall.org/v2/10.1038/nature12373?email=test@example.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Unpaywall 查论文的开放获取版本，输入 DOI 返回合法的免费全文链接、版本和许可，需要邮箱作为 Key（免费）。适合做文献获取或 OA 覆盖率统计。",
+  "capabilities": [
+   "OA 全文链接",
+   "DOI 查询",
+   "版本与许可",
+   "OA 状态判断"
+  ],
+  "best_for": "做文献获取或 OA 覆盖率统计。"
  },
  {
   "slug": "usgs-earthquake",
@@ -1954,7 +2769,15 @@
   "example": "curl -s \"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国地质调查局的地震目录接口，按时间、震级、区域和深度查地震事件，返回 GeoJSON 或 CSV，实时更新、免 Key。",
+  "capabilities": [
+   "地震目录",
+   "实时更新",
+   "GeoJSON",
+   "震级筛选"
+  ],
+  "best_for": "做地震监测或地理数据可视化。"
  },
  {
   "slug": "gbif",
@@ -1973,7 +2796,15 @@
   "example": "curl -s \"https://api.gbif.org/v1/occurrence/search?limit=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "全球生物多样性信息网络的接口，查物种名录、分类、分布记录和数据集，覆盖数亿条观测，免 Key。适合做物种分布图或生态研究。",
+  "capabilities": [
+   "物种名录",
+   "分布记录",
+   "数据集",
+   "分类检索"
+  ],
+  "best_for": "做物种分布图或生态研究。"
  },
  {
   "slug": "inaturalist",
@@ -1992,7 +2823,15 @@
   "example": "curl -s \"https://api.inaturalist.org/v1/observations?per_page=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "iNaturalist 的公民科学接口，查物种、观测记录、项目、鉴定和用户，免 Key。数据由全球爱好者上传，适合做自然观察或物种识别应用。",
+  "capabilities": [
+   "观测记录",
+   "物种信息",
+   "项目",
+   "鉴定数据"
+  ],
+  "best_for": "做自然观察应用或物种识别。"
  },
  {
   "slug": "rcsb-pdb",
@@ -2011,7 +2850,15 @@
   "example": "curl -s \"https://data.rcsb.org/rest/v1/core/entry/4HHB\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "蛋白质结构数据库接口，按 PDB ID 取结构文件、实验元数据、配体和序列，提供 REST 与 GraphQL，免 Key。适合做结构生物学工具。",
+  "capabilities": [
+   "结构文件",
+   "实验元数据",
+   "GraphQL",
+   "配体信息"
+  ],
+  "best_for": "做结构生物学工具或分子可视化。"
  },
  {
   "slug": "unsplash-api",
@@ -2030,7 +2877,15 @@
   "example": "curl -s \"https://api.unsplash.com/photos\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Unsplash 的免费图库接口，按关键词搜图、取随机图和合集，需免费 Key，免费档 50 次/小时。使用时要求署名，并触发下载追踪。",
+  "capabilities": [
+   "图片搜索",
+   "随机图",
+   "合集",
+   "下载追踪"
+  ],
+  "best_for": "做配图、壁纸或图片墙。"
  },
  {
   "slug": "pexels-api",
@@ -2049,7 +2904,15 @@
   "example": "curl -s \"https://api.pexels.com/v1/search?query=cat\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Pexels 的免费图片与视频接口，按关键词搜图和视频，返回多尺寸链接，需免费 Key，限 200 次/小时。",
+  "capabilities": [
+   "图片搜索",
+   "视频素材",
+   "多尺寸链接",
+   "热门榜单"
+  ],
+  "best_for": "做内容站配图或素材库。"
  },
  {
   "slug": "pixabay-api",
@@ -2068,7 +2931,15 @@
   "example": "curl -s \"https://pixabay.com/api/?q=cat\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Pixabay 的免费素材接口，覆盖图片、插画、矢量、视频、音乐和音效，需免费 Key，限 100 次/分，要求缓存 24 小时。",
+  "capabilities": [
+   "图片与矢量",
+   "视频",
+   "音乐音效",
+   "多语言检索"
+  ],
+  "best_for": "做多元素材站或演示项目。"
  },
  {
   "slug": "lorem-picsum",
@@ -2087,7 +2958,15 @@
   "example": "curl -s \"https://picsum.photos/id/1/200/300\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Lorem Picsum 是占位图服务，按尺寸取随机或指定图片，支持灰度、模糊和固定 seed，免 Key。适合原型和列表页占位。",
+  "capabilities": [
+   "随机占位图",
+   "指定尺寸",
+   "灰度与模糊",
+   "固定 seed"
+  ],
+  "best_for": "做原型或列表页占位。"
  },
  {
   "slug": "giphy-api",
@@ -2106,7 +2985,15 @@
   "example": "curl -s \"https://api.giphy.com/v1/gifs/trending\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "GIPHY 的 GIF 与贴纸接口，支持搜索、热门榜、随机和趋势，需免费 beta Key，有速率限制。",
+  "capabilities": [
+   "GIF 搜索",
+   "热门榜",
+   "贴纸",
+   "随机"
+  ],
+  "best_for": "做聊天或内容里的动图。"
  },
  {
   "slug": "imgur-api",
@@ -2125,7 +3012,15 @@
   "example": "curl -s \"https://api.imgur.com/3/gallery/hot/viral/0.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Imgur 的图片托管接口，支持上传、相册管理、评论和封面设置，需 OAuth 或 Client ID，免费档 1250 次/天。",
+  "capabilities": [
+   "图片上传",
+   "相册管理",
+   "评论",
+   "OAuth"
+  ],
+  "best_for": "做图床或社区图片功能。"
  },
  {
   "slug": "remove-bg",
@@ -2144,7 +3039,15 @@
   "example": "curl -s \"https://api.remove.bg/v1.0/account\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "remove.bg 的自动抠图接口，上传图片返回透明背景 PNG，支持批量、指定输出尺寸和裁剪，按张计费，有免费预览额度（低分辨率）。",
+  "capabilities": [
+   "自动抠图",
+   "批量处理",
+   "透明 PNG",
+   "尺寸控制"
+  ],
+  "best_for": "做电商主图或设计工具。"
  },
  {
   "slug": "cloudinary",
@@ -2163,7 +3066,15 @@
   "example": "curl -s \"https://res.cloudinary.com/demo/image/upload/sample.jpg\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Cloudinary 提供图片与视频的存储、转码、裁剪、压缩和 CDN 分发，URL 参数就能做变换，SDK 覆盖主流语言，免费档每月 25 credit。",
+  "capabilities": [
+   "上传与转码",
+   "智能裁剪",
+   "CDN 分发",
+   "多语言 SDK"
+  ],
+  "best_for": "做图片密集型产品。"
  },
  {
   "slug": "dicebear",
@@ -2182,7 +3093,15 @@
   "example": "curl -s \"https://api.dicebear.com/9.x/personas/svg?seed=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "DiceBear 是开源头像库的 HTTP 接口，61 种风格，按 seed 生成确定性 SVG 或 PNG，免 Key。同一 seed 永远得到同一张图，适合做默认头像。",
+  "capabilities": [
+   "多种风格",
+   "确定性生成",
+   "SVG 与 PNG",
+   "HTTP 直出"
+  ],
+  "best_for": "做用户默认头像或匿名身份。"
  },
  {
   "slug": "robohash",
@@ -2201,7 +3120,15 @@
   "example": "curl -s \"https://robohash.org/test.png\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "RoboHash 按任意文本生成机器人、怪物或外星人头像，支持 PNG 与 SVG、指定尺寸和背景，免 Key。",
+  "capabilities": [
+   "文本生成头像",
+   "多主题",
+   "PNG 与 SVG",
+   "自定义背景"
+  ],
+  "best_for": "做占位头像或趣味身份图。"
  },
  {
   "slug": "qr-server",
@@ -2220,7 +3147,15 @@
   "example": "curl -s \"https://api.qrserver.com/v1/create-qr-code/?data=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "goQR 的二维码接口，按内容返回 PNG 或 SVG，可调尺寸、颜色、边距和纠错级别，免 Key，可以直接放在 img 标签里用。",
+  "capabilities": [
+   "二维码生成",
+   "尺寸与颜色",
+   "PNG 与 SVG",
+   "纠错级别"
+  ],
+  "best_for": "做分享链接或活动物料。"
  },
  {
   "slug": "tmdb-api",
@@ -2239,7 +3174,15 @@
   "example": "curl -s \"https://api.themoviedb.org/3/movie/popular\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TMDb 的影视数据库接口，覆盖电影、剧集、演员、剧组、海报和评分，多语言元数据齐全，需免费 Key（非商用）。适合做影视资料站。",
+  "capabilities": [
+   "电影与剧集",
+   "演员与剧组",
+   "海报图片",
+   "多语言"
+  ],
+  "best_for": "做影视资料站或推荐功能。"
  },
  {
   "slug": "omdb-api",
@@ -2258,7 +3201,15 @@
   "example": "curl -s \"https://www.omdbapi.com/?i=tt3896198\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OMDb 的影视信息接口，按标题或 IMDb ID 查剧情、评分、演员、票房和海报，免费 Key 每天 1000 次。数据来自 IMDb 与自有整理。",
+  "capabilities": [
+   "影片信息",
+   "IMDb 评分",
+   "海报",
+   "演员表"
+  ],
+  "best_for": "做影片查询或评分展示。"
  },
  {
   "slug": "tvmaze-api",
@@ -2277,7 +3228,15 @@
   "example": "curl -s \"https://api.tvmaze.com/shows/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TVMaze 的电视剧接口，提供剧集、季、播出日程、演员、电视台和网络信息，免 Key。适合做追剧日历或剧集库。",
+  "capabilities": [
+   "剧集与季",
+   "播出日程",
+   "演员表",
+   "剧集搜索"
+  ],
+  "best_for": "做追剧日历或剧集库。"
  },
  {
   "slug": "youtube-data-api",
@@ -2296,7 +3255,15 @@
   "example": "curl -s \"https://www.googleapis.com/youtube/v3/videos?id=dQw4w9WgXcQ&part=snippet\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "YouTube 官方接口，可搜索视频、取频道与播放列表、读评论、管理上传和字幕，免费配额每天 1 万 unit，搜索一次消耗 100 unit，用尽当天不可用。",
+  "capabilities": [
+   "视频搜索",
+   "频道与播放列表",
+   "评论",
+   "上传与字幕"
+  ],
+  "best_for": "做视频聚合或频道分析。"
  },
  {
   "slug": "opensubtitles",
@@ -2315,7 +3282,15 @@
   "example": "curl -s \"https://api.opensubtitles.com/api/v1/subtitles?query=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenSubtitles 的字幕接口，按影片哈希、IMDb ID 或文件名查多语言字幕并下载，需免费 Key，匿名下载每天 5 次。",
+  "capabilities": [
+   "多语言字幕",
+   "哈希匹配",
+   "字幕下载",
+   "评分筛选"
+  ],
+  "best_for": "做播放器字幕或影视工具。"
  },
  {
   "slug": "spotify-web-api",
@@ -2334,7 +3309,15 @@
   "example": "curl -s \"https://api.spotify.com/v1/search?q=test&type=track\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Spotify Web API 提供曲目、专辑、艺人、播放列表和收听历史，还能控制播放（需 Premium），OAuth 授权。免费，但新应用有配额审核。",
+  "capabilities": [
+   "曲库元数据",
+   "播放列表",
+   "收听历史",
+   "播放控制"
+  ],
+  "best_for": "做音乐推荐或播放器集成。"
  },
  {
   "slug": "last-fm-api",
@@ -2353,7 +3336,15 @@
   "example": "curl -s \"https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Last.fm 的音乐数据接口，查艺人、专辑、曲目、相似艺人和用户收听统计，需免费 Key。适合做音乐推荐或 scrobble 统计。",
+  "capabilities": [
+   "音乐元数据",
+   "相似艺人",
+   "收听统计",
+   "scrobble"
+  ],
+  "best_for": "做音乐推荐或听歌记录。"
  },
  {
   "slug": "musicbrainz",
@@ -2372,7 +3363,15 @@
   "example": "curl -s \"https://musicbrainz.org/ws/2/artist?query=radiohead&fmt=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "MusicBrainz 是开放音乐百科全书，查艺人、专辑、录音、发行、厂牌及相互关系，免 Key，需自定义 User-Agent 并限 1 次/秒。",
+  "capabilities": [
+   "艺人专辑",
+   "录音关系",
+   "发行版本",
+   "厂牌"
+  ],
+  "best_for": "做音乐库整理或元数据补全。"
  },
  {
   "slug": "discogs-api",
@@ -2391,7 +3390,15 @@
   "example": "curl -s \"https://api.discogs.com/database/search?q=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Discogs 的唱片数据库接口，查发行、艺人、厂牌、曲目和收藏市场价格，需 Token，限速 60 次/分。",
+  "capabilities": [
+   "唱片发行",
+   "艺人厂牌",
+   "曲目",
+   "市场价格"
+  ],
+  "best_for": "做黑胶或唱片资料站。"
  },
  {
   "slug": "genius-api",
@@ -2410,7 +3417,15 @@
   "example": "curl -s \"https://api.genius.com/search?q=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Genius 的歌词接口，搜歌曲、取歌词页面链接、艺人信息和注释，需 OAuth。官方不直接返回歌词正文，要自己解析页面。",
+  "capabilities": [
+   "歌词搜索",
+   "注释",
+   "艺人信息",
+   "OAuth"
+  ],
+  "best_for": "做歌词站或音乐内容产品。"
  },
  {
   "slug": "lyrics-ovh",
@@ -2429,7 +3444,14 @@
   "example": "curl -s \"https://api.lyrics.ovh/v1/coldplay/yellow\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Lyrics.ovh 是极简歌词接口，按艺人名和歌名返回歌词，免 Key。覆盖以欧美歌曲为主，冷门曲目可能缺失。",
+  "capabilities": [
+   "歌词查询",
+   "按歌手检索",
+   "JSON"
+  ],
+  "best_for": "做歌词展示的小工具。"
  },
  {
   "slug": "deezer-api",
@@ -2448,7 +3470,15 @@
   "example": "curl -s \"https://api.deezer.com/chart\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Deezer 的音乐接口，查曲目、专辑、艺人、播放列表和排行榜，提供 30 秒试听片段，公开接口免 Key。",
+  "capabilities": [
+   "曲库检索",
+   "试听片段",
+   "排行榜",
+   "播放列表"
+  ],
+  "best_for": "做音乐试听或曲库浏览。"
  },
  {
   "slug": "freesound",
@@ -2467,7 +3497,15 @@
   "example": "curl -s \"https://freesound.org/apiv2/search/text/?query=test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Freesound 的音效库接口，按关键词、时长、采样率和许可证搜音效与环境声，需免费 Key，可下载预览。",
+  "capabilities": [
+   "音效搜索",
+   "许可证过滤",
+   "预览下载",
+   "元数据"
+  ],
+  "best_for": "做视频配乐或音效素材库。"
  },
  {
   "slug": "github-rest-api",
@@ -2486,7 +3524,15 @@
   "example": "curl -s \"https://api.github.com/repos/torvalds/linux\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "GitHub 的 REST 接口，覆盖仓库、文件、Issues、PR、Actions、用户和组织，未认证 60 次/时，带 Token 5000 次/时。另有 GraphQL 版本可按需取字段。",
+  "capabilities": [
+   "仓库与代码",
+   "Issues 与 PR",
+   "Actions",
+   "组织与用户"
+  ],
+  "best_for": "做 CI 自动化、仓库看板或机器人。"
  },
  {
   "slug": "gitlab-api",
@@ -2505,7 +3551,15 @@
   "example": "curl -s \"https://gitlab.com/api/v4/projects?per_page=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "GitLab 的 REST 与 GraphQL 接口，覆盖项目、合并请求、流水线、议题、成员和权限，用 Personal Access Token 认证，自托管实例同样适用。",
+  "capabilities": [
+   "项目与 MR",
+   "CI 流水线",
+   "议题",
+   "成员权限"
+  ],
+  "best_for": "做 GitLab 自动化或自建平台集成。"
  },
  {
   "slug": "npm-registry-api",
@@ -2524,7 +3578,15 @@
   "example": "curl -s \"https://registry.npmjs.org/react/latest\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "npm 公共注册表的接口，可查包元数据、版本、依赖、维护者和下载量，免 Key。下载量统计在 api.npmjs.org，注意遵守限流。",
+  "capabilities": [
+   "包元数据",
+   "版本与依赖",
+   "下载量",
+   "搜索"
+  ],
+  "best_for": "做依赖分析或包管理工具。"
  },
  {
   "slug": "pypi-json-api",
@@ -2543,7 +3605,15 @@
   "example": "curl -s \"https://pypi.org/pypi/requests/json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "PyPI 的 JSON 接口，按包名取版本、依赖、发布文件、维护者和元数据，免 Key。每个包的 /json 端点直接返回完整信息。",
+  "capabilities": [
+   "包信息",
+   "版本历史",
+   "发布文件",
+   "依赖"
+  ],
+  "best_for": "做 Python 依赖审计。"
  },
  {
   "slug": "docker-hub-api",
@@ -2562,7 +3632,15 @@
   "example": "curl -s \"https://hub.docker.com/v2/repositories/library/ubuntu/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Docker Hub 的 HTTP 接口，可查镜像、标签、仓库、自动构建和拉取数，公开仓库免认证，私有操作需 Token，有限速。",
+  "capabilities": [
+   "镜像查询",
+   "标签列表",
+   "仓库搜索",
+   "拉取统计"
+  ],
+  "best_for": "做镜像管理或 CI 校验。"
  },
  {
   "slug": "crates-io-api",
@@ -2581,7 +3659,15 @@
   "example": "curl -s \"https://crates.io/api/v1/crates/serde\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Rust 包仓库的接口，查 crate 元数据、版本、依赖、下载量和反向依赖，免 Key，需自定义 User-Agent。",
+  "capabilities": [
+   "crate 信息",
+   "版本依赖",
+   "下载量",
+   "反向依赖"
+  ],
+  "best_for": "做 Rust 依赖检查。"
  },
  {
   "slug": "stackexchange-api",
@@ -2600,7 +3686,15 @@
   "example": "curl -s \"https://api.stackexchange.com/2.3/questions?site=stackoverflow\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Stack Exchange 的接口，可搜问题、答案、标签和用户，覆盖 Stack Overflow 等 180 多个站点，免 Key 每天 300 次，带 Key 1 万次。",
+  "capabilities": [
+   "问答检索",
+   "标签",
+   "用户",
+   "多站点"
+  ],
+  "best_for": "做技术问答聚合或知识库。"
  },
  {
   "slug": "codeforces-api",
@@ -2619,7 +3713,15 @@
   "example": "curl -s \"https://codeforces.com/api/problemset.problems\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Codeforces 的竞赛接口，查比赛、题目、提交记录、用户 rating 和题解状态，免 Key。适合做竞赛数据统计或训练工具。",
+  "capabilities": [
+   "比赛列表",
+   "题目",
+   "提交记录",
+   "rating"
+  ],
+  "best_for": "做竞赛数据统计或训练工具。"
  },
  {
   "slug": "judge0-ce",
@@ -2638,7 +3740,15 @@
   "example": "curl -s \"https://ce.judge0.com/about\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Judge0 是开源在线判题系统，提交代码返回编译与运行结果，支持 60 多种语言和资源限制，可自托管，公共实例有配额。",
+  "capabilities": [
+   "多语言执行",
+   "沙箱隔离",
+   "判题结果",
+   "可自托管"
+  ],
+  "best_for": "做在线编程题或代码运行功能。"
  },
  {
   "slug": "httpbin",
@@ -2657,7 +3767,15 @@
   "example": "curl -s \"https://httpbin.org/get\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "httpbin 是 HTTP 调试服务，提供 GET/POST、状态码、header、cookie、重定向、认证和延迟等测试端点，免 Key，也可自建。",
+  "capabilities": [
+   "请求回显",
+   "状态码测试",
+   "认证测试",
+   "延迟模拟"
+  ],
+  "best_for": "调试 HTTP 客户端或写测试。"
  },
  {
   "slug": "jsonplaceholder",
@@ -2676,7 +3794,15 @@
   "example": "curl -s \"https://jsonplaceholder.typicode.com/posts/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "JSONPlaceholder 提供 posts、comments、users 等六类假数据，支持全部 HTTP 方法，免 Key。适合前端原型和教学演示。",
+  "capabilities": [
+   "假数据",
+   "CRUD 示例",
+   "关联资源",
+   "过滤分页"
+  ],
+  "best_for": "前端原型或教学演示。"
  },
  {
   "slug": "reqres",
@@ -2695,7 +3821,15 @@
   "example": "curl -s \"https://reqres.in/api/users/2\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "ReqRes 是测试用 REST 接口，提供用户列表、登录、注册、分页和延迟模拟，返回真实结构，免 Key。适合前端联调和接口测试。",
+  "capabilities": [
+   "用户 CRUD",
+   "登录注册",
+   "分页",
+   "延迟模拟"
+  ],
+  "best_for": "前端联调或接口测试。"
  },
  {
   "slug": "resend",
@@ -2714,7 +3848,15 @@
   "example": "curl -s \"https://api.resend.com/domains\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Resend 是面向开发者的邮件 API，一条 POST 发事务邮件，支持 React 模板、附件、批量和 webhook，免费档每月 3000 封、每天 100 封。",
+  "capabilities": [
+   "事务邮件",
+   "模板",
+   "附件与批量",
+   "Webhook"
+  ],
+  "best_for": "做注册验证或通知邮件。"
  },
  {
   "slug": "sendgrid",
@@ -2733,7 +3875,15 @@
   "example": "curl -s \"https://api.sendgrid.com/v3/user/profile\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Twilio SendGrid 的邮件接口，支持事务邮件、营销邮件、动态模板、投递统计和事件 webhook，免费档每天 100 封。",
+  "capabilities": [
+   "事务邮件",
+   "营销邮件",
+   "模板",
+   "投递统计"
+  ],
+  "best_for": "做规模化邮件通知。"
  },
  {
   "slug": "mailgun",
@@ -2752,7 +3902,15 @@
   "example": "curl -s \"https://api.mailgun.net/v3/domains\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Mailgun 的邮件接口，支持发送、接收路由、日志、模板和地址验证，免费试用额度限时，沙盒域只能发给授权收件人。",
+  "capabilities": [
+   "邮件发送",
+   "接收路由",
+   "日志",
+   "地址验证"
+  ],
+  "best_for": "做交易邮件或邮件解析。"
  },
  {
   "slug": "emailjs",
@@ -2771,7 +3929,15 @@
   "example": "curl -s \"https://api.emailjs.com/api/v1.0/email/send\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "EmailJS 让前端直接发邮件，不用自建后端：配置模板后用公钥调用，免费档每月 200 封、2 个模板。适合静态站的联系表单。",
+  "capabilities": [
+   "前端发信",
+   "模板",
+   "附件",
+   "无需后端"
+  ],
+  "best_for": "静态站的联系表单。"
  },
  {
   "slug": "cloudflare-api",
@@ -2790,7 +3956,15 @@
   "example": "curl -s \"https://api.cloudflare.com/client/v4/zones\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Cloudflare 的账户与域名接口，可管理 DNS、缓存、防火墙、Workers、R2 和 Turnstile，Token 按权限细分。免费计划同样可用 API。",
+  "capabilities": [
+   "DNS 管理",
+   "缓存清理",
+   "WAF 规则",
+   "Workers 部署"
+  ],
+  "best_for": "做 DNS 自动化或多站点运维。"
  },
  {
   "slug": "telegram-bot-api",
@@ -2809,7 +3983,15 @@
   "example": "curl -s \"https://api.telegram.org/bot123456:ABC/getMe\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Telegram 的机器人接口，收发消息、按钮、文件、群管理和 webhook，免 Key，只需要 BotFather 发的 Token。国内访问需自备网络。",
+  "capabilities": [
+   "消息收发",
+   "内联按钮",
+   "文件与图片",
+   "Webhook"
+  ],
+  "best_for": "做通知机器人或社群工具。"
  },
  {
   "slug": "discord-api",
@@ -2828,7 +4010,15 @@
   "example": "curl -s \"https://discord.com/api/v10/gateway\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Discord 的机器人接口，可收发消息、管理频道与角色、处理 Slash 命令和语音，需在开发者门户建应用拿 Token，按 scope 授权。",
+  "capabilities": [
+   "消息与频道",
+   "角色权限",
+   "Slash 命令",
+   "语音"
+  ],
+  "best_for": "做社区机器人或告警通知。"
  },
  {
   "slug": "slack-api",
@@ -2847,7 +4037,15 @@
   "example": "curl -s \"https://slack.com/api/api.test\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Slack 的 Web API，覆盖消息、频道、用户、文件、反应和 OAuth 安装，Bot Token 按 scope 授权，免费工作区也能用。",
+  "capabilities": [
+   "消息与频道",
+   "用户",
+   "文件",
+   "OAuth 安装"
+  ],
+  "best_for": "做团队通知或审批机器人。"
  },
  {
   "slug": "hunter-io",
@@ -2866,7 +4064,15 @@
   "example": "curl -s \"https://api.hunter.io/v2/domain-search?domain=stripe.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Hunter.io 的邮箱发现接口，按域名或姓名查企业邮箱、验证有效性和来源，免费档每月 50 次搜索、100 次验证。适合做销售线索或招聘联系。",
+  "capabilities": [
+   "邮箱发现",
+   "有效性验证",
+   "来源与置信度",
+   "域名检索"
+  ],
+  "best_for": "做销售线索或招聘联系。"
  },
  {
   "slug": "numverify",
@@ -2885,7 +4091,15 @@
   "example": "curl -s \"https://apilayer.net/api/validate\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Numverify 的电话号码校验接口，返回国家、运营商、线路类型和有效性，支持 200 多个国家，免费档每月 100 次。",
+  "capabilities": [
+   "号码校验",
+   "运营商识别",
+   "线路类型",
+   "国家归属"
+  ],
+  "best_for": "做注册表单校验。"
  },
  {
   "slug": "nager-date",
@@ -2904,7 +4118,15 @@
   "example": "curl -s \"https://date.nager.at/api/v3/PublicHolidays/2026/US\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Nager.Date 的公共假日接口，覆盖 200 多个国家和地区的法定假日、长周末和州级差异，免 Key，也可自建。",
+  "capabilities": [
+   "法定假日",
+   "多国家",
+   "长周末",
+   "州级差异"
+  ],
+  "best_for": "做排期、请假或旅行规划。"
  },
  {
   "slug": "timezonedb",
@@ -2923,7 +4145,15 @@
   "example": "curl -s \"http://api.timezonedb.com/v2.1/get-time-zone?format=json&by=zone&zone=Asia/Tokyo\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TimezoneDB 的时区接口，按坐标或时区名查当前时间、UTC 偏移、夏令时和时区列表，免费 Key 有限速。",
+  "capabilities": [
+   "时区查询",
+   "夏令时",
+   "坐标定位",
+   "时区列表"
+  ],
+  "best_for": "做跨时区排期或世界时钟。"
  },
  {
   "slug": "sunrise-sunset-api",
@@ -2942,7 +4172,15 @@
   "example": "curl -s \"https://api.sunrise-sunset.org/json?lat=36.72&lng=-4.42\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Sunrise-Sunset 的接口，给经纬度返回日出、日落、太阳正午、晨昏和黄金时刻，免 Key。适合做摄影时刻表或户外应用。",
+  "capabilities": [
+   "日出日落",
+   "黄金时刻",
+   "暮光时间",
+   "太阳位置"
+  ],
+  "best_for": "做摄影时刻表或户外应用。"
  },
  {
   "slug": "tinyurl-api",
@@ -2961,7 +4199,15 @@
   "example": "curl -s \"https://api.tinyurl.com/create\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TinyURL 的短链接口，传长链接返回短链，支持自定义别名和点击统计，免 Key。接口简单，适合做分享链接。",
+  "capabilities": [
+   "短链生成",
+   "自定义别名",
+   "点击统计",
+   "接口极简"
+  ],
+  "best_for": "做分享链接或二维码。"
  },
  {
   "slug": "is-gd",
@@ -2980,7 +4226,15 @@
   "example": "curl -s \"https://is.gd/create.php?format=simple&url=https://example.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "is.gd 的短链接口，支持自定义后缀、JSON 返回和二维码，免 Key，有限流。适合轻量短链需求。",
+  "capabilities": [
+   "短链生成",
+   "自定义后缀",
+   "JSON",
+   "二维码"
+  ],
+  "best_for": "轻量短链需求。"
  },
  {
   "slug": "microlink",
@@ -2999,7 +4253,15 @@
   "example": "curl -s \"https://api.microlink.io/?url=https://example.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Microlink 的网页元数据接口，给 URL 返回标题、描述、OG 图、logo 和截图，也能做 PDF 和 Lighthouse 检测，免费档每天 50 次。",
+  "capabilities": [
+   "链接预览",
+   "网页截图",
+   "OG 元数据",
+   "PDF 生成"
+  ],
+  "best_for": "做链接卡片或网页存档。"
  },
  {
   "slug": "languagetool",
@@ -3018,7 +4280,15 @@
   "example": "curl -s \"https://api.languagetool.org/v2/languages\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "LanguageTool 的语法与拼写检查接口，支持 30 多种语言，返回错误位置、类型和修改建议，公共实例限 20 次/分，可自建。",
+  "capabilities": [
+   "语法检查",
+   "拼写",
+   "多语言",
+   "修改建议"
+  ],
+  "best_for": "做写作助手或内容校对。"
  },
  {
   "slug": "libretranslate",
@@ -3037,7 +4307,15 @@
   "example": "curl -s \"https://libretranslate.com/translate\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "LibreTranslate 是开源的机器翻译服务，可自建，公共实例支持多语言互译和自动检测，免 Key 但限流。适合对数据主权有要求的项目。",
+  "capabilities": [
+   "多语言翻译",
+   "自动检测",
+   "可自托管",
+   "术语表"
+  ],
+  "best_for": "想自己掌控翻译数据的项目。"
  },
  {
   "slug": "deepl-api-free",
@@ -3056,7 +4334,15 @@
   "example": "curl -s \"https://api-free.deepl.com/v2/usage\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "DeepL 的免费档接口，支持 30 多种语言互译，质量在机器翻译里靠前，每月 50 万字符，支持术语表和文档翻译（文档另计）。",
+  "capabilities": [
+   "高质量翻译",
+   "多语言",
+   "术语表",
+   "文档翻译"
+  ],
+  "best_for": "做文档翻译或多语站点。"
  },
  {
   "slug": "pok-api",
@@ -3075,7 +4361,15 @@
   "example": "curl -s \"https://pokeapi.co/api/v2/pokemon/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "宝可梦开放数据库，覆盖 1000 多种宝可梦、招式、属性、进化链、道具、特性和地区，提供 REST 与 GraphQL，免 Key，社区维护。",
+  "capabilities": [
+   "宝可梦图鉴",
+   "招式与属性",
+   "进化链",
+   "道具与特性"
+  ],
+  "best_for": "做图鉴类练手项目或游戏资料站。"
  },
  {
   "slug": "swapi",
@@ -3094,7 +4388,15 @@
   "example": "curl -s \"https://swapi.dev/api/people/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "星球大战宇宙的开放数据接口，提供人物、星球、飞船、载具、电影和物种，返回 JSON 与关联链接，免 Key。适合做资料站或 API 教学示例。",
+  "capabilities": [
+   "人物与星球",
+   "飞船与载具",
+   "电影",
+   "关联数据"
+  ],
+  "best_for": "做星战资料站或 API 教学示例。"
  },
  {
   "slug": "jikan-myanimelist",
@@ -3113,7 +4415,15 @@
   "example": "curl -s \"https://api.jikan.moe/v4/anime/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Jikan 是 MyAnimeList 的非官方 REST 接口，查动画、漫画、角色、声优、制作公司和播出日程，免 Key 有速率限制（3 次/秒）。",
+  "capabilities": [
+   "动画与漫画",
+   "角色声优",
+   "播出日程",
+   "排行榜"
+  ],
+  "best_for": "做追番应用或动漫资料库。"
  },
  {
   "slug": "anilist-graphql",
@@ -3132,7 +4442,15 @@
   "example": "curl -s \"https://graphql.anilist.co\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "AniList 的 GraphQL 接口，覆盖动画、漫画、角色、工作人员和用户列表，读取免 Key，改数据需 OAuth。字段可按需组合，返回体积小。",
+  "capabilities": [
+   "动画漫画",
+   "角色与工作人员",
+   "用户列表",
+   "GraphQL"
+  ],
+  "best_for": "做动漫追踪或评分站。"
  },
  {
   "slug": "studio-ghibli-api",
@@ -3151,7 +4469,15 @@
   "example": "curl -s \"https://ghibliapi.vercel.app/films\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "吉卜力工作室的开放接口，提供电影、角色、场景、物种、载具和地点，免 Key。数据量不大，适合做资料页或前端练习。",
+  "capabilities": [
+   "电影列表",
+   "角色",
+   "场景与地点",
+   "图片资源"
+  ],
+  "best_for": "做吉卜力资料页或演示项目。"
  },
  {
   "slug": "rick-and-morty-api",
@@ -3170,7 +4496,15 @@
   "example": "curl -s \"https://rickandmortyapi.com/api/character/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "瑞克和莫蒂的剧集数据接口，提供角色、地点和剧集，同时支持 REST 与 GraphQL，免 Key，图片资源齐全。",
+  "capabilities": [
+   "角色",
+   "地点",
+   "剧集",
+   "REST 与 GraphQL"
+  ],
+  "best_for": "做剧集资料站或前端练习。"
  },
  {
   "slug": "open-trivia-db",
@@ -3189,7 +4523,15 @@
   "example": "curl -s \"https://opentdb.com/api.php?amount=1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "开放题库接口，按分类、难度、题型取选择题，支持批量、指定编码和会话令牌防重复，免 Key。",
+  "capabilities": [
+   "选择题库",
+   "分类与难度",
+   "批量取题",
+   "防重复令牌"
+  ],
+  "best_for": "做答题游戏或课堂测验。"
  },
  {
   "slug": "jokeapi",
@@ -3208,7 +4550,15 @@
   "example": "curl -s \"https://v2.jokeapi.dev/joke/Any\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "JokeAPI 的笑话接口，支持按分类、语言、黑名单和关键词过滤，返回单条或批量，免 Key。自带安全模式过滤敏感内容。",
+  "capabilities": [
+   "多分类笑话",
+   "语言过滤",
+   "批量返回",
+   "安全模式"
+  ],
+  "best_for": "做聊天机器人或每日一笑。"
  },
  {
   "slug": "icanhazdadjoke",
@@ -3227,7 +4577,15 @@
   "example": "curl -s \"https://icanhazdadjoke.com/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "icanhazdadjoke 的老爹笑话接口，随机返回或搜索笑话，支持纯文本与 JSON，也能提交新笑话，免 Key。",
+  "capabilities": [
+   "随机笑话",
+   "搜索",
+   "纯文本",
+   "提交笑话"
+  ],
+  "best_for": "做轻松类小应用。"
  },
  {
   "slug": "chuck-norris-api",
@@ -3246,7 +4604,14 @@
   "example": "curl -s \"https://api.chucknorris.io/jokes/random\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Chuck Norris 笑话接口，随机返回或按分类取，免 Key。数据量小但稳定，常被用作 API 教学示例。",
+  "capabilities": [
+   "随机笑话",
+   "分类",
+   "JSON 直出"
+  ],
+  "best_for": "做示例项目或页面彩蛋。"
  },
  {
   "slug": "kanye-rest",
@@ -3265,7 +4630,14 @@
   "example": "curl -s \"https://api.kanye.rest\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "kanye.rest 随机返回一条 Kanye West 语录，免 Key，返回极简 JSON。适合做占位内容或趣味组件。",
+  "capabilities": [
+   "随机语录",
+   "极简 JSON",
+   "JSON"
+  ],
+  "best_for": "做占位内容或趣味组件。"
  },
  {
   "slug": "dog-ceo-api",
@@ -3284,7 +4656,15 @@
   "example": "curl -s \"https://dog.ceo/api/breeds/image/random\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Dog CEO 的狗图接口，按品种取随机图或全部图片，附品种与子品种列表，免 Key，图片来自用户上传。",
+  "capabilities": [
+   "随机狗图",
+   "品种列表",
+   "子品种",
+   "品种图片"
+  ],
+  "best_for": "做宠物类应用或占位图。"
  },
  {
   "slug": "cat-fact-api",
@@ -3303,7 +4683,14 @@
   "example": "curl -s \"https://catfact.ninja/fact\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Cat Fact 的接口每次返回一条猫知识，免 Key，返回 JSON。适合做每日推送或趣味卡片。",
+  "capabilities": [
+   "随机猫知识",
+   "轻量 JSON",
+   "JSON"
+  ],
+  "best_for": "做每日推送或趣味卡片。"
  },
  {
   "slug": "random-user-generator",
@@ -3322,7 +4709,15 @@
   "example": "curl -s \"https://randomuser.me/api/\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Random User Generator 生成随机用户数据，含姓名、地址、邮箱、电话、头像和登录信息，支持指定国籍、性别和字段，免 Key。",
+  "capabilities": [
+   "随机用户",
+   "头像",
+   "多国籍",
+   "指定字段"
+  ],
+  "best_for": "做列表占位或测试数据。"
  },
  {
   "slug": "xkcd-api",
@@ -3341,7 +4736,15 @@
   "example": "curl -s \"https://xkcd.com/info.0.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "xkcd 漫画的 JSON 接口，按编号取漫画信息、标题、alt 文本和图片，另有 latest 取最新一期，免 Key。",
+  "capabilities": [
+   "漫画元数据",
+   "指定编号",
+   "最新一期",
+   "alt 文本"
+  ],
+  "best_for": "做漫画浏览或页面彩蛋。"
  },
  {
   "slug": "api-football",
@@ -3360,7 +4763,15 @@
   "example": "curl -s \"https://v3.football.api-sports.io/status\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "API-Football 覆盖 1000 多个联赛的赛程、比分、阵容、统计、赔率和伤病，免费档每天 100 次。数据来自 API-Sports 体系。",
+  "capabilities": [
+   "赛程比分",
+   "阵容统计",
+   "赔率",
+   "多联赛"
+  ],
+  "best_for": "做足球资讯或 fantasy 应用。"
  },
  {
   "slug": "thesportsdb",
@@ -3379,7 +4790,15 @@
   "example": "curl -s \"https://www.thesportsdb.com/api/v1/json/3/all_leagues.php\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TheSportsDB 的体育数据库，覆盖足球、篮球、棒球、橄榄球等联赛的球队、球员、场馆、赛事和图片，免费档用测试 Key，正式档走 Patreon。",
+  "capabilities": [
+   "联赛球队",
+   "球员",
+   "场馆",
+   "赛事与图片"
+  ],
+  "best_for": "做体育资料站或赛程展示。"
  },
  {
   "slug": "balldontlie-nba",
@@ -3398,7 +4817,15 @@
   "example": "curl -s \"https://api.balldontlie.io/v1/teams\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "BALLDONTLIE 的篮球数据接口，覆盖 NBA、WNBA、NCAAB 等联赛的球队、球员、比赛和统计，免费档有限额，付费档更高。",
+  "capabilities": [
+   "NBA 数据",
+   "球员统计",
+   "比赛结果",
+   "多联赛"
+  ],
+  "best_for": "做篮球数据看板。"
  },
  {
   "slug": "jolpica-f1-ergast",
@@ -3417,7 +4844,15 @@
   "example": "curl -s \"https://api.jolpi.ca/ergast/f1/current/last/results.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Jolpica 是 Ergast F1 API 的社区继任者，提供 F1 赛季、赛程、车手、车队、积分和比赛结果，免 Key。原 Ergast 已停服，迁移只需换域名。",
+  "capabilities": [
+   "赛程结果",
+   "车手车队",
+   "积分榜",
+   "历史赛季"
+  ],
+  "best_for": "做 F1 数据站，或从 Ergast 迁移。"
  },
  {
   "slug": "openf1",
@@ -3436,7 +4871,15 @@
   "example": "curl -s \"https://api.openf1.org/v1/drivers?session_key=latest\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenF1 是开源的 F1 数据接口，提供实时遥测、圈速、分段、天气、赛事控制和车手无线电，免费档需注册拿 Key，比赛周末实时推送。",
+  "capabilities": [
+   "实时遥测",
+   "圈速与分段",
+   "天气",
+   "赛事控制"
+  ],
+  "best_for": "做 F1 实时可视化。"
  },
  {
   "slug": "strava-api",
@@ -3455,7 +4898,15 @@
   "example": "curl -s \"https://www.strava.com/api/v3/athlete\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Strava 的运动数据接口，可读运动员资料、活动、路段和排行榜，也能上传活动，OAuth 授权，免费档限 100 次/15 分钟、1000 次/天。",
+  "capabilities": [
+   "活动数据",
+   "路段与排行榜",
+   "运动员资料",
+   "上传活动"
+  ],
+  "best_for": "做骑行、跑步数据看板。"
  },
  {
   "slug": "opensky-network",
@@ -3474,7 +4925,15 @@
   "example": "curl -s \"https://opensky-network.org/api/states/all\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenSky 提供全球航班的实时位置、状态向量和历史轨迹，数据来自 ADS-B 接收网络，匿名访问有限额，注册用户额度更高。",
+  "capabilities": [
+   "实时航班位置",
+   "历史轨迹",
+   "状态向量",
+   "全球覆盖"
+  ],
+  "best_for": "做航班追踪或航空数据分析。"
  },
  {
   "slug": "aviationstack",
@@ -3493,7 +4952,15 @@
   "example": "curl -s \"http://api.aviationstack.com/v1/flights\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Aviationstack 的航班接口，提供实时航班、历史记录、机场、航线和飞机信息，免费档每月 100 次且只支持 HTTP。",
+  "capabilities": [
+   "实时航班",
+   "历史航班",
+   "机场与航线",
+   "飞机信息"
+  ],
+  "best_for": "做航班查询或物流跟踪。"
  },
  {
   "slug": "transport-for-london",
@@ -3512,7 +4979,15 @@
   "example": "curl -s \"https://api.tfl.gov.uk/Line/Mode/tube/Status\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "伦敦交通局的统一接口，提供地铁、公交、Overground、骑行和道路交通状态、到站时间、线路与站点，需免费 App Key。",
+  "capabilities": [
+   "线路状态",
+   "到站时间",
+   "共享单车桩",
+   "道路状况"
+  ],
+  "best_for": "做伦敦出行应用。"
  },
  {
   "slug": "open-charge-map",
@@ -3531,7 +5006,15 @@
   "example": "curl -s \"https://api.openchargemap.io/v3/poi/?output=json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Open Charge Map 是全球电动车充电站数据库，按位置查站点、接口类型、功率和实时可用性，需免费 Key，数据由社区维护。",
+  "capabilities": [
+   "充电站查询",
+   "接口与功率",
+   "实时状态",
+   "社区数据"
+  ],
+  "best_for": "做充电地图或路线规划。"
  },
  {
   "slug": "amadeus-for-developers",
@@ -3550,7 +5033,15 @@
   "example": "curl -s \"https://test.travel.api.amadeus.com/v1/security/oauth2/token\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Amadeus 的旅行接口，提供航班搜索、最低价日历、酒店、目的地内容和预订，测试环境免费有额度，生产按量计费。",
+  "capabilities": [
+   "航班搜索",
+   "酒店",
+   "目的地内容",
+   "预订"
+  ],
+  "best_for": "做机票比价或旅行规划。"
  },
  {
   "slug": "google-books-api",
@@ -3569,7 +5060,15 @@
   "example": "curl -s \"https://www.googleapis.com/books/v1/volumes?q=api\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Google Books 接口，按书名、作者、ISBN 或全文搜书，返回元数据、封面、预览链接和销售信息，免 Key 有配额。",
+  "capabilities": [
+   "图书搜索",
+   "ISBN 查询",
+   "封面",
+   "预览链接"
+  ],
+  "best_for": "做书目查询或读书应用。"
  },
  {
   "slug": "open-library",
@@ -3588,7 +5087,15 @@
   "example": "curl -s \"https://openlibrary.org/search.json?q=api\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Open Library 的开放书目接口，按 ISBN、标题、作者查书、封面、版本和作者信息，也能读写书单，免 Key。",
+  "capabilities": [
+   "ISBN 查询",
+   "书目与版本",
+   "封面",
+   "书单"
+  ],
+  "best_for": "做图书馆式检索或藏书管理。"
  },
  {
   "slug": "gutendex",
@@ -3607,7 +5114,15 @@
   "example": "curl -s \"https://gutendex.com/books?search=api\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Gutendex 是 Project Gutenberg 的 JSON 接口，查 7 万多本公版书的元数据、语言、主题和下载链接，免 Key，支持按语言和版权过滤。",
+  "capabilities": [
+   "公版书检索",
+   "多语言",
+   "下载链接",
+   "主题过滤"
+  ],
+  "best_for": "做电子书站或阅读器。"
  },
  {
   "slug": "themealdb",
@@ -3626,7 +5141,15 @@
   "example": "curl -s \"https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TheMealDB 的免费菜谱接口，按名称、分类、地区或单个食材搜菜谱，含食材清单、步骤和图片，测试 Key 为 1。",
+  "capabilities": [
+   "菜谱检索",
+   "分类地区",
+   "食材步骤",
+   "图片"
+  ],
+  "best_for": "做菜谱应用或美食站。"
  },
  {
   "slug": "thecocktaildb",
@@ -3645,7 +5168,15 @@
   "example": "curl -s \"https://www.thecocktaildb.com/api/json/v1/1/random.php\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "TheCocktailDB 的免费鸡尾酒接口，按名称、配料或分类查配方、杯型、步骤和图片，测试 Key 为 1，与 TheMealDB 同源。",
+  "capabilities": [
+   "鸡尾酒配方",
+   "配料检索",
+   "杯型与步骤",
+   "图片"
+  ],
+  "best_for": "做调酒应用或酒吧菜单。"
  },
  {
   "slug": "open-food-facts",
@@ -3664,7 +5195,15 @@
   "example": "curl -s \"https://world.openfoodfacts.org/api/v2/product/737628064502.json\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Open Food Facts 是开放食品数据库，按条码查配料、营养、过敏原、品牌和评分，覆盖全球数百万商品，免 Key，数据由社区贡献。",
+  "capabilities": [
+   "条码查询",
+   "营养成分",
+   "过敏原",
+   "品牌与评分"
+  ],
+  "best_for": "做食品扫码或健康饮食应用。"
  },
  {
   "slug": "fake-store-api",
@@ -3683,7 +5222,15 @@
   "example": "curl -s \"https://fakestoreapi.com/products/1\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Fake Store API 提供电商假数据，含商品、分类、购物车和用户登录，返回结构接近真实电商，免 Key。适合做电商原型。",
+  "capabilities": [
+   "商品数据",
+   "分类",
+   "购物车",
+   "用户登录"
+  ],
+  "best_for": "做电商原型或前端练习。"
  },
  {
   "slug": "virustotal",
@@ -3702,7 +5249,15 @@
   "example": "curl -s \"https://www.virustotal.com/api/v3/domains/google.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "VirusTotal 的文件与 URL 检测接口，用 70 多个引擎查哈希、扫描样本、域名和 IP，免费 Key 每分钟 4 次、每天 500 次。",
+  "capabilities": [
+   "文件哈希查询",
+   "URL 扫描",
+   "域名与 IP 情报",
+   "多引擎结果"
+  ],
+  "best_for": "做安全分析或样本排查。"
  },
  {
   "slug": "shodan",
@@ -3721,7 +5276,15 @@
   "example": "curl -s \"https://api.shodan.io/shodan/host/8.8.8.8\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Shodan 是互联网设备搜索引擎的接口，可按 IP、端口、协议、产品和服务查暴露资产，免费 Key 只能做有限查询，且不能导出结果。",
+  "capabilities": [
+   "资产搜索",
+   "端口与服务",
+   "主机详情",
+   "协议过滤"
+  ],
+  "best_for": "做暴露面排查或安全研究。"
  },
  {
   "slug": "have-i-been-pwned",
@@ -3740,7 +5303,15 @@
   "example": "curl -s \"https://haveibeenpwned.com/api/v3/breachedaccount/test@example.com\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Have I Been Pwned 的泄露查询接口，按邮箱或域名查是否出现在泄露事件中，密码查询用 k-Anonymity 可免 Key，其余需付费 Key。",
+  "capabilities": [
+   "邮箱泄露查询",
+   "域名泄露",
+   "密码范围查询",
+   "泄露详情"
+  ],
+  "best_for": "做账号安全提醒。"
  },
  {
   "slug": "abuseipdb",
@@ -3759,7 +5330,15 @@
   "example": "curl -s \"https://api.abuseipdb.com/api/v2/check?ipAddress=8.8.8.8\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "AbuseIPDB 的 IP 信誉接口，查 abuse 置信度、举报记录、地理位置和 ISP，也能提交举报，免费 Key 每天 1000 次。",
+  "capabilities": [
+   "IP 信誉",
+   "举报记录",
+   "地理与 ISP",
+   "提交举报"
+  ],
+  "best_for": "做风控或日志告警。"
  },
  {
   "slug": "alienvault-otx",
@@ -3778,7 +5357,15 @@
   "example": "curl -s \"https://otx.alienvault.com/api/v1/indicators/domain/google.com/general\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "AlienVault OTX 的威胁情报接口，查 IP、域名、URL、文件哈希关联的 pulse、恶意软件家族和被动 DNS，需免费 Key。",
+  "capabilities": [
+   "威胁情报",
+   "IoC 查询",
+   "pulse",
+   "被动 DNS"
+  ],
+  "best_for": "做安全运营或威胁狩猎。"
  },
  {
   "slug": "greynoise",
@@ -3797,7 +5384,15 @@
   "example": "curl -s \"https://api.greynoise.io/v3/community/8.8.8.8\"",
   "tags": [],
   "featured": true,
-  "source": "manual"
+  "source": "manual",
+  "intro": "GreyNoise 区分互联网背景扫描噪音和针对性攻击，查 IP 的扫描行为、分类和社区标签，有社区免费档。",
+  "capabilities": [
+   "扫描噪音识别",
+   "IP 分类",
+   "威胁上下文",
+   "社区标签"
+  ],
+  "best_for": "做告警降噪或 SOC 分析。"
  },
  {
   "slug": "un-comtrade",
@@ -3816,7 +5411,15 @@
   "example": "curl -s \"https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=842&period=2022&cmdCode=85\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "UN Comtrade 是联合国商品贸易统计库，按报告国、伙伴国、HS 商品编码查年度与月度进出口额，数据可回溯到 1962 年，免 Key 有配额。",
+  "capabilities": [
+   "双边贸易额",
+   "HS 商品分类",
+   "年度与月度",
+   "长历史序列"
+  ],
+  "best_for": "做贸易流向分析或行业研究。"
  },
  {
   "slug": "imf-datamapper",
@@ -3835,7 +5438,15 @@
   "example": "curl -s \"https://www.imf.org/external/datamapper/api/v1/NGDPD\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "IMF 的 DataMapper 接口，按指标、国家、年份取 WEO 等数据集，返回 JSON，免 Key，覆盖 GDP、通胀、债务等宏观指标与预测。",
+  "capabilities": [
+   "宏观指标",
+   "国别对比",
+   "预测值",
+   "指标元数据"
+  ],
+  "best_for": "做全球经济看板或国别研究。"
  },
  {
   "slug": "imf-sdmx-api",
@@ -3854,7 +5465,15 @@
   "example": "curl -s \"https://api.imf.org/external/sdmx/2.1/dataflow\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "IMF 的 SDMX 标准接口，可拉取国际收支、政府财政、金融稳健等数据集，需要按 dataflow 拼 URL，适合程序化定时同步。",
+  "capabilities": [
+   "SDMX 标准",
+   "国际收支",
+   "政府财政",
+   "批量同步"
+  ],
+  "best_for": "要把 IMF 数据接进自有管道。"
  },
  {
   "slug": "eurostat-api",
@@ -3873,7 +5492,15 @@
   "example": "curl -s \"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "欧盟统计局接口，提供成员国的人口、就业、物价、贸易等统计，支持 JSON-stat 与 SDMX 两种格式，免 Key。",
+  "capabilities": [
+   "欧盟成员国数据",
+   "JSON-stat",
+   "SDMX",
+   "JSON-stat 输出"
+  ],
+  "best_for": "做欧洲市场对比或政策研究。"
  },
  {
   "slug": "oecd-sdmx",
@@ -3892,7 +5519,15 @@
   "example": "curl -s \"https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.STES\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OECD 的 SDMX 接口，覆盖成员国的经济、教育、健康、税收等指标，按 dataflow 查询，免 Key。",
+  "capabilities": [
+   "OECD 指标",
+   "教育健康",
+   "税收数据",
+   "SDMX"
+  ],
+  "best_for": "做发达国家对比研究。"
  },
  {
   "slug": "ecb-data-portal",
@@ -3911,7 +5546,15 @@
   "example": "curl -s \"https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "欧洲央行数据门户，提供政策利率、汇率、货币供应和国际收支，REST 与 SDMX 两种接口，免 Key。",
+  "capabilities": [
+   "利率与汇率",
+   "货币供应",
+   "国际收支",
+   "SDMX 输出"
+  ],
+  "best_for": "做欧元区金融数据分析。"
  },
  {
   "slug": "bis-statistics",
@@ -3930,7 +5573,15 @@
   "example": "curl -s \"https://stats.bis.org/api/v1/data/WS_LONG_CPI?format=json\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "国际清算银行统计，覆盖跨境信贷、衍生品、房地产价格和央行政策，按数据集查询，免 Key。",
+  "capabilities": [
+   "跨境信贷",
+   "衍生品",
+   "房价指数",
+   "央行政策"
+  ],
+  "best_for": "做金融稳定或跨境资金研究。"
  },
  {
   "slug": "who-gho-odata",
@@ -3949,7 +5600,15 @@
   "example": "curl -s \"https://ghoapi.azureedge.net/api/Indicator\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "世卫组织全球卫生观测台的 OData 接口，可查预期寿命、死因、疾病负担和卫生投入等指标，免 Key。",
+  "capabilities": [
+   "卫生指标",
+   "死因数据",
+   "疾病负担",
+   "OData"
+  ],
+  "best_for": "做公共卫生研究或健康数据可视化。"
  },
  {
   "slug": "un-sdg-api",
@@ -3968,7 +5627,15 @@
   "example": "curl -s \"https://unstats.un.org/SDGAPI/v1/sdg/Goal/List\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "联合国可持续发展目标接口，按目标、指标、地区和年份查询 200 多个 SDG 指标，免 Key。",
+  "capabilities": [
+   "SDG 指标",
+   "地区对比",
+   "时间序列",
+   "目标指标映射"
+  ],
+  "best_for": "做可持续发展相关报道或研究。"
  },
  {
   "slug": "unhcr-refugee-data",
@@ -3987,7 +5654,15 @@
   "example": "curl -s \"https://api.unhcr.org/population/v1/population/?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "联合国难民署数据接口，提供难民、寻求庇护者和流离失所人口统计，按国家、年份和来源国查询，免 Key。",
+  "capabilities": [
+   "难民统计",
+   "来源国与接收国",
+   "年度序列",
+   "来源国维度"
+  ],
+  "best_for": "做移民、人道议题的数据分析。"
  },
  {
   "slug": "hdx-ocha",
@@ -4006,7 +5681,15 @@
   "example": "curl -s \"https://data.humdata.org/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "人道主义数据交换平台，聚合危机地区的行政边界、人口和援助数据，走 CKAN 接口，免 Key。",
+  "capabilities": [
+   "人道危机数据",
+   "行政边界",
+   "援助项目",
+   "CKAN"
+  ],
+  "best_for": "做应急响应或人道研究。"
  },
  {
   "slug": "undata",
@@ -4025,7 +5708,15 @@
   "example": "curl -s \"https://data.un.org/ws/rest/dataflow\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "UNdata 是联合国统计司的门户，整合 30 多个国际机构的数据，覆盖人口、经济、贸易、能源、环境和社会指标，可按指标与国家查询，部分数据集提供 API 下载。",
+  "capabilities": [
+   "联合国汇总数据",
+   "国别指标",
+   "多机构来源",
+   "数据下载"
+  ],
+  "best_for": "做跨国统计对比。"
  },
  {
   "slug": "us-congress-api",
@@ -4044,7 +5735,15 @@
   "example": "curl -s \"https://api.congress.gov/v3/bill?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Congress.gov 的接口，查法案、修正案、议员、投票、委员会和听证，需免费 api.data.gov Key，覆盖第 93 届国会至今。",
+  "capabilities": [
+   "法案与修正案",
+   "议员与投票",
+   "委员会",
+   "听证与日程"
+  ],
+  "best_for": "做立法追踪或政治数据新闻。"
  },
  {
   "slug": "bea-api",
@@ -4063,7 +5762,15 @@
   "example": "curl -s \"https://apps.bea.gov/api/data/?method=GETDATASETLIST\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国经济分析局接口，提供 GDP、个人收入、行业产出、地区经济和国际贸易数据，免费 Key，按 dataset 与 table 查询。",
+  "capabilities": [
+   "GDP 与收入",
+   "行业产出",
+   "地区经济",
+   "国际贸易"
+  ],
+  "best_for": "做美国宏观经济分析。"
  },
  {
   "slug": "data-gov-uk-ckan",
@@ -4082,7 +5789,15 @@
   "example": "curl -s \"https://data.gov.uk/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "英国开放数据门户基于 CKAN，可检索数据集、机构和资源，支持 datastore_search 直接对表做类 SQL 查询，免 Key。",
+  "capabilities": [
+   "UK 数据集",
+   "CKAN 检索",
+   "直接查表",
+   "机构索引"
+  ],
+  "best_for": "找英国官方数据做分析。"
  },
  {
   "slug": "uk-ons-api",
@@ -4101,7 +5816,15 @@
   "example": "curl -s \"https://api.beta.ons.gov.uk/v1/datasets?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "英国国家统计局接口，提供人口、通胀、就业、GDP 等官方统计，按数据集和版本取 JSON 或 CSV，免 Key，版本可追溯。",
+  "capabilities": [
+   "英国官方统计",
+   "通胀与就业",
+   "版本化数据",
+   "数据集版本"
+  ],
+  "best_for": "做英国经济或社会研究。"
  },
  {
   "slug": "data-gouv-fr",
@@ -4120,7 +5843,15 @@
   "example": "curl -s \"https://www.data.gouv.fr/api/1/datasets/?page_size=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "法国开放数据平台，覆盖交通、地理、公共财政、企业等数据集，提供自研 API 与 CKAN 兼容接口，免 Key。",
+  "capabilities": [
+   "法国开放数据",
+   "交通与地理",
+   "公共财政",
+   "CKAN 兼容"
+  ],
+  "best_for": "做法国市场或公共服务研究。"
  },
  {
   "slug": "govdata-de",
@@ -4139,7 +5870,15 @@
   "example": "curl -s \"https://www.govdata.de/ckan/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "德国开放数据门户，聚合联邦与各州的数据集，提供 CKAN 与 SPARQL 接口，免 Key，元数据支持多语言。",
+  "capabilities": [
+   "德国数据集",
+   "CKAN",
+   "SPARQL",
+   "多语言元数据"
+  ],
+  "best_for": "做德国公共数据检索。"
  },
  {
   "slug": "destatis-genesis",
@@ -4158,7 +5897,15 @@
   "example": "curl -s \"https://www-genesis.destatis.de/genesisWS/rest/2020/catalogue/tables?username=&password=&selection=*\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "德国联邦统计局的 GENESIS 接口，提供人口、物价、贸易、就业等官方统计，需注册账号并申请 Token，按表号查询。",
+  "capabilities": [
+   "德国官方统计",
+   "人口物价",
+   "贸易数据",
+   "表号查询"
+  ],
+  "best_for": "做德国经济分析。"
  },
  {
   "slug": "e-stat-jp",
@@ -4177,7 +5924,15 @@
   "example": "curl -s \"https://api.e-stat.go.jp/rest/3.0/app/json/getStatsList?appId=DUMMY\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "日本政府统计门户 e-Stat 的 API，提供人口普查、经济普查、物价和劳动统计，需注册 App ID，支持 JSON 与 XML。",
+  "capabilities": [
+   "日本统计",
+   "普查数据",
+   "JSON 与 XML",
+   "App ID"
+  ],
+  "best_for": "做日本市场或社会研究。"
  },
  {
   "slug": "data-go-kr",
@@ -4196,7 +5951,15 @@
   "example": "curl -s \"https://www.data.go.kr/\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "韩国公共数据门户，数万个数据集与 Open API，覆盖交通、气象、医疗、金融，需申请 Key，多数接口有每日配额。",
+  "capabilities": [
+   "韩国公共数据",
+   "Open API",
+   "交通气象",
+   "数据集下载"
+  ],
+  "best_for": "做韩国市场或公共服务应用。"
  },
  {
   "slug": "data-gov-sg",
@@ -4215,7 +5978,15 @@
   "example": "curl -s \"https://api-production.data.gov.sg/v2/public/api/collections\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "新加坡开放数据平台，提供数据集元数据与实时接口，覆盖出租车、天气、人口、组屋等，免 Key。",
+  "capabilities": [
+   "新加坡数据",
+   "实时接口",
+   "地理与交通",
+   "实时交通数据"
+  ],
+  "best_for": "做新加坡城市数据应用。"
  },
  {
   "slug": "data-gov-tw",
@@ -4234,7 +6005,15 @@
   "example": "curl -s \"https://data.gov.tw/api/v2/rest/dataset?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "台湾政府资料开放平台，数据集可下载或通过 API 获取，覆盖财政、交通、卫生、环境，多数免 Key，格式以 CSV、JSON 为主。",
+  "capabilities": [
+   "台湾开放数据",
+   "CSV 与 JSON",
+   "数据集 API",
+   "政府统计"
+  ],
+  "best_for": "做台湾地区的数据分析。"
  },
  {
   "slug": "data-gov-hk",
@@ -4253,10 +6032,18 @@
   "example": "curl -s \"https://data.gov.hk/en-data/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "香港开放数据平台，覆盖公共交通、天气、人口、城市管理，提供 API 与文件下载，免 Key。",
+  "capabilities": [
+   "香港开放数据",
+   "交通与天气",
+   "API 与文件",
+   "文件与 API 双通道"
+  ],
+  "best_for": "做香港城市应用或研究。"
  },
  {
-  "slug": "api",
+  "slug": "canada-open-data",
   "name": "加拿大开放数据",
   "category": "public-data",
   "description_zh": "加拿大政府数据",
@@ -4272,7 +6059,15 @@
   "example": "curl -s \"https://open.canada.ca/data/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "加拿大政府开放数据，提供数据集检索与 CKAN 接口，覆盖地理、环境、财政、健康等主题，免 Key。",
+  "capabilities": [
+   "加拿大数据集",
+   "CKAN",
+   "地理与环境",
+   "CKAN 兼容"
+  ],
+  "best_for": "做加拿大公共数据检索。"
  },
  {
   "slug": "data-gov-au",
@@ -4291,7 +6086,15 @@
   "example": "curl -s \"https://data.gov.au/data/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "澳洲开放数据门户基于 CKAN，聚合联邦与各州的数据集，可检索、预览并直接下载，免 Key。",
+  "capabilities": [
+   "澳洲数据集",
+   "CKAN",
+   "联邦与州",
+   "空间数据"
+  ],
+  "best_for": "做澳洲市场或政策研究。"
  },
  {
   "slug": "data-govt-nz",
@@ -4310,7 +6113,15 @@
   "example": "curl -s \"https://catalogue.data.govt.nz/api/3/action/package_search?rows=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "新西兰开放数据门户基于 CKAN，覆盖人口、环境、交通、经济等主题，免 Key。",
+  "capabilities": [
+   "新西兰数据",
+   "CKAN",
+   "人口与环境",
+   "CKAN 兼容"
+  ],
+  "best_for": "做新西兰相关数据分析。"
  },
  {
   "slug": "dados-gov-br",
@@ -4329,10 +6140,18 @@
   "example": "curl -s \"https://dados.gov.br/dados/api/publico/conjuntos-dados?pagina=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "巴西开放数据门户，提供联邦数据集与 API，覆盖财政、教育、环境、卫生，免 Key。",
+  "capabilities": [
+   "巴西数据",
+   "财政与教育",
+   "API 与下载",
+   "数据集下载"
+  ],
+  "best_for": "做巴西市场研究。"
  },
  {
-  "slug": "api-2",
+  "slug": "china-nbs",
   "name": "国家统计局",
   "category": "public-data",
   "description_zh": "中国国家统计数据库",
@@ -4348,10 +6167,18 @@
   "example": "curl -s \"https://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode=hgnd&rowcode=zb&colcode=sj&wds=[]&dfwds=[]\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "中国国家统计局的数据接口，按指标代码取月度与年度数据，返回 JSON，需按官网说明拼 URL，适合抓 CPI、PMI、GDP 等宏观序列。",
+  "capabilities": [
+   "国家统计指标",
+   "月度年度",
+   "JSON",
+   "宏观序列"
+  ],
+  "best_for": "做中国宏观经济数据抓取。"
  },
  {
-  "slug": "api-3",
+  "slug": "shanghai-open-data",
   "name": "上海市公共数据开放平台",
   "category": "public-data",
   "description_zh": "上海市政务数据",
@@ -4367,10 +6194,18 @@
   "example": "curl -s \"https://data.sh.gov.cn/\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "上海市公共数据开放平台，提供交通、气象、人口、信用等数据集与 API，需注册并申请，部分数据要审核。",
+  "capabilities": [
+   "上海政务数据",
+   "交通气象",
+   "API 调用",
+   "信用数据"
+  ],
+  "best_for": "做上海本地化数据应用。"
  },
  {
-  "slug": "api-4",
+  "slug": "shenzhen-open-data",
   "name": "深圳市开放数据平台",
   "category": "public-data",
   "description_zh": "深圳市政府数据",
@@ -4386,10 +6221,18 @@
   "example": "curl -s \"https://opendata.sz.gov.cn/\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "深圳市政府数据开放平台，提供数据集下载与接口调用，覆盖交通、教育、医疗、企业等，需注册。",
+  "capabilities": [
+   "深圳政务数据",
+   "数据集下载",
+   "接口调用",
+   "企业数据"
+  ],
+  "best_for": "做深圳本地数据应用。"
  },
  {
-  "slug": "api-5",
+  "slug": "zhejiang-open-data",
   "name": "浙江省公共数据开放平台",
   "category": "public-data",
   "description_zh": "浙江省政务数据",
@@ -4405,7 +6248,15 @@
   "example": "curl -s \"https://data.zjzwfw.gov.cn/\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "浙江省公共数据开放平台，提供数据下载、查询与接口调用，覆盖经济、民生、环境、交通，需注册申请。",
+  "capabilities": [
+   "浙江政务数据",
+   "数据下载",
+   "接口调用",
+   "民生数据"
+  ],
+  "best_for": "做浙江本地数据应用。"
  },
  {
   "slug": "cdc-open-data",
@@ -4424,7 +6275,15 @@
   "example": "curl -s \"https://data.cdc.gov/api/views.json?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国 CDC 开放数据，覆盖疾病监测、疫苗接种、健康行为、环境暴露和死亡率，走 Socrata 平台，可用 SODA 查询，免 Key。",
+  "capabilities": [
+   "疾病监测",
+   "疫苗接种",
+   "健康行为",
+   "SODA 查询"
+  ],
+  "best_for": "做公共卫生数据可视化。"
  },
  {
   "slug": "noaa-ncei",
@@ -4443,7 +6302,15 @@
   "example": "curl -s \"https://www.ncei.noaa.gov/access/services/data/v1?dataset=global-summary-of-the-year&limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "美国国家环境信息中心接口，提供气候、海洋、气象的历史观测、站点元数据和气候常值，免 Key 有配额。",
+  "capabilities": [
+   "历史气候",
+   "海洋数据",
+   "站点元数据",
+   "气候常值"
+  ],
+  "best_for": "做气候分析或气象回测。"
  },
  {
   "slug": "datacite-api",
@@ -4462,7 +6329,15 @@
   "example": "curl -s \"https://api.datacite.org/dois?page%5Bsize%5D=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "DataCite 的 REST 接口，可检索和注册 DOI 元数据，覆盖论文、数据集、软件和样本，读取免 Key。",
+  "capabilities": [
+   "DOI 元数据",
+   "成果检索",
+   "注册 DOI",
+   "关联作品"
+  ],
+  "best_for": "做科研数据索引或成果统计。"
  },
  {
   "slug": "zenodo-api",
@@ -4481,7 +6356,15 @@
   "example": "curl -s \"https://zenodo.org/api/records?size=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Zenodo 的开放接口，可检索、上传研究成果并自动获取 DOI，免费；上传需个人 Token，支持大文件与版本。",
+  "capabilities": [
+   "成果检索",
+   "上传与 DOI",
+   "版本管理",
+   "开放获取"
+  ],
+  "best_for": "做科研数据归档或文献聚合。"
  },
  {
   "slug": "figshare-api",
@@ -4500,7 +6383,15 @@
   "example": "curl -s \"https://api.figshare.com/v2/articles?page_size=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Figshare 的研究数据接口，支持检索、上传、发布、版本和 DOI 管理，公开数据可匿名读，写操作需 OAuth。",
+  "capabilities": [
+   "研究数据检索",
+   "上传发布",
+   "版本与 DOI",
+   "OAuth"
+  ],
+  "best_for": "做科研数据仓库或成果展示。"
  },
  {
   "slug": "dryad-api",
@@ -4519,7 +6410,15 @@
   "example": "curl -s \"https://datadryad.org/api/v2/datasets?per_page=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Dryad 的科研数据接口，可检索数据集、下载文件与元数据，公开数据多数免 Key，适合做数据复用与引用。",
+  "capabilities": [
+   "数据集检索",
+   "文件下载",
+   "元数据",
+   "引用信息"
+  ],
+  "best_for": "做科研数据复用。"
  },
  {
   "slug": "openaire-api",
@@ -4538,7 +6437,15 @@
   "example": "curl -s \"https://api.openaire.eu/search/publications?size=1&format=json\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "OpenAIRE Graph 接口，覆盖出版物、数据集、软件、项目和作者，支持类 SQL 的图查询，免 Key。",
+  "capabilities": [
+   "出版物与数据集",
+   "项目关联",
+   "图查询",
+   "成果关联"
+  ],
+  "best_for": "做科研产出统计或机构分析。"
  },
  {
   "slug": "common-crawl-index",
@@ -4557,7 +6464,15 @@
   "example": "curl -s \"https://index.commoncrawl.org/CC-MAIN-2024-10-index?url=example.com\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Common Crawl 的索引接口，按 URL 查历史抓取快照并从 S3 取 WARC 文件，免 Key。适合做语料构建和网页历史研究。",
+  "capabilities": [
+   "网页索引",
+   "WARC 下载",
+   "历史快照",
+   "S3 直取"
+  ],
+  "best_for": "做语料构建或网页历史研究。"
  },
  {
   "slug": "overpass-api-osm",
@@ -4576,7 +6491,15 @@
   "example": "curl -s \"https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3Bnode(1)%3Bout%3B\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Overpass API 是 OSM 的查询接口，用 Overpass QL 按区域和标签取 POI、道路、边界和建筑，免 Key，公共实例有流量限制。",
+  "capabilities": [
+   "POI 查询",
+   "道路与边界",
+   "Overpass QL",
+   "空间查询"
+  ],
+  "best_for": "做地理数据提取或地图分析。"
  },
  {
   "slug": "socrata-discovery",
@@ -4595,7 +6518,15 @@
   "example": "curl -s \"https://api.us.socrata.com/api/catalog/v1?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Socrata 的目录发现接口，可跨全球数千个开放数据门户检索数据集、列和元数据，免 Key。",
+  "capabilities": [
+   "跨门户检索",
+   "数据集发现",
+   "列级元数据",
+   "元数据检索"
+  ],
+  "best_for": "找某个主题的开放数据源。"
  },
  {
   "slug": "opendatasoft-catalog",
@@ -4614,7 +6545,15 @@
   "example": "curl -s \"https://data.opendatasoft.com/api/v2/catalog/datasets?limit=1\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "Opendatasoft 的目录接口，聚合 10 万多个数据集，支持全文检索、分面统计和导出，免 Key。",
+  "capabilities": [
+   "数据集目录",
+   "全文检索",
+   "分面统计",
+   "导出"
+  ],
+  "best_for": "做数据源发现或目录站。"
  },
  {
   "slug": "global-forest-watch",
@@ -4633,6 +6572,14 @@
   "example": "curl -s \"https://data-api.globalforestwatch.org/\"",
   "tags": [],
   "featured": false,
-  "source": "manual"
+  "source": "manual",
+  "intro": "全球森林监察的数据接口，提供森林砍伐、火灾、土地覆盖、保护区等图层数据，需免费 Key，适合做遥感与环保分析。",
+  "capabilities": [
+   "森林砍伐",
+   "火灾监测",
+   "土地覆盖",
+   "保护区"
+  ],
+  "best_for": "做环保监测或遥感分析。"
  }
 ]

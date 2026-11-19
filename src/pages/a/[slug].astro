@@ -28,7 +28,7 @@ const category = getCategory(api.category);
 const status = statusOf(api);
 const auth = authLabel(api);
 const title = `${api.name} 免费额度、认证方式与调用示例 · 免费 API 中文索引`;
-const description = `${api.name}：${api.description_zh}。${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
+const description = `${api.name}：${api.intro} ${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
 const canonicalPath = `/a/${api.slug}/`;
 const officialHost = new URL(api.url).hostname;
 const correctionUrl = `https://github.com/yukari09/public-apis/issues/new?title=[纠错]%20${api.slug}`;
@@ -36,7 +36,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: api.name,
-  description: api.description_zh,
+  description: api.intro,
   applicationCategory: category?.name ?? 'DeveloperApplication',
   operatingSystem: 'Any',
   url: `${SITE_URL}${canonicalPath}`,
@@ -76,6 +76,8 @@ const jsonLd = {
         <span class={`stamp ${status.cls}`}>{status.label}</span>
       </div>
       <p class="detail-desc">{api.description_zh}</p>
+      <p class="detail-intro">{api.intro}</p>
+      <p class="best-for"><span>适合：</span>{api.best_for}</p>
     </header>
 
     <div class="detail-body">
@@ -96,6 +98,15 @@ const jsonLd = {
               <div><dt>分类</dt><dd>{category.name}</dd></div>
             </dl>
           </div>
+        </section>
+
+        <section class="detail-section" aria-labelledby="capabilities-title">
+          <h2 id="capabilities-title">能力</h2>
+          <ul class="capability-list">
+            {api.capabilities.map((capability) => (
+              <li>{capability}</li>
+            ))}
+          </ul>
         </section>
 
         <div class="detail-actions">
