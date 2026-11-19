@@ -58,7 +58,7 @@ components:
     padding: "8px 12px"
     typography: "{typography.body}"
   filter-chip-active:
-    backgroundColor: "{colors.ink}"
+    backgroundColor: "{colors.accent}"
     textColor: "{colors.paper}"
     rounded: "{rounded.full}"
     padding: "8px 12px"
