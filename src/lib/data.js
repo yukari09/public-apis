@@ -50,7 +50,7 @@ const CATEGORY_COLOR = {
   music: '#b29cc2',
   fun: '#b29cc2',
   lifestyle: '#b29cc2',
-  security: '#cf7f7f',
+  security: '#cf8a8a',
   utilities: '#9aa0a6',
 };
 

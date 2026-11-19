@@ -7,16 +7,16 @@
   --color-raised: #181b20;
   --color-line: #262b32;
   --color-line-strong: #3a414b;
-  --color-bone: #ebe7de;
-  --color-muted: #969996;
+  --color-bone: #f3efe7;
+  --color-muted: #b7b7b0;
   --color-copper: #d29a5d;
   --color-copper-ink: #170d05;
-  --color-sky: #a3bcc2;
+  --color-sky: #b4d4da;
   --color-blue: #8fa7c4;
   --color-coral: #c98b7a;
-  --color-ok: #8fbf9f;
-  --color-key: #d6b25e;
-  --color-bad: #cf7f7f;
+  --color-ok: #9bd2aa;
+  --color-key: #e2c06a;
+  --color-bad: #e09292;
   --radius-control: 10px;
   --radius-panel: 16px;
   --font-sans: "Space Grotesk Variable", -apple-system, "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", system-ui, sans-serif;
@@ -356,7 +356,7 @@
   }
 
   .entry-head {
-    @apply grid grid-cols-[minmax(0,1fr)_200px_92px] gap-5 px-2 py-2 font-mono text-[10px] tracking-[0.12em] text-muted;
+    @apply grid grid-cols-[minmax(0,1fr)_240px_92px] gap-5 px-2 py-2 font-mono text-[10px] tracking-[0.12em] text-muted;
   }
 
   .entry-head span:last-child {
@@ -368,7 +368,7 @@
   }
 
   .entry {
-    @apply grid grid-cols-[minmax(0,1fr)_200px_92px] items-start gap-x-5 gap-y-1 rounded-lg border border-transparent border-b-line px-2 py-4;
+    @apply grid grid-cols-[minmax(0,1fr)_240px_92px] items-start gap-x-5 gap-y-1 rounded-lg border border-transparent border-b-line px-2 py-4;
     transition: background-color 150ms ease, border-color 150ms ease;
   }
 
@@ -396,14 +396,16 @@
 
   .desc {
     @apply col-start-1 row-start-2 m-0 text-[14px] text-muted;
+    text-wrap: pretty;
   }
 
   .entry-quota {
     @apply col-start-2 row-span-2 row-start-1 flex flex-col gap-1 text-[13px] leading-[1.5] text-muted;
+    text-wrap: pretty;
   }
 
   .source {
-    @apply mr-1.5 inline-block rounded border border-line-strong px-1 align-[1px] font-mono text-[9.5px] leading-[1.55] tracking-[0.03em] text-muted;
+    @apply mr-1.5 inline-block rounded border border-line-strong px-1 align-[1px] font-mono text-[10px] leading-[1.55] tracking-[0.03em] text-muted;
   }
 
   .auth {
@@ -623,7 +625,7 @@
   }
 
   .code-wrap pre {
-    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] leading-[1.75] text-[#d8d5cb];
+    @apply m-0 overflow-x-auto px-4 py-5 font-mono text-[12px] leading-[1.75] text-[#e2dfd6];
     padding-right: 108px;
     tab-size: 2;
     white-space: pre-wrap;
@@ -717,7 +719,7 @@
 
   .prose p,
   .prose li {
-    @apply text-[#c3c1b8];
+    @apply text-[#d1cfc6];
   }
 
   .prose ul {
@@ -729,7 +731,7 @@
   }
 
   .prose code {
-    @apply rounded border border-line bg-surface px-1.5 py-0.5 font-mono text-[0.9em] text-[#d8d5cb];
+    @apply rounded border border-line bg-surface px-1.5 py-0.5 font-mono text-[0.9em] text-[#e2dfd6];
   }
 
   .source-list {
@@ -804,7 +806,7 @@
 
     .entry,
     .entry-head {
-      @apply grid-cols-[minmax(0,1fr)_190px_88px] gap-4;
+      @apply grid-cols-[minmax(0,1fr)_210px_84px] gap-4;
     }
   }
 

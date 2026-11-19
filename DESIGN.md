@@ -7,18 +7,18 @@ colors:
   raised: "#181b20"
   line: "#262b32"
   line-strong: "#3a414b"
-  bone: "#ebe7de"
-  muted: "#969996"
+  bone: "#f3efe7"
+  muted: "#b7b7b0"
   copper: "#d29a5d"
   copper-ink: "#170d05"
-  sky: "#a3bcc2"
+  sky: "#b4d4da"
   blue: "#8fa7c4"
   coral: "#c98b7a"
-  status-ok: "#8fbf9f"
-  status-key: "#d6b25e"
-  status-bad: "#cf7f7f"
-  prose: "#c3c1b8"
-  code: "#d8d5cb"
+  status-ok: "#9bd2aa"
+  status-key: "#e2c06a"
+  status-bad: "#e09292"
+  prose: "#d1cfc6"
+  code: "#e2dfd6"
 typography:
   display:
     fontFamily: "Space Grotesk Variable, PingFang SC, Noto Sans CJK SC, system-ui, sans-serif"
@@ -107,7 +107,7 @@ The palette is a warm graphite console with one burnished copper signal.
 - **Copper Ink** (#170d05): text placed on copper.
 
 ### Secondary
-- **Slate Teal** (#a3bcc2): inline links and low-volume information.
+- **Slate Teal** (#b4d4da): inline links and low-volume information.
 - **Dust Blue** (#8fa7c4): reserved for secondary data emphasis and future data graphics.
 - **Coral Clay** (#c98b7a): a small third signal for the fourth dot in the mark.
 
@@ -116,15 +116,15 @@ The palette is a warm graphite console with one burnished copper signal.
 - **Deck Surface** (#121417): search deck, sample panel, entry hover, info panel.
 - **Raised Deck** (#181b20): a second neutral layer for related links and controls.
 - **Hairline** (#262b32) and **Strong Hairline** (#3a414b): borders and dividers.
-- **Bone** (#ebe7de): primary text.
-- **Muted Signal** (#969996): secondary copy, metadata, counts, and labels.
-- **Prose** (#c3c1b8): long-form reading text.
-- **Code** (#d8d5cb): curl and code.
+- **Bone** (#f3efe7): primary text.
+- **Muted Signal** (#b7b7b0): secondary copy, metadata, counts, and labels.
+- **Prose** (#d1cfc6): long-form reading text.
+- **Code** (#e2dfd6): curl and code.
 
 ### Status
-- **Sage** (#8fbf9f): usable.
-- **Amber** (#d6b25e): key required.
-- **Muted Red** (#cf7f7f): unreachable or dead.
+- **Sage** (#9bd2aa): usable.
+- **Amber** (#e2c06a): key required.
+- **Muted Red** (#e09292): unreachable or dead.
 
 ### Category Spectrum
 Category dots use six muted families: copper for AI/devtools/finance, slate teal for weather/geo/transport, sage for open data/science/sports, mauve for news/media/music/fun/lifestyle, muted red for security, and slate for utilities. The dot is 6px and appears beside category names and entries; active rows tint the background at 11% of the category hue.
