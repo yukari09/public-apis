@@ -469,7 +469,8 @@
   }
 
   .page-btn {
-    @apply inline-flex h-9 min-w-9 items-center justify-center rounded-[2px] border border-line px-2 font-mono text-[12px] font-medium text-ink;
+    @apply inline-flex h-10 min-w-10 items-center justify-center rounded-[2px] border border-line-strong px-3 font-sans text-[13px] font-semibold text-ink;
+    font-variant-numeric: tabular-nums;
   }
 
   .page-btn:hover {
@@ -481,11 +482,11 @@
   }
 
   .page-btn.is-disabled {
-    @apply cursor-not-allowed opacity-40;
+    @apply cursor-not-allowed border-line text-muted;
   }
 
   .page-gap {
-    @apply px-1 font-mono text-[12px] text-muted;
+    @apply px-1 font-sans text-[13px] font-medium text-muted;
   }
 
   .empty-state {

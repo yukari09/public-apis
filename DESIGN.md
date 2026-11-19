@@ -162,7 +162,7 @@ Controls, cards, status stamps, and pagination use a 2px radius. Filters use the
 - **Category rail:** neutral category dots, codes, names, counts. Active state becomes an ink block with an orange dot and count.
 - **API card:** name, neutral category square, description, quota/auth evidence, and a status stamp in the top-right. Hover changes surface and border.
 - **Status stamp:** paper ground, strong hairline, black text, and a 4px semantic square. Text is always present.
-- **Pagination:** square previous/next/page controls; current page uses safety orange with ink text.
+- **Pagination:** square 40px previous/next/page controls at 13px/600 sans; current page uses safety orange with ink text, disabled controls stay muted but readable.
 - **Spec panel:** paper surface with a two-column definition grid on desktop and one column on mobile.
 - **Call example:** black code surface with paper text; copy feedback uses the orange fill.
 - **Related links:** two-column paper records with a hairline border and a surface hover.
