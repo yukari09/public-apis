@@ -126,7 +126,7 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 
 **Character:** Instrument Sans gives the page a contemporary but neutral editorial voice; the mono layer reads as evidence, not decoration. The Chinese fallback stays plain and legible. Interface and evidence text runs at 500 with subpixel antialiasing; long-form prose stays at 400. 400 is not used for visible UI labels or controls.
 
-**Microtype floor:** no visible text below 11px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 600. Small text is never 400 weight.
+**Microtype floor:** no visible text below 11px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 500. Weight is assigned by role: 400 for long prose, footer links, and category names; 500 for all other UI and evidence; 600 only for the brand and display/page/section headings.
 
 **Rendering:** set `-webkit-font-smoothing: subpixel-antialiased` on `html` and form controls, with `text-rendering: optimizeLegibility`. Do not use `antialiased` on the paper surface; it thins the text.
 
@@ -134,11 +134,11 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 - **Display** (600, clamp 42–68px, 1.02): the masthead.
 - **Page title** (600, 34–56px): category and detail headings.
 - **Headline** (600, 19–24px): section headings and empty states.
-- **Entry name** (600, 17–18px): API names in the cards.
+- **Entry name** (500, 17–18px): API names in the cards.
 - **UI text** (500, 13.5–16px): descriptions, controls, navigation, and evidence.
 - **Long-form prose** (400, 15px, 1.65): About, disclaimer, and privacy pages only.
 - **Label** (500, 11–12px mono or tracked sans): counts, source tags, status, and column labels.
-- **Numeric metadata** (600, 12px mono, ink): category codes and counts. The result line and pagination use 12px mono at 500 weight.
+- **Numeric metadata** (500, 12px mono): category codes and counts, the result line, and pagination.
 
 ## Layout
 
@@ -165,7 +165,7 @@ Controls, cards, status stamps, and pagination use a 2px radius. Filters use the
 - **Category rail:** neutral category dots, codes, names, counts. Active state becomes an ink block with an orange dot and count.
 - **API card:** name, neutral category square, description, quota/auth evidence, and a status stamp in the top-right. Hover changes surface and border.
 - **Status stamp:** paper ground, strong hairline, black text, and a 4px semantic square. Text is always present.
-- **Pagination:** square 40px previous/next/page controls at 13px/600 sans; current page uses safety orange with ink text, disabled controls stay muted but readable.
+- **Pagination:** square 36px previous/next/page controls at 12px/500 mono; current page uses safety orange with ink text, disabled controls stay muted but readable.
 - **Spec panel:** paper surface with a two-column definition grid on desktop and one column on mobile.
 - **Call example:** black code surface with paper text; copy feedback uses the orange fill.
 - **Related links:** two-column paper records with a hairline border and a surface hover.

@@ -239,7 +239,7 @@
   }
 
   .sample-name {
-    @apply truncate font-semibold text-paper;
+    @apply truncate font-medium text-paper;
   }
 
   .sample-kicker {
@@ -411,7 +411,7 @@
   }
 
   .name {
-    @apply block pr-[96px] font-sans text-[18px] font-semibold leading-[1.35] tracking-[-0.015em] text-ink;
+    @apply block pr-[96px] font-sans text-[18px] font-medium leading-[1.35] tracking-[-0.015em] text-ink;
   }
 
   .name::before {
@@ -489,7 +489,7 @@
   }
 
   .page-btn {
-    @apply inline-flex h-9 min-w-9 items-center justify-center rounded-[2px] border border-line px-2 font-mono text-[12px] font-semibold text-ink;
+    @apply inline-flex h-9 min-w-9 items-center justify-center rounded-[2px] border border-line px-2 font-mono text-[12px] font-medium text-ink;
     font-variant-numeric: tabular-nums;
   }
 
@@ -559,7 +559,7 @@
   }
 
   .breadcrumb .is-current {
-    @apply font-semibold text-ink;
+    @apply font-medium text-ink;
   }
 
   .category-header {
@@ -575,7 +575,7 @@
   }
 
   .category-code {
-    @apply inline-block flex-none rounded-[2px] border border-accent bg-accent px-2 py-0.5 font-mono text-[12px] font-semibold text-accent-ink;
+    @apply inline-block flex-none rounded-[2px] border border-accent bg-accent px-2 py-0.5 font-mono text-[12px] font-medium text-accent-ink;
   }
 
   .category-intro {
@@ -591,7 +591,7 @@
   }
 
   .adj-code {
-    @apply font-mono text-[11px] font-semibold text-ink;
+    @apply font-mono text-[11px] font-medium text-ink;
   }
 
   .notice-banner {
@@ -623,7 +623,7 @@
   }
 
   .detail-category .category-code {
-    @apply border-0 p-0 text-[11px] font-semibold;
+    @apply border-0 p-0 text-[11px] font-medium;
   }
 
   .detail-category .cat-dot {
@@ -752,7 +752,7 @@
   }
 
   .related-name {
-    @apply block text-[16px] font-semibold text-ink;
+    @apply block text-[16px] font-medium text-ink;
   }
 
   .related-link:hover .related-name {
