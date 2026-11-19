@@ -5,6 +5,9 @@ export default defineConfig({
   site: 'https://public-apis.morio.cc',
   build: { format: 'directory' },
   compressHTML: true,
+  server: {
+    host: true,
+  },
   integrations: [
     sitemap({
       filter: (page) =>
