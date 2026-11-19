@@ -713,7 +713,7 @@
   }
 
   .detail-actions {
-    @apply mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-4 text-[13px] font-medium;
+    @apply mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-4 text-[13px] font-normal;
   }
 
   .official-link,
