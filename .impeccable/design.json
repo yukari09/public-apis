@@ -70,7 +70,8 @@
       { "name": "The Orange Registration Rule", "body": "Safety Orange marks action, current state, and one masthead square. It never becomes a background wash.", "section": "colors" },
       { "name": "The Paper Rule", "body": "Surfaces stay paper-like; do not reintroduce dark dashboard chrome or neon accents.", "section": "colors" },
       { "name": "The Card Record Rule", "body": "Every API card uses the same evidence slots and a bottom-anchored footer; hover changes surface and border, not geometry.", "section": "layout" },
-      { "name": "The Explicit Page Rule", "body": "The directory paginates at 20 records; no infinite scroll.", "section": "layout" }
+      { "name": "The Explicit Page Rule", "body": "The directory paginates at 20 records; no infinite scroll.", "section": "layout" },
+      { "name": "The Microtype Floor", "body": "No supporting text below 10px; mono evidence is 11px/500 and numeric metadata is 12px.", "section": "typography" }
     ],
     "dos": [
       "Use Instrument Sans and the system Chinese fallback together.",

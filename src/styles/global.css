@@ -199,7 +199,7 @@
   }
 
   .status-item {
-    @apply inline-flex items-baseline gap-1.5 border-r border-line pr-5;
+    @apply inline-flex items-baseline gap-1.5 border-r border-line pr-5 font-medium;
   }
 
   .status-item:last-child {
@@ -231,7 +231,7 @@
   }
 
   .sample-kicker {
-    @apply ml-auto font-mono text-[9px] tracking-[0.16em] text-[#b8b1a5];
+    @apply ml-auto font-mono text-[10.5px] font-medium tracking-[0.12em] text-[#b8b1a5];
   }
 
   .sample-code {
@@ -241,7 +241,7 @@
   }
 
   .sample-foot {
-    @apply flex items-center justify-between gap-4 border-t border-[#2a2824] px-4 py-3 text-[12px] text-[#b8b1a5];
+    @apply flex items-center justify-between gap-4 border-t border-[#2a2824] px-4 py-3 text-[12px] font-medium text-[#b8b1a5];
   }
 
   .sample-head .cat-dot {
@@ -294,7 +294,7 @@
   }
 
   .export-btn {
-    @apply h-10 cursor-pointer rounded-control border border-ink bg-ink px-3.5 font-mono text-[10.5px] tracking-[0.03em] text-paper;
+    @apply h-10 cursor-pointer rounded-control border border-ink bg-ink px-3.5 font-mono text-[11.5px] font-medium tracking-[0.02em] text-paper;
   }
 
   .export-btn:hover {
@@ -310,7 +310,7 @@
   }
 
   .rail-label {
-    @apply mb-2.5 border-b border-line pb-2 font-mono text-[10.5px] font-medium tracking-[0.16em] text-muted;
+    @apply mb-2.5 border-b border-line pb-2 font-mono text-[11px] font-medium tracking-[0.14em] text-muted;
   }
 
   .cat-list {
@@ -410,12 +410,12 @@
   }
 
   .entry-quota {
-    @apply mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-line pt-3 text-[12.5px] leading-[1.5] text-muted;
+    @apply mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-line pt-3 text-[12.5px] font-medium leading-[1.5] text-muted;
     text-wrap: pretty;
   }
 
   .source {
-    @apply mr-1.5 inline-block rounded border border-line-strong px-1 align-[1px] font-mono text-[10px] leading-[1.55] tracking-[0.03em] text-muted;
+    @apply mr-1.5 inline-block rounded-[2px] border border-line-strong px-1 align-[1px] font-mono text-[11px] font-medium leading-[1.55] tracking-[0.02em] text-muted;
   }
 
   .auth {
@@ -423,7 +423,7 @@
   }
 
   .stamp {
-    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-[2px] border border-line-strong bg-paper px-2.5 py-1 font-mono text-[10.5px] font-medium tracking-[0.02em] text-ink;
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-[2px] border border-line-strong bg-paper px-2.5 py-1 font-mono text-[11px] font-medium tracking-[0.02em] text-ink;
   }
 
   .entry > .stamp {
@@ -457,11 +457,11 @@
   }
 
   .ad-label {
-    @apply font-mono text-[10px] tracking-[0.14em];
+    @apply font-mono text-[11px] font-medium tracking-[0.12em];
   }
 
   .ad-note {
-    @apply mt-1 font-mono text-[9px] tracking-[0.1em] text-muted;
+    @apply mt-1 font-mono text-[10px] font-medium tracking-[0.08em] text-muted;
   }
 
   .pagination {
@@ -513,7 +513,7 @@
   }
 
   .breadcrumb {
-    @apply mb-6 mt-4 font-mono text-[11.5px] text-muted;
+    @apply mb-6 mt-4 font-mono text-[11.5px] font-medium text-muted;
   }
 
   .breadcrumb ol {
@@ -538,7 +538,7 @@
   }
 
   .breadcrumb .is-current {
-    @apply font-medium text-ink;
+    @apply font-semibold text-ink;
   }
 
   .category-header {
@@ -554,7 +554,7 @@
   }
 
   .category-code {
-    @apply inline-block flex-none rounded-[2px] border border-accent bg-accent px-2 py-0.5 font-mono text-[11px] font-medium text-accent-ink;
+    @apply inline-block flex-none rounded-[2px] border border-accent bg-accent px-2 py-0.5 font-mono text-[12px] font-semibold text-accent-ink;
   }
 
   .category-intro {
@@ -570,7 +570,7 @@
   }
 
   .adj-code {
-    @apply font-mono text-[10px] text-accent;
+    @apply font-mono text-[11px] font-semibold text-ink;
   }
 
   .notice-banner {
@@ -594,7 +594,7 @@
   }
 
   .detail-category {
-    @apply inline-flex items-center gap-2 rounded-full border border-line-strong px-3 py-1 text-[12px] text-muted;
+    @apply inline-flex items-center gap-2 rounded-full border border-line-strong px-3 py-1 text-[12px] font-medium text-muted;
   }
 
   .detail-category:hover {
@@ -602,7 +602,7 @@
   }
 
   .detail-category .category-code {
-    @apply border-0 p-0 text-[10px];
+    @apply border-0 p-0 text-[11px] font-semibold;
   }
 
   .detail-category .cat-dot {
@@ -650,7 +650,7 @@
   }
 
   .spec-grid dt {
-    @apply font-mono text-[9.5px] tracking-[0.1em] text-muted;
+    @apply font-mono text-[11px] font-medium tracking-[0.08em] text-muted;
   }
 
   .spec-grid dd {
@@ -675,7 +675,7 @@
   }
 
   .copy-btn {
-    @apply absolute right-2.5 top-2.5 cursor-pointer rounded-[2px] border border-paper/30 bg-code px-2.5 py-1.5 font-mono text-[10px] text-paper;
+    @apply absolute right-2.5 top-2.5 cursor-pointer rounded-[2px] border border-paper/30 bg-code px-2.5 py-1.5 font-mono text-[11px] font-medium text-paper;
   }
 
   .copy-btn:hover {

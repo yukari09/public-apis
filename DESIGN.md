@@ -126,6 +126,8 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 
 **Character:** Instrument Sans gives the page a contemporary but neutral editorial voice; the mono layer reads as evidence, not decoration. The Chinese fallback stays plain and legible.
 
+**Microtype floor:** no supporting text below 10px. Mono evidence labels are 11px/500; category numbers and result counts are 12px; the current breadcrumb is 600. Small text is never 400 weight.
+
 ### Hierarchy
 - **Display** (600, clamp 42–68px, 1.02): the masthead.
 - **Page title** (600, 34–56px): category and detail headings.
