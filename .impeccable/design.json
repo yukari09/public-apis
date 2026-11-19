@@ -4,69 +4,85 @@
   "title": "Design System: 免费 API 中文索引",
   "extensions": {
     "colorMeta": {
-      "ink": { "role": "neutral", "displayName": "Night Ink", "canonical": "#090c0a" },
-      "paper": { "role": "neutral", "displayName": "Reading Paper", "canonical": "#0f1511" },
-      "seal": { "role": "primary", "displayName": "Cinnabar Seal", "canonical": "#e3694a" },
-      "bone": { "role": "neutral", "displayName": "Warm Bone", "canonical": "#efe8d8" },
-      "muted": { "role": "neutral", "displayName": "Muted Bone", "canonical": "#a4a597" },
-      "prose-bone": { "role": "neutral", "displayName": "Prose Bone", "canonical": "#c4c0b2" },
-      "code-bone": { "role": "neutral", "displayName": "Code Bone", "canonical": "#d7d1c2" },
-      "celadon-link": { "role": "secondary", "displayName": "Celadon Link", "canonical": "#aac9c0" }
+      "ink": { "role": "neutral", "displayName": "Deck Ink", "canonical": "#07090d" },
+      "surface": { "role": "neutral", "displayName": "Deck Surface", "canonical": "#0c1118" },
+      "raised": { "role": "neutral", "displayName": "Raised Deck", "canonical": "#121926" },
+      "lime": { "role": "primary", "displayName": "Signal Lime", "canonical": "#c8ff3d" },
+      "sky": { "role": "secondary", "displayName": "Signal Sky", "canonical": "#6ed9f5" },
+      "coral": { "role": "tertiary", "displayName": "Coral Signal", "canonical": "#ff7a59" },
+      "bone": { "role": "neutral", "displayName": "Bone", "canonical": "#eef3f8" },
+      "muted": { "role": "neutral", "displayName": "Muted Signal", "canonical": "#8d9aae" }
     },
     "typographyMeta": {
-      "display": { "displayName": "Lexicon Display", "purpose": "Masthead and page-defining statements." },
-      "headline": { "displayName": "Section Headline", "purpose": "Section and category headings." },
-      "body": { "displayName": "Working Sans", "purpose": "Descriptions, prose, and controls." },
-      "label": { "displayName": "Measured Mono", "purpose": "Codes, counts, dates, and status." }
+      "display": { "displayName": "Signal Display", "purpose": "Masthead and 404 statement." },
+      "headline": { "displayName": "Section Headline", "purpose": "Section and empty-state headings." },
+      "body": { "displayName": "Working Grotesk", "purpose": "Descriptions, prose, and controls." },
+      "label": { "displayName": "Evidence Mono", "purpose": "Codes, counts, dates, and status." }
     },
     "motion": [
-      { "name": "state-shift", "value": "120ms linear", "purpose": "Entry hover and state transitions only." }
+      { "name": "state-shift", "value": "150ms ease", "purpose": "Entry hover and category/filter state changes." }
     ],
     "breakpoints": [
       { "name": "rail-collapse", "value": "900px" },
       { "name": "ledger-single-column", "value": "640px" }
-    ]
+    ],
+    "tailwind": {
+      "version": "4",
+      "plugin": "@tailwindcss/vite",
+      "entry": "src/styles/global.css"
+    }
   },
   "components": [
     {
-      "name": "Status Stamp",
+      "name": "Status Badge",
       "kind": "custom",
-      "refersTo": "entry-stamp",
-      "description": "Rectangular status marker used in the ledger and specification grid.",
-      "html": "<span class=\"ds-stamp\">需要 Key</span>",
-      "css": ".ds-stamp { display: inline-flex; padding: 2px 7px; border: 1px solid #dcb463; border-radius: 2px; color: #dcb463; background: transparent; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.04em; line-height: 1.55; white-space: nowrap; }"
+      "refersTo": "status-stamp",
+      "description": "Pill status with dot and text, used in the ledger and spec panel.",
+      "html": "<span class=\"ds-status\">需要 Key</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #fbbf24; border-radius: 999px; color: #fbbf24; background: color-mix(in srgb, #fbbf24 9%, transparent); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; font-weight: 500; } .ds-status::before { content: ''; width: 4px; height: 4px; border-radius: 999px; background: currentColor; }"
     },
     {
-      "name": "Seal Button",
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "filter-chip-active",
+      "description": "Pill filter used for authentication and quota scopes.",
+      "html": "<button class=\"ds-filter\">全部</button>",
+      "css": ".ds-filter { padding: 8px 12px; border: 1px solid #c8ff3d; border-radius: 999px; color: #080c02; background: #c8ff3d; font-size: 12px; font-weight: 500; cursor: pointer; } .ds-filter:hover { filter: brightness(1.05); } .ds-filter:focus-visible { outline: 2px solid #c8ff3d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Export Button",
       "kind": "button",
-      "refersTo": "seal-button",
-      "description": "Thin cinnabar outlined action for CSV export and secondary actions.",
-      "html": "<button class=\"ds-seal-button\">导出 CSV</button>",
-      "css": ".ds-seal-button { padding: 7px 12px; border: 1px solid #e3694a; border-radius: 2px; color: #e3694a; background: transparent; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; letter-spacing: 0.03em; cursor: pointer; } .ds-seal-button:hover { color: #090c0a; background: #e3694a; } .ds-seal-button:focus-visible { outline: 2px solid #e3694a; outline-offset: 3px; }"
+      "refersTo": "export-button",
+      "description": "Outlined lime action for CSV export.",
+      "html": "<button class=\"ds-export\">导出 CSV</button>",
+      "css": ".ds-export { padding: 8px 14px; border: 1px solid #c8ff3d; border-radius: 10px; color: #c8ff3d; background: transparent; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.03em; cursor: pointer; } .ds-export:hover { color: #080c02; background: #c8ff3d; } .ds-export:focus-visible { outline: 2px solid #c8ff3d; outline-offset: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Night Lexicon",
-    "overview": "A Chinese lexicon read after hours: warm bone type on ink, cinnabar marks for action, and a ruled index that behaves like a working tool. The metaphor enters through type, palette, density, and the category-code rail, never through terminal costume or card decoration.",
+    "northStar": "Signal Deck",
+    "overview": "A dark, high-signal directory console with a fluorescent lime action color, Space Grotesk lettering, and a live sample call in the first viewport. The interface stays a working tool: search, filters, evidence, and status are always standard and visible.",
     "keyCharacteristics": [
-      "Warm bone serif against ink with cinnabar used for state and action.",
-      "Flat, ruled composition with no cards, pills, gradients, or shadows.",
-      "Dense entries that prioritize name, definition, quota, authentication, and status."
+      "Deck Ink ground with Signal Lime actions and Signal Sky links.",
+      "Live sample panel proves the product with a real curl call.",
+      "Category dots and low-tint active rows carry the directory's color spectrum.",
+      "Dense ledger rows, flat surfaces, and hairline borders."
     ],
     "rules": [
-      { "name": "The Cinnabar Rarity Rule", "body": "Cinnabar marks action, selection, and the index. It is never a decorative wash.", "section": "colors" },
-      { "name": "The Text-First Status Rule", "body": "Every status stamp carries text; color is a second signal.", "section": "colors" },
-      { "name": "The No-Card Rule", "body": "Repeated content is a ruled ledger. Cards are not part of this system.", "section": "shapes" }
+      { "name": "The One Signal Rule", "body": "Only one high-energy lime fill is visible per functional region; other color is category or status information.", "section": "colors" },
+      { "name": "The Proof First Rule", "body": "The first viewport shows a real callable example from the data, not a decorative illustration.", "section": "layout" },
+      { "name": "The Ledger Rule", "body": "API entries are ruled rows, not a card grid; hover changes the surface, not the geometry.", "section": "layout" }
     ],
     "dos": [
-      "Use the serif for API names and page headings.",
-      "Keep the ledger readable with JavaScript disabled.",
-      "Let hairlines and spacing carry hierarchy."
+      "Use Space Grotesk and system Chinese fallback together.",
+      "Use Tailwind 4 theme tokens for color, type, and radius.",
+      "Keep status text and category dots visible.",
+      "Let long curl lines wrap on narrow columns."
     ],
     "donts": [
-      "Don't introduce pill-shaped badges or floating cards.",
-      "Don't use mono for ordinary prose.",
-      "Don't let the lexicon metaphor replace standard web controls."
+      "Don't introduce decorative gradients, glow shadows, or glass.",
+      "Don't use category color as a full panel fill.",
+      "Don't turn the search deck into a modal or command palette.",
+      "Don't remove the live sample from the masthead."
     ]
   }
 }

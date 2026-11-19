@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://public-apis.morio.cc',
@@ -7,6 +8,9 @@ export default defineConfig({
   compressHTML: true,
   server: {
     host: true,
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
   integrations: [
     sitemap({

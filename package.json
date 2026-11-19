@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.6",
-    "astro": "^5.18.2"
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^5.18.2",
+    "tailwindcss": "^4.3.5"
   },
   "engines": {
     "node": ">=22"

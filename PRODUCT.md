@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Astro 5 static output, one global CSS file, inline client JavaScript only. No React/Vue/Svelte, no Tailwind, no runtime backend, no database, no secrets.
+Astro 5 static output with Tailwind CSS 4 via `@tailwindcss/vite`, one global CSS entry, inline client JavaScript only. No React/Vue/Svelte, no runtime backend, no database, no secrets.
 
 ## Users
 
@@ -37,7 +37,7 @@ Visitors arrive from search, bookmarks, or a colleague's link, usually while eva
 
 ## Brand Commitments
 
-The site name is 免费 API 中文索引. The voice is direct, specific, and useful to Chinese developers; it avoids hype and invented claims. The current visual treatment is being replaced by this redesign and is not a durable commitment.
+The site name is 免费 API 中文索引. The voice is direct, specific, and useful to Chinese developers; it avoids hype and invented claims. The current Signal Deck visual system is documented in `DESIGN.md`.
 
 ## Evidence on Hand
 

@@ -9,7 +9,7 @@
 - 244 条 API，17 个分类
 - 语义友好的分类页与详情页，支持搜索、认证筛选、额度筛选与 CSV 导出
 - 静态 JSON 接口：`/api/all.json`、`/api/category/{slug}.json`
-- 深色单主题，无前端框架、无 Tailwind、无运行时后端
+- 深色 Signal Deck 主题，Astro 5 + Tailwind CSS 4，无前端框架、无运行时后端
 - 每 14 天复测端点状态
 
 ## 本地开发
@@ -35,7 +35,7 @@ Cloudflare Pages 使用 `npm ci && npm run build` 构建，输出目录为 `dist
 | `data/README.md` | 字段口径与来源说明 |
 | `src/pages/` | 首页、分类、详情、关于、免责、隐私、404 与 JSON API |
 | `src/lib/data.js` | 数据读取、标签映射与页面辅助函数 |
-| `src/styles/global.css` | 全站样式 |
+| `src/styles/global.css` | Tailwind 4 入口、主题 token 与组件样式 |
 | `NOTICE` | 第三方署名、商标与免责声明 |
 
 ## 数据概况（2026-11-18 实测）

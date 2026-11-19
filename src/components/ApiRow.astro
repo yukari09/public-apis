@@ -1,6 +1,7 @@
 ---
 import {
   authLabel,
+  categoryColor,
   limitSourceLabel,
   statusOf,
 } from '../lib/data.js';
@@ -13,6 +14,7 @@ const href = `/a/${api.slug}/`;
 
 <li
   class="entry"
+  style={`--cat:${categoryColor(api.category)}`}
   data-cat={api.category}
   data-auth={api.auth}
   data-k={api.tags.length ? api.tags.join(' ') : undefined}

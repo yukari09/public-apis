@@ -6,6 +6,7 @@ import {
   apis,
   categories,
   categoryCode,
+  categoryColor,
   popularCategories,
   SITE_URL,
   stats,
@@ -15,6 +16,11 @@ const title = '免费 API 中文索引 · 244 个可直接调用的公共接口'
 const description =
   '给中文开发者的免费 API 目录：244 个公共接口，带中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例。';
 const hotCategories = popularCategories(3);
+const spotlight =
+  apis.find((api) => api.slug === 'wttr-in') ??
+  apis.find((api) => api.featured && api.auth === 'none' && api.status === 'ok') ??
+  apis.find((api) => api.auth === 'none') ??
+  apis[0];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -32,26 +38,68 @@ const jsonLd = {
 <Base title={title} description={description} canonicalPath="/" jsonLd={jsonLd}>
   <div class="container">
     <section class="masthead" aria-labelledby="page-title">
-      <h1 id="page-title">免费 API 中文索引</h1>
-      <p class="lede">
-        给中文开发者的免费 API 目录：每条都有中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例。
-      </p>
-      <div class="edition" aria-label="数据概览">
-        <div class="edition-item"><strong>{stats.total}</strong><span>收录 API</span></div>
-        <div class="edition-item"><strong>{stats.ok}</strong><span>可直调</span></div>
-        <div class="edition-item"><strong>{stats.keyRequired}</strong><span>需要 Key</span></div>
-        <div class="edition-item"><strong>{stats.categories}</strong><span>分类</span></div>
-        <div class="edition-item"><strong>{stats.lastChecked}</strong><span>最后实测</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title" id="page-title">免费 API <span>中文索引</span></h1>
+          <p class="lede">
+            给中文开发者的免费 API 目录。中文说明、免费额度、认证方式、实测状态和可直接复制的 curl 示例，都在一条词条里。
+          </p>
+          <div class="status-rail" aria-label="数据概览">
+            <span class="status-item"><strong>{stats.total}</strong> 收录</span>
+            <span class="status-item"><strong>{stats.ok}</strong> 可直调</span>
+            <span class="status-item"><strong>{stats.keyRequired}</strong> 需 Key</span>
+            <span class="status-item"><strong>{stats.categories}</strong> 分类</span>
+            <span class="status-item is-live"><i></i>{stats.lastChecked} 实测</span>
+          </div>
+        </div>
+
+        <aside class="sample-panel" aria-label="示例调用">
+          <div class="sample-head">
+            <span class="cat-dot" style={`--cat:${categoryColor(spotlight.category)}`}></span>
+            <span class="sample-name">{spotlight.name}</span>
+            <span class="sample-kicker">SAMPLE CALL</span>
+          </div>
+          <pre class="sample-code"><code>{spotlight.example}</code></pre>
+          <div class="sample-foot">
+            <span>{spotlight.free_tier}</span>
+            <a href={`/a/${spotlight.slug}/`}>查看词条</a>
+          </div>
+        </aside>
       </div>
+    </section>
+
+    <section class="search-deck" aria-label="搜索和筛选">
+      <label class="search-field">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="m16 16 4 4"></path>
+        </svg>
+        <span class="visually-hidden">搜索 API</span>
+        <input
+          id="api-search"
+          type="search"
+          placeholder="搜索 API、说明或分类，如「天气」/ weather"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </label>
+      <div class="filters" role="group" aria-label="筛选 API">
+        <button class="filter-btn" type="button" data-auth="all" aria-pressed="true">全部</button>
+        <button class="filter-btn" type="button" data-auth="none" aria-pressed="false">无需认证</button>
+        <button class="filter-btn" type="button" data-auth="key" aria-pressed="false">需要 Key</button>
+        <button class="filter-btn" type="button" id="quota-filter" aria-pressed="false">有额度</button>
+      </div>
+      <button class="export-btn" type="button" id="export-csv">导出 CSV</button>
     </section>
 
     <div class="index-layout">
       <aside class="index-rail" aria-labelledby="category-title">
-        <h2 class="rail-label" id="category-title">分类索引</h2>
+        <h2 class="rail-label" id="category-title">分类</h2>
         <nav aria-label="API 分类">
           <ul class="cat-list">
             <li>
               <a class="cat-link is-active" href="/" data-cat="all" data-name="全部">
+                <span class="cat-dot" style="--cat:var(--color-lime)"></span>
                 <span class="cat-code">00</span>
                 <span class="cat-name">全部</span>
                 <span class="cat-count">{apis.length}</span>
@@ -65,6 +113,7 @@ const jsonLd = {
                   data-cat={category.slug}
                   data-name={category.name}
                 >
+                  <span class="cat-dot" style={`--cat:${categoryColor(category.slug)}`}></span>
                   <span class="cat-code">{categoryCode(category.slug)}</span>
                   <span class="cat-name">{category.name}</span>
                   <span class="cat-count">{category.count}</span>
@@ -78,37 +127,8 @@ const jsonLd = {
       <section class="content-column" aria-labelledby="list-title">
         <h2 class="visually-hidden" id="list-title">API 列表</h2>
 
-        <div class="toolbar">
-          <label class="search-field">
-            <span class="search-word" aria-hidden="true">查词</span>
-            <span class="visually-hidden">搜索 API</span>
-            <input
-              id="api-search"
-              type="search"
-              placeholder="API、说明或分类，如「天气」/ weather"
-              autocomplete="off"
-              spellcheck="false"
-            />
-          </label>
-          <div class="filters" role="group" aria-label="筛选 API">
-            <button class="filter-btn" type="button" data-auth="all" aria-pressed="true">全部</button>
-            <button class="filter-btn" type="button" data-auth="none" aria-pressed="false">
-              无需认证
-            </button>
-            <button class="filter-btn" type="button" data-auth="key" aria-pressed="false">
-              需要 Key
-            </button>
-            <button class="filter-btn" type="button" id="quota-filter" aria-pressed="false">
-              只看有额度
-            </button>
-          </div>
-          <div class="toolbar-actions">
-            <button class="export-btn" type="button" id="export-csv">导出 CSV</button>
-          </div>
-        </div>
-
         <div class="result-line">
-          <span id="result-count" aria-live="polite">共 {apis.length} 条词条</span>
+          <span id="result-count" aria-live="polite">共 {apis.length} 条</span>
           <span id="active-category" hidden></span>
         </div>
 
@@ -134,7 +154,7 @@ const jsonLd = {
         <div class="load-sentinel" id="load-sentinel" hidden>继续向下滚动加载更多</div>
 
         <div class="empty-state" id="empty-state" hidden>
-          <h2>未检得匹配词条</h2>
+          <h2>没有匹配的 API</h2>
           <p>换个关键词，或从这些分类继续：</p>
           <div class="popular-chips">
             {hotCategories.map((category) => (
@@ -222,7 +242,7 @@ const jsonLd = {
         if (showAd) matches[7].after(adItem);
 
         const shown = Math.min(matches.length, visibleCount);
-        resultCount.textContent = `共 ${matches.length} 条词条 · 已显示 ${shown} 条`;
+        resultCount.textContent = `共 ${matches.length} 条 · 已显示 ${shown} 条`;
         emptyState.hidden = matches.length !== 0;
         sentinel.hidden = matches.length <= visibleCount || matches.length === 0;
         listEnd.hidden = matches.length === 0 || matches.length > visibleCount;

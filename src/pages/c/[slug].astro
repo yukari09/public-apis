@@ -7,6 +7,7 @@ import {
   categories,
   categoryApis,
   categoryCode,
+  categoryColor,
   categoryIntro,
 } from '../../lib/data.js';
 
@@ -31,7 +32,7 @@ const adjacent = adjacentCategories(category.slug);
   description={intro}
   canonicalPath={`/c/${category.slug}/`}
 >
-  <div class="container">
+  <div class="container category-shell">
     <Breadcrumb
       items={[
         { label: '首页', href: '/' },
@@ -40,7 +41,7 @@ const adjacent = adjacentCategories(category.slug);
     />
 
     <header class="category-header">
-      <h1 class="category-title">
+      <h1 class="category-title" style={`--cat:${categoryColor(category.slug)}`}>
         <span class="category-code">{categoryCode(category.slug)}</span>
         {category.name} API
       </h1>

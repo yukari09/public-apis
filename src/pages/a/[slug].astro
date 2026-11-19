@@ -6,6 +6,7 @@ import {
   apis,
   authLabel,
   categoryCode,
+  categoryColor,
   getCategory,
   limitSourceLabel,
   relatedApis,
@@ -65,49 +66,62 @@ const jsonLd = {
     <header class="detail-header">
       <h1>{api.name}</h1>
       <div class="detail-meta">
-        <a class="detail-category" href={`/c/${category.slug}/`}>
-          <span class="category-code">{categoryCode(category.slug)}</span>
+        <a
+          class="detail-category"
+          href={`/c/${category.slug}/`}
+          style={`--cat:${categoryColor(category.slug)}`}
+        >
+          <span class="cat-dot" style={`--cat:${categoryColor(category.slug)}`}></span>
           {category.name}
+          <span class="category-code">{categoryCode(category.slug)}</span>
         </a>
         <span class={`stamp ${status.cls}`}>{status.label}</span>
       </div>
       <p class="detail-desc">{api.description_zh}</p>
     </header>
 
-    <section class="detail-section" aria-labelledby="info-title">
-      <h2 id="info-title">条目信息</h2>
-      <dl class="spec-grid">
-        <div><dt>认证</dt><dd>{auth}</dd></div>
-        <div><dt>免费额度</dt><dd>{api.free_tier}</dd></div>
-        <div><dt>额度来源</dt><dd>{limitSourceLabel(api)}</dd></div>
-        <div><dt>商用限制</dt><dd>{api.commercial?.trim() || '以官网为准'}</dd></div>
-        <div>
-          <dt>状态</dt>
-          <dd><span class={`stamp ${status.cls}`}>{status.label}</span></dd>
-        </div>
-        <div><dt>最后检测时间</dt><dd>{api.checked_at}</dd></div>
-        <div><dt>分类</dt><dd>{category.name}</dd></div>
-      </dl>
-    </section>
-
-    <section class="detail-section" aria-labelledby="example-title">
-      <h2 id="example-title">调用示例</h2>
-      <div class="code-wrap">
-        <pre><code id="curl-example">{api.example}</code></pre>
-        <button class="copy-btn" type="button" data-copy>复制</button>
+    <div class="detail-body">
+      <div class="detail-main">
+        <section class="detail-section" aria-labelledby="info-title">
+          <h2 id="info-title">基本信息</h2>
+          <div class="spec-panel">
+            <dl class="spec-grid">
+              <div><dt>认证</dt><dd>{auth}</dd></div>
+              <div><dt>免费额度</dt><dd>{api.free_tier}</dd></div>
+              <div><dt>额度来源</dt><dd>{limitSourceLabel(api)}</dd></div>
+              <div><dt>商用限制</dt><dd>{api.commercial?.trim() || '以官网为准'}</dd></div>
+              <div>
+                <dt>状态</dt>
+                <dd><span class={`stamp ${status.cls}`}>{status.label}</span></dd>
+              </div>
+              <div><dt>最后检测时间</dt><dd>{api.checked_at}</dd></div>
+              <div><dt>分类</dt><dd>{category.name}</dd></div>
+            </dl>
+          </div>
+        </section>
       </div>
-      <p class="hint">
-        {api.auth === 'none' ? (
-          <>该接口无需认证，可直接把示例粘进终端；使用前请阅读
-            <a href={api.url} target="_blank" rel="noopener">官网说明</a>。
-          </>
-        ) : api.auth === 'api_key' ? (
-          <>去 <a href={api.url} target="_blank" rel="noopener">{officialHost}</a> 注册拿 Key，替换示例里的 KEY。</>
-        ) : (
-          <>按 <a href={api.url} target="_blank" rel="noopener">{officialHost}</a> 的说明完成授权或认证，再替换示例中的占位值。</>
-        )}
-      </p>
-    </section>
+
+      <aside class="detail-aside">
+        <section class="detail-section" aria-labelledby="example-title">
+          <h2 id="example-title">调用示例</h2>
+          <div class="code-wrap">
+            <pre><code id="curl-example">{api.example}</code></pre>
+            <button class="copy-btn" type="button" data-copy>复制</button>
+          </div>
+          <p class="hint">
+            {api.auth === 'none' ? (
+              <>该接口无需认证，可直接把示例粘进终端；使用前请阅读
+                <a href={api.url} target="_blank" rel="noopener">官网说明</a>。
+              </>
+            ) : api.auth === 'api_key' ? (
+              <>去 <a href={api.url} target="_blank" rel="noopener">{officialHost}</a> 注册拿 Key，替换示例里的 KEY。</>
+            ) : (
+              <>按 <a href={api.url} target="_blank" rel="noopener">{officialHost}</a> 的说明完成授权或认证，再替换示例中的占位值。</>
+            )}
+          </p>
+        </section>
+      </aside>
+    </div>
 
     <div class="detail-actions">
       <a class="official-link" href={api.url} target="_blank" rel="noopener">访问官网</a>
