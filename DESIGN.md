@@ -133,6 +133,7 @@ Status color is carried by a 4px square inside a neutral stamp; the label stays 
 - **Entry name** (600, 17–18px): API names in the cards.
 - **Body** (400, 13.5–16px): descriptions, prose, and controls.
 - **Label** (500, 9–12px mono or tracked sans): counts, source tags, status, and column labels.
+- **Numeric metadata** (600, 12px mono, ink): category codes and counts. The result line and pagination use 12px mono at 500 weight.
 
 ## Layout
 
