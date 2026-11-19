@@ -25,3 +25,6 @@ REQUIREMENTS.md
 # probe artefacts（临时，不提交）
 data/probe-*.json
 !data/status-history.jsonl
+
+# 内部交接单，不提交
+CODEX-BRIEF.md
