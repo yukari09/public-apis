@@ -692,7 +692,7 @@
   }
 
   .best-for span {
-    @apply inline-block bg-accent px-1.5 py-0.5 font-mono text-[11px] font-medium text-accent-ink;
+    @apply inline-block bg-accent px-1.5 py-0.5 font-mono text-[11px] font-medium text-paper;
   }
 
   .intent-tags {
