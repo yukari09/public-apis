@@ -163,6 +163,7 @@ Controls, cards, status stamps, and pagination use a 2px radius. Filters use the
 - **Breadcrumb:** 11.5px mono, muted ancestors, current page in ink. It sits 16px below the header and never self-links.
 - **Search deck:** paper surface, search icon, input, pill filters, and a black CSV action.
 - **Category rail:** neutral category dots, codes, names, counts. Active state becomes an ink block with an orange dot and count.
+- **Category code:** outlined only — paper ground, safety-orange border, ink text; never a filled orange block.
 - **API card:** name, neutral category square, description, quota/auth evidence, and a status stamp in the top-right. Hover changes surface and border.
 - **Status stamp:** paper ground, strong hairline, black text, and a 4px semantic square. Text is always present.
 - **Pagination:** square 36px previous/next/page controls at 12px/500 mono; current page uses safety orange with ink text, disabled controls stay muted but readable.

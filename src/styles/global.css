@@ -575,7 +575,7 @@
   }
 
   .category-code {
-    @apply inline-block flex-none rounded-[2px] border border-accent bg-accent px-2 py-0.5 font-mono text-[12px] font-medium text-accent-ink;
+    @apply inline-block flex-none rounded-[2px] border border-accent bg-paper px-2 py-0.5 font-mono text-[12px] font-medium text-ink;
   }
 
   .category-intro {
