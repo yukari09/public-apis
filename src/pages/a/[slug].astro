@@ -126,14 +126,16 @@ const jsonLd = faqJsonLd ? [applicationJsonLd, faqJsonLd] : applicationJsonLd;
           </div>
         </section>
 
-        <section class="detail-section" aria-labelledby="capabilities-title">
-          <h2 id="capabilities-title">能力</h2>
-          <ul class="capability-list">
-            {api.capabilities.map((capability) => (
-              <li>{capability}</li>
-            ))}
-          </ul>
-        </section>
+        {!api.intro.includes('## 主要能力') && (
+          <section class="detail-section" aria-labelledby="capabilities-title">
+            <h2 id="capabilities-title">能力</h2>
+            <ul class="capability-list">
+              {api.capabilities.map((capability) => (
+                <li>{capability}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {faq.length > 0 && (
           <section class="detail-section" aria-labelledby="faq-title">
