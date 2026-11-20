@@ -1,12 +1,13 @@
 ---
 // 广告位：只有配置了对应 slot id 才渲染 <ins>，否则生产环境不输出任何内容。
 // 本地开发时显示虚线占位，方便看版式。
+// 两个单元都是「多媒體廣告 / 自適應」，统一用 auto + full-width-responsive。
 const placement = Astro.props.placement ?? 'detail';
 const slot =
   placement === 'list'
     ? import.meta.env.PUBLIC_ADSENSE_SLOT_LIST
     : import.meta.env.PUBLIC_ADSENSE_SLOT_DETAIL;
-const client = import.meta.env.PUBLIC_ADSENSE_CLIENT ?? 'ca-pub-pub-8834563225975418';
+const client = import.meta.env.PUBLIC_ADSENSE_CLIENT ?? 'ca-pub-8834563225975418';
 ---
 
 {slot ? (
