@@ -47,6 +47,7 @@ const applicationJsonLd = {
   operatingSystem: 'Any',
   inLanguage: 'zh-CN',
   url: `${SITE_URL}${canonicalPath}`,
+  ...(api.icon ? { image: `${SITE_URL}${api.icon}` } : {}),
   mainEntityOfPage: `${SITE_URL}${canonicalPath}`,
   dateModified: api.checked_at,
   offers: {
@@ -84,7 +85,12 @@ const jsonLd = [applicationJsonLd, breadcrumbJsonLd(crumbs), faqJsonLd].filter(B
     )}
 
     <header class="detail-header">
-      <h1>{api.name}</h1>
+      <div class="detail-title-row">
+        {api.icon && (
+          <img class="api-icon api-icon-lg" src={api.icon} alt="" width="56" height="56" decoding="async" />
+        )}
+        <h1>{api.name}</h1>
+      </div>
       <div class="detail-meta">
         <a
           class="detail-category"
@@ -235,11 +241,18 @@ const jsonLd = [applicationJsonLd, breadcrumbJsonLd(crumbs), faqJsonLd].filter(B
       button.addEventListener('click', async () => {
         const text = code.textContent;
         try {
+          let ok = false;
           if (navigator.clipboard?.writeText) {
-            await navigator.clipboard.writeText(text);
-          } else if (!legacyCopy(text)) {
-            throw new Error('copy failed');
+            try {
+              await navigator.clipboard.writeText(text);
+              ok = true;
+            } catch {
+              ok = legacyCopy(text);
+            }
+          } else {
+            ok = legacyCopy(text);
           }
+          if (!ok) throw new Error('copy failed');
           button.textContent = '已复制';
           button.classList.add('is-copied');
           reset();

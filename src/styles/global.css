@@ -1114,3 +1114,44 @@
     }
   }
 }
+
+/* 未配置广告位时不留下空盒子（Astro 会渲染空白文本节点，:empty 不可靠） */
+.ad-item:not(:has(> ins, > .ad-placeholder)),
+.detail-ad:not(:has(> ins, > .ad-placeholder)) {
+  display: none;
+}
+
+/* API 图标 */
+.api-icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  border: 1px solid var(--color-line, #d8d2c4);
+  background: #fff;
+  object-fit: contain;
+  padding: 1px;
+}
+
+.api-icon-lg {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.name.has-icon::before {
+  display: none;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

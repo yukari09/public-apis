@@ -1,8 +1,31 @@
 ---
-// TODO(adsense): 填入真实 slot id 后，再把占位 div 换成 <ins class="adsbygoogle">。
+// 广告位：只有配置了对应 slot id 才渲染 <ins>，否则生产环境不输出任何内容。
+// 本地开发时显示虚线占位，方便看版式。
+const placement = Astro.props.placement ?? 'detail';
+const slot =
+  placement === 'list'
+    ? import.meta.env.PUBLIC_ADSENSE_SLOT_LIST
+    : import.meta.env.PUBLIC_ADSENSE_SLOT_DETAIL;
+const client = import.meta.env.PUBLIC_ADSENSE_CLIENT ?? 'ca-pub-pub-8834563225975418';
 ---
 
-<div class="ad-placeholder" aria-label="广告位预留">
-  <span class="ad-label">广告插页</span>
-  <span class="ad-note">ADVERTISEMENT</span>
-</div>
+{slot ? (
+  <>
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={client}
+      data-ad-slot={slot}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script is:inline>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </>
+) : import.meta.env.DEV ? (
+  <div class="ad-placeholder" aria-label="广告位预留">
+    <span class="ad-label">广告插页</span>
+    <span class="ad-note">ADVERTISEMENT</span>
+  </div>
+) : null}

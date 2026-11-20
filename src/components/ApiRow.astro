@@ -17,7 +17,12 @@ const href = `/a/${api.slug}/`;
   data-auth={api.auth}
   data-k={api.tags.length ? api.tags.join(' ') : undefined}
 >
-  <a class="name" href={href}>{api.name}</a>
+  <a class={`name${api.icon ? ' has-icon' : ''}`} href={href}>
+    {api.icon && (
+      <img class="api-icon" src={api.icon} alt="" width="24" height="24" loading="lazy" decoding="async" />
+    )}
+    <span>{api.name}</span>
+  </a>
   <p class="desc">{api.description_zh}</p>
   <div class="entry-quota">
     <span class="quota">
