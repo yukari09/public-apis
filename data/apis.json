@@ -26,17 +26,19 @@
   ],
   "best_for": "用一套 SDK 打通对话、检索和语音的产品。",
   "intent_queries": [
-   "openai api app",
-   "openai api pip",
-   "open ai api paid services",
+   "openai api",
+   "openai api key",
+   "openai api platform",
+   "openai api login",
    "openai api pricing",
-   "openai api upi"
+   "openai api key free",
+   "openai api dashboard",
+   "openai api billing"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价",
-   "模型"
+   "定价"
   ],
   "faq": [
    {
@@ -79,12 +81,14 @@
   ],
   "best_for": "要读长文档或搭 Agent 流程的团队。",
   "intent_queries": [
-   "anthropic claude api pricing",
-   "anthropic claude api platform",
-   "anthropic claude api plan",
-   "anthropic claude api access",
-   "anthropic claude api key",
-   "anthropic claude api login"
+   "anthropic api",
+   "anthropic api key",
+   "anthropic api login",
+   "anthropic api pricing",
+   "anthropic api console",
+   "anthropic api key free",
+   "anthropic api platform",
+   "anthropic api billing"
   ],
   "intent_tags": [
    "密钥",
@@ -132,19 +136,17 @@
   ],
   "best_for": "需要读图读视频，或处理超长材料。",
   "intent_queries": [
-   "google gemini api ai studio",
-   "google gemini api ai key",
-   "google gemini api pricing",
-   "google gemini api privacy policy",
-   "google gemini api python",
-   "google gemini api platform"
+   "google api",
+   "google api key",
+   "google api console",
+   "google api studio",
+   "google api key gemini",
+   "google api key free",
+   "google api login"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
-   "接入示例",
-   "隐私"
+   "免费额度"
   ],
   "faq": [
    {
@@ -187,17 +189,17 @@
   ],
   "best_for": "实时语音助手、聊天和需要快响应的场景。",
   "intent_queries": [
-   "groq cloud api",
-   "groq cloud api key",
-   "groq cloud api free tier",
-   "groq cloud api free",
-   "groq cloud api models",
-   "groq cloud api console"
+   "groq api login",
+   "groq api key",
+   "groq api",
+   "groq api key generation",
+   "groq api free",
+   "groq api models",
+   "groq api console"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "限速",
    "模型"
   ],
   "faq": [
@@ -241,17 +243,20 @@
   ],
   "best_for": "想要欧洲合规选项或自托管权重的团队。",
   "intent_queries": [
-   "mistral ai api key",
-   "mistral ai api",
-   "mistral ai api key free",
-   "mistral ai api pricing",
-   "mistral ai api examples",
-   "mistral ai api tutorial"
+   "mistral api key",
+   "mistral api",
+   "mistral api pricing",
+   "mistral api free",
+   "mistral api usage",
+   "mistral api docs",
+   "mistral api free tier",
+   "mistral api examples"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -300,11 +305,13 @@
    "cohere api key login",
    "cohere api key generate",
    "cohere api pricing",
-   "cohere api login"
+   "cohere api login",
+   "cohere api dashboard",
+   "cohere api key create"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
+   "限速",
    "定价"
   ],
   "faq": [
@@ -348,19 +355,11 @@
   ],
   "best_for": "选型阶段快速对比各种开源模型。",
   "intent_queries": [
-   "hugging face inference api",
    "hugging face inference api key",
-   "hugging face inference api free",
-   "hugging face inference api models",
-   "hugging face inference api limits",
-   "hugging face inference api pricing"
+   "hugging face api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "定价",
-   "限速",
-   "模型"
+   "密钥"
   ],
   "faq": [
    {
@@ -408,14 +407,13 @@
    "openrouter api key",
    "openrouter api",
    "openrouter api key free",
-   "openrouter api url"
+   "openrouter api url",
+   "openrouter api + sillytavern",
+   "openrouter api integration"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
-   "限速",
-   "模型"
+   "免费额度"
   ],
   "faq": [
    {
@@ -458,17 +456,20 @@
   ],
   "best_for": "要把开源模型跑成稳定生产服务。",
   "intent_queries": [
-   "together ai api key",
-   "together ai api",
-   "together ai api key free",
-   "together ai api url",
-   "together ai free api",
-   "together ai api pricing"
+   "together api",
+   "together api key",
+   "together api examples",
+   "together api documentation",
+   "together api integration guide",
+   "together api pricing",
+   "together api features",
+   "together api authentication"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价"
+   "定价",
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -511,12 +512,14 @@
   ],
   "best_for": "成本敏感、需要中文和代码能力。",
   "intent_queries": [
-   "deepseek api app",
-   "deepseek api pingtai",
-   "deepseek api ai",
+   "deepseek api status",
+   "deepseek api",
+   "deepseek api key",
+   "deepseek api platform",
    "deepseek api pricing",
-   "deepseek api openclaw",
-   "deepseek api opencode"
+   "deepseek api free",
+   "deepseek api login",
+   "deepseek api usage"
   ],
   "intent_tags": [
    "密钥",
@@ -564,16 +567,12 @@
   ],
   "best_for": "想接 Grok 或做 X 舆情分析。",
   "intent_queries": [
-   "xai grok api pricing",
-   "xai grok api pricing 2026 per million tokens",
-   "grok xai api key",
-   "xai api access grok business",
-   "what is grok xai",
-   "what is grok api"
+   "xai api grok",
+   "xai grok api key",
+   "xai grok api pricing"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "定价"
   ],
   "faq": [
@@ -622,11 +621,14 @@
    "replicate api token",
    "replicate api usage",
    "replicate api key free",
-   "replicate api examples"
+   "replicate api examples",
+   "replicate api documentation",
+   "replicate api integration"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -675,13 +677,14 @@
    "ollama api key",
    "ollama api url",
    "ollama api docs",
-   "ollama api endpoint"
+   "ollama api endpoint",
+   "ollama api documentation",
+   "ollama api port"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "接入示例",
-   "模型"
+   "文档"
   ],
   "faq": [
    {
@@ -724,18 +727,20 @@
   ],
   "best_for": "做图像生成功能、需要明确商用许可。",
   "intent_queries": [
-   "stability ai api",
+   "stability api key",
+   "stability api",
+   "stability api key generator",
    "stability ai api key",
-   "stability ai api key free",
+   "stability ai api",
+   "seachem stability vs api quick start",
    "stability ai api pricing",
-   "stability ai api docs",
-   "stability ai api documentation"
+   "stability ai api docs"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "定价",
-   "接入示例"
+   "文档",
+   "替代"
   ],
   "faq": [
    {
@@ -783,14 +788,15 @@
    "elevenlabs api documentation",
    "elevenlabs api",
    "elevenlabs api key",
-   "elevenlabs api endpoint"
+   "elevenlabs api endpoint",
+   "elevenlabs api free",
+   "elevenlabs api key not found"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "限速",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -835,13 +841,11 @@
   "intent_queries": [
    "assemblyai api",
    "assemblyai api key",
-   "assemblyai api documentation",
-   "assembly ai api free"
+   "assemblyai api documentation"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -889,13 +893,15 @@
    "deepgram api pricing",
    "deepgram api docs",
    "deepgram api key free",
-   "deepgram api playground"
+   "deepgram api playground",
+   "deepgram api login",
+   "deepgram api endpoint"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -938,19 +944,18 @@
   ],
   "best_for": "已经在用 Workers、想让推理就近跑。",
   "intent_queries": [
-   "cloudflare workers ai api",
-   "cloudflare workers ai api key",
-   "cloudflare workers ai api key free",
-   "cloudflare workers ai free",
-   "cloudflare workers ai docs",
-   "cloudflare workers ai models"
+   "cloudflare api documentation",
+   "cloudflare api security",
+   "cloudflare api",
+   "cloudflare api key",
+   "cloudflare api token",
+   "cloudflare api shield",
+   "cloudflare api gateway",
+   "cloudflare api docs"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
-   "接入示例",
-   "模型"
+   "文档"
   ],
   "faq": [
    {
@@ -993,18 +998,12 @@
   ],
   "best_for": "要把开源模型跑成生产服务。",
   "intent_queries": [
-   "fireworks ai api key",
-   "fireworks ai api",
-   "fireworks ai training api",
-   "ai adobe fireworks tutorial",
-   "what is fireworks ai",
-   "ai adobe fireworks web design"
+   "fireworks api",
+   "fireworks api key",
+   "fireworks ai api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例",
-   "替代"
+   "密钥"
   ],
   "faq": [
    {
@@ -1047,15 +1046,20 @@
   ],
   "best_for": "对速度和吞吐要求高的场景。",
   "intent_queries": [
-   "cerebras inference api",
-   "cerebras inference api key",
-   "how to invest in cerebras systems",
-   "cerebras ml api sdet",
-   "cerebras.ai",
-   "https://cerebras.ai"
+   "cerebras api",
+   "cerebras api key",
+   "cerebras api url",
+   "cerebras api models",
+   "cerebras api latency",
+   "cerebras api pricing",
+   "cerebras api key gratis",
+   "cerebras api docs"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "定价",
+   "文档",
+   "模型"
   ],
   "faq": [
    {
@@ -1098,18 +1102,19 @@
   ],
   "best_for": "做需要实时信息并标注来源的助手。",
   "intent_queries": [
-   "perplexity api ai",
+   "perplexity api console",
+   "perplexity api",
+   "perplexity api key",
    "perplexity api pricing",
-   "perplexity api portal",
-   "perplexity api python",
+   "perplexity api login",
+   "perplexity api docs",
    "perplexity api platform",
-   "perplexity api platform login"
+   "perplexity api cost"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -1209,14 +1214,14 @@
    "openweathermap api free",
    "openweathermap api key usage",
    "openweathermap api key free",
-   "openweathermap api url"
+   "openweathermap api url",
+   "openweathermap api key generator",
+   "openweathermap api documentation"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "限速",
-   "接入示例",
-   "报错"
+   "文档"
   ],
   "faq": [
    {
@@ -1259,18 +1264,11 @@
   ],
   "best_for": "做天气工具、回测，或不想处理 Key。",
   "intent_queries": [
-   "open meteo api documentation",
-   "open-meteo api",
-   "open-meteo api key",
-   "open-meteo api docs",
-   "open-meteo api limits",
-   "api open meteo"
+   "open meteo api key",
+   "open-meteo api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "限速",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -1313,12 +1311,7 @@
   ],
   "best_for": "功能要全、月调用量又大。",
   "intent_queries": [
-   "weatherapi.com api",
-   "weatherapi.com api key",
-   "weather api free",
-   "weather api free open source",
-   "weather api free no key",
-   "weather api free url"
+   "weatherapi.com api key"
   ],
   "intent_tags": [
    "密钥"
@@ -1364,11 +1357,14 @@
   ],
   "best_for": "写脚本、终端小工具或机器人播报。",
   "intent_queries": [
-   "wttr.in api",
+   "wttr api",
+   "wttr price",
+   "wttr weather api",
    "wttr.in api key"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "定价"
   ],
   "faq": [
    {
@@ -1411,16 +1407,17 @@
   ],
   "best_for": "从 Dark Sky 迁移，或要熟悉的字段结构。",
   "intent_queries": [
-   "pirate weather api",
-   "pirate weather api key",
-   "api key weather free",
-   "api key for weather",
-   "my weather api key",
-   "web weather api key"
+   "pirate app",
+   "pirate pizza",
+   "pirate pictures",
+   "pirate pistol",
+   "pirate piece",
+   "pirate episode",
+   "pirate rapier",
+   "pirate apparel for adults"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度"
+   "限速"
   ],
   "faq": [
    {
@@ -1463,10 +1460,8 @@
   ],
   "best_for": "出行、配送这类对短时降水敏感的产品。",
   "intent_queries": [
-   "tomorrow.io api",
-   "tomorrow.io api key",
-   "tomorrow.io weather api",
-   "tomorrow keycaps"
+   "tomorrow api",
+   "tomorrow.io api key"
   ],
   "intent_tags": [
    "密钥"
@@ -1512,15 +1507,19 @@
   ],
   "best_for": "做气候分析、历史回测。",
   "intent_queries": [
-   "visual crossing api",
+   "visual api",
+   "visual api mod",
+   "visual api mc",
    "visual crossing api key",
    "visual crossing weather api",
-   "https://www.visualcrossing.com",
    "free visual search image search api",
-   "visual keyboard"
+   "visual studio api documentation",
+   "visual search api documentation"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "免费额度",
+   "文档"
   ],
   "faq": [
    {
@@ -1568,13 +1567,15 @@
    "weatherstack api limits",
    "weatherstack api pricing",
    "weatherstack api examples",
-   "weatherstack api features"
+   "weatherstack api features",
+   "weatherstack api integration",
+   "weatherstack api free"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价",
    "限速",
+   "定价",
    "接入示例"
   ],
   "faq": [
@@ -1618,17 +1619,9 @@
   ],
   "best_for": "面向中文用户的天气应用。",
   "intent_queries": [
-   "和风天气 qweather api",
-   "free weather api key",
-   "web weather api key",
-   "what is weather api key",
-   "weather app api key",
-   "api key for accuweather"
+   "和风天气 qweather api"
   ],
-  "intent_tags": [
-   "密钥",
-   "免费额度"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "和风天气 API 免费吗？",
@@ -1670,13 +1663,13 @@
   ],
   "best_for": "做空气质量地图或环保应用。",
   "intent_queries": [
-   "world air quality index waqi api",
-   "aqi by zip code api",
-   "aqicn.org api",
-   "https://api.waqi.info",
-   "aq.wakwak"
+   "aqicn api",
+   "aqicn api key",
+   "aqicn.org api"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "密钥"
+  ],
   "faq": [
    {
     "q": "WAQI 的 Token 怎么拿？",
@@ -1722,12 +1715,11 @@
    "openaq api key",
    "openaq api documentation",
    "openaq api v3",
-   "openaq data api key",
-   "openai api key"
+   "openaq data api key"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -1770,17 +1762,17 @@
   ],
   "best_for": "商用级地图，能接受按量计费。",
   "intent_queries": [
-   "google maps platform api",
-   "google maps platform api key",
-   "google maps platform api key free",
-   "google maps platform api pricing",
-   "google maps platform api checker",
-   "google maps platform route optimization api"
+   "google api",
+   "google api key",
+   "google api console",
+   "google api studio",
+   "google api key gemini",
+   "google api key free",
+   "google api login"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价"
+   "免费额度"
   ],
   "faq": [
    {
@@ -1828,13 +1820,14 @@
    "mapbox api key",
    "mapbox api token",
    "mapbox api access token",
-   "mapbox api pricing"
+   "mapbox api pricing",
+   "mapbox api key free",
+   "mapbox api cost"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价",
-   "限速"
+   "定价"
   ],
   "faq": [
    {
@@ -1877,16 +1870,22 @@
   ],
   "best_for": "低频地理编码、内部工具或原型。",
   "intent_queries": [
-   "openstreetmap nominatim api",
-   "openstreetmap nominatim api key",
-   "how to get openstreetmap api key",
-   "how to get openstreetmap api",
-   "is openstreetmap api free",
-   "nominatim open street map"
+   "openstreetmap api",
+   "openstreetmap api key",
+   "openstreetmap api documentation",
+   "openstreetmap api pricing",
+   "openstreetmap api free",
+   "openstreetmap api limits",
+   "openstreetmap api python",
+   "openstreetmap api c#"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "免费额度",
+   "限速",
+   "定价",
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -1934,12 +1933,15 @@
    "opencage api limits",
    "opencage api pricing",
    "opencage api examples",
-   "opencage api tutorial"
+   "opencage api tutorial",
+   "opencage geocoding api",
+   "opencage geocoder api"
   ],
   "intent_tags": [
    "密钥",
-   "定价",
+   "免费额度",
    "限速",
+   "定价",
    "接入示例"
   ],
   "faq": [
@@ -1983,17 +1985,19 @@
   ],
   "best_for": "物流、车载或需要交通流数据。",
   "intent_queries": [
-   "here maps api",
-   "here maps api pricing",
-   "here maps api key",
-   "here maps api documentation",
-   "here maps routing api",
-   "here maps geocoding api"
+   "here api pricing",
+   "here api login",
+   "here api",
+   "here api key",
+   "here api features",
+   "here api documentation",
+   "here api integration guide",
+   "here api tutorial"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "定价",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -2090,7 +2094,8 @@
    "geoapify places api",
    "geoapify geocoding api",
    "geoapify routing api",
-   "geoapify postcode api"
+   "geoapify postcode api",
+   "how to get api key for geoapify places api"
   ],
   "intent_tags": [
    "密钥"
@@ -2232,13 +2237,15 @@
   ],
   "best_for": "做风控、日志分析或地域分流。",
   "intent_queries": [
-   "ipinfo.io api",
-   "ipinfo.io api key",
+   "ipinfo api",
+   "ipinfo api key",
    "ipinfo api free",
-   "ipinfo api key"
+   "ipinfo api token",
+   "ipinfo.io api key"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "免费额度"
   ],
   "faq": [
    {
@@ -2281,7 +2288,9 @@
   ],
   "best_for": "轻量地域判断、原型阶段。",
   "intent_queries": [
-   "ipapi api"
+   "ipapi api",
+   "ipapi ip address",
+   "ipapi indonesia"
   ],
   "intent_tags": [],
   "faq": [
@@ -2325,15 +2334,19 @@
   ],
   "best_for": "非商用项目、内网工具。",
   "intent_queries": [
-   "ip-api.com api",
-   "ip-api.com pricing",
-   "ip-api.com ipstack.com",
-   "ip api free",
+   "ip api",
+   "ip apipa",
+   "ip api json",
+   "ip api documentation",
    "ip api features",
-   "ip api response format"
+   "ip api integration",
+   "ip api usage limits",
+   "ip api lookup"
   ],
   "intent_tags": [
-   "定价"
+   "免费额度",
+   "限速",
+   "文档"
   ],
   "faq": [
    {
@@ -2376,8 +2389,7 @@
   ],
   "best_for": "脚本判断出口 IP、做 DDNS。",
   "intent_queries": [
-   "ipify api",
-   "ipify app"
+   "ipify api"
   ],
   "intent_tags": [],
   "faq": [
@@ -2421,18 +2433,9 @@
   ],
   "best_for": "做国家选择器、汇率或地区展示。",
   "intent_queries": [
-   "rest countries api",
-   "rest countries api free",
-   "rest countries api documentation",
-   "rest countries api url",
-   "rest countries api link",
-   "rest countries api frontend mentor solution"
+   "rest api for countries"
   ],
-  "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "REST Countries 免费吗？",
@@ -2474,13 +2477,9 @@
   ],
   "best_for": "做英国地址表单或配送范围。",
   "intent_queries": [
-   "postcodes.io api",
-   "postcodes.io pricing",
-   "ideal postcodes api key"
+   "postcodes api"
   ],
-  "intent_tags": [
-   "定价"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "Postcodes.io 支持其他国家吗？",
@@ -2522,15 +2521,21 @@
   ],
   "best_for": "做新闻聚合原型或内部监控。",
   "intent_queries": [
-   "newsapi api key",
-   "newsapi api",
    "news api free",
+   "news api",
+   "news api key",
+   "news api india",
+   "news api ai",
    "news api free unlimited",
-   "news api free india",
-   "news api free without key"
+   "news api documentation",
+   "news api pricing"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "免费额度",
+   "限速",
+   "定价",
+   "文档"
   ],
   "faq": [
    {
@@ -2574,11 +2579,13 @@
   "best_for": "做多语言资讯站或舆情监控。",
   "intent_queries": [
    "gnews api",
-   "news api key",
    "gnews api usage",
    "gnews api limits",
    "gnews api examples",
-   "gnews api tutorial"
+   "gnews api tutorial",
+   "gnews api integration",
+   "gnews api keys",
+   "gnews api free"
   ],
   "intent_tags": [
    "密钥",
@@ -2627,9 +2634,10 @@
   ],
   "best_for": "做地区性资讯或内容聚合。",
   "intent_queries": [
-   "newsdata.io api",
-   "newsdata.io api key",
-   "newsdata api key"
+   "newsdata api",
+   "newsdata api key",
+   "newsdata io api",
+   "newsdata.io api key"
   ],
   "intent_tags": [
    "密钥"
@@ -2675,12 +2683,14 @@
   ],
   "best_for": "做媒体分析、语料库或内容策展。",
   "intent_queries": [
-   "the guardian open platform api",
-   "the guardian open platform",
-   "apiguardian-api",
-   "what is the guardian app",
-   "guardian.com",
-   "www.guardian.co.uk"
+   "the apis",
+   "the apiary",
+   "the apiary west allis",
+   "the apiary lexington ky",
+   "the apiary residences",
+   "the apiary denver",
+   "the apiarist",
+   "the apic"
   ],
   "intent_tags": [],
   "faq": [
@@ -2715,7 +2725,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "纽约时报按数据集拆成多个服务，最常用三个：https://api.nytimes.com/svc/topstories/v2/home.json?api-key=KEY 头条，/svc/books/v3/lists/current/hardcover-fiction.json 书榜，/svc/movies/v2/reviews/search.json?query= 影评。\n\n返回结构各不相同：头条给 results 数组带 title、abstract、url、multimedia；书榜给 books 数组带 rank、weeks_on_list、isbn。\n\n免费 Key 限 500 次/天、5 次/分。归档 API 可以按月拉历史文章元数据，适合做语料。\n\n坑是每个数据集的版本号不一样（v2 和 v3 混用），文档分散；摘要是编辑写的，不是全文。",
+  "intro": "NYT API 是《纽约时报》的内容接口，通过 api.nytimes.com 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **文章检索**：/svc/search/v2/articlesearch.json 按关键词和日期查。\n- **头条**：/svc/topstories/v2/{section}.json 按栏目取。\n- **书评**：/svc/books/v3 返回畅销榜与书评。\n- **影评**：/svc/movies/v3 返回评论与评分。\n- **归档**：按月拉取历史文章元数据。\n\n## 特点\n- 免费档每分钟 5 次、每天 500 次。\n- 只给标题、摘要和链接，正文需订阅。\n- 部分栏目有独立端点，路径不同。\n\n典型使用场景：英文新闻语料、书评影评聚合、内容分析。",
   "capabilities": [
    "头条与归档",
    "书评与影评",
@@ -2724,16 +2734,11 @@
   ],
   "best_for": "做媒体研究或英文内容聚合。",
   "intent_queries": [
-   "nytimes article search api",
-   "api days new york",
-   "today in history api",
-   "is api real time",
-   "how long have apis been around",
-   "nyc open data api"
+   "new york times api key",
+   "api days new york"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度"
+   "密钥"
   ],
   "faq": [
    {
@@ -2776,17 +2781,9 @@
   ],
   "best_for": "做 HN 客户端或技术资讯聚合。",
   "intent_queries": [
-   "what is an api attack",
-   "hacker news algolia api",
-   "stock market news api",
-   "what is news api",
-   "stock news api free",
-   "stock market news api free"
+   "hacker news algolia api"
   ],
-  "intent_tags": [
-   "密钥",
-   "免费额度"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "HN API 有搜索吗？",
@@ -2828,10 +2825,7 @@
   ],
   "best_for": "搜 HN 历史讨论，而不只是看最新榜。",
   "intent_queries": [
-   "hacker news algolia api",
-   "what is algolia search",
-   "algolia android api client",
-   "wp search with algolia"
+   "hn api"
   ],
   "intent_tags": [],
   "faq": [
@@ -2875,18 +2869,20 @@
   ],
   "best_for": "做社区内容聚合或舆情观察。",
   "intent_queries": [
-   "reddit app api",
-   "reddit api application",
-   "reddit api apps",
+   "reddit api access",
+   "reddit api cost",
+   "reddit api documentation",
+   "reddit api",
+   "reddit api key",
    "reddit api pricing",
-   "reddit api pricing structure"
+   "reddit api free",
+   "reddit api docs"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例",
-   "模型"
+   "文档"
   ],
   "faq": [
    {
@@ -2929,18 +2925,10 @@
   ],
   "best_for": "做开发者内容聚合或自动发布。",
   "intent_queries": [
-   "we are devs api",
-   "how to get dev account tutorial api",
-   "steam community dev api key",
-   "how to develop api",
-   "what is api in devops",
-   "what is api development"
+   "steam community dev api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例",
-   "替代"
+   "密钥"
   ],
   "faq": [
    {
@@ -2983,17 +2971,9 @@
   ],
   "best_for": "做航天资讯站或新闻机器人。",
   "intent_queries": [
-   "free flight information api",
-   "international space station api",
-   "free flight details api",
-   "api information for flights",
-   "https://build.betaflight.com/api/targets",
-   "flight plan database api key"
+   "spaceflight news api"
   ],
-  "intent_tags": [
-   "密钥",
-   "免费额度"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "Spaceflight News 免费吗？",
@@ -3035,19 +3015,18 @@
   ],
   "best_for": "做行情 demo 或小规模数据分析。",
   "intent_queries": [
-   "alpha vantage api documentation",
-   "alpha vantage api",
+   "alpha api",
+   "alpha api key",
+   "alpha capital",
    "alpha vantage api key",
-   "alpha vantage api pricing",
-   "alpha vantage api free",
-   "alpha vantage api limits"
+   "alpha vantage api key generator",
+   "alpha vantage api key for indian market",
+   "alpha vantage api key registration",
+   "alpha vantage free api key"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
-   "限速",
-   "接入示例"
+   "免费额度"
   ],
   "faq": [
    {
@@ -3095,12 +3074,13 @@
    "finnhub api python",
    "finnhub api examples",
    "finnhub api tutorial",
-   "finnhub api websocket"
+   "finnhub api websocket",
+   "finnhub api integration",
+   "finnhub api documentation"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "限速",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -3144,10 +3124,12 @@
   ],
   "best_for": "做多市场行情图表。",
   "intent_queries": [
-   "twelve data api documentation",
-   "twelve data api",
+   "twelve api",
+   "twelve api key",
    "twelve data api key",
    "twelve data api key free",
+   "how to get twelve data api key",
+   "twelve data api documentation",
    "twelve data api pricing",
    "twelve data free api"
   ],
@@ -3155,7 +3137,7 @@
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3198,16 +3180,20 @@
   ],
   "best_for": "做量化回测或需要细粒度数据。",
   "intent_queries": [
-   "polygon.io api",
-   "polygon.io api key",
-   "polygon.io api pricing",
-   "polygon.io data api",
-   "polygon.io financial data api",
-   "polygon api reference"
+   "polygon api",
+   "polygon api key",
+   "polygon api tutorial",
+   "polygon api examples",
+   "polygon api reference",
+   "polygon api pricing",
+   "polygon api integration",
+   "polygon api gratis"
   ],
   "intent_tags": [
    "密钥",
-   "定价"
+   "定价",
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -3250,19 +3236,19 @@
   ],
   "best_for": "做基本面选股或财报展示。",
   "intent_queries": [
-   "financial modeling prep api key",
-   "financial modeling prep api",
-   "financial modeling prep api reddit",
-   "financial modeling prep api documentation",
-   "financial modeling prep fmp api",
-   "financial modeling prep fmp api key"
+   "financial api",
+   "financial api free",
+   "financial api key price",
+   "api financial data",
+   "api financial services",
+   "api financial solutions",
+   "api financial data quality",
+   "api financial data access"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价",
-   "接入示例",
-   "模型"
+   "定价"
   ],
   "faq": [
    {
@@ -3310,13 +3296,15 @@
    "alpaca api login",
    "alpaca api trading",
    "alpaca api",
-   "alpaca api key"
+   "alpaca api key",
+   "alpaca api docs",
+   "alpaca api free"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3364,12 +3352,13 @@
    "fred api",
    "fred api documentation",
    "fred api python",
-   "fred api docs"
+   "fred api docs",
+   "fred api data",
+   "fred api key signup"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -3413,17 +3402,18 @@
   ],
   "best_for": "个人项目快速拿行情，且能接受不稳定。",
   "intent_queries": [
-   "yahoo finance api key",
-   "yahoo finance api free",
-   "yahoo finance api documentation",
-   "yahoo finance api pricing",
-   "yahoo finance api",
-   "yahoo finance api python"
+   "yahoo api finance",
+   "yahoo api",
+   "yahoo api key",
+   "yahoo api for stock data",
+   "yahoo api documentation",
+   "yahoo api python",
+   "yahoo api fantasy football",
+   "yahoo finance api key"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -3472,13 +3462,14 @@
    "coingecko api free",
    "coingecko api documentation",
    "coingecko api docs",
-   "coingecko api3"
+   "coingecko api dashboard",
+   "coingecko api token price"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3521,16 +3512,11 @@
   ],
   "best_for": "做轻量币价展示。",
   "intent_queries": [
-   "coinmarket cap api key",
-   "coin market cap api documentation",
-   "coin market cap api",
-   "coin market cap api tutorial",
-   "what does coinmarketcap api provide access to",
-   "coin market cap api github"
+   "coincap api",
+   "coincap api key"
   ],
   "intent_tags": [
-   "密钥",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -3578,13 +3564,15 @@
    "coinmarketcap api free",
    "coinmarketcap api login",
    "coinmarketcap api excel",
-   "coinmarketcap api documentation"
+   "coinmarketcap api documentation",
+   "coinmarketcap api pricing",
+   "coinmarketcap api cost"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3627,14 +3615,18 @@
   ],
   "best_for": "做交易所行情或量化机器人。",
   "intent_queries": [
-   "binance api pricing",
+   "binance api key",
+   "binance api docs",
+   "binance api",
+   "binance api documentation",
+   "binance api management",
+   "binance api key usage",
    "binance api python",
-   "binance api historical data"
+   "binance api key security"
   ],
   "intent_tags": [
    "密钥",
-   "定价",
-   "限速",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -3678,17 +3670,20 @@
   ],
   "best_for": "做加密交易或行情聚合。",
   "intent_queries": [
-   "kraken api historical data",
-   "kraken api limits",
-   "api key kraken api",
    "kraken api key",
-   "api key kraken crypto",
-   "api key kraken trading"
+   "kraken api",
+   "kraken api documentation",
+   "kraken api docs",
+   "kraken api gateway",
+   "kraken api status",
+   "kraken api rate limit",
+   "kraken api octopus"
   ],
   "intent_tags": [
    "密钥",
+   "免费额度",
    "限速",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3731,14 +3726,18 @@
   ],
   "best_for": "做法币入金或链上应用。",
   "intent_queries": [
+   "coinbase api documentation",
+   "coinbase api",
+   "coinbase api key",
+   "coinbase api docs",
    "coinbase api python",
-   "coinbase api portal",
-   "coinbase api passphrase",
-   "coinbase api access",
-   "coinbase api key"
+   "coinbase api fees",
+   "coinbase api secret",
+   "coinbase api call python"
   ],
   "intent_tags": [
    "密钥",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -3835,8 +3834,7 @@
    "defillama api free"
   ],
   "intent_tags": [
-   "免费额度",
-   "模型"
+   "免费额度"
   ],
   "faq": [
    {
@@ -3884,13 +3882,15 @@
    "etherscan api v2",
    "etherscan api docs",
    "etherscan api documentation",
-   "etherscan explorer api"
+   "etherscan explorer api",
+   "etherscan api pricing",
+   "etherscan free api"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3940,7 +3940,7 @@
    "api frankfurter app"
   ],
   "intent_tags": [
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -3983,15 +3983,15 @@
   ],
   "best_for": "做电商多币种定价。",
   "intent_queries": [
-   "exchange rate api india",
-   "exchange rate api are they free or cost money",
-   "exchangerate-api key",
-   "exchangerate api key"
+   "exchangerate api key",
+   "exchangerate api",
+   "exchangerate api free",
+   "exchangerate-api key"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价"
+   "限速"
   ],
   "faq": [
    {
@@ -4034,17 +4034,16 @@
   ],
   "best_for": "找美国官方数据做分析。",
   "intent_queries": [
-   "data.gov api",
-   "data.gov api key",
-   "data.gov api documentation",
-   "cdc natality and mortality files api data.gov",
-   "data api free",
-   "data api free trial"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
-  "intent_tags": [
-   "密钥",
-   "接入示例"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "Data.gov 的 API 是什么？",
@@ -4086,12 +4085,12 @@
   ],
   "best_for": "做国别对比或发展研究。",
   "intent_queries": [
-   "world bank open data api",
-   "world bank open data pib",
-   "world bank data api",
-   "open data world bank",
+   "world api",
+   "world api index",
+   "world api reading",
    "world bank api key",
-   "world bank open data portal"
+   "world bank data api",
+   "world bank indicators api"
   ],
   "intent_tags": [
    "密钥"
@@ -4137,16 +4136,11 @@
   ],
   "best_for": "做美国市场分析或人口研究。",
   "intent_queries": [
-   "us census bureau api",
    "us census bureau api key",
-   "us census bureau geocoder api",
-   "us census bureau acs api",
-   "us census bureau naics api",
-   "us census data api"
+   "census data api key"
   ],
   "intent_tags": [
-   "密钥",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -4189,17 +4183,11 @@
   ],
   "best_for": "做企业尽调或英国公司查询。",
   "intent_queries": [
-   "uk companies house api",
    "uk companies house api key",
-   "beta companies house uk api",
-   "companies house beta service uk api",
-   "apic uk ltd companies house",
-   "api technologies uk companies house"
+   "uk companies house api"
   ],
   "intent_tags": [
-   "密钥",
-   "定价",
-   "限速"
+   "密钥"
   ],
   "faq": [
    {
@@ -4251,8 +4239,9 @@
   "intent_tags": [
    "密钥",
    "免费额度",
+   "限速",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -4297,15 +4286,11 @@
   "intent_queries": [
    "opensanctions api",
    "opensanctions api key",
-   "open sanctions api doc",
-   "open sanctions api pricing",
    "opensanctions free api key"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
-   "接入示例"
+   "免费额度"
   ],
   "faq": [
    {
@@ -4348,12 +4333,9 @@
   ],
   "best_for": "做政治献金分析或数据新闻。",
   "intent_queries": [
-   "fecapi piraju",
    "fec api key",
-   "api and api key",
-   "how to get apify api key",
-   "how to fetch an api",
-   "api_key"
+   "fec api",
+   "fecapi piraju"
   ],
   "intent_tags": [
    "密钥"
@@ -4399,17 +4381,14 @@
   ],
   "best_for": "跟踪美国监管变化。",
   "intent_queries": [
-   "federal register api",
+   "federal api",
+   "federal applicable rate",
    "federal register api key",
-   "federal register api documentation",
-   "federal reserve api key",
-   "federal reserve economic data api key",
-   "fedex create an api key"
+   "federal reserve api key"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "接入示例"
+   "限速"
   ],
   "faq": [
    {
@@ -4457,10 +4436,13 @@
    "usaspending api examples",
    "usaspending api tutorial",
    "usaspending api reference",
-   "usaspending api key"
+   "usaspending api key",
+   "usaspending api endpoints",
+   "usaspending api docs"
   ],
   "intent_tags": [
    "密钥",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -4504,12 +4486,11 @@
   ],
   "best_for": "做城市数据可视化。",
   "intent_queries": [
-   "socrata open data api",
-   "nyc open data api",
-   "nyc open source data",
-   "nys open data platform",
-   "open data new york state",
-   "nys open data website"
+   "nyc api",
+   "nyc apic",
+   "nyc api portal",
+   "nyc apic chapter",
+   "nyc api geocoding"
   ],
   "intent_tags": [],
   "faq": [
@@ -4601,14 +4582,21 @@
   ],
   "best_for": "做百科卡片或术语解释。",
   "intent_queries": [
-   "rest api what is it",
-   "was ist eine rest api",
-   "why is it called rest api",
-   "what is api rest",
-   "api and rest api",
-   "rest api was ist das"
+   "wikipedia api",
+   "wikipedia api key",
+   "wikipedia api python",
+   "wikipedia api documentation",
+   "wikipedia api url",
+   "wikipedia api free",
+   "wikipedia api docs",
+   "wikipedia api json"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "密钥",
+   "免费额度",
+   "文档",
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "Wikipedia API 要 Key 吗？",
@@ -4650,15 +4638,18 @@
   ],
   "best_for": "做机器学习数据准备。",
   "intent_queries": [
-   "kaggle api python",
+   "kaggle api",
    "kaggle api key",
-   "kaggle api key download",
-   "kaggle create api token",
-   "how to get kaggle key",
-   "how to use kaggle"
+   "kaggle api token",
+   "kaggle api python",
+   "kaggle api token download",
+   "kaggle api settings",
+   "kaggle api download",
+   "kaggle api documentation"
   ],
   "intent_tags": [
    "密钥",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -4702,16 +4693,18 @@
   ],
   "best_for": "做历史网页查询或数字资料检索。",
   "intent_queries": [
+   "internet api",
+   "internet api gateway",
+   "internet api windows or curl",
+   "internet api curl vs windows",
    "internet archive api",
    "internet archive api key",
-   "free web search api key",
-   "free search api key",
-   "web search api key",
-   "internet archive type identifier"
+   "internet search api",
+   "internet payment processor api"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "替代"
   ],
   "faq": [
    {
@@ -4754,16 +4747,19 @@
   ],
   "best_for": "做天文科普或太空主题站点。",
   "intent_queries": [
-   "nasa api apod",
+   "nasa api",
    "nasa api key",
+   "nasa api documentation",
+   "nasa api free",
+   "nasa api 1169",
+   "nasa api portal",
    "nasa api key generator",
-   "nasa firms api key",
-   "nasa eye on earth api",
-   "nasa earth data api"
+   "nasa api data"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "免费额度",
+   "文档"
   ],
   "faq": [
    {
@@ -4806,12 +4802,14 @@
   ],
   "best_for": "做航天数据展示或发射追踪。",
   "intent_queries": [
+   "spacex api",
    "spacex api key",
-   "x-api-key",
-   "nasa access api key",
-   "apispace.com",
-   "spacex what is it",
-   "www.apispace.com"
+   "spacex api console",
+   "spacex graphql api",
+   "spacex data api",
+   "spacex rest api",
+   "spacex starlink gps location api",
+   "spacex launch api"
   ],
   "intent_tags": [
    "密钥"
@@ -4856,17 +4854,17 @@
   ],
   "best_for": "做 ISS 追踪小工具或教学示例。",
   "intent_queries": [
-   "open notify api",
-   "people in space now api open notify",
-   "api open notify org",
-   "how to open notifications",
-   "product notifications api tutorial",
-   "product notifications api examples"
+   "open api",
+   "open api keys",
+   "open api specification",
+   "open api swagger",
+   "open api meaning",
+   "open api viewer",
+   "open api platform",
+   "open api generator"
   ],
   "intent_tags": [
-   "免费额度",
-   "接入示例",
-   "替代"
+   "密钥"
   ],
   "faq": [
    {
@@ -4958,17 +4956,22 @@
   ],
   "best_for": "做论文聚合或研究热点追踪。",
   "intent_queries": [
-   "arxiv api python",
-   "arxiv api python usage",
-   "arxiv api integration guide",
+   "arxiv api",
    "arxiv api key",
-   "arxiv what is it",
-   "is arxiv a valid source"
+   "arxiv api query",
+   "arxiv api documentation",
+   "arxiv api python",
+   "arxiv api search",
+   "arxiv api rate limit",
+   "arxiv api 429"
   ],
   "intent_tags": [
    "密钥",
+   "免费额度",
    "限速",
-   "接入示例"
+   "文档",
+   "接入示例",
+   "报错"
   ],
   "faq": [
    {
@@ -5011,15 +5014,18 @@
   ],
   "best_for": "做文献管理或引用统计。",
   "intent_queries": [
-   "crossref api python",
-   "crossref api integration",
+   "crossref api",
    "crossref api key",
-   "search.crossref",
-   "cross river api docs",
-   "crossref_api_key"
+   "crossref api examples",
+   "crossref api tutorial",
+   "crossref api integration",
+   "crossref api documentation",
+   "crossref api python",
+   "crossref rest api"
   ],
   "intent_tags": [
    "密钥",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -5068,10 +5074,13 @@
    "openalex api documentation",
    "openalex api guide",
    "openalex api usage",
-   "openalex api examples"
+   "openalex api examples",
+   "openalex api integration",
+   "openalex api tutorial"
   ],
   "intent_tags": [
    "密钥",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -5115,17 +5124,18 @@
   ],
   "best_for": "做文献推荐或引用分析。",
   "intent_queries": [
+   "semantic api",
+   "semantic api integration",
+   "semantic api documentation",
+   "semantic api examples",
    "semantic scholar api",
    "semantic scholar api key",
-   "semantic scholar api examples",
-   "semantic scholar api tutorial",
-   "semantic scholar api guide",
-   "semantic scholar api documentation"
+   "apim semantic caching",
+   "api semantic analysis"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -5169,15 +5179,19 @@
   ],
   "best_for": "做医学文献检索或循证工具。",
   "intent_queries": [
-   "pubmed e-utilities api",
-   "pubmed central pmc api",
-   "e-utilities api",
-   "pubmed trending articles api",
-   "download pubmed articles free",
-   "pubmed search engine download"
+   "pubmed api key",
+   "pubmed api",
+   "pubmed api python",
+   "pubmed api documentation",
+   "pubmed api guide",
+   "pubmed api search",
+   "pubmed api tutorial",
+   "pubmed api integration"
   ],
   "intent_tags": [
-   "免费额度"
+   "密钥",
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -5220,12 +5234,7 @@
   ],
   "best_for": "做生物医学文献分析。",
   "intent_queries": [
-   "europe pmc api",
-   "what is europe pmc",
-   "is europe pmc reliable",
-   "https://europepmc.org",
-   "europepmc.org",
-   "europe key facts"
+   "europe api"
   ],
   "intent_tags": [],
   "faq": [
@@ -5269,8 +5278,7 @@
   ],
   "best_for": "做文献获取或 OA 覆盖率统计。",
   "intent_queries": [
-   "unpaywall api",
-   "unpaywall app"
+   "unpaywall api"
   ],
   "intent_tags": [],
   "faq": [
@@ -5314,15 +5322,18 @@
   ],
   "best_for": "做地震监测或地理数据可视化。",
   "intent_queries": [
-   "usgs earthquake api",
-   "usgs earthquake api documentation",
-   "usgs earthquake api integration",
-   "usgs earthquake data api",
-   "usgs earthquake catalog api",
-   "usgs earthquakes rest api"
+   "usgs api key",
+   "usgs api",
+   "usgs api documentation",
+   "usgs api url",
+   "usgs api waterdata",
+   "usgs api earthquake",
+   "usgs api webinar 2025",
+   "usgs m2m api"
   ],
   "intent_tags": [
-   "接入示例"
+   "密钥",
+   "文档"
   ],
   "faq": [
    {
@@ -5366,9 +5377,6 @@
   "best_for": "做物种分布图或生态研究。",
   "intent_queries": [
    "gbif api",
-   "gbif ailanthus altissima",
-   "gbif ipt",
-   "gbif ebird",
    "gbif database api",
    "gbif species api"
   ],
@@ -5419,10 +5427,13 @@
    "inaturalist api usage",
    "inaturalist api examples",
    "inaturalist api tutorial",
-   "inaturalist api reference"
+   "inaturalist api reference",
+   "inaturalist api documentation",
+   "inaturalist app free"
   ],
   "intent_tags": [
    "免费额度",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -5466,16 +5477,11 @@
   ],
   "best_for": "做结构生物学工具或分子可视化。",
   "intent_queries": [
+   "rcsb api",
    "rcsb pdb api",
-   "rcsb pdb pairwise structure alignment",
-   "rcsb pdb pairwise structure alignment tool",
-   "rcsb pdb alignment",
-   "rcsb protein data bank pdb",
-   "rpdb api key reddit"
+   "rcsb search api"
   ],
-  "intent_tags": [
-   "密钥"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "RCSB 怎么下载结构文件？",
@@ -5517,18 +5523,20 @@
   ],
   "best_for": "做配图、壁纸或图片墙。",
   "intent_queries": [
-   "unsplash api pricing",
-   "unsplash api image",
-   "unsplash api access key",
-   "unsplash api link",
+   "unsplash api",
    "unsplash api key",
-   "unsplash api key free"
+   "unsplash api key free",
+   "unsplash api image",
+   "unsplash api credentials",
+   "unsplash api pricing",
+   "unsplash api documentation",
+   "unsplash api docs"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -5571,18 +5579,21 @@
   ],
   "best_for": "做内容站配图或素材库。",
   "intent_queries": [
-   "pexels api pricing",
-   "pexels api page",
-   "pexels api portal",
-   "pexels api limit",
+   "pexels api",
    "pexels api key",
+   "pexels api free",
+   "pexels api pricing",
+   "pexels api documentation",
+   "pexels api limit",
+   "how to connect pexels api to n8n",
    "is pexels api free"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
+   "限速",
    "定价",
-   "限速"
+   "文档"
   ],
   "faq": [
    {
@@ -5625,16 +5636,19 @@
   ],
   "best_for": "做多元素材站或演示项目。",
   "intent_queries": [
-   "pixabay api integration",
+   "pixabay api",
    "pixabay api key",
-   "how to get ebay api key",
-   "how to use ebay api",
-   "best buy api key",
-   "what is your api key"
+   "pixabay api documentation",
+   "pixabay api tutorial",
+   "pixabay api integration",
+   "pixabay api examples",
+   "pixabay api usage",
+   "how to get pixabay api key"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -5677,17 +5691,14 @@
   ],
   "best_for": "做原型或列表页占位。",
   "intent_queries": [
+   "lorem api",
    "lorem picsum api",
-   "lorem picsum image",
-   "lorem picsum free api",
    "shortcut key for lorem ipsum",
-   "how to generate lorem ipsum",
-   "lorem ipsum html code"
+   "how to generate lorem ipsum"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "接入示例"
+   "限速"
   ],
   "faq": [
    {
@@ -5730,18 +5741,21 @@
   ],
   "best_for": "做聊天或内容里的动图。",
   "intent_queries": [
-   "giphy api pricing",
-   "giphy api integration",
-   "giphy api limits",
+   "giphy api",
    "giphy api key",
-   "google api key github",
-   "create api key github"
+   "giphy api limits",
+   "giphy api search",
+   "giphy api tutorial",
+   "giphy api integration",
+   "giphy api free",
+   "giphy api pricing"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
+   "限速",
    "定价",
-   "限速"
+   "接入示例"
   ],
   "faq": [
    {
@@ -5784,12 +5798,14 @@
   ],
   "best_for": "做图床或社区图片功能。",
   "intent_queries": [
+   "imgur api",
    "imgur api key",
+   "imgur api registration",
    "imgur api key apollo",
-   "how to find my imgur api",
-   "imgur image view api",
-   "how to use imgur",
-   "imgur login with google"
+   "imgur api registration page",
+   "imgur login api",
+   "nak imgur api",
+   "imgur image view api"
   ],
   "intent_tags": [
    "密钥"
@@ -5835,12 +5851,11 @@
   ],
   "best_for": "做电商主图或设计工具。",
   "intent_queries": [
-   "remove.bg api",
-   "remove.bg api key",
-   "remove.bg api key free",
+   "remove api",
+   "remove api key steam",
+   "remove api client from isu workday",
    "remove bg api key",
-   "remove app fire tablet",
-   "remove app firestick"
+   "remove.bg api key free"
   ],
   "intent_tags": [
    "密钥",
@@ -5892,11 +5907,13 @@
    "cloudinary api docs",
    "cloudinary api base url",
    "cloudinary api documentation",
-   "cloudinary api search"
+   "cloudinary api search",
+   "cloudinary api secret",
+   "cloudinary api upload"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -6027,18 +6044,9 @@
   ],
   "best_for": "做分享链接或活动物料。",
   "intent_queries": [
-   "qr server api",
-   "qrserver api excel",
-   "api qr code server",
-   "qr code api free",
-   "qr code api google",
-   "what is my qrz api key"
+   "qr api server"
   ],
-  "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "QR Server 要 Key 吗？",
@@ -6080,18 +6088,19 @@
   ],
   "best_for": "做影视资料站或推荐功能。",
   "intent_queries": [
-   "tmdb api application url",
-   "tmdb api application summary",
-   "tmdb api pricing",
-   "tmdb api python",
-   "tmdb api key - the movie database api",
-   "tmdb api key"
+   "tmdb api reference",
+   "tmdb api key",
+   "tmdb api",
+   "tmdb api documentation",
+   "tmdb api key generator",
+   "tmdb api free",
+   "tmdb api key v3",
+   "tmdb embed api"
   ],
   "intent_tags": [
    "密钥",
-   "定价",
-   "限速",
-   "接入示例"
+   "免费额度",
+   "文档"
   ],
   "faq": [
    {
@@ -6134,16 +6143,20 @@
   ],
   "best_for": "做影片查询或评分展示。",
   "intent_queries": [
-   "omdbapi api key",
-   "what is omdb api",
-   "tmdb api key example",
-   "tmdb api key usage",
-   "application url for tmdb api key",
-   "tmdb api key request"
+   "omdb api",
+   "omdb api key",
+   "omdb api documentation",
+   "omdb api website",
+   "omdb api python",
+   "omdb api movie",
+   "omdb api full form",
+   "omdb api rate limit"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
+   "限速",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -6187,6 +6200,7 @@
   ],
   "best_for": "做追剧日历或剧集库。",
   "intent_queries": [
+   "tvmaze api",
    "tvmaze api key"
   ],
   "intent_tags": [
@@ -6233,18 +6247,18 @@
   ],
   "best_for": "做视频聚合或频道分析。",
   "intent_queries": [
-   "youtube data api pricing",
-   "youtube data api python",
-   "youtube data api pagetoken",
-   "youtube data api is free",
-   "youtube data api limits",
-   "youtube data api live stream"
+   "youtube api documentation",
+   "youtube api",
+   "youtube api key",
+   "youtube api v3",
+   "youtube api key free",
+   "youtube api python",
+   "youtube api docs"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价",
-   "限速",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -6335,16 +6349,19 @@
   ],
   "best_for": "做音乐推荐或播放器集成。",
   "intent_queries": [
-   "spotify web app api",
-   "spotify web api javascript api",
-   "how to use spotify api",
-   "spotify web audio api",
-   "is there an api for spotify",
-   "how to find spotify api"
+   "spotify api free",
+   "spotify api token",
+   "spotify api for developers",
+   "spotify api",
+   "spotify api key",
+   "spotify api documentation",
+   "spotify api python",
+   "spotify api docs"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -6388,16 +6405,15 @@
   ],
   "best_for": "做音乐推荐或听歌记录。",
   "intent_queries": [
+   "last api",
+   "last api version salesforce",
    "last.fm api key",
    "last fm api documentation",
-   "last-api",
-   "how to get last fm api key",
-   "last fm app for windows",
-   "last key realty"
+   "last-api"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -6493,16 +6509,17 @@
   ],
   "best_for": "做黑胶或唱片资料站。",
   "intent_queries": [
-   "discogs api python",
-   "discogs api integration",
+   "discogs api",
    "discogs api key",
-   "discogs official site api",
-   "does discogs have an api",
-   "how to get discord api key"
+   "discogs api examples",
+   "discogs api integration",
+   "discogs api guide",
+   "discogs api tutorial",
+   "discogs api usage",
+   "discogs api search"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "接入示例"
   ],
   "faq": [
@@ -6546,17 +6563,19 @@
   ],
   "best_for": "做歌词站或音乐内容产品。",
   "intent_queries": [
-   "genius api price",
    "genius api key",
-   "generate me an api key",
-   "github api key generation",
-   "give me a api key",
-   "google genai api key"
+   "genius api",
+   "genius api token",
+   "genius api cost",
+   "genius api get lyrics",
+   "genius api docs",
+   "genius api price",
+   "auto genius api"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价"
+   "定价",
+   "文档"
   ],
   "faq": [
    {
@@ -6598,14 +6617,15 @@
   ],
   "best_for": "做歌词展示的小工具。",
   "intent_queries": [
-   "lyrics.ovh api",
+   "lyrics api",
    "lyrics api free",
+   "lyrics apink bubibu",
    "lyrics app free",
-   "song lyrics api free",
-   "lyrics key to the highway",
-   "lyrics keyshia cole i remember"
+   "song lyrics api free"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "免费额度"
+  ],
   "faq": [
    {
     "q": "Lyrics.ovh 要 Key 吗？",
@@ -6647,16 +6667,17 @@
   ],
   "best_for": "做音乐试听或曲库浏览。",
   "intent_queries": [
+   "deezer api",
    "deezer api key",
-   "deezer app download windows",
-   "deezer application windows 11",
-   "https://www.deezer.com/en/link",
-   "comment utiliser deezer gratuitement",
-   "deezer activer un code"
+   "deezer api free",
+   "deezer api documentation",
+   "deezer music api",
+   "deezer developer api"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "免费额度",
+   "文档"
   ],
   "faq": [
    {
@@ -6749,18 +6770,20 @@
   ],
   "best_for": "做 CI 自动化、仓库看板或机器人。",
   "intent_queries": [
-   "github rest api apps",
-   "github rest api vs graphql api",
-   "github rest api contents",
-   "github rest api reference",
-   "github docs rest api",
-   "github enterprise rest api"
+   "github api rate limit",
+   "github api status",
+   "github api",
+   "github api key",
+   "github api documentation",
+   "github api docs",
+   "github api token",
+   "github api url"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "接入示例",
-   "替代"
+   "限速",
+   "文档"
   ],
   "faq": [
    {
@@ -6803,16 +6826,18 @@
   ],
   "best_for": "做 GitLab 自动化或自建平台集成。",
   "intent_queries": [
-   "gitlab api epics",
-   "gitlab api approval_rules",
-   "gitlab api pipelines",
-   "gitlab api approve merge request",
-   "gitlab api pipeline status",
-   "gitlab api pipeline schedule"
+   "gitlab api key",
+   "gitlab api",
+   "gitlab api documentation",
+   "gitlab api docs",
+   "gitlab api url",
+   "gitlab api token",
+   "gitlab api v4",
+   "gitlab api projects"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -6855,15 +6880,14 @@
   ],
   "best_for": "做依赖分析或包管理工具。",
   "intent_queries": [
-   "what is the npm registry",
-   "npm install specify registry",
-   "npm set registry npmjs",
-   "npm install from specific registry",
-   "how to set registry url in npm",
-   "npm config get registry"
+   "npm apidoc",
+   "npm api",
+   "npm apiops-cli",
+   "npm api documentation",
+   "npm apidevtools/swagger-parser"
   ],
   "intent_tags": [
-   "密钥"
+   "文档"
   ],
   "faq": [
    {
@@ -6906,17 +6930,13 @@
   ],
   "best_for": "做 Python 依赖审计。",
   "intent_queries": [
-   "what is api json",
-   "is a json file an api",
-   "sample json api file",
-   "python call json api",
-   "free api json data",
-   "json data sample api"
+   "pypi api token",
+   "pypi api",
+   "copilot api documentation pypi documentation"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -6959,16 +6979,18 @@
   ],
   "best_for": "做镜像管理或 CI 校验。",
   "intent_queries": [
-   "google docker hub api",
-   "docker hub rest api",
-   "how to use docker hub",
-   "docker hub asp net",
-   "docker hub evolution api",
-   "docker hub official website"
+   "docker api",
+   "docker api port",
+   "docker api version",
+   "docker api usage",
+   "docker apisix",
+   "docker api key",
+   "docker api rce",
+   "docker api reference"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -7011,11 +7033,15 @@
   ],
   "best_for": "做 Rust 依赖检查。",
   "intent_queries": [
+   "crates app",
+   "crates appear",
+   "crates pictures",
    "crates.io",
-   "https://crates.io",
-   "crates.io index"
+   "https://crates.io"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "限速"
+  ],
   "faq": [
    {
     "q": "crates.io 为什么 403？",
@@ -7065,7 +7091,8 @@
    "stackexchange / github"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "限速"
   ],
   "faq": [
    {
@@ -7108,14 +7135,14 @@
   ],
   "best_for": "做竞赛数据统计或训练工具。",
   "intent_queries": [
+   "codeforces api",
    "codeforces api key",
-   "get salesforce api key",
-   "how to use salesforce api",
-   "how to start with codeforces",
-   "what is api name in salesforce"
+   "codeforces api documentation",
+   "codeforces login api"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "文档"
   ],
   "faq": [
    {
@@ -7158,13 +7185,19 @@
   ],
   "best_for": "做在线编程题或代码运行功能。",
   "intent_queries": [
-   "judge0 ce api",
-   "judge 0 api key",
+   "judge0 api",
+   "judge0 api examples",
+   "judge0 api features",
+   "judge0 api tutorial",
+   "judge0 api integration",
    "judge0 api free",
-   "judge0 api features"
+   "judge0 api docs",
+   "judge0 api documentation"
   ],
   "intent_tags": [
-   "密钥"
+   "免费额度",
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -7256,11 +7289,13 @@
    "jsonplaceholder api todos",
    "jsonplaceholder api url",
    "jsonplaceholder api free",
-   "jsonplaceholder api post"
+   "jsonplaceholder api post",
+   "jsonplaceholder api documentation",
+   "jsonplaceholder api film"
   ],
   "intent_tags": [
    "免费额度",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -7308,7 +7343,9 @@
    "reqres api",
    "reqres api guide",
    "reqres api tutorial",
-   "reqres api free"
+   "reqres api free",
+   "reqres api swagger",
+   "reqres api users"
   ],
   "intent_tags": [
    "密钥",
@@ -7361,12 +7398,14 @@
    "resend api tutorial",
    "resend api integration",
    "resend api guide",
-   "resend api pricing"
+   "resend api pricing",
+   "resend api docs",
+   "resend api key email"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "定价",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -7415,13 +7454,14 @@
    "sendgrid api key",
    "sendgrid api documentation",
    "sendgrid api docs",
-   "sendgrid api pricing"
+   "sendgrid api pricing",
+   "sendgrid api logs search with subject",
+   "sendgrid api send email"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -7469,11 +7509,13 @@
    "mailgun api key",
    "mailgun api docs",
    "mailgun api endpoint",
-   "mailgun api reference"
+   "mailgun api reference",
+   "mailgun api dns",
+   "mailgun api url"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -7520,8 +7562,7 @@
    "emailjs api key"
   ],
   "intent_tags": [
-   "密钥",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -7564,19 +7605,18 @@
   ],
   "best_for": "做 DNS 自动化或多站点运维。",
   "intent_queries": [
-   "cloudflare api ai",
-   "cloudflare api permissions",
-   "cloudflare api python",
-   "cloudflare api postman collection",
-   "cloudflare api policy",
-   "cloudflare api powershell"
+   "cloudflare api documentation",
+   "cloudflare api security",
+   "cloudflare api",
+   "cloudflare api key",
+   "cloudflare api token",
+   "cloudflare api shield",
+   "cloudflare api gateway",
+   "cloudflare api docs"
   ],
   "intent_tags": [
    "密钥",
-   "定价",
-   "限速",
-   "接入示例",
-   "替代"
+   "文档"
   ],
   "faq": [
    {
@@ -7619,17 +7659,17 @@
   ],
   "best_for": "做通知机器人或社群工具。",
   "intent_queries": [
-   "telegram bot api python",
-   "telegram bot api limits",
-   "telegram bot api download file",
-   "telegram bot api c++",
-   "telegram bot api send message",
-   "telegram bot api local server"
+   "telegram api",
+   "telegram api key",
+   "telegram api id",
+   "telegram api hash",
+   "telegram api bot",
+   "telegram api development tools",
+   "telegram api login",
+   "telegram api token"
   ],
   "intent_tags": [
-   "密钥",
-   "限速",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -7672,14 +7712,19 @@
   ],
   "best_for": "做社区机器人或告警通知。",
   "intent_queries": [
-   "discord app api",
-   "discord app apple",
-   "discord api permissions"
+   "discord api issues",
+   "discord api",
+   "discord api status",
+   "discord api key",
+   "discord api error",
+   "discord api fivem",
+   "discord api error 400",
+   "discord api docs"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "接入示例"
+   "文档",
+   "报错"
   ],
   "faq": [
    {
@@ -7722,18 +7767,18 @@
   ],
   "best_for": "做团队通知或审批机器人。",
   "intent_queries": [
+   "slack api documentation",
+   "slack api token",
+   "slack api login",
+   "slack api",
    "slack api apps",
-   "slack app api",
-   "slack api apps page",
-   "slack api applications",
-   "slack api apps dashboard",
-   "slack api app management"
+   "slack api key",
+   "slack api docs",
+   "slack api dashboard"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "限速",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -7776,14 +7821,18 @@
   ],
   "best_for": "做销售线索或招聘联系。",
   "intent_queries": [
-   "hunter.io api",
-   "hunter.io api key",
-   "hunter api pricing",
+   "hunter api",
    "hunter api key",
-   "hunter io api key"
+   "hunter api pricing",
+   "hunter api purpose",
+   "hunter api in banking",
+   "hunter io api",
+   "hunter io api key",
+   "hunter alpha api"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "定价"
   ],
   "faq": [
    {
@@ -7831,13 +7880,14 @@
    "numverify api free",
    "numverify api usage",
    "numverify api limits",
-   "numverify api integration"
+   "numverify api integration",
+   "numverify api documentation"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "限速",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -7880,12 +7930,19 @@
   ],
   "best_for": "做排期、请假或旅行规划。",
   "intent_queries": [
-   "nager.date api",
-   "nager api features",
+   "nager api",
    "nager api examples",
-   "nager api tutorial"
+   "nager api features",
+   "nager api tutorial",
+   "nager api integration",
+   "nager api documentation",
+   "nager date api",
+   "nager holiday api"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "文档",
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "Nager.Date 要 Key 吗？",
@@ -7974,14 +8031,13 @@
   ],
   "best_for": "做摄影时刻表或户外应用。",
   "intent_queries": [
-   "google ads api sunset",
+   "sunrise api",
    "https://sunrise-sunset.org/api",
-   "sunrise app free version",
-   "sunrise sunset free api",
-   "sunrise key west",
-   "sunrise keystone"
+   "sunrise app free version"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "免费额度"
+  ],
   "faq": [
    {
     "q": "Sunrise-Sunset 要 Key 吗？",
@@ -8023,16 +8079,12 @@
   ],
   "best_for": "做分享链接或二维码。",
   "intent_queries": [
-   "tiny url creator api",
-   "curl with api key",
-   "how to use tinyurl",
-   "youtube_api_key",
-   "mineru_api_key",
-   "api_key"
+   "tinyurl api",
+   "tinyurl api documentation",
+   "tinyurl generator api"
   ],
   "intent_tags": [
-   "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -8075,12 +8127,14 @@
   ],
   "best_for": "轻量短链需求。",
   "intent_queries": [
-   "is.gd links",
-   "is.gd link shortener",
-   "is.gd files",
-   "is.gd firedragon777",
-   "gd app free",
-   "is api free"
+   "is apixaban eliquis",
+   "is apixaban an anticoagulant",
+   "is apixaban a doac",
+   "is apixaban a blood thinner",
+   "is apixaban an antiplatelet",
+   "is apixaban available in usa",
+   "is apixaban generic",
+   "is apify free"
   ],
   "intent_tags": [
    "免费额度"
@@ -8126,9 +8180,7 @@
   ],
   "best_for": "做链接卡片或网页存档。",
   "intent_queries": [
-   "microlink api",
-   "microlink epi growth gaas for rf",
-   "microlink ai"
+   "microlink api"
   ],
   "intent_tags": [],
   "faq": [
@@ -8173,15 +8225,10 @@
   "best_for": "做写作助手或内容校对。",
   "intent_queries": [
    "languagetool api",
-   "language tool api free",
-   "languagetool app",
-   "languagetool app download",
-   "languagetool application mobile",
-   "languagetool app review"
+   "languagetool app free"
   ],
   "intent_tags": [
-   "免费额度",
-   "接入示例"
+   "免费额度"
   ],
   "faq": [
    {
@@ -8275,16 +8322,20 @@
   ],
   "best_for": "做文档翻译或多语站点。",
   "intent_queries": [
-   "deepl api free api key",
-   "deepl api pro subscription",
-   "deepl german english api",
-   "deepl v2 api key",
-   "how to get deepl api key",
-   "deepl english to french api"
+   "deepl api free",
+   "deepl api",
+   "deepl api key",
+   "deepl api pro",
+   "deepl api pricing",
+   "deepl api documentation",
+   "deepl api growth",
+   "deepl api url"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "免费额度",
+   "定价",
+   "文档"
   ],
   "faq": [
    {
@@ -8378,14 +8429,17 @@
   ],
   "best_for": "做星战资料站或 API 教学示例。",
   "intent_queries": [
-   "swapi api",
-   "swapi api angular",
-   "swapi - star wars api",
-   "swapi dev api",
+   "sw api",
    "sw api shift select",
-   "sw api shift select baylor"
+   "sw api guide",
+   "sw api time and attendance",
+   "sw api shift select baylor",
+   "swap pricing",
+   "swap pricing formula"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "定价"
+  ],
   "faq": [
    {
     "q": "SWAPI 稳定吗？",
@@ -8427,13 +8481,18 @@
   ],
   "best_for": "做追番应用或动漫资料库。",
   "intent_queries": [
-   "myanimelist.net api",
+   "jikan api",
+   "jikan api guide",
+   "jikan api usage",
    "jikan api examples",
    "jikan api tutorial",
    "jikan api search",
+   "jikan api integration",
    "jikan api status"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "Jikan 限速多少？",
@@ -8475,16 +8534,13 @@
   ],
   "best_for": "做动漫追踪或评分站。",
   "intent_queries": [
-   "new api for graphql",
-   "github graphql api examples",
-   "what are graphql apis",
-   "new relic graphql api",
-   "how to create graphql api",
-   "how to test graphql apis"
+   "anilist api key",
+   "anilist api rate limit"
   ],
   "intent_tags": [
+   "密钥",
    "免费额度",
-   "接入示例"
+   "限速"
   ],
   "faq": [
    {
@@ -8527,15 +8583,18 @@
   ],
   "best_for": "做吉卜力资料页或演示项目。",
   "intent_queries": [
-   "studio ghibli web store",
-   "studio ghibli official site",
-   "studio ghibli website store",
-   "studio ghibli official website",
-   "studio ghibli official store",
-   "studio ghibli web shop"
+   "studio api",
+   "studio api key",
+   "studio api google",
+   "studio api examples",
+   "studio api features",
+   "studio api tutorial",
+   "studio api gemini",
+   "studio api integration"
   ],
   "intent_tags": [
-   "免费额度"
+   "密钥",
+   "接入示例"
   ],
   "faq": [
    {
@@ -8578,15 +8637,16 @@
   ],
   "best_for": "做剧集资料站或前端练习。",
   "intent_queries": [
-   "rick and morty app",
+   "rick api",
+   "rick apitz",
+   "rick apitz obit",
    "rick and morty keycaps",
    "api rick y morty",
-   "rick and morty develop an app episode",
-   "what app is rick and morty on",
-   "rick and morty app episode"
+   "rick and morty api documentation"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "文档"
   ],
   "faq": [
    {
@@ -8629,15 +8689,17 @@
   ],
   "best_for": "做答题游戏或课堂测验。",
   "intent_queries": [
-   "open trivia db api",
-   "how to set up trivia",
-   "online trivia free create",
-   "free online trivia apps create own questions",
-   "online trivia platform free",
-   "create online trivia game free"
+   "open api",
+   "open api keys",
+   "open api specification",
+   "open api swagger",
+   "open api meaning",
+   "open api viewer",
+   "open api platform",
+   "open api generator"
   ],
   "intent_tags": [
-   "免费额度"
+   "密钥"
   ],
   "faq": [
    {
@@ -8680,14 +8742,19 @@
   ],
   "best_for": "做聊天机器人或每日一笑。",
   "intent_queries": [
-   "joke api appspot",
+   "joke api documentation",
+   "joke api",
    "joke api free",
-   "random joke api free",
-   "free joke api github",
-   "free joke generator api",
-   "dad joke free api"
+   "joke api sv443",
+   "joke api url",
+   "joke api appspot",
+   "joke generator api",
+   "random joke api github"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "免费额度",
+   "文档"
+  ],
   "faq": [
    {
     "q": "JokeAPI 免费吗？",
@@ -8822,8 +8889,7 @@
   ],
   "best_for": "做占位内容或趣味组件。",
   "intent_queries": [
-   "kanye.rest api",
-   "kanye keychain"
+   "kanye api"
   ],
   "intent_tags": [],
   "faq": [
@@ -8867,16 +8933,18 @@
   ],
   "best_for": "做宠物类应用或占位图。",
   "intent_queries": [
-   "who creates an api",
-   "what is api in corporate",
-   "what is api company",
-   "who owns api group",
-   "api group corporation ticker",
-   "api group board of directors"
+   "dog api",
+   "dog api free",
+   "dog apical tooth abscess",
+   "dog api v2",
+   "dog api ceo",
+   "dog api link",
+   "how to get datadog api key",
+   "datadog application key vs api key"
   ],
   "intent_tags": [
    "密钥",
-   "定价",
+   "免费额度",
    "替代"
   ],
   "faq": [
@@ -8920,16 +8988,15 @@
   ],
   "best_for": "做每日推送或趣味卡片。",
   "intent_queries": [
-   "cat fact api ninja",
    "random cat facts api",
-   "revenue cat api docs",
    "cat facts ninja api",
-   "factset on demand api",
-   "cat facts api free"
+   "cat fact api free",
+   "cat facts api documentation",
+   "cat facts free api"
   ],
   "intent_tags": [
    "免费额度",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -8972,15 +9039,18 @@
   ],
   "best_for": "做列表占位或测试数据。",
   "intent_queries": [
-   "random user generator api",
-   "random number generator api",
-   "random object generator api",
-   "random name generator api",
+   "random api key",
    "random api key generator",
-   "random user id generator"
+   "random api",
+   "random api generator",
+   "random api for testing",
+   "random api java",
+   "random api python",
+   "random api request"
   ],
   "intent_tags": [
-   "密钥"
+   "密钥",
+   "接入示例"
   ],
   "faq": [
    {
@@ -9023,16 +9093,9 @@
   ],
   "best_for": "做漫画浏览或页面彩蛋。",
   "intent_queries": [
-   "how to get x api key",
-   "code is compiling xkcd",
-   "xkcd my code is compiling",
-   "api x-api-key",
-   "xkcd file copy dialog",
-   "xkdm.app"
+   "xkcd api"
   ],
-  "intent_tags": [
-   "密钥"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "xkcd 有正式 API 吗？",
@@ -9065,7 +9128,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "API-Football 的接口在 https://v3.football.api-sports.io，认证头 x-apisports-key。\n\n常用 /fixtures?league=39&season=2025&date=2026-11-19、/fixtures/statistics?fixture=、/players?team=&season=、/standings?league=39&season=2025。\n\n返回 response 数组，fixture 有 fixture.id、date、status.short、teams、goals；统计有 possession、shots、corners。\n\n免费档每天 100 次，覆盖 1000 多个联赛。\n\n坑是赛季参数要用起始年（2025 表示 2025–26）；免费档不含部分联赛的阵容和赔率；响应里有 errors 字段要看。",
+  "intro": "API-Football 是足球数据接口，托管在 RapidAPI 上，通过 api-football-v1.p.rapidapi.com 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **赛程与比分**：/fixtures 按联赛、日期、球队查。\n- **积分榜**：/standings 返回联赛排名。\n- **阵容与事件**：/fixtures/lineups、/fixtures/events。\n- **球员统计**：/players 返回出场、进球和助攻。\n- **赔率**：/odds 返回赛前与滚球赔率。\n\n## 特点\n- 免费档每天 100 次，需走 RapidAPI。\n- 覆盖 1000 多个联赛，含中超和五大联赛。\n- 实时比分有几分钟延迟。\n\n典型使用场景：赛事应用、比分推送、球队数据看板。",
   "capabilities": [
    "赛程比分",
    "阵容统计",
@@ -9074,12 +9137,7 @@
   ],
   "best_for": "做足球资讯或 fantasy 应用。",
   "intent_queries": [
-   "api-football api-sports",
-   "api-football api key",
-   "api api restaurant",
-   "api apify",
-   "api api resort",
-   "api apifox"
+   "api-football api key"
   ],
   "intent_tags": [
    "密钥"
@@ -9116,7 +9174,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "TheSportsDB 的接口在 https://www.thesportsdb.com/api/v1/json/{key}，测试 Key 是 3，付费档拿个人 Key。\n\n常用 /searchteams.php?t=Arsenal、/eventsnextleague.php?id=4328、/lookuptable.php?l=4328&s=2025-2026、/all_leagues.php。\n\n返回 teams 或 events 数组，含 strTeam、strLeague、strHomeTeam、intHomeScore、strEventTime。\n\n免费测试 Key 限速且字段不全，正式用要 Patreon 订阅（约 $10/月起）。\n\n坑是字段名带 str/int 前缀；赛事时间带时区偏移；测试 Key 不保证 SLA。",
+  "intro": "TheSportsDB 是体育数据库接口，通过 www.thesportsdb.com/api 对外开放。测试 Key 为 3，正式可申请。\n\n## 主要能力\n- **球队与球员**：/searchteams.php、/searchplayers.php。\n- **赛事**：/eventsday.php 按日期查比赛。\n- **联赛**：/all_leagues.php 返回全部联赛。\n- **图片**：返回队徽、球衣和场馆图。\n- **历史**：/eventspastleague.php 查往季结果。\n\n## 特点\n- 测试 Key 免费，正式 Key 需 Patreon 订阅。\n- 覆盖足球为主，其他项目在补充。\n- 数据由社区维护，冷门联赛不全。\n\n典型使用场景：球队资料、赛事日历、体育资讯站。",
   "capabilities": [
    "联赛球队",
    "球员",
@@ -9163,7 +9221,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "BALLDONTLIE 的接口在 https://api.balldontlie.io/v1，认证头 Authorization: KEY（免费注册）。\n\n端点有 /players?search=lebron、/teams、/games?dates[]=2026-11-18、/stats?game_ids[]=、/season_averages?season=2025&player_ids[]=。\n\n返回 data 数组加 meta（next_cursor、per_page），分页用游标不是 offset。\n\n免费档限 5 次/分、有总调用上限；付费档（All-Star）才给历史全量和更高频。\n\n坑是 2024 年后 v1 需要 Key，老教程的无 Key 调用已失效；dates 参数要数组形式。",
+  "intro": "Ball Dont Lie 是 NBA 数据接口，通过 api.balldontlie.io 对外开放。开发者注册获取 Key 后调用。\n\n## 主要能力\n- **球队**：/v1/teams 返回队名、分区和城市。\n- **球员**：/v1/players 按姓名和球队查。\n- **比赛**：/v1/games 按日期和赛季查比分。\n- **统计**：/v1/stats 返回得分、篮板和助攻。\n- **赛季平均**：/v1/season_averages。\n\n## 特点\n- 免费档每分钟 5 次。\n- 覆盖 NBA，不含发展联盟和大学联赛。\n- 数据更新有延迟，不适合实时比分。\n\n典型使用场景：NBA 数据看板、球员对比、梦幻篮球工具。",
   "capabilities": [
    "NBA 数据",
    "球员统计",
@@ -9172,15 +9230,19 @@
   ],
   "best_for": "做篮球数据看板。",
   "intent_queries": [
-   "balldontlie nba api",
-   "free nba data api",
-   "nba_api",
+   "balldontlie api",
+   "balldontlie api key",
    "balldontlie api examples",
+   "balldontlie api tutorial",
    "balldontlie api endpoints",
-   "balldontlie api key"
+   "balldontlie api integration",
+   "balldontlie api documentation",
+   "balldontlie mlb api"
   ],
   "intent_tags": [
-   "免费额度"
+   "密钥",
+   "文档",
+   "接入示例"
   ],
   "faq": [
    {
@@ -9214,7 +9276,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Jolpica 是 Ergast 的社区继任者，接口完全沿用老路径：https://api.jolpi.ca/ergast/f1/2026/races/、/2026/drivers/、/2026/2026-03/results/、/drivers/verstappen/results/。\n\n返回 MRData 对象，里面 RaceTable.Races 数组，每场有 raceName、Circuit、Results（含 position、points、laps）。\n\n完全免费、免 Key，限速约 4 次/秒、500 次/小时。\n\n坑是赛季参数用年份，分站用轮次或国家；结果的 positionText 可能是 R（退赛）不是数字；老 Ergast 的 URL 只要换域名即可。",
+  "intro": "Jolpica 是 Ergast F1 数据的继任接口，通过 api.jolpi.ca/ergast 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **赛程**：/f1/{season}.json 返回分站和日期。\n- **车手与车队**：/drivers、/constructors。\n- **比赛结果**：/results 返回名次、圈速和积分。\n- **排位**：/qualifying 返回 Q1–Q3 成绩。\n- **积分榜**：/driverStandings 按赛季查。\n\n## 特点\n- 免费无 Key，限速约每秒 4 次。\n- 继承 Ergast 的路径结构，老代码改域名即可。\n- 数据到上一站为止，非实时。\n\n典型使用场景：F1 数据站、赛季回顾、车手对比。",
   "capabilities": [
    "赛程结果",
    "车手车队",
@@ -9222,7 +9284,10 @@
    "历史赛季"
   ],
   "best_for": "做 F1 数据站，或从 Ergast 迁移。",
-  "intent_queries": [],
+  "intent_queries": [
+   "jolpica api",
+   "jolpica f1 api"
+  ],
   "intent_tags": [],
   "faq": [
    {
@@ -9256,7 +9321,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenF1 的接口在 https://api.openf1.org/v1，端点有 /sessions?year=2026、/drivers?session_key=、/car_data?session_key=&driver_number=1&speed>=300、/laps、/weather、/race_control。\n\ntime 参数支持比较符（date>=2026-03-01T00:00:00），返回数组，car_data 每 0.1 秒一条，含 speed、throttle、brake、drs。\n\n免费档要注册拿 Basic Auth（或 OAuth），限速按天；比赛周末实时更新。\n\n坑是数据量巨大，拉整场遥测几百 MB，要按时间和车手过滤；历史赛季只有 2023 年后。",
+  "intro": "OpenF1 API 是 F1 实时数据接口，通过 api.openf1.org 对外开放。无需 Key 即可读历史与实时数据。\n\n## 主要能力\n- **遥测**：/v1/car_data 返回速度、转速和挡位。\n- **圈速**：/v1/laps 返回每圈时间与分段。\n- **位置**：/v1/position 返回赛道排名变化。\n- **进站**：/v1/pit 返回停站时长。\n- **无线电**：/v1/team_radio 返回车队通话录音链接。\n\n## 特点\n- 免费无 Key，实时数据有几十秒延迟。\n- 只在比赛周末有数据。\n- 历史赛季覆盖从 2023 年起。\n\n典型使用场景：F1 实时看板、战术分析、比赛回放。",
   "capabilities": [
    "实时遥测",
    "圈速与分段",
@@ -9265,8 +9330,7 @@
   ],
   "best_for": "做 F1 实时可视化。",
   "intent_queries": [
-   "openf1 api",
-   "open api"
+   "openf1 api"
   ],
   "intent_tags": [],
   "faq": [
@@ -9301,7 +9365,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Strava 的接口在 https://www.strava.com/api/v3，读活动 /athlete/activities?per_page=30&page=1&after=，单条 /activities/{id}，路段 /segments/{id}，上传 /uploads。\n\n认证走 OAuth2：先跳授权页拿 code，再换 access_token（6 小时过期）和 refresh_token。请求头 Authorization: Bearer。\n\n免费，限 100 次/15 分钟、1000 次/天；新应用默认 1 个运动员，要申请提额。\n\n坑是 activities 只返回摘要，详细流（streams）要单独取；上传必须是 fit/gpx/tcx 文件；隐私区域会裁掉起终点坐标。",
+  "intro": "Strava API 是运动数据接口，通过 www.strava.com/api/v3 对外开放。开发者创建应用后走 OAuth 授权。\n\n## 主要能力\n- **活动**：/athlete/activities 返回距离、配速和心率。\n- **单次详情**：/activities/{id} 返回分段和地图折线。\n- **路段**：/segments 返回爬坡与冲刺段排名。\n- **排行榜**：/segments/{id}/leaderboard。\n- **上传**：可上传 GPX/FIT 文件。\n\n## 特点\n- 免费，限每 15 分钟 100 次、每天 1000 次。\n- 必须走 OAuth，access token 6 小时过期。\n- 只能读授权用户自己的数据。\n\n典型使用场景：骑行跑步分析、训练看板、路线分享。",
   "capabilities": [
    "活动数据",
    "路段与排行榜",
@@ -9310,16 +9374,21 @@
   ],
   "best_for": "做骑行、跑步数据看板。",
   "intent_queries": [
-   "strava api application",
-   "strava app api",
+   "strava api key",
+   "strava api",
+   "strava api documentation",
    "strava api pricing",
-   "strava app apple watch",
-   "strava api key"
+   "strava api settings",
+   "strava api token",
+   "strava api limits",
+   "strava api free"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
-   "定价"
+   "限速",
+   "定价",
+   "文档"
   ],
   "faq": [
    {
@@ -9353,7 +9422,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenSky 的接口在 https://opensky-network.org/api，实时位置 /states/all?lamin=45&lomin=5&lamax=48&lomax=10，返回 time 和 states 数组，每项是 [icao24, callsign, origin_country, time_position, last_contact, longitude, latitude, baro_altitude, on_ground, velocity, ...]。\n\n历史航班 /flights/arrival?airport=EDDF&begin=1700000000&end=1700086400（Unix 秒），轨迹 /tracks/all?icao24=&time=0。\n\n匿名 100 次/天、10 秒分辨率；注册用户 4000 次/天、5 秒分辨率。\n\n坑是 states 是位置数组不是对象，要按下标取；部分字段可能为 null（地面无信号）；欧洲覆盖最好，海洋和非洲稀疏。",
+  "intro": "OpenSky Network API 是全球航班位置接口，通过 opensky-network.org/api 对外开放。匿名可读，注册后额度更高。\n\n## 主要能力\n- **实时状态**：/states/all 返回航班坐标、高度和速度。\n- **按范围**：用 lamin/lomin 限定地图框。\n- **单机航迹**：/tracks/all?icao24= 返回历史轨迹。\n- **起降**：/flights/arrival、/flights/departure。\n- **机场**：/airports 返回跑道与坐标。\n\n## 特点\n- 匿名限每天 400 次，注册后 4000 次。\n- 依赖 ADS-B 接收站，海洋和偏远地区覆盖弱。\n- 数据有几十秒延迟。\n\n典型使用场景：航班追踪、空域分析、航空研究。",
   "capabilities": [
    "实时航班位置",
    "历史轨迹",
@@ -9362,16 +9431,15 @@
   ],
   "best_for": "做航班追踪或航空数据分析。",
   "intent_queries": [
-   "opensky network api key",
-   "opensky network api documentation",
-   "opensky network api in qt",
-   "opensky network api",
-   "opensky network rest api",
-   "what is opensky network"
+   "opensky api key",
+   "opensky api client secret",
+   "opensky api documentation",
+   "opensky api account",
+   "opensky network api key"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -9405,7 +9473,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Aviationstack 的接口是 http://api.aviationstack.com/v1/flights?access_key=KEY，参数 flight_iata、dep_iata、arr_iata、flight_status。\n\n返回 data 数组，每项有 flight_date、flight_status、departure（airport、scheduled、actual、terminal、gate）、arrival、airline、aircraft。\n\n免费档每月 100 次、只支持 HTTP，且不含历史航班；付费档才有 HTTPS 和历史。\n\n坑是免费档的航班列表只给部分结果；HTTP 意味着前端不能直连；航班状态更新有延迟，别当实时雷达用。",
+  "intro": "AviationStack API 是航班数据接口，通过 api.aviationstack.com 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **实时航班**：/v1/flights 返回状态、延误和登机口。\n- **历史航班**：/v1/flights 加 flight_date 查。\n- **航线**：/v1/routes 返回起降机场与班次。\n- **机场与航司**：/v1/airports、/v1/airlines。\n- **机型**：/v1/airplanes 返回注册号和配置。\n\n## 特点\n- 免费档每月 100 次，仅 HTTP。\n- 免费档不含实时数据，只有基础航班信息。\n- 国内航班覆盖一般。\n\n典型使用场景：航班动态、接机应用、差旅看板。",
   "capabilities": [
    "实时航班",
    "历史航班",
@@ -9414,12 +9482,9 @@
   ],
   "best_for": "做航班查询或物流跟踪。",
   "intent_queries": [
-   "aviationstack api",
-   "aviation stack api key"
+   "aviationstack api"
   ],
-  "intent_tags": [
-   "密钥"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "Aviationstack 免费额度？",
@@ -9452,7 +9517,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "TfL 的统一接口在 https://api.tfl.gov.uk，免 Key 可调用但限额低，注册 App Key 后加 ?app_key= 提高配额。\n\n常用 /Line/Mode/tube/Status 查线路状态，/StopPoint/{id}/Arrivals 查到站时间，/Line/{id}/Route/Sequence/outbound 查线路走向，/BikePoint 查共享单车桩。\n\n返回数组，Arrivals 每项有 lineName、destinationName、timeToStation（秒）、expectedArrival。\n\n免费，限 50 次/分（无 Key 更低）。\n\n坑是 StopPoint ID 不是站名，要用 /StopPoint/Search?query= 先查；timeToStation 是秒，要自己格式化；部分线路只在地铁模式里。",
+  "intro": "TfL API 是伦敦交通数据接口，通过 api.tfl.gov.uk 对外开放。无需 Key 即可低频调用。\n\n## 主要能力\n- **到站预测**：/StopPoint/{id}/Arrivals 返回下一班时间。\n- **线路状态**：/Line/Mode/tube/Status 返回延误与停运。\n- **站点搜索**：/StopPoint/Search?query=。\n- **路况**：/Road 返回拥堵和事件。\n- **行程规划**：/Journey/JourneyResults 返回换乘方案。\n\n## 特点\n- 无 Key 限每秒 50 次，注册后更高。\n- 只覆盖大伦敦地区。\n- 部分线路数据由运营商提供，更新有延迟。\n\n典型使用场景：伦敦出行应用、到站看板、交通播报。",
   "capabilities": [
    "线路状态",
    "到站时间",
@@ -9461,14 +9526,18 @@
   ],
   "best_for": "做伦敦出行应用。",
   "intent_queries": [
-   "transport for london api",
-   "transport for london appeal pcn",
-   "transport for london apprenticeships",
-   "transport for london appeal",
-   "transport for london apprenticeships 2026",
-   "transport for london appeal pcn online"
+   "transport api",
+   "transport api documentation",
+   "transport api tapi",
+   "api transport integration",
+   "api transport tracking",
+   "api transport services",
+   "transport nsw api",
+   "api transport data"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "文档"
+  ],
   "faq": [
    {
     "q": "TfL API 要 Key 吗？",
@@ -9501,7 +9570,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Open Charge Map 的接口在 https://api.openchargemap.io/v3/poi/，参数 output=json、latitude、longitude、maxresults=100、distance=10、countrycode=CN。\n\n返回 POI 数组，每项有 AddressInfo（Title、Latitude、Longitude）、Connections（ConnectionType、PowerKW、Level）、StatusType、NumberOfPoints。\n\n免 Key 可试用少量请求，正式要免费 Key（key 参数）。数据由社区贡献。\n\n坑是中国的充电站覆盖很稀疏；PowerKW 可能为空；状态（可用/占用）依赖用户上报，不准。",
+  "intro": "Open Charge Map API 是全球充电桩数据库，通过 api.openchargemap.io 对外开放。无需 Key 即可读公开数据。\n\n## 主要能力\n- **按范围查**：/v3/poi/?boundingbox= 返回区域内充电站。\n- **站点详情**：返回接口类型、功率和数量。\n- **按国家**：countryid 过滤。\n- **状态**：部分站点有可用性报告。\n- **提交**：注册后可新增或修正站点。\n\n## 特点\n- 免费无 Key，限速较宽松。\n- 数据由社区维护，实时占用状态不可靠。\n- 中国站点覆盖较少。\n\n典型使用场景：充电地图、电动车路线规划、站点查询。",
   "capabilities": [
    "充电站查询",
    "接口与功率",
@@ -9510,12 +9579,8 @@
   ],
   "best_for": "做充电地图或路线规划。",
   "intent_queries": [
-   "open charge map api",
-   "kohomada open charge map api eka ganne",
    "open charge map api key",
-   "google maps api charges",
-   "open charge point interface",
-   "what are api charges"
+   "openai api key charge"
   ],
   "intent_tags": [
    "密钥"
@@ -9552,7 +9617,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Amadeus 的测试环境在 https://test.api.amadeus.com，先 POST /v1/security/oauth2/token（grant_type=client_credentials、client_id、client_secret）拿 access_token，之后带 Bearer。\n\n航班搜索 /v2/shopping/flight-offers?originLocationCode=PVG&destinationLocationCode=NRT&departureDate=2026-12-01&adults=1&max=5；酒店 /v3/shopping/hotel-offers；地点 /v1/reference-data/locations。\n\n测试环境免费但有月度配额（约几千次），数据是缓存的沙盒数据，不是实时库存。\n\n坑是测试数据的价格和航班是假的，别拿去比价；access_token 30 分钟过期，要缓存并刷新。",
+  "intro": "Amadeus for Developers 是旅游数据接口，通过 test.api.amadeus.com 对外开放。开发者注册后获取 Key 调用。\n\n## 主要能力\n- **航班搜索**：/v2/shopping/flight-offers 返回报价与中转。\n- **酒店**：/v3/shopping/hotel-offers 返回房型与价格。\n- **地点**：/v1/reference-data/locations 查机场和城市。\n- **预订**：支持创建订单（生产环境）。\n- **分析**：提供航班延误与旅行趋势数据。\n\n## 特点\n- 测试环境免费，数据为沙箱样本。\n- 生产环境按调用计费。\n- 测试环境的报价不代表真实库存。\n\n典型使用场景：机票比价、行程规划、差旅系统。",
   "capabilities": [
    "航班搜索",
    "酒店",
@@ -9561,14 +9626,21 @@
   ],
   "best_for": "做机票比价或旅行规划原型。",
   "intent_queries": [
-   "amadeus for developers portal",
-   "amadeus for developers api",
-   "amadeus for developers website",
-   "amadeus self service api",
-   "amadeus hotel offers api",
-   "how to insert apis in amadeus"
+   "amadeus api key",
+   "amadeus apis entry",
+   "amadeus api",
+   "amadeus api free",
+   "amadeus api documentation",
+   "amadeus api integration",
+   "amadeus api pricing",
+   "amadeus api login"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "密钥",
+   "免费额度",
+   "定价",
+   "文档"
+  ],
   "faq": [
    {
     "q": "Amadeus 免费吗？",
@@ -9610,18 +9682,17 @@
   ],
   "best_for": "做书目查询或读书应用。",
   "intent_queries": [
-   "google books api pricing",
-   "google books api documentation",
-   "google books api key",
-   "is google books api free",
-   "what is google api",
-   "free api for books"
+   "google api",
+   "google api key",
+   "google api console",
+   "google api studio",
+   "google api key gemini",
+   "google api key free",
+   "google api login"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "定价",
-   "接入示例"
+   "免费额度"
   ],
   "faq": [
    {
@@ -9664,17 +9735,10 @@
   ],
   "best_for": "做图书馆式检索或藏书管理。",
   "intent_queries": [
-   "open library api",
-   "open library api documentation",
-   "open library api key",
-   "open ai api library",
-   "what is open api key",
-   "free open api key"
+   "open library api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -9769,6 +9833,7 @@
    "themealdb api documentation"
   ],
   "intent_tags": [
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -9856,18 +9921,11 @@
   ],
   "best_for": "做食品扫码或健康饮食应用。",
   "intent_queries": [
-   "open food facts api",
-   "open food facts api documentation",
-   "open food facts api limits",
    "open food facts api thailand",
-   "open food facts api key",
-   "world open food facts api"
+   "open food facts api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "限速",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -9910,17 +9968,18 @@
   ],
   "best_for": "做电商原型或前端练习。",
   "intent_queries": [
-   "platzi fake store api",
-   "what is api store",
-   "where to find fabric api",
-   "how to get fabric api",
-   "fake api for food",
-   "fake api for testing"
+   "fake api json",
+   "fake api for testing",
+   "fake api data",
+   "fake api",
+   "fake api store",
+   "fake api products",
+   "fake api key",
+   "fake api free"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
-   "接入示例"
+   "免费额度"
   ],
   "faq": [
    {
@@ -9954,7 +10013,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "VirusTotal 的 API v3 在 https://www.virustotal.com/api/v3，认证头 x-apikey。\n\n查文件哈希 /files/{sha256}，查 URL /urls/{base64url}，查域名 /domains/{domain}，查 IP /ip_addresses/{ip}。返回 data.attributes.last_analysis_stats 里有 malicious、suspicious、undetected、harmless 的引擎数。\n\n免费 Key 每分钟 4 次、每天 500 次，且不能下载样本；上传文件 /files 也占额度。\n\n坑是 URL 要先做无填充 base64url；同一个文件看哈希比看文件名可靠；免费档查不到的私有样本要付费。",
+  "intro": "VirusTotal API 是恶意文件与 URL 检测接口，通过 www.virustotal.com/api/v3 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **文件查询**：/files/{hash} 返回多引擎检测结果。\n- **URL 扫描**：/urls 提交并查询信誉。\n- **域名与 IP**：/domains、/ip_addresses 返回关联样本。\n- **上传**：/files 可提交文件，限 32MB。\n- **关系图谱**：查样本通信的域名和 IP。\n\n## 特点\n- 免费档每分钟 4 次、每天 500 次。\n- 免费档不能下载样本。\n- 上传的文件会被共享给安全厂商。\n\n典型使用场景：样本研判、IOC 查询、邮件附件检测。",
   "capabilities": [
    "文件哈希查询",
    "URL 扫描",
@@ -9968,13 +10027,15 @@
    "virustotal api cost",
    "virustotal api",
    "virustotal api key",
-   "virustotal api docs"
+   "virustotal api docs",
+   "virustotal api url",
+   "virustotal api free"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "定价",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -10008,7 +10069,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Shodan 的接口在 https://api.shodan.io，主机详情 /shodan/host/{ip}?key=，搜索 /shodan/host/search?query=apache&key=，DNS /dns/resolve?hostnames=，账户信息 /api-info?key=。\n\nhost 返回 open_ports、banners、vulns、os、org、country_name，banner 里含服务指纹和证书。\n\n免费 Key 只能查有限结果、没有search 分页和导出；会员（一次性 $49）给更多查询。\n\n坑是免费档拿不到搜索结果的分页，只能看前几条；很多主机没有 banner；查自己的资产建议先用组织过滤。",
+  "intro": "Shodan API 是联网设备搜索引擎接口，通过 api.shodan.io 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **主机查询**：/shodan/host/{ip} 返回开放端口、 banner 和漏洞。\n- **搜索**：/shodan/host/search 按产品、端口、国家过滤。\n- **DNS**：/dns/domain/{domain} 返回子域名。\n- **统计**：/shodan/host/count 返回结果数量。\n- **预警**：可订阅网段变化。\n\n## 特点\n- 免费档限速低，部分接口需付费。\n- 扫描结果是历史快照，不保证当前状态。\n- 仅用于授权范围内的资产排查。\n\n典型使用场景：资产暴露面排查、IoT 设备统计、威胁情报。",
   "capabilities": [
    "资产搜索",
    "端口与服务",
@@ -10022,12 +10083,15 @@
    "shodan api examples",
    "shodan api limits",
    "shodan api usage",
-   "shodan api gratis"
+   "shodan api gratis",
+   "shodan api integration",
+   "shodan api documentation"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "限速",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -10062,7 +10126,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Have I Been Pwned 有两套接口。密码查询完全免费且无需 Key：https://api.pwnedpasswords.com/range/{sha1 前 5 位}，返回该前缀下所有后缀和出现次数，用 k-Anonymity 保证不泄露完整密码。\n\n账号泄露查询要付费 Key（hibp-api-key 头）：/api/v3/breachedaccount/{email}，返回该邮箱涉及的泄露事件、数据类别、时间。\n\n坑是密码查询要做 SHA1 再取前 5 位，别把完整哈希发过去；账号查询没 Key 直接 401；返回 404 表示没查到，不是出错。",
+  "intro": "Have I Been Pwned API 是泄露数据查询接口，通过 haveibeenpwned.com/api 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **邮箱泄露**：/v3/breachedaccount/{email} 返回涉及事件。\n- **全量事件**：/v3/breaches 返回泄露库清单。\n- **密码查询**：/v3/pwnedpasswords 用 k-anonymity 查哈希前缀。\n- **粘贴**：/v3/pasteaccount 查 Pastebin 泄露。\n- **数据类别**：标注泄露了邮箱、密码还是 IP。\n\n## 特点\n- 密码查询免费，邮箱查询需付费 Key（每月 3.95 美元）。\n- 密码接口用 SHA-1 前 5 位查询，不传完整哈希。\n- 不能用于批量撞库。\n\n典型使用场景：账号安全自查、注册风控、安全审计。",
   "capabilities": [
    "密码范围查询",
    "邮箱泄露查询",
@@ -10071,17 +10135,11 @@
   ],
   "best_for": "做账号安全提醒。",
   "intent_queries": [
-   "have i been pwned api",
-   "have i been pwned api documentation",
-   "have i been pwned api usage",
-   "have i been pwned api access",
-   "have i been pwned api integration",
-   "have i been pwned api key"
+   "have i been pwned api key",
+   "have i been pwned api"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -10115,7 +10173,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "AbuseIPDB 的接口在 https://api.abuseipdb.com/api/v2，认证头 Key 和 Accept: application/json。\n\n查 IP /check?ipAddress=1.2.3.4&maxAgeInDays=90，返回 abuseConfidenceScore（0–100）、totalReports、numDistinctUsers、countryCode、isp、usageType、isWhitelisted。举报用 POST /report。\n\n免费 Key 每天 1000 次，黑名单下载要付费。\n\n坑是置信度是举报加权，不是判决；maxAgeInDays 最长 365；白名单 IP 的分数会被压到 0。",
+  "intro": "AbuseIPDB API 是 IP 信誉接口，通过 api.abuseipdb.com 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **IP 查询**：/api/v2/check 返回滥用置信度和报告数。\n- **举报**：/api/v2/report 提交滥用记录。\n- **黑名单**：/api/v2/blacklist 返回高风险 IP。\n- **网段**：/api/v2/check-block 查整个 CIDR。\n- **报告详情**：返回时间、类型和评论。\n\n## 特点\n- 免费档每天 1000 次。\n- 信誉分来自社区举报，可能误判。\n- 举报需要提供证据，滥用会被封号。\n\n典型使用场景：登录风控、日志分析、封禁名单生成。",
   "capabilities": [
    "IP 信誉",
    "举报记录",
@@ -10129,12 +10187,15 @@
    "abuseipdb api integration",
    "abuseipdb api documentation",
    "abuseipdb api rate limit",
-   "abuseipdb api free"
+   "abuseipdb api free",
+   "abuseipdb api limit",
+   "abuseipdb api example"
   ],
   "intent_tags": [
    "密钥",
    "免费额度",
    "限速",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -10169,7 +10230,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "AlienVault OTX 的接口在 https://otx.alienvault.com/api/v1，认证头 X-OTX-API-KEY（免费注册）。\n\n指标查询 /indicators/IPv4/{ip}/general、/indicators/domain/{domain}/general、/indicators/file/{hash}/general，返回 pulse_info（关联的威胁情报包）、reputation、geo。另有 /pulses/activity 看最新情报。\n\n免费，限速较松，社区数据开放。\n\n坑是 pulse 是社区提交，质量参差；/general 只给摘要，详细要 /passive_dns 或 /malware 子路径；中文相关情报少。",
+  "intro": "AlienVault OTX API 是开放威胁情报接口，通过 otx.alienvault.com/api/v1 对外开放。无需 Key 即可读公开情报。\n\n## 主要能力\n- **IOC 查询**：/indicators/{type}/{value}/general 返回情报摘要。\n- **脉冲**：/pulses 返回攻击活动与关联样本。\n- **域名情报**：/indicators/domain/{domain}/passive_dns。\n- **订阅**：可导出自己关注的 pulse。\n- **社区**：返回贡献者和参考链接。\n\n## 特点\n- 免费，注册后可提高额度。\n- 情报由社区提交，质量参差。\n- IOC 有时效性，老数据参考价值低。\n\n典型使用场景：威胁情报聚合、IOC 富化、安全运营。",
   "capabilities": [
    "威胁情报",
    "IoC 查询",
@@ -10178,16 +10239,16 @@
   ],
   "best_for": "做安全运营或威胁狩猎。",
   "intent_queries": [
-   "alienvault otx api",
+   "alienvault api",
+   "alienvault api key",
    "alienvault otx api key",
-   "alienvault otx api documentation",
-   "what is alienvault otx",
-   "otx alienvault ip check",
-   "alienvault otx threat intelligence"
+   "alienvault otx api",
+   "alienvault usm api",
+   "alienvault otx api documentation"
   ],
   "intent_tags": [
    "密钥",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -10221,7 +10282,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "GreyNoise 的社区接口是 https://api.greynoise.io/v3/community/{ip}，免费且不用 Key（有限速）。\n\n返回 ip、noise（是否背景噪音）、riot（是否常见良性服务）、classification（malicious、benign、unknown）、name、last_seen、link。企业版另有 /v2/noise/context 给更细的扫描行为。\n\n免费社区版每天限 50 次左右，企业 API 要 Key。\n\n坑是 noise=true 只说明它在全网扫描，不代表针对你；riot=true 是常见服务（如 Google、Cloudflare），应直接从告警里排除。",
+  "intro": "GreyNoise API 是互联网扫描噪音情报接口，通过 api.greynoise.io 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **IP 查询**：/v3/ip/{ip} 返回是否扫描器、意图和活动。\n- **上下文**：/v3/ip/{ip}/context 返回 ASN、端口和目标。\n- **批量**：/v3/ip 一次查多个 IP。\n- **GNQL**：用查询语言筛扫描行为。\n- **趋势**：返回近期扫描活动统计。\n\n## 特点\n- 免费档每天 50 次查询。\n- 只判断背景噪音，不替代沙箱分析。\n- 新出现的扫描器可能暂无记录。\n\n典型使用场景：告警降噪、日志分流、暴露面研判。",
   "capabilities": [
    "扫描噪音识别",
    "IP 分类",
@@ -10239,7 +10300,7 @@
   "intent_tags": [
    "密钥",
    "免费额度",
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -10273,7 +10334,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "UN Comtrade 的官方接口在 https://comtradeapi.un.org，v1 路径形如 /data/v1/get/{typeCode}/{freqCode}/{clCode}：typeCode 是 C（商品）或 S（服务），freqCode 是 A（年）或 M（月），clCode 是 HS、SITC 等分类。\n\n必须带 subscription-key 头（免费注册给试用额度），参数有 reporterCode、partnerCode、period、cmdCode。老的 comtrade.un.org/api/get 已停用，老代码要迁。\n\n数据可回溯到 1962 年，双边贸易按 HS 编码，是研究贸易流向最全的免费源。\n\n坑是免费额度很小，一次只能取少量组合；国家代码用 M49 数字（156 是中国），不是 ISO 二字码。",
+  "intro": "UN Comtrade 是联合国商品贸易统计数据库，通过 comtradeapi.un.org 对外开放。免费档注册后获取 Key 调用。\n\n## 主要能力\n- **双边贸易**：/data/v1/get 按报告国、伙伴国、商品编码查进出口额。\n- **商品分类**：支持 HS、SITC 编码体系。\n- **年度与月度**：按频率取时间序列。\n- **多国批量**：一次请求多个经济体。\n- **元数据**：返回单位、币种和统计口径。\n\n## 特点\n- 免费档每天 500 次请求、每次 500 条记录。\n- 数据按各国申报，发布滞后 6–18 个月。\n- 转口贸易和再出口容易重复计算。\n\n典型使用场景：国际贸易分析、供应链研究、进出口对比。",
   "capabilities": [
    "双边贸易额",
    "HS 商品分类",
@@ -10282,12 +10343,7 @@
   ],
   "best_for": "做贸易流向分析或行业研究。",
   "intent_queries": [
-   "un comtrade api",
-   "un comtrade api key",
-   "un comtrade api baseurl",
-   "un comtrade database api",
-   "un comtrade database exports and imports",
-   "united nations comtrade database"
+   "un comtrade api key"
   ],
   "intent_tags": [
    "密钥"
@@ -10324,7 +10380,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "IMF 的 DataMapper 接口在 https://www.imf.org/external/datamapper/api/v1，路径是 /{指标}/{国家}，比如 /NGDP_RPCH/CHN/USA 取实际 GDP 增速。\n\n返回 values 是 {指标:{国家:{年份:值}}} 三层嵌套，年份是字符串。另有 /indicators 列全部指标及元数据。\n\n完全免费、免 Key，覆盖 WEO、财政监测、金融稳健等数据集，含未来几年的预测值。\n\n坑是接口没有正式文档承诺稳定性，字段结构偶尔变；预测值是 IMF 的模型输出，不是事实，引用时要标注；部分国家缺年份，返回里直接没有该 key。",
+  "intro": "IMF DataMapper API 是国际货币基金组织的指标接口，通过 www.imf.org/external/datamapper/api 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **指标数据**：/v1/{indicator} 返回各国年度值。\n- **指定国家**：/v1/{indicator}/{countries}。\n- **指标目录**：/v1/indicators 返回可用指标。\n- **多指标**：一次请求多个 indicator。\n- **JSON 结构**：values 按国家代码嵌套。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 覆盖 GDP、通胀、债务、人口等常用宏观指标。\n- 多为年度数据，季度指标需换其他库。\n\n典型使用场景：宏观对比、经济看板、数据新闻。",
   "capabilities": [
    "宏观指标",
    "国别对比",
@@ -10333,14 +10389,20 @@
   ],
   "best_for": "做全球经济看板或国别研究。",
   "intent_queries": [
-   "imf datamapper api",
-   "imf datamapper indonesia",
-   "imf data mapper gdp growth",
-   "gdp ppp imf data mapper",
-   "imf financial data query tool",
-   "imf data mapper egypt"
+   "imf api",
+   "imf api guide",
+   "imf api access",
+   "imf api integration",
+   "imf api documentation",
+   "imf api key",
+   "imf api data",
+   "imf api examples"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "密钥",
+   "文档",
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "IMF DataMapper 要 Key 吗？",
@@ -10373,7 +10435,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "IMF 的 SDMX 接口在 https://dataservices.imf.org/REST/SDMX_JSON.svc，路径是 /{数据集}/{频率}.{区域}.{指标}，比如 /CompactData/IFS/M.CN.PMP_IX 取中国月度物价指数。\n\n数据集有 IFS（国际金融统计）、BOP（国际收支）、GFSR（财政）、FSI（金融稳健）。返回 CompactData.DataSet.Series 里的 Obs 数组，每项 @TIME_PERIOD 和 @OBS_VALUE。\n\n免 Key，但服务较老、响应慢，批量拉要自己排队。\n\n坑是 SDMX 的维度和代码体系要查各数据集的 DSD，写错维度顺序直接 404；Obs 只有一个值时是对象不是数组，解析要兼容。",
+  "intro": "IMF SDMX API 是基金组织的标准统计数据接口，通过 api.imf.org/external/sdmx/2.1 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据流目录**：/dataflow 返回可用数据集。\n- **取数**：/data/{flow}/{key} 按维度和时间取序列。\n- **结构定义**：/datastructure 返回维度和代码表。\n- **多格式**：SDMX-JSON、XML、CSV。\n- **数据集**：国际收支、政府财政、货币与金融统计。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 维度代码复杂，需先查 dataflow 和 codelist。\n- 更新频率按数据集不同，月度到年度。\n\n典型使用场景：国际收支研究、财政监测、宏观数据库建设。",
   "capabilities": [
    "SDMX 标准",
    "国际收支",
@@ -10382,11 +10444,20 @@
   ],
   "best_for": "要把 IMF 数据接进自有管道。",
   "intent_queries": [
-   "api integration in sfmc",
-   "imf api examples",
-   "imf api key"
+   "imf api",
+   "imf api guide",
+   "imf api access",
+   "imf api integration",
+   "imf api documentation",
+   "imf api key",
+   "imf api data",
+   "imf api examples"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "密钥",
+   "文档",
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "IMF SDMX 还能用吗？",
@@ -10419,7 +10490,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Eurostat 的接口在 https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/{数据集}，比如 /data/une_rt_m?format=JSON&lang=EN&geo=DE&time=2024-01。\n\n返回是 JSON-stat 2.0 格式：id 列维度名，size 列各维度长度，value 是扁平对象（键是位置索引，值是数字），dimension 里有 category 的 index 和 label。要自己按 size 把扁平索引还原成多维。\n\n免 Key、无配额，数据集代码（如 une_rt_m 是月度失业率）要先在 Eurostat 网站查。\n\n坑是 JSON-stat 的解析和普通 JSON 完全不同，建议用 jsonstat 库；维度顺序变了，索引就会错位。",
+  "intro": "Eurostat API 是欧盟统计局接口，通过 ec.europa.eu/eurostat/api 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集目录**：/dissemination/statistics/1.0/dataflow 返回全部数据集。\n- **取数**：/data/{dataset}?format=JSON&lang=EN。\n- **维度过滤**：geo、time、unit 等参数筛选。\n- **批量下载**：支持 TSV 与 SDMX。\n- **元数据**：返回指标定义和更新日期。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 覆盖欧盟成员国，口径统一，适合横向对比。\n- 数据集代码长且不直观，需查目录。\n\n典型使用场景：欧盟经济分析、跨国对比、政策研究。",
   "capabilities": [
    "欧盟成员国数据",
    "JSON-stat",
@@ -10428,16 +10499,13 @@
   ],
   "best_for": "做欧洲市场对比或政策研究。",
   "intent_queries": [
+   "eurostat api",
    "eurostat api python",
-   "stock market api key",
-   "api for stock market data",
-   "e-stat api",
-   "eurostat config api filters",
-   "api key for stock market data"
+   "eurostat api documentation",
+   "eurostat config api filters"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -10472,7 +10540,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "OECD 的新接口在 https://sdmx.oecd.org/public/rest，路径形如 /data/{机构},{dataflow},{版本}/{维度过滤}?format=jsondata&startPeriod=2020。\n\n比如卫生支出用 /data/OECD.ELS.HD,DSD_HEALTH_REAC@DF_HEALTH_REAC,1.0/.... 具体 dataflow 要先查 /dataflow 列表。返回 SDMX-JSON，结构是 data.dataSets[0].series 加结构描述。\n\n免 Key，支持 format=csvfile 导出 CSV，对不熟 SDMX 的人更友好。\n\n坑是旧接口 stats.oecd.org 已迁到新域名，老教程的 URL 全失效；维度过滤用点号占位，空位表示不限，漏一个点就报错。",
+  "intro": "OECD SDMX API 是经合组织统计接口，通过 sdmx.oecd.org/public/rest 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据流目录**：/dataflow/OECD 返回可用数据集。\n- **取数**：/data/{flow}/{key} 按维度查询。\n- **结构**：/datastructure 返回维度与代码表。\n- **多格式**：SDMX-JSON、CSV。\n- **领域**：经济展望、教育、健康、税收、创新。\n\n## 特点\n- 免费无 Key，建议控制并发。\n- 成员国数据完整，非成员国覆盖有限。\n- 代码表层级深，取数前先看结构。\n\n典型使用场景：跨国政策对比、教育健康研究、经济预测。",
   "capabilities": [
    "OECD 指标",
    "教育健康",
@@ -10481,9 +10549,18 @@
   ],
   "best_for": "做发达国家对比研究。",
   "intent_queries": [
-   "oecd api examples"
+   "oecd api",
+   "oecd api guide",
+   "oecd api access",
+   "oecd api examples",
+   "oecd api python",
+   "oecd api documentation",
+   "oecd data api"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "文档",
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "OECD 接口地址换了吗？",
@@ -10516,7 +10593,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "欧洲央行的数据接口在 https://data-api.ecb.europa.eu/service/data/{flowRef}/{key}，比如 /data/EXR/D.USD.EUR.SP00.A?format=jsondata 取美元兑欧元日汇率。\n\nflowRef 是数据流（EXR 汇率、YC 收益率曲线、BSI 银行统计），key 是维度组合，点号分隔、空表示不限。返回 SDMX-JSON，或加 format=csvdata 拿 CSV。\n\n免 Key、无配额，数据从 1999 年欧元诞生起，更新及时。\n\n坑是 key 的维度顺序由各 flow 的 DSD 定义，不同 flow 顺序不同；时间过滤用 startPeriod/endPeriod，不是 SQL 那种日期。",
+  "intro": "ECB Data Portal API 是欧洲央行统计接口，通过 data-api.ecb.europa.eu 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集目录**：/service/dataflow 返回全部数据流。\n- **取数**：/service/data/{flow}/{key} 返回时间序列。\n- **汇率**：EXR 数据流提供欧元兑各币种汇率。\n- **利率**：FM 数据流返回政策利率与收益率。\n- **格式**：SDMX-ML、CSV。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 欧元区数据权威，日频更新。\n- 序列键含多个维度，拼接规则要查文档。\n\n典型使用场景：汇率查询、利率跟踪、欧元区金融分析。",
   "capabilities": [
    "利率与汇率",
    "货币供应",
@@ -10525,15 +10602,14 @@
   ],
   "best_for": "做欧元区金融数据分析。",
   "intent_queries": [
-   "ecb data portal api",
-   "ecb exchange rates api",
+   "ecb api",
    "ecb api exchange rate",
-   "ecb e learning portal",
-   "currency converter ecb data portal",
-   "ecb online learning portal"
+   "ecb api reference interest rates",
+   "ecb exchange rates api"
   ],
   "intent_tags": [
-   "密钥"
+   "限速",
+   "文档"
   ],
   "faq": [
    {
@@ -10576,15 +10652,13 @@
   ],
   "best_for": "做金融稳定或跨境资金研究。",
   "intent_queries": [
-   "bis exchange for statistics and research",
+   "bis api",
+   "bisapient",
    "im-bis api",
-   "bis is standard download",
-   "australian bureau of statistics api",
-   "why does the bis publish data",
-   "what is bis list"
+   "bis safety api documentation"
   ],
   "intent_tags": [
-   "免费额度"
+   "文档"
   ],
   "faq": [
    {
@@ -10618,7 +10692,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "世卫组织全球卫生观测台的接口是 OData：https://ghoapi.azureedge.net/api/{IndicatorCode}，比如 /api/WHOSIS_000001 取预期寿命。\n\n支持 OData 查询参数：$filter=SpatialDim eq 'CHN' and TimeDim eq 2021、$select、$top、$orderby。返回 value 数组，每项有 SpatialDim、TimeDim、NumericValue、Dim1。\n\n免 Key、无配额，指标有几千个，代码要查 /api/Indicator 列表。\n\n坑是 OData 的字符串要用单引号，日期和数字不用；部分指标按性别或年龄分 Dim1，聚合前要看清维度。",
+  "intro": "WHO GHO OData API 是世界卫生组织健康指标接口，通过 ghoapi.azureedge.net 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **指标目录**：/api/Indicator 返回全部指标与代码。\n- **按国家取数**：/api/{IndicatorCode}?$filter=SpatialDim eq 'CHN'。\n- **时间过滤**：$filter=TimeDim eq 2023。\n- **维度值**：/api/Dimension 返回国家、年龄、性别。\n- **OData 查询**：支持 $select、$top、$orderby。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 覆盖 1000 多个健康指标，含中国数据。\n- 部分指标年份不连续。\n\n典型使用场景：公共卫生研究、健康看板、跨国对比。",
   "capabilities": [
    "卫生指标",
    "死因数据",
@@ -10627,17 +10701,14 @@
   ],
   "best_for": "做公共卫生研究或健康数据可视化。",
   "intent_queries": [
-   "gho odata api",
-   "what is odata api",
-   "odata api in sap",
-   "sap odata api documentation",
-   "business central odata api",
-   "what is odata in c# web api"
+   "who api",
+   "who apimf",
+   "who api index",
+   "who apimf variation guideline",
+   "who api key"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "接入示例"
+   "密钥"
   ],
   "faq": [
    {
@@ -10671,7 +10742,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "联合国 SDG 接口在 https://unstats.un.org/SDGAPI/v1/sdg，端点有 /Goal/List、/Indicator/List、/Goal/{goal}/Indicator/{indicator}/Data?areaCode=156&timePeriod=2020。\n\n返回 data 数组，每项有 geoAreaCode、timePeriodStart、value、units，外加 dimensions 描述。areaCode 用 M49 数字（156 是中国）。\n\n免 Key、无配额，覆盖 200 多个指标，可回溯到 2000 年。\n\n坑是很多指标年份不全，最新两年常缺；指标代码如 1.1.1 对应具体定义，跨指标对比前先读元数据。",
+  "intro": "UN SDG API 是联合国可持续发展目标数据接口，通过 unstats.un.org/sdgs/UNSDGAPI 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **目标与指标**：/sdgapi/GetIndicators 返回 231 个指标。\n- **按国家取数**：GetCountryData 返回时间序列。\n- **按区域**：GetRegionData 返回区域汇总。\n- **地理列表**：GetGeoAreaList 返回国家代码。\n- **元数据**：返回指标定义与数据来源。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 覆盖 17 个目标，年份从 2000 年起。\n- 各国上报口径不一，跨国比较需谨慎。\n\n典型使用场景：可持续发展研究、国际发展报告、指标看板。",
   "capabilities": [
    "SDG 指标",
    "地区对比",
@@ -10680,15 +10751,17 @@
   ],
   "best_for": "做可持续发展相关报道或研究。",
   "intent_queries": [
-   "un digital library api",
-   "sdgb-some-api",
-   "sdk/api",
-   "api/sdk",
-   "google maps sdk api key",
-   "un api es un middleware"
+   "un api",
+   "un api usage examples",
+   "un api integration guide",
+   "un api documentation",
+   "un api data access",
+   "un api developer resources",
+   "un apiculteur proche de tilh",
+   "un api data sources"
   ],
   "intent_tags": [
-   "密钥",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -10723,7 +10796,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "联合国难民署的数据接口在 https://api.unhcr.org/population/v1，端点按主题分：/population（人口统计）、/asylum-applications（申请）、/asylum-decisions（决定）、/solutions（安置）。\n\n参数有 year、coo（来源国）、coa（庇护国）、iso3，返回 items 数组，含 origin、asylum、refugees、asylum_seekers、returned 等字段。\n\n免 Key、无配额，数据从 1951 年至今，年度粒度。\n\n坑是国家和地区的代码用 UNHCR 自己的三位码，和 ISO 有出入；同一年不同主题的口径不同，别混着加总。",
+  "intro": "UNHCR Refugee Data API 是难民署人口统计接口，通过 api.unhcr.org 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **人口统计**：/population 按国家、年份、来源国查。\n- **按国家**：返回难民、寻求庇护者和流离失所者人数。\n- **时间序列**：支持多年份对比。\n- **拆分维度**：按年龄、性别、安置方式。\n- **元数据**：返回口径说明。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 数据按年度发布，滞后约一年。\n- 部分冲突地区数据缺失或为估算。\n\n典型使用场景：难民研究、人道主义报告、人口流动分析。",
   "capabilities": [
    "难民统计",
    "来源国与接收国",
@@ -10732,12 +10805,7 @@
   ],
   "best_for": "做移民、人道议题的数据分析。",
   "intent_queries": [
-   "unhcr refugee data finder",
-   "unhcr un refugee agency",
-   "united nations refugee agency unhcr",
-   "usa for unhcr the un refugee agency",
-   "register for refugee status with the unhcr",
-   "how to apply for unhcr refugee status"
+   "unhcr api"
   ],
   "intent_tags": [],
   "faq": [
@@ -10772,7 +10840,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "人道主义数据交换平台 HDX 的接口是 CKAN：https://data.humdata.org/api/3/action/package_search?q=ukraine&rows=20，另有 package_show 取单个数据集、organization_list 列机构。\n\n返回 result.results 数组，每个数据集有 title、notes、resources（含下载 URL、格式、更新时间），很多资源直接是 CSV 或 GeoJSON。\n\n免 Key、无配额，数据由 OCHA 和各家 NGO 上传，危机地区的行政边界、人口、援助项目都能找到。\n\n坑是资源链接会过期或被替换，要按 last_modified 取最新；不同机构的口径和行政边界版本不一致，合并前先对齐。",
+  "intro": "HDX API 是人道主义数据交换平台接口，通过 data.humdata.org 对外开放。无需 Key 即可检索。\n\n## 主要能力\n- **数据集检索**：/api/3/action/package_search 按国家、主题查。\n- **资源下载**：返回 CSV、GeoJSON、XLSX 链接。\n- **组织**：/api/3/action/organization_list 返回数据提供方。\n- **元数据**：含更新时间、许可和覆盖范围。\n- **CKAN 接口**：兼容标准 CKAN API。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 危机数据更新快，适合应急场景。\n- 数据质量随提供方差异大。\n\n典型使用场景：人道主义响应、灾害评估、援助项目分析。",
   "capabilities": [
    "人道危机数据",
    "行政边界",
@@ -10780,7 +10848,9 @@
    "CKAN"
   ],
   "best_for": "做应急响应或人道研究。",
-  "intent_queries": [],
+  "intent_queries": [
+   "hdx api"
+  ],
   "intent_tags": [],
   "faq": [
    {
@@ -10814,7 +10884,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "UNdata 是联合国统计司的门户，本身没有统一的 REST API：一部分数据集提供 SDMX 下载，一部分只给 CSV，还有的跳到各机构自己的接口（如 UN Comtrade、ILO）。\n\n实际用法是先 https://data.un.org/ 找到数据集，再用它的下载链接或对应机构的 API。较新的统一入口是 https://data.un.org/ws/ 的 SDMX 服务，但覆盖不全。\n\n免费、免 Key，数据权威，但工程化程度低。\n\n坑是别指望一个端点拿全部数据；做自动化要按数据集分别对接，工作量比想象大。",
+  "intro": "UN Data API 是联合国统计数据库检索接口，通过 data.un.org 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据库列表**：返回人口、贸易、能源等库。\n- **检索**：按指标、国家、年份查。\n- **下载**：支持 CSV 与 Excel。\n- **元数据**：返回指标定义与来源机构。\n- **多语言**：部分界面与字段支持中文。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 各库由不同机构维护，接口不统一。\n- 部分数据库只提供文件下载，无 API。\n\n典型使用场景：联合国数据检索、发展指标、人口研究。",
   "capabilities": [
    "联合国汇总数据",
    "国别指标",
@@ -10859,7 +10929,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Congress.gov 的接口在 https://api.congress.gov/v3，路径按资源分层：/bill/{congress}/{type}/{number} 查法案，/member 查议员，/committee 查委员会，/vote 查投票。\n\n参数 api_key 必填（免费），format=json 默认。返回 bill 里有 title、sponsors、latestAction、policyArea，文本在 /bill/.../text 单独取。\n\n免费 Key 每小时 5000 次，覆盖第 93 届国会至今。\n\n坑是法案类型代码要记（hr、s、hjres、sjres），写错 404；投票数据只在众议院较全，参议院部分缺失。",
+  "intro": "Congress.gov API 是美国国会数据接口，通过 api.congress.gov/v3 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **法案**：/bill 返回提案、进度和全文链接。\n- **议员**：/member 返回党派、选区和任期。\n- **投票**：/house-vote、/senate-vote 返回表决记录。\n- **委员会**：/committee 返回成员与听证。\n- **国会记录**：/congressional-record 返回每日议程。\n\n## 特点\n- 免费，需申请 Key，限每小时 5000 次。\n- 覆盖第 93 届国会至今。\n- 全文多为 PDF，需另做解析。\n\n典型使用场景：法案追踪、政策研究、选举报道。",
   "capabilities": [
    "法案与修正案",
    "议员与投票",
@@ -10868,16 +10938,17 @@
   ],
   "best_for": "做立法追踪或政治数据新闻。",
   "intent_queries": [
-   "library of congress api",
-   "congress api public laws",
-   "api for us code",
-   "us army public api",
-   "secretary of state api",
-   "propublica congress api key"
+   "us api",
+   "us apis information",
+   "us api data",
+   "us api mimecast",
+   "us apical 4 chamber",
+   "us api weekly crude oil stock",
+   "us api error",
+   "us api manufacturers"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度"
+   "报错"
   ],
   "faq": [
    {
@@ -10911,7 +10982,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "美国经济分析局的接口在 https://apps.bea.gov/api/data/，全部参数走 query：UserID=KEY&method=GetData&datasetname=GDP&Year=2024&ResultFormat=JSON。\n\n先调 method=GetDataSetList 看数据集，再 GetParameterList 和 GetParameterValues 拿维度的合法取值，最后 GetData。GDP、NIPA、Regional、Trade 是常用数据集。\n\n免费 Key、无调用费，但要求每次请求带 UserID，且限制 100MB/分钟。\n\n坑是不先查参数值几乎必然拼错，尤其 TableName 和 GeoFips；返回 Data 是数组，数值常是字符串。",
+  "intro": "BEA API 是美国经济分析局接口，通过 apps.bea.gov/api 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **GDP**：/data?DataSetName=GDP 返回各州与全国数据。\n- **个人收入**：DataSetName=PIT 返回收入与消费。\n- **行业数据**：返回增加值与就业。\n- **地区**：可按州、县、都市区查。\n- **元数据**：/GetDataSetList 返回可用数据集。\n\n## 特点\n- 免费 Key，每天 1000 次。\n- 季度与年度数据，修订较频繁。\n- 只覆盖美国。\n\n典型使用场景：美国经济分析、区域研究、财政报道。",
   "capabilities": [
    "GDP 与收入",
    "行业产出",
@@ -10920,16 +10991,16 @@
   ],
   "best_for": "做美国宏观经济分析。",
   "intent_queries": [
-   "bea api python example",
+   "bea api",
    "bea api key",
-   "how to access api with api key",
-   "what is your api key",
-   "eia api key registration",
-   "how to obtain api key"
+   "bea api documentation",
+   "bea api builder",
+   "bea apirajkamol",
+   "bea api python example"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度",
+   "文档",
    "接入示例"
   ],
   "faq": [
@@ -10964,7 +11035,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "英国开放数据门户基于 CKAN，接口在 https://data.gov.uk/api/3/action，常用 package_search?q=transport&rows=20、package_show?id={name}、organization_list。\n\n返回 result.results 里每项有 title、notes、resources（URL、format、last_modified），很多数据集还开了 DataStore，可以用 datastore_search?resource_id=...&limit=100 直接当数据库查。\n\n免 Key、无配额，覆盖中央和地方政府数据。\n\n坑是 datastore 只有部分资源开启，没开的只能下 CSV；资源链接经常换域名，别硬编码。",
+  "intro": "data.gov.uk CKAN API 是英国政府开放数据接口，通过 data.gov.uk/api/3 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集检索**：/action/package_search 按关键词查。\n- **数据集详情**：/action/package_show?id= 返回资源列表。\n- **组织**：/action/organization_list 返回发布机构。\n- **资源下载**：返回 CSV、JSON、API 链接。\n- **分页**：rows 与 start 控制数量。\n\n## 特点\n- 免费无 Key，限速宽松。\n- CKAN 标准接口，换其他国家门户也通用。\n- 部分资源链接失效，需自行校验。\n\n典型使用场景：英国公共数据检索、政策研究、数据发现。",
   "capabilities": [
    "UK 数据集",
    "CKAN 检索",
@@ -10973,16 +11044,16 @@
   ],
   "best_for": "找英国官方数据做分析。",
   "intent_queries": [
-   "census data api key",
-   "gov uk data api",
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
-  "intent_tags": [
-   "密钥"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "data.gov.uk 是什么接口？",
@@ -11015,7 +11086,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "英国国家统计局的接口分新旧两套：新版 https://api.beta.ons.gov.uk/v1，旧版 https://api.ons.gov.uk。\n\n新版路径是 /datasets?limit=20 列数据集，/datasets/{id}/editions/{edition}/versions/{version} 取元数据和下载链接，数据本体在 observations 或 CSV 里。旧版更直接：/dataset/{id}/edition/{edition}/version/{version}/data 一次给全量 JSON。\n\n免 Key、无配额，数据按版本管理，每个版本有 release_date。\n\n坑是 beta 接口还在变，路径偶尔调整；指标分 CPI、就业、GDP 等多个数据集，不要指望一个端点拿全，要按数据集分别对接。",
+  "intro": "UK ONS API 是英国国家统计局接口，通过 api.beta.ons.gov.uk 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集目录**：/v1/datasets 返回可用数据集。\n- **版本**：/v1/datasets/{id}/editions/{edition}/versions。\n- **观测值**：/v1/datasets/{id}/editions/{e}/versions/{v}/observations。\n- **维度**：返回地理、时间与分类代码。\n- **元数据**：含更新日期与统计口径。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 人口普查、就业、物价数据齐全。\n- 接口为 beta，路径可能调整。\n\n典型使用场景：英国社会经济研究、数据新闻、指标看板。",
   "capabilities": [
    "英国官方统计",
    "通胀与就业",
@@ -11024,17 +11095,17 @@
   ],
   "best_for": "做英国经济或社会研究。",
   "intent_queries": [
-   "api global uk limited",
-   "api what are they",
+   "uk api",
+   "uk api catalogue",
+   "uk api flight",
+   "uk api travel why now",
    "uk companies house api",
-   "api services and solutions",
-   "what are apis details",
-   "nhs england api management"
+   "gov uk api first",
+   "uk weather api free",
+   "uk address lookup api free"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度",
-   "限速"
+   "免费额度"
   ],
   "faq": [
    {
@@ -11068,7 +11139,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "法国开放数据平台的接口在 https://www.data.gouv.fr/api/1，常用 /datasets/?q=transport&page_size=20、/datasets/{id}/、/organizations/、/resources/{id}/。\n\n返回 data 数组，每个数据集有 title、description、resources（格式、URL、更新时间）、organization、frequency。很多资源直接是 CSV 或 GeoJSON。\n\n免 Key、无配额，覆盖交通、地理、财政、企业等，国家级和市级数据都在。\n\n坑是 API 在 2024 年后有过版本迁移，老教程的 /api/2 路径可能 404；资源 URL 会随数据集更新而变化，别写死。",
+  "intro": "data.gouv.fr API 是法国政府开放数据接口，通过 www.data.gouv.fr/api 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集检索**：/1/datasets/ 按关键词、组织查。\n- **资源**：返回 CSV、GeoJSON、API 链接。\n- **组织**：/1/organizations/ 返回发布机构。\n- **复用案例**：/1/reuses/ 返回基于数据的应用。\n- **分页**：page 与 page_size。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 法国中央与地方数据统一入口。\n- 部分数据集只有法语说明。\n\n典型使用场景：法国公共数据研究、地理数据、政策分析。",
   "capabilities": [
    "法国开放数据",
    "交通与地理",
@@ -11077,12 +11148,14 @@
   ],
   "best_for": "做法国市场或公共服务研究。",
   "intent_queries": [
-   "data.gouv.fr api",
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free",
-   "market data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
   "intent_tags": [],
   "faq": [
@@ -11117,7 +11190,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "德国 GovData 的接口基于 CKAN：https://www.govdata.de/ckan/api/3/action/package_search?q=mobility&rows=20，另有 package_show?id={name}。\n\n返回 result.results 数组，包含 title、notes、resources（URL、format）、metadata_modified。联邦和十六个州的数据集都在同一个目录里，但实际文件常托管在各州门户。\n\n免 Key、无配额。另有 SPARQL 端点可做跨数据集查询。\n\n坑是元数据以德语为主，英文标题不全；很多数据集只有 PDF 或 WFS，不是 CSV；下载链接可能跳到州政府站点，需要再过一层。",
+  "intro": "GovData API 是德国开放数据门户接口，通过 www.govdata.de 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集检索**：CKAN 兼容接口按关键词查。\n- **联邦与州**：覆盖 16 个州的门户数据。\n- **资源格式**：CSV、JSON、XML、PDF。\n- **元数据**：含许可、更新周期和联系人。\n- **DCAT**：提供标准元数据导出。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 德语元数据为主，检索建议用德语关键词。\n- 各州数据完整度不一。\n\n典型使用场景：德国公共数据检索、城市研究、开放数据目录。",
   "capabilities": [
    "德国数据集",
    "CKAN",
@@ -11134,8 +11207,7 @@
    "obtener api key google maps"
   ],
   "intent_tags": [
-   "密钥",
-   "免费额度"
+   "密钥"
   ],
   "faq": [
    {
@@ -11169,7 +11241,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "德国联邦统计局的 GENESIS 接口在 https://genesis.destatis.de/genesisWS/rest/2020，认证用 username 和 password（注册后在账号里生成 Token，可当密码用）。\n\n查表数据用 /data/table?name=12411-0001&area=all&format=json&language=en，查元数据用 /catalogue/tables?selection=...。表号是 5 位加后缀，比如 12411-0001 是人口。\n\n免费注册，按调用次数限速。\n\n坑是它的参数名和常见 REST 不一样（name 是表号不是表名），文档以德语为主；返回结构层层嵌套，要写转换器；大批量拉取容易被限。",
+  "intro": "Destatis Genesis API 是德国联邦统计局接口，通过 www-genesis.destatis.de 对外开放。需注册账号获取凭证。\n\n## 主要能力\n- **数据表目录**：/genesisws/rest/2020/catalogue/tables。\n- **取数**：/data/table 按表代码返回行列数据。\n- **统计分类**：人口、物价、就业、工业产出。\n- **多格式**：CSV、Excel、JSON。\n- **元数据**：返回统计口径和更新时间。\n\n## 特点\n- 免费，需注册并申请 API 权限。\n- 德语表名和代码，检索门槛较高。\n- 部分微观数据需单独申请。\n\n典型使用场景：德国经济统计、工业分析、官方数据研究。",
   "capabilities": [
    "德国官方统计",
    "人口物价",
@@ -11178,11 +11250,12 @@
   ],
   "best_for": "做德国经济分析。",
   "intent_queries": [
-   "destatis genesis api",
-   "statistisches bundesamt genesis api",
+   "destatis api",
    "destatis api python"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "接入示例"
+  ],
   "faq": [
    {
     "q": "GENESIS 怎么认证？",
@@ -11215,7 +11288,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "日本政府统计门户 e-Stat 的接口在 https://api.e-stat.go.jp/rest/3.0/app/json，核心端点：/getStatsList?appId=KEY 列数据集，/getStatsData?appId=&statsDataId=... 取数据，/getMetaInfo 取指标和地区代码。\n\n返回 GET_STATS_DATA.STATISTICAL_DATA.DATA_INF.VALUE 数组，每项有 @time、@area、@cat01 等维度代码和 $ 值，要先用 meta 把代码翻译成名称。\n\n需注册 App ID，免费，有每日配额。\n\n坑是维度代码不查 meta 根本看不懂；数据以日文为主，英文翻译不全；statsDataId 要先从 getStatsList 查，不能猜。",
+  "intro": "e-Stat API 是日本总务省统计接口，通过 api.e-stat.go.jp 对外开放。开发者申请 App ID 后调用。\n\n## 主要能力\n- **统计表检索**：/rest/3.0/app/json/getStatsList 按关键词查。\n- **取数**：getStatsData 按统计表 ID 返回数据。\n- **分类**：人口、就业、物价、企业活动。\n- **区域数据**：支持都道府县和市区町村。\n- **元数据**：返回单位、注释和调查周期。\n\n## 特点\n- 免费，需申请 App ID。\n- 日文表名，检索建议用日文关键词。\n- 部分统计表为 Excel 下载，无 API 数据。\n\n典型使用场景：日本市场研究、人口分析、区域经济。",
   "capabilities": [
    "日本统计",
    "普查数据",
@@ -11224,14 +11297,11 @@
   ],
   "best_for": "做日本市场或社会研究。",
   "intent_queries": [
-   "e stat japan",
-   "e-stat api",
-   "e-stat api python",
-   "e-stat j",
-   "e- stat",
-   "eap free"
+   "e-stat key_code",
+   "e-stat api python"
   ],
   "intent_tags": [
+   "密钥",
    "接入示例"
   ],
   "faq": [
@@ -11266,7 +11336,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "韩国公共数据门户的接口在 https://apis.data.go.kr，路径是 /{机构}/{服务}/{操作}，比如 /B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty（空气质量）。\n\n统一参数：serviceKey（Encoding 后的 Key）、pageNo、numOfRows、返回类型 type=json 或 xml。返回外面包 response.header.resultCode 和 body.items。\n\n需注册申请，多数服务有每日 1000 次的开发配额，商用要申请提额。\n\n坑是 serviceKey 有 Encoding 和 Decoding 两个版本，用错会 401 或参数解析失败；每个服务的参数名完全不同，要逐个看文档。",
+  "intro": "data.go.kr API 是韩国公共数据门户接口，通过 api.data.go.kr 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **数据集目录**：返回文件数据与开放 API 列表。\n- **取数**：按数据集提供的 REST 端点调用。\n- **分类**：交通、气象、政务、民生。\n- **格式**：JSON、XML、CSV。\n- **元数据**：含更新周期和提供机构。\n\n## 特点\n- 免费，需注册并申请使用权限。\n- 每个数据集接口不同，需逐个看文档。\n- 韩文界面，部分文档有英文版。\n\n典型使用场景：韩国市场数据、政务查询、本地化应用。",
   "capabilities": [
    "韩国公共数据",
    "Open API",
@@ -11275,12 +11345,14 @@
   ],
   "best_for": "做韩国市场或公共服务应用。",
   "intent_queries": [
-   "data.go.kr api",
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free",
-   "market data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
   "intent_tags": [],
   "faq": [
@@ -11315,7 +11387,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "新加坡的接口有两个层面：数据集目录在 https://api-production.data.gov.sg/v2/public/api/collections 和 /datasets/{id}/metadata，实时数据在 https://api.data.gov.sg/v1/environment/{topic}。\n\n实时端点有 air-temperature、relative-humidity、rainfall、psi、pm25、taxi-availability、traffic-images，返回 items[0].readings 或 timestamp 加 data 数组。\n\n免 Key、无配额，实时数据每分钟到几分钟更新。\n\n坑是实时接口的坐标是 WGS84 但部分图层有偏移；历史数据要下载文件，不在 API 里；目录 API 和实时 API 是两套域名，别混。",
+  "intro": "data.gov.sg API 是新加坡政府开放数据接口，通过 api-production.data.gov.sg 对外开放。无需 Key 即可读公开数据集。\n\n## 主要能力\n- **数据集目录**：/v1/public/api/datasets 返回可查询数据集。\n- **取数**：/v1/public/api/datasets/{id}/query 返回记录。\n- **下载**：支持 CSV 与 GeoJSON。\n- **分类**：交通、天气、人口、住房。\n- **元数据**：含更新频率和覆盖范围。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 数据质量高，更新及时。\n- 只覆盖新加坡，适合本地化应用。\n\n典型使用场景：新加坡城市数据、天气与交通应用、研究。",
   "capabilities": [
    "新加坡数据",
    "实时接口",
@@ -11324,16 +11396,16 @@
   ],
   "best_for": "做新加坡城市数据应用。",
   "intent_queries": [
-   "data.gov.sg api",
-   "data.gov.sg api key",
-   "data.gov.sg carpark availability api",
-   "data api free",
-   "data api free trial",
-   "nse data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
-  "intent_tags": [
-   "密钥"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "data.gov.sg 要 Key 吗？",
@@ -11366,7 +11438,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "台湾政府资料开放平台的接口在 https://data.gov.tw/api/v2，/rest/dataset?q=空氣品質&size=20 搜数据集，/rest/dataset/{id} 取元数据和资源列表。\n\n返回 result.results 数组，含 title、description、distribution（下载 URL、格式、更新频率）。多数数据集给 CSV 或 JSON 直链。\n\n免 Key、无配额，但部分数据集要申请或只给下载档，没有 API。\n\n坑是繁体中文关键词才搜得准，简体常搜不到；资源链接常指向各机关网站，格式不统一。",
+  "intro": "data.gov.tw API 是台湾政府开放数据接口，通过 data.gov.tw 对外开放。无需 Key 即可检索。\n\n## 主要能力\n- **数据集检索**：/api/v2/rest/dataset 按关键词查。\n- **元数据**：返回提供机关、格式和更新频率。\n- **下载**：CSV、XML、JSON 文件链接。\n- **分类**：政务、交通、财政、民生。\n- **分页**：page 与 size 参数。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 繁体中文元数据为主。\n- 部分数据集只有文件下载，无 API。\n\n典型使用场景：台湾公共数据研究、政务查询、数据新闻。",
   "capabilities": [
    "台湾开放数据",
    "CSV 与 JSON",
@@ -11375,12 +11447,14 @@
   ],
   "best_for": "做台湾地区的数据分析。",
   "intent_queries": [
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free",
-   "market data api free",
-   "sports data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
   "intent_tags": [],
   "faq": [
@@ -11415,7 +11489,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "香港开放数据平台的接口基于 CKAN：https://data.gov.hk/en-data/api/3/action/package_search?q=weather&rows=20，另有 package_show?id=。\n\n返回 result.results 里每个数据集有 title、notes、resources，资源可能是 CSV、JSON 或 API 链接（如公共交通的实时到站）。部分实时数据走独立的 https://data.gov.hk/en-data/api/... 端点。\n\n免 Key、无配额，中英双语元数据。\n\n坑是很多“API”其实指向文件下载，不是真接口；实时交通数据的格式各家不同（XML、CSV 混用），整合成本高。",
+  "intro": "data.gov.hk API 是香港政府开放数据接口，通过 data.gov.hk 对外开放。无需 Key 即可检索与下载。\n\n## 主要能力\n- **数据集目录**：返回中英文名称、提供机构和格式。\n- **下载**：CSV、JSON、XML、PDF。\n- **分类**：交通、房屋、环境、财政。\n- **元数据**：含更新周期和许可。\n- **检索**：按关键词和机构过滤。\n\n## 特点\n- 免费无 Key。\n- 中英文双语元数据。\n- 部分高价值数据仍需向部门申请。\n\n典型使用场景：香港城市研究、公共数据应用、政策分析。",
   "capabilities": [
    "香港开放数据",
    "交通与天气",
@@ -11424,12 +11498,14 @@
   ],
   "best_for": "做香港城市应用或研究。",
   "intent_queries": [
-   "data.gov.hk api",
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free",
-   "market data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
   "intent_tags": [],
   "faq": [
@@ -11464,7 +11540,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "加拿大政府开放数据的接口在 https://open.canada.ca/data/api/3/action，CKAN 标准：package_search?q=climate&rows=20、package_show?id=、organization_list。\n\n返回 results 数组，每个数据集有 title、notes、resources（URL、format、language、last_modified）。联邦数据为主，部分省份另有门户。\n\n免 Key、无配额，英法双语元数据。\n\n坑是很多数据集只提供 FGDB 或 shapefile，不是 CSV；资源分英语和法语两版，别重复统计；链接指向 open.canada.ca 的下载页，需要再解析。",
+  "intro": "Canada Open Data API 是加拿大政府开放数据接口，通过 open.canada.ca 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集检索**：/data/en/api/3/action/package_search 按关键词查。\n- **资源下载**：CSV、GeoJSON、XLSX 链接。\n- **组织**：返回联邦部门与机构。\n- **地理数据**：含行政区划和遥感产品。\n- **CKAN 兼容**：标准接口，工具通用。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 英法双语元数据。\n- 部分数据集更新不规律。\n\n典型使用场景：加拿大公共数据研究、地理分析、政策报道。",
   "capabilities": [
    "加拿大数据集",
    "CKAN",
@@ -11472,7 +11548,16 @@
    "双语元数据"
   ],
   "best_for": "做加拿大公共数据检索。",
-  "intent_queries": [],
+  "intent_queries": [
+   "canada open data portal",
+   "government of canada open data portal",
+   "stats canada open data portal",
+   "statistics canada open data portal",
+   "open data science portal canada",
+   "open canada api",
+   "canada open government data",
+   "statistics canada open data"
+  ],
   "intent_tags": [],
   "faq": [
    {
@@ -11506,7 +11591,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "澳洲开放数据门户基于 CKAN：https://data.gov.au/data/api/3/action/package_search?q=transport&rows=20，另有 package_show?id=、datastore_search?resource_id=。\n\n返回 results 里每个数据集有 title、notes、resources、organization，很多带 DataStore 可直接类 SQL 查询。\n\n免 Key、无配额，联邦加各州数据都在目录里。\n\n坑是 DataStore 只覆盖部分资源；空间数据常用 WFS/WMS，不是普通 JSON；州级门户（如 NSW、VIC）另有接口，目录里只是链接。",
+  "intro": "data.gov.au API 是澳大利亚政府开放数据接口，通过 data.gov.au 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **数据集检索**：CKAN 接口 /api/3/action/package_search。\n- **资源**：CSV、GeoJSON、API 链接。\n- **机构**：联邦与州政府数据。\n- **元数据**：含许可、更新频率。\n- **分页**：rows 与 start。\n\n## 特点\n- 免费无 Key。\n- 联邦与州数据统一入口。\n- 部分数据集为 PDF，不利于分析。\n\n典型使用场景：澳大利亚公共数据、地理研究、政策分析。",
   "capabilities": [
    "澳洲数据集",
    "CKAN",
@@ -11515,12 +11600,14 @@
   ],
   "best_for": "做澳洲市场或政策研究。",
   "intent_queries": [
-   "data.gov.au api",
-   "data.gov.au phis",
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
   "intent_tags": [],
   "faq": [
@@ -11555,7 +11642,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "新西兰开放数据目录在 https://catalogue.data.govt.nz/api/3/action，CKAN 标准：package_search?q=population&rows=20、package_show?id=。\n\n返回 results 数组，含 title、notes、resources、organization、metadata_modified。数据多来自统计局、环境部、交通局。\n\n免 Key、无配额，元数据英文。\n\n坑是 catalogue 只是目录，数据常托管在机构自己的网站；部分数据集更新停滞，先看 metadata_modified 再决定用不用。",
+  "intro": "data.govt.nz API 是新西兰政府开放数据接口，通过 data.govt.nz 对外开放。无需 Key 即可检索。\n\n## 主要能力\n- **数据集检索**：CKAN 兼容接口。\n- **资源下载**：CSV、JSON、GeoJSON。\n- **机构**：中央与地方政府。\n- **元数据**：含许可与更新周期。\n- **分类**：环境、人口、交通、财政。\n\n## 特点\n- 免费无 Key。\n- 数据量小于澳加，但质量较整齐。\n- 部分数据集需向机构申请。\n\n典型使用场景：新西兰公共数据研究、环境分析、政策报道。",
   "capabilities": [
    "新西兰数据",
    "CKAN",
@@ -11564,12 +11651,14 @@
   ],
   "best_for": "做新西兰相关数据分析。",
   "intent_queries": [
-   "data api free",
-   "data api free trial",
-   "nse data api free",
-   "weather data api free",
-   "market data api free",
-   "sports data api free"
+   "data api builder azure",
+   "data api meaning",
+   "data api builder github",
+   "data api",
+   "data api builder",
+   "data api builder dab",
+   "data api builder mcp",
+   "data api builder download"
   ],
   "intent_tags": [],
   "faq": [
@@ -11604,7 +11693,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "巴西开放数据门户的接口在 https://dados.gov.br/api/publico，常用 /conjuntos-dados?nomeConjuntoDados=saude&pagina=1 搜数据集，/conjuntos-dados/{id} 取详情和资源。\n\n返回是分页 JSON，含 title、description、resources（URL、format、更新时间）。老的 CKAN 接口 /api/3/action/package_search 仍部分可用。\n\n免 Key、无配额，数据以葡萄牙语为主。\n\n坑是部分数据集只有 PDF 或 XLSX；联邦、州、市三级门户各自独立，这个站只覆盖联邦；接口文档只有葡语。",
+  "intro": "dados.gov.br API 是巴西政府开放数据接口，通过 dados.gov.br 对外开放。无需 Key 即可检索。\n\n## 主要能力\n- **数据集检索**：CKAN 兼容接口按关键词查。\n- **资源**：CSV、JSON、GeoJSON。\n- **机构**：联邦部委与州政府。\n- **元数据**：葡萄牙语为主。\n- **分类**：农业、环境、财政、教育。\n\n## 特点\n- 免费无 Key。\n- 葡萄牙语元数据，检索需对应关键词。\n- 部分数据更新滞后。\n\n典型使用场景：巴西市场研究、农业与环境数据、公共政策。",
   "capabilities": [
    "巴西数据",
    "财政与教育",
@@ -11613,7 +11702,10 @@
   ],
   "best_for": "做巴西市场研究。",
   "intent_queries": [
-   "dados.gov.br api"
+   "dados api",
+   "dados api bcb",
+   "casa dos dados api",
+   "api de dados"
   ],
   "intent_tags": [],
   "faq": [
@@ -11648,7 +11740,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "国家统计局的“国家数据”没有正式公开的 API 文档，实际可用的是数据查询接口 https://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode=hgyd&rowcode=zb&colcode=sj&wds=[]&dfwds=[{\"wdcode\":\"zb\",\"valuecode\":\"A01\"}]。\n\ndbcode 分 hgyd（月度）、hgjd（季度）、hgnd（年度）、fsyd（分省月度）等；zb 是指标代码，sj 是时间。返回 returndata.datanodes 数组，每项有 code 和 data.data 值。\n\n免 Key，但必须带 Referer 和 Cookie，直接 curl 会被拦或返回空。\n\n坑是接口非官方承诺、随时可能变；指标代码要先在网页端查；频率限制不透明，批量抓要限速。",
+  "intro": "国家统计局数据接口是中国国家统计局的公开数据服务，通过 data.stats.gov.cn 对外开放。无需 Key，可按指标查询。\n\n## 主要能力\n- **月度数据**：返回 CPI、PPI、工业增加值等。\n- **季度与年度**：GDP、投资、消费、就业。\n- **分省数据**：按地区查主要指标。\n- **分类浏览**：按行业和主题组织。\n- **导出**：支持 CSV 与 Excel。\n\n## 特点\n- 免费，无需 Key，但接口未正式文档化。\n- 指标口径以官网说明为准，跨年可能调整。\n- 高频调用会被限流。\n\n典型使用场景：中国经济研究、行业分析、数据新闻。",
   "capabilities": [
    "国家统计指标",
    "月度年度",
@@ -11657,12 +11749,15 @@
   ],
   "best_for": "做中国宏观经济数据抓取。",
   "intent_queries": [
-   "国家统计局 api",
+   "国家统计局api",
    "国家统计局api接口",
    "国家统计局api申请",
-   "国家统计局 app"
+   "国家统计局数据接口",
+   "国家统计局数据接口使用文档"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "文档"
+  ],
   "faq": [
    {
     "q": "国家统计局有公开 API 吗？",
@@ -11695,7 +11790,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "上海市公共数据开放平台（https://data.sh.gov.cn）提供数据集目录、文件下载和 API 三种形态，但没有对外的统一 REST 文档：数据集页面上标注“接口”的才有 API，调用前要在平台注册并申请该数据集的授权。\n\n申请通过后拿到 appKey，按数据集页给的服务地址和参数调用，返回多是 JSON 或 XML。\n\n免费，但审批按数据集走，部分涉敏数据不开放或只给脱敏样本。\n\n坑是每个数据集的接口形状都不同，没有统一网关；文档散落在数据集详情页；调用配额按申请时约定。",
+  "intro": "上海开放数据 API 是上海市公共数据开放平台，通过 data.sh.gov.cn 对外开放。注册后可申请接口调用。\n\n## 主要能力\n- **数据集目录**：按部门、主题、格式浏览。\n- **接口申请**：部分数据集提供 REST 接口。\n- **文件下载**：CSV、XLSX、JSON。\n- **分类**：交通、医疗、教育、市场监管。\n- **元数据**：含更新周期和提供单位。\n\n## 特点\n- 免费，需实名注册并申请。\n- 部分数据仅限本地企业或机构使用。\n- 接口格式各数据集不同。\n\n典型使用场景：上海城市研究、政务应用、本地化服务。",
   "capabilities": [
    "上海政务数据",
    "交通气象",
@@ -11703,7 +11798,14 @@
    "需注册审核"
   ],
   "best_for": "做上海本地化数据应用。",
-  "intent_queries": [],
+  "intent_queries": [
+   "上海开放数据平台",
+   "上海开放数据门户",
+   "上海市公共数据开放平台",
+   "上海公共数据开放平台",
+   "上海开放数据竞赛",
+   "上海开放数据创新应用大赛"
+  ],
   "intent_tags": [],
   "faq": [
    {
@@ -11737,7 +11839,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "深圳市政府数据开放平台（https://opendata.sz.gov.cn）以数据集下载为主，部分数据集提供 API。使用流程是注册账号，在数据集详情页点“申请接口”，审核通过后拿到 appKey 和服务地址。\n\n接口风格不统一：有的 GET 带参数返回 JSON，有的给 WSDL/SOAP，还有的只给文件包（CSV、XLSX）。\n\n免费，审核按数据集，涉及个人信息的字段通常脱敏或不开放。\n\n坑是没有全站统一的 API 文档，得逐个数据集看；接口稳定性一般，做生产要自己缓存。",
+  "intro": "深圳开放数据 API 是深圳市政务数据开放平台，通过 opendata.sz.gov.cn 对外开放。注册后可申请接口。\n\n## 主要能力\n- **数据集目录**：按部门与主题浏览。\n- **接口调用**：部分数据集提供 API。\n- **文件下载**：CSV、XLSX、JSON。\n- **分类**：交通、教育、医疗、企业服务。\n- **元数据**：含更新频率和许可。\n\n## 特点\n- 免费，需注册申请。\n- 高价值数据可能需要资质审核。\n- 接口文档以平台页面为准。\n\n典型使用场景：深圳城市数据、企业服务、政务应用。",
   "capabilities": [
    "深圳政务数据",
    "数据集下载",
@@ -11745,7 +11847,14 @@
    "需注册"
   ],
   "best_for": "做深圳本地数据应用。",
-  "intent_queries": [],
+  "intent_queries": [
+   "深圳开放数据平台",
+   "深圳开放数据集",
+   "深圳市政府数据开放平台",
+   "深圳市数据开放平台",
+   "深圳数据开放平台",
+   "深圳开放数据应用创新大赛"
+  ],
   "intent_tags": [],
   "faq": [
    {
@@ -11779,7 +11888,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "浙江省公共数据开放平台（https://data.zjzwfw.gov.cn）提供数据下载、查询和接口调用三种方式，接口需要注册并申请，审批通过后在“我的接口”里拿到调用凭证。\n\n和上海、深圳类似，它没有统一的对外 REST 规范，每个数据集的服务地址、参数、返回格式都可能不同，以数据集页说明为准。\n\n免费，部分高价值数据要单位资质或场景说明。\n\n坑是文档只在平台内可见，外部搜不到；接口配额按申请约定；跨数据集关联要自己做主键对齐。",
+  "intro": "浙江开放数据 API 是浙江省公共数据开放平台，通过 data.zjzwfw.gov.cn 对外开放。注册后可申请数据与接口。\n\n## 主要能力\n- **数据集目录**：按省级部门与地市浏览。\n- **接口申请**：提供 REST 与文件两种方式。\n- **分类**：政务、交通、环境、民生。\n- **元数据**：含更新周期与提供单位。\n- **下载**：CSV、XLSX、JSON。\n\n## 特点\n- 免费，需实名注册。\n- 部分数据限本地机构申请。\n- 接口规范各数据集不统一。\n\n典型使用场景：浙江政务数据、区域研究、数字化应用。",
   "capabilities": [
    "浙江政务数据",
    "数据下载",
@@ -11787,7 +11896,14 @@
    "需注册"
   ],
   "best_for": "做浙江本地数据应用。",
-  "intent_queries": [],
+  "intent_queries": [
+   "浙江开放数据",
+   "浙江开放数据平台",
+   "浙江省数据开放平台",
+   "浙江省公共数据开放平台",
+   "浙江公共数据开放平台",
+   "浙江政务数据开放平台"
+  ],
   "intent_tags": [],
   "faq": [
    {
@@ -11821,7 +11937,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "美国 CDC 的开放数据跑在 Socrata 上，接口形如 https://data.cdc.gov/resource/{dataset_id}.json?$limit=1000，比如 9bhg-hcku 是 COVID-19 死亡数据。\n\n支持 SoQL：$where、$select=state,count(*)、$group、$order、$limit。返回数组，字段名常带空格和单位，要看数据集页的列定义。\n\n免 Key，不加 App Token 时限速较低，申请免费 Token 后高很多。\n\n坑是不同数据集的更新频率差别大，从每日到每年都有；部分数据集已停止更新但仍在目录里，用前先看 updated_at。",
+  "intro": "CDC Open Data API 是美国疾控中心数据接口，通过 data.cdc.gov 的 Socrata 接口对外开放。无需 Key 即可低频调用。\n\n## 主要能力\n- **数据集目录**：/api/catalog/v1 返回全部数据集。\n- **取数**：/resource/{id}.json 支持 SoQL 过滤。\n- **分类**：疾病监测、疫苗接种、行为风险。\n- **地理**：按州、县统计。\n- **导出**：CSV、JSON。\n\n## 特点\n- 无 Key 有限流，注册后提高。\n- 公共卫生数据权威，但发布有滞后。\n- 部分数据集停止更新，需看时间范围。\n\n典型使用场景：公共卫生研究、疾病监测、数据新闻。",
   "capabilities": [
    "疾病监测",
    "疫苗接种",
@@ -11830,15 +11946,17 @@
   ],
   "best_for": "做公共卫生数据可视化。",
   "intent_queries": [
-   "cdc open data portal",
+   "cdc api",
+   "cdc api data",
+   "cdc apic",
+   "cdc apixaban",
+   "cdc apic meeting",
    "cdc places data api",
-   "how to open .cdc file",
-   "is the cdc open",
-   "os open data api",
-   "how to open cdc account"
+   "auto cdc apis databricks",
+   "sap cdc api documentation"
   ],
   "intent_tags": [
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -11872,7 +11990,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "美国国家环境信息中心的数据接口在 https://www.ncei.noaa.gov/access/services/data/v1，参数式调用：?dataset=global-summary-of-the-month&stations=CHM00054511&startDate=2020-01-01&endDate=2024-12-31&format=json。\n\ndataset 有多种（daily-summaries、global-hourly、GSOM），stations 用 WMO 或 GHCN ID，format 支持 json、csv。返回是观测记录数组，字段如 TMAX、TMIN、PRCP。\n\n免 Key，免费档有每日请求上限；大批量建议走 HTTPS 文件下载或 AWS Open Data 镜像。\n\n坑是站点 ID 体系和数据集绑定，换数据集要重查；缺失值用 -9999 表示，必须过滤。",
+  "intro": "NOAA NCEI API 是美国国家环境信息中心接口，通过 www.ncei.noaa.gov 对外开放。无需 Key 即可访问。\n\n## 主要能力\n- **气候数据**：/access/services/data/v1 按站点和日期取观测。\n- **数据集目录**：返回陆地、海洋、卫星数据。\n- **站点**：/access/services/stations 返回气象站坐标。\n- **格式**：CSV、JSON、NetCDF。\n- **历史**：部分序列超过百年。\n\n## 特点\n- 免费无 Key，批量下载建议限速。\n- 数据体量大，NetCDF 需专门工具。\n- 全球覆盖，但海洋与极地站点稀疏。\n\n典型使用场景：气候研究、历史天气回测、环境分析。",
   "capabilities": [
    "历史气候",
    "海洋数据",
@@ -11881,16 +11999,20 @@
   ],
   "best_for": "做气候分析或气象回测。",
   "intent_queries": [
-   "noaa ncei api",
-   "noaa ncei past weather tool",
-   "noaa ncei paleoclimatology",
-   "noaa ncei past weather",
-   "noaa ncei passive acoustic data archive",
-   "noaa ncei isd"
+   "noaa api key",
+   "noaa api token",
+   "noaa api",
+   "noaa api v1",
+   "noaa api docs",
+   "noaa api limits",
+   "noaa api key request",
+   "noaa api documentation"
   ],
   "intent_tags": [
    "密钥",
-   "免费额度"
+   "免费额度",
+   "限速",
+   "文档"
   ],
   "faq": [
    {
@@ -11924,7 +12046,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "DataCite 的 REST 接口在 https://api.datacite.org，检索用 /dois?query=climate&page[size]=25，单条用 /dois/{doi}，另有 /works 走更完整的作品模型。\n\n返回 data 数组，每项有 id（DOI）、attributes（titles、creators、publisher、publicationYear、types、url、relatedIdentifiers）。\n\n读取免 Key、无配额（要求礼貌使用）；注册 DOI 要机构账号和 API 凭据。\n\n坑是 DOI 里的斜杠要 URL 编码（10.1234/abc 变成 10.1234%2Fabc）；不同资源的 metadata 完整度差别很大。",
+  "intro": "DataCite API 是研究数据 DOI 接口，通过 api.datacite.org 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **DOI 查询**：/dois/{doi} 返回元数据、作者和许可。\n- **检索**：/dois?query= 按关键词查数据集。\n- **机构**：/providers 返回注册机构。\n- **引用**：返回关联论文与版本。\n- **格式**：JSON:API 与 DataCite XML。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 覆盖数据集、软件、样本等研究产出。\n- 元数据由提交方填写，完整度不一。\n\n典型使用场景：数据引用、研究产出统计、仓储集成。",
   "capabilities": [
    "DOI 元数据",
    "成果检索",
@@ -11933,10 +12055,12 @@
   ],
   "best_for": "做科研数据索引或成果统计。",
   "intent_queries": [
+   "datacite api",
+   "datacite rest api",
    "datacite rest api documentation"
   ],
   "intent_tags": [
-   "接入示例"
+   "文档"
   ],
   "faq": [
    {
@@ -11970,7 +12094,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Zenodo 的接口在 https://zenodo.org/api，检索 /records?q=climate&size=20&sort=mostrecent，单条 /records/{id}，文件下载在 files[].links.self。\n\n上传走 deposition：POST /api/deposit/depositions 建草稿，再 PUT 文件、POST /actions/publish 发布，认证用 personal access token 的 Authorization: Bearer。\n\n免费，单文件上限 50GB，单条记录有总容量限制；公开数据读取免 Key。\n\n坑是发布后不能改文件，只能升版本；检索 API 的 q 支持 Elasticsearch 语法，写复杂查询要先看语法说明。",
+  "intro": "Zenodo API 是开放科研存储接口，通过 zenodo.org/api 对外开放。无需 Key 即可检索，上传需 Token。\n\n## 主要能力\n- **检索**：/records 按关键词、作者、类型查。\n- **记录详情**：/records/{id} 返回文件列表和 DOI。\n- **上传**：/deposit/depositions 创建并提交。\n- **版本**：支持同一记录的多版本。\n- **社区**：可按社区聚合成果。\n\n## 特点\n- 免费，单文件上限 50GB。\n- 每条记录自动分配 DOI。\n- 上传需 OAuth Token，且有审核。\n\n典型使用场景：论文与数据存档、预印本、软件发布。",
   "capabilities": [
    "成果检索",
    "上传与 DOI",
@@ -11979,16 +12103,9 @@
   ],
   "best_for": "做科研数据归档或文献聚合。",
   "intent_queries": [
-   "rest api for denodo",
-   "zenodo what is it",
-   "zenodo get doi youtube github",
-   "denodo solution manager api",
-   "github/zenodo",
-   "opencode zen api endpoint"
+   "zenodo api"
   ],
-  "intent_tags": [
-   "报错"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "Zenodo 上传要什么？",
@@ -12021,7 +12138,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Figshare 的接口在 https://api.figshare.com/v2，检索 POST /articles/search（body 里 search_for、page_size），单条 GET /articles/{id}，文件在 files[].download_url。\n\n上传分三步：POST /account/articles 建条目，POST /account/articles/{id}/files 传文件，POST /account/articles/{id}/publish 发布。认证用 OAuth 或 personal token。\n\n公开数据读取免 Key；写操作要 token。免费额度按机构订阅不同。\n\n坑是搜索用 POST 不是 GET，参数放 body；发布前必须补齐 metadata（类别、关键词），否则 400；文件上传要先拿 upload_url 再 PUT。",
+  "intro": "Figshare API 是科研数据存储接口，通过 api.figshare.com 对外开放。无需 Key 即可检索，上传需 Token。\n\n## 主要能力\n- **检索**：/v2/articles 按关键词、类型查。\n- **详情**：返回作者、文件、DOI 和引用。\n- **上传**：/v2/account/articles 创建条目。\n- **文件**：分片上传大文件。\n- **机构门户**：支持机构自建实例。\n\n## 特点\n- 免费档有存储上限，机构版更高。\n- 公开内容带 DOI，可引用。\n- 受版权限制的数据只给元数据。\n\n典型使用场景：论文配图、数据集发布、补充材料存档。",
   "capabilities": [
    "研究数据检索",
    "上传发布",
@@ -12030,12 +12147,12 @@
   ],
   "best_for": "做科研数据仓库或成果展示。",
   "intent_queries": [
-   "https://figshare.com/account/login",
-   "www.figshare.com",
-   "https://figshare.com/articles/dataset"
+   "figshare api",
+   "figshare api documentation",
+   "figshare api docs"
   ],
   "intent_tags": [
-   "密钥"
+   "文档"
   ],
   "faq": [
    {
@@ -12069,7 +12186,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Dryad 的接口在 https://datadryad.org/api/v2，搜索 /search?q=climate&page=1&per_page=20，数据集 /datasets/{doi}，文件在 /datasets/{doi}/versions/{n}/files。\n\n返回 _embedded.stash:datasets 数组，每项有 title、authors、abstract、keywords、versionNumber、links。\n\n公开数据读取免 Key；下载文件要跟随 302 到存储地址。提交数据需机构账号。\n\n坑是 DOI 里带斜杠要编码；部分数据集有 embarg（延迟公开），API 返回元数据但文件下不了。",
+  "intro": "Dryad API 是生态与进化生物学数据仓储接口，通过 datadryad.org/api 对外开放。无需 Key 即可检索。\n\n## 主要能力\n- **检索**：/v2/search 按关键词、作者、年份查。\n- **数据集详情**：返回文件、DOI 和关联论文。\n- **下载**：返回文件直链。\n- **版本**：支持数据集更新版本。\n- **元数据**：含采集地点和方法。\n\n## 特点\n- 免费，上传需机构或会员资格。\n- 专注生态与进化领域，数据规范较严。\n- 部分数据集有 embargo 期限。\n\n典型使用场景：生态研究复现、数据引用、 元分析。",
   "capabilities": [
    "数据集检索",
    "文件下载",
@@ -12078,16 +12195,9 @@
   ],
   "best_for": "做科研数据复用。",
   "intent_queries": [
-   "dryad papillon artisan perfumes",
-   "what is data dryad",
-   "how to get the dryad",
-   "ready api download free",
-   "ready api free trial",
-   "what is ready api"
+   "dryad api"
   ],
-  "intent_tags": [
-   "免费额度"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "Dryad 要 Key 吗？",
@@ -12120,7 +12230,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "OpenAIRE 有两套接口：老的搜索 API https://api.openaire.eu/search/publications?title=climate&format=json，和新的 Graph API https://api.openaire.eu/graph/v1/researchProducts?search=climate&type=publication。\n\nGraph 返回的字段更规整：id、mainTitle、publicationDate、creators、publisher、doi、bestAccessRight。老的 search 返回 XML 风格嵌套，解析麻烦。\n\n免 Key、无配额（要求合理使用），覆盖出版物、数据集、软件、项目和作者。\n\n坑是 Graph 的过滤参数名和文档示例不完全一致，先用简单查询试；老 API 的 JSON 结构层层嵌套，建议只用 Graph。",
+  "intro": "OpenAIRE API 是欧盟研究开放基础设施接口，通过 api.openaire.eu 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **研究成果**：/search/publications 返回论文与数据集。\n- **项目**：/search/projects 返回欧盟资助项目。\n- **关联**：论文、数据、项目之间可互查。\n- **机构**：返回参与机构与国别。\n- **格式**：JSON 与 XML。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 覆盖欧盟框架项目，关联关系丰富。\n- 非欧盟成果覆盖较少。\n\n典型使用场景：欧盟科研分析、项目评估、开放科学监测。",
   "capabilities": [
    "出版物与数据集",
    "项目关联",
@@ -12129,20 +12239,9 @@
   ],
   "best_for": "做科研产出统计或机构分析。",
   "intent_queries": [
-   "api keys - openai api",
-   "test openai api key",
-   "api key for openai",
-   "developer openai api key",
-   "api key openai price",
-   "openai api key free tier"
+   "openaire api"
   ],
-  "intent_tags": [
-   "密钥",
-   "免费额度",
-   "定价",
-   "接入示例",
-   "模型"
-  ],
+  "intent_tags": [],
   "faq": [
    {
     "q": "OpenAIRE 用哪个接口？",
@@ -12175,7 +12274,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Common Crawl 的索引在 https://index.commoncrawl.org/{crawl}-index?url=example.com&output=json，crawl 形如 CC-MAIN-2026-05，可先用 https://index.commoncrawl.org/collinfo.json 拿全部批次。\n\n返回每行一个 JSON：url、status、mime、length、offset、filename，靠 offset 和 filename 去 S3（https://data.commoncrawl.org/{filename}）取 WARC 记录，再用 Range 请求只取那一段。\n\n完全免费、免 Key，每月新增一批，历史批次都保留。\n\n坑是索引只支持前缀或域名匹配，不支持全文；WARC 是压缩的，要用 warcio 或 pywb 解析；一条记录常几十 MB，别整文件下载。",
+  "intro": "Common Crawl Index API 是网页抓取档案的索引接口，通过 index.commoncrawl.org 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **索引查询**：/CC-MAIN-2024-10-index?url= 返回抓取记录。\n- **WARC 文件**：按记录的偏移和长度取原始内容。\n- **抓取批次**：返回历年 crawl 列表。\n- **域名检索**：支持通配和前缀匹配。\n- **CDX 格式**：返回状态码、时间和 MIME。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 档案体量以 PB 计，按需取片段。\n- 只含公开网页，动态内容常缺失。\n\n典型使用场景：网页语料构建、历史页面分析、模型训练数据。",
   "capabilities": [
    "网页索引",
    "WARC 下载",
@@ -12184,15 +12283,20 @@
   ],
   "best_for": "做语料构建或网页历史研究。",
   "intent_queries": [
-   "common crawl index server",
-   "list crawler web api",
-   "web crawler free api",
-   "crawling indexing and ranking",
-   "google crawling and indexing",
-   "what is the common crawl dataset"
+   "common api",
+   "common api error codes",
+   "common api rate limits mistakes",
+   "common api examples",
+   "common api response codes",
+   "common api errors",
+   "common api someip",
+   "common api status codes"
   ],
   "intent_tags": [
-   "免费额度"
+   "免费额度",
+   "限速",
+   "接入示例",
+   "报错"
   ],
   "faq": [
    {
@@ -12226,7 +12330,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Overpass API 是 OSM 的查询引擎，端点在 https://overpass-api.de/api/interpreter，POST data= 放 Overpass QL：\n`[out:json];node(around:1000,31.23,121.47)[amenity=cafe];out body;`\n\n返回 elements 数组，每项有 type、id、lat、lon、tags。查询可以按 bbox、around、area，也能用 recurse 取关系成员。\n\n免 Key，公共实例有每日配额和并发限制；重度使用要自建或换镜像（kumi.systems、overpass.private.coffee）。\n\n坑是 QL 语法严格，少一个分号就 400；大范围查询很容易超时（默认 180 秒），要分块；`out body` 和 `out center` 返回内容不同。",
+  "intro": "Overpass API 是 OpenStreetMap 要素查询接口，通过 overpass-api.de 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **要素查询**：按标签、名称、类型检索 OSM 数据。\n- **区域查询**：按边界或地图框限定范围。\n- **导出**：返回 JSON 或 XML。\n- **几何**：可返回节点、路径和关系。\n- **历史**：部分实例支持版本查询。\n\n## 特点\n- 免费无 Key，公共实例限速较严。\n- 查询语言 Overpass QL 有学习成本。\n- 大批量导出建议自建实例。\n\n典型使用场景：POI 提取、地图数据加工、地理分析。",
   "capabilities": [
    "POI 查询",
    "道路与边界",
@@ -12235,15 +12339,17 @@
   ],
   "best_for": "做地理数据提取或地图分析。",
   "intent_queries": [
-   "openstreetmap / overpass api",
-   "open street map overpass api",
-   "nodes examples in overpass api",
-   "overpass api rate limit",
-   "oracle osm xml api",
-   "overpass api query form"
+   "overpass api",
+   "overpass api osm",
+   "overpass api tutorial",
+   "overpass api status",
+   "overpass api openstreetmap",
+   "overpass api examples",
+   "overpass api query",
+   "overpass api rate limit"
   ],
   "intent_tags": [
-   "密钥",
+   "免费额度",
    "限速",
    "接入示例"
   ],
@@ -12279,7 +12385,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Socrata 的目录发现接口在 https://api.us.socrata.com/api/catalog/v1，用 q 搜全平台数据集：?q=air quality&limit=20，也可按 domains、categories、only=dataset 过滤。\n\n返回 results 数组，每项有 resource.id、resource.name、metadata.domain、classification.domain_category，拿 id 和 domain 就能拼出实际的 /resource/{id}.json 端点。\n\n免 Key，无明确配额，覆盖全球数千个政府门户（纽约、芝加哥、CDC、旧金山等）。\n\n坑是同一个数据集可能在多个门户重复；resource.id 只在对应 domain 下有效，别混域名；catalog 的更新有延迟。",
+  "intro": "Socrata Discovery API 是政府数据门户的统一检索接口，通过 api.us.socrata.com 对外开放。无需 Key 即可低频调用。\n\n## 主要能力\n- **跨站检索**：/api/catalog/v1 按关键词查多个门户。\n- **数据集元数据**：返回列定义、更新时间和许可。\n- **按域名**：domains 参数限定门户。\n- **分类**：按主题和发布机构过滤。\n- **分页**：limit 与 offset。\n\n## 特点\n- 无 Key 有限流。\n- 覆盖使用 Socrata 的数百个政府门户。\n- 只给目录，取数要到各门户端点。\n\n典型使用场景：政府数据发现、跨城对比、数据目录建设。",
   "capabilities": [
    "跨门户检索",
    "数据集发现",
@@ -12288,12 +12394,19 @@
   ],
   "best_for": "找某个主题的开放数据源。",
   "intent_queries": [
-   "socrata discovery api",
-   "socrata open data api",
+   "socrata api",
+   "socrata api key",
+   "socrata api list assets",
    "socrata api replace revision using raw api",
-   "socrata api key"
+   "socrata api documentation",
+   "socrata discovery api",
+   "socrata metadata api",
+   "socrata open data api soda"
   ],
-  "intent_tags": [],
+  "intent_tags": [
+   "密钥",
+   "文档"
+  ],
   "faq": [
    {
     "q": "Socrata Discovery 干什么用？",
@@ -12326,7 +12439,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "Opendatasoft 的目录接口在 https://data.opendatasoft.com/api/v2/catalog/datasets，参数 limit、offset、where、order_by、select。\n\n返回 datasets 数组，每项有 dataset_id、metas.default.title、metas.default.description、fields（字段名和类型）。实际数据在 /api/v2/catalog/datasets/{dataset_id}/records?limit=100。\n\n免 Key，公开数据集无配额；私有数据集要 API Key。\n\n坑是 where 是 ODSQL 语法，字段名带引号；records 一次最多 100 条，深翻要用 offset；不同门户（data.opendatasoft.com 与各城市自己的域名）要分开查。",
+  "intro": "Opendatasoft Catalog API 是公共数据门户目录接口，通过 api.opendatasoft.com 对外开放。无需 Key 即可检索。\n\n## 主要能力\n- **门户目录**：/catalog/v1 返回使用 ODS 的门户列表。\n- **数据集元数据**：返回字段、更新频率和许可。\n- **检索**：按关键词和国家过滤。\n- **导出**：CSV、JSON。\n- **多语言**：元数据含多语版本。\n\n## 特点\n- 无 Key 可读，限速较宽松。\n- 法国与欧洲城市门户覆盖较多。\n- 取数要到各门户自己的 API。\n\n典型使用场景：城市开放数据发现、跨门户检索、数据目录。",
   "capabilities": [
    "数据集目录",
    "全文检索",
@@ -12335,12 +12448,7 @@
   ],
   "best_for": "做数据源发现或目录站。",
   "intent_queries": [
-   "api catalog open source",
-   "data catalog open source",
-   "open source data catalog features",
-   "microsoft update catalog api",
-   "open source data catalog examples",
-   "usda open data catalog"
+   "open source data catalog examples"
   ],
   "intent_tags": [
    "接入示例"
@@ -12377,7 +12485,7 @@
   "tags": [],
   "featured": false,
   "source": "manual",
-  "intro": "全球森林监察的数据接口在 https://data-api.globalforestwatch.org，认证用 x-api-key 头（免费注册）。\n\n核心是 /dataset/{dataset}/latest/query?sql=SELECT ...，SQL 里指定图层和几何范围；另有 /dataset 列全部数据集、/geostore 存几何。常用数据集有 integrated_alerts（森林警报）、tree_cover_loss。\n\n免费 Key 有速率限制，商用要申请。\n\n坑是查询用 SQL 方言，字段名要查 dataset 的 metadata；几何范围大时响应很慢，建议按小多边形分批；警报数据更新有几天延迟。",
+  "intro": "Global Forest Watch API 是森林监测数据接口，通过 data-api.globalforestwatch.org 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **森林损失**：按经纬度或行政区返回损失面积。\n- **警报**：/v2/glad-alerts 返回近期毁林警报。\n- **火灾**：返回活跃火点数据。\n- **覆盖**：按国家、保护区统计。\n- **分析**：支持自定义地理范围统计。\n\n## 特点\n- 免费，需注册 API Key。\n- 数据来自卫星影像，分辨率 10–30 米。\n- 警报不等于确认毁林，需人工核实。\n\n典型使用场景：森林监测、供应链尽调、环保报道。",
   "capabilities": [
    "森林砍伐",
    "火灾监测",
@@ -12386,12 +12494,14 @@
   ],
   "best_for": "做环保监测或遥感分析。",
   "intent_queries": [
-   "global forest watch api",
-   "global forest watch api key",
-   "global forest watch download data",
-   "global forest watch data",
-   "global fishing watch api",
-   "global forest watch map"
+   "global api",
+   "global api key",
+   "global api key cloudflare",
+   "global apiaries india",
+   "global api market",
+   "global api exposure intelligence",
+   "global api industry",
+   "global api breach statistics"
   ],
   "intent_tags": [
    "密钥"
