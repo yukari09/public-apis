@@ -17,7 +17,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenAI 的接口只有一个域名 api.openai.com，能力按路径拆开：/v1/chat/completions 对话，/v1/embeddings 向量，/v1/audio/transcriptions 转写，/v1/images/generations 生图，/v1/models 列当前可用模型。认证只需要请求头 Authorization: Bearer $OPENAI_API_KEY，没有额外签名步骤。\n\n最小请求是 POST /v1/chat/completions，body 里 model 加 messages 数组，每条 {role, content}，role 取 system、user、assistant。返回取 choices[0].message.content，token 消耗在 usage 里，输入输出分开计。\n\n计费按 token，模型之间差价很大，缓存命中的输入有折扣；新账号偶尔有试用额度，但没有长期免费层。限速按 RPM 和 TPM 两个维度，撞上返回 429 并带 retry-after。\n\n坑在模型名迭代快，写死某个版本过几个月可能就 deprecated，稳妥做法是先调 /v1/models 拿当前列表再选。国内网络无法直连，要自备出口。",
+  "intro": "OpenAI API 是 OpenAI 通过 platform.openai.com 开放的大模型服务接口。开发者申请 API Key 后，用 HTTP 请求或官方 SDK（Python、Node.js）即可调用，无需自己部署推理服务。\n\n## 主要能力\n- **对话补全（Chat Completions）**：支持多轮对话、系统提示词、函数调用和流式输出，接口风格是行业事实标准。\n- **文本嵌入（Embeddings）**：把文本转成向量，用于语义搜索、聚类、推荐和 RAG。\n- **语音与图像**：Whisper 做转写，TTS 做合成，Images 做生成与编辑。\n- **结构化输出**：支持 JSON Schema 约束，返回可直接解析的对象。\n- **微调与批处理**：可针对特定任务微调模型，离线任务走 Batch API，单价更低。\n\n## 特点\n- 模型线覆盖文本、语音、图像，一套 Key 全通。\n- 生态最完整，SDK、示例和第三方集成最多。\n- 按 token 计费，模型之间差价大，缓存命中有折扣。\n\n典型使用场景：智能客服、内容生成与摘要、代码助手、知识库问答、语音转写。",
   "capabilities": [
    "对话与函数调用",
    "文本嵌入与检索",
@@ -49,7 +49,7 @@
     "a": "在 platform.openai.com 建 Key，请求头放 Authorization: Bearer，先 GET /v1/models 确认可用模型，再 POST /v1/chat/completions，body 里 model 加 messages。"
    }
   ],
-  "plain_intro": "你把文字或图片发给它，它返回生成的回复、代码或图片，按用量计费。"
+  "plain_intro": "OpenAI 提供对话、嵌入、语音转写和图像生成接口，按 token 计费。"
  },
  {
   "slug": "anthropic-claude-api",
@@ -69,7 +69,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Anthropic 的核心端点只有一个：POST https://api.anthropic.com/v1/messages，另有 /v1/messages/count_tokens 预估 token。认证用 x-api-key 头，还必须带 anthropic-version: 2023-06-01，缺这个头直接报错。\n\n请求体和 OpenAI 不一样：system 是顶层字段，不放在 messages 里；max_tokens 必填；messages 只接受 user 和 assistant，且要交替出现。返回的 content 是数组，可能同时含 text 块和 tool_use 块，客户端要按 type 遍历，不能直接当字符串取。\n\n长上下文是它的主打，整份合同、整个代码库都能一次读入；cache_control 可以给重复前缀打缓存，按折扣计价。批处理接口适合离线任务，单价更低。\n\n没有长期免费层，注册赠额也有限，长文本场景要先估算成本再上。",
+  "intro": "Anthropic Claude API 是 Anthropic 通过 console.anthropic.com 开放的模型接口。开发者申请 API Key 后，用 HTTP 请求或官方 SDK（Python、TypeScript）调用，无需自己部署。\n\n## 主要能力\n- **对话（Messages）**：核心端点 POST /v1/messages，支持多轮对话、系统提示词和流式输出。\n- **工具调用**：模型可以请求调用外部函数，返回结构化参数，适合搭 agent。\n- **长上下文**：整份合同、整个代码库可以一次读入，适合文档分析。\n- **提示缓存**：重复前缀可缓存，按折扣计费，长对话省成本。\n- **批处理**：离线任务走 Batch API，单价更低。\n\n## 特点\n- 长上下文和工具调用是强项，适合 agent 类应用。\n- 请求格式与 OpenAI 不同：system 是顶层字段、max_tokens 必填、必须带 anthropic-version 头。\n- 无长期免费层，长文本场景需先估 token 成本。\n\n典型使用场景：长文档审阅、代码库问答、多轮 agent、合同与报告分析。",
   "capabilities": [
    "超长上下文阅读",
    "工具调用与 Agent",
@@ -120,7 +120,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Gemini 走 Google AI Studio 的 Key，端点是 https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent，Key 可以放 query 参数 key=，也可以走 OAuth。\n\n请求体是 contents 数组，每项 {role, parts:[{text}]}；图片用 inline_data 传 base64，视频可以给 YouTube URL 或先用 File API 上传换引用。返回取 candidates[0].content.parts[0].text，被安全策略拦掉时 promptFeedback 里会给原因。\n\n免费档按模型给每日请求数和 token 上限，超了返回 429；付费档按 token 计。带 preview 后缀的模型会下线，生产要绑稳定版。\n\n长处是原生多模态和长上下文，一个请求里同时塞图、音频、视频都行；短处是不同地区开放的模型不一致，报 404 先查该地区的支持列表。",
+  "intro": "Gemini API 是 Google 通过 Google AI Studio 和 Vertex AI 开放的模型接口。开发者在 AI Studio 申请 Key 后即可调用，无需自己部署。\n\n## 主要能力\n- **多模态输入**：文本、图像、音频、视频可在同一个请求里混合输入。\n- **超长上下文**：长上下文型号可一次读入整本书或长视频。\n- **结构化输出**：支持 JSON Schema 约束和函数调用。\n- **文件接口**：大文件先用 File API 上传，再在请求里引用。\n- **批量与缓存**：支持批处理和上下文缓存，降低长文本成本。\n\n## 特点\n- 多模态是原生长处，不是外挂拼接。\n- 免费档按模型给每日配额，付费按 token。\n- 不同地区开放的模型不一致，报 404 先查地区支持列表。\n\n典型使用场景：视频内容理解、文档与图表解析、多模态助手、长材料摘要。",
   "capabilities": [
    "多模态理解",
    "超长上下文",
@@ -173,7 +173,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Groq 的接口完全兼容 OpenAI，base URL 换成 https://api.groq.com/openai/v1 就能复用现成 SDK，端点还是 /chat/completions、/models、/audio/transcriptions。\n\n差别在硬件：它用自研 LPU 跑开源模型（Llama、Qwen、Mixtral 等），输出常在每秒几百 token，首字延迟低到几十毫秒。代价是模型选择少，只跑开放权重。\n\n免费档按模型分别限 RPM、RPD 和 TPM，控制台里每个模型都列了具体数字；撞限返回 429，响应头带重置时间。\n\n适合实时对话、语音助手、批量摘要这类对速度敏感的场景；需要闭源大模型推理能力的任务，它给不了。",
+  "intro": "Groq Cloud 是 Groq 通过 console.groq.com 开放的推理接口。开发者申请 API Key 后，用兼容 OpenAI 的 HTTP 请求或 SDK 调用，无需自己部署。\n\n## 主要能力\n- **对话补全**：接口兼容 OpenAI 的 /chat/completions，改 base URL 即可迁移。\n- **低延迟推理**：用自研 LPU 跑开源模型，输出速度和首字延迟明显低于常见 GPU 服务。\n- **语音转写**：提供 Whisper 系列模型的托管推理。\n- **流式输出**：支持 SSE，适合实时字幕和语音对话。\n- **模型列表**：通过 /models 查询当前可用模型。\n\n## 特点\n- 只跑开放权重模型，模型选择比聚合平台少。\n- 免费档按模型分别限 RPM、RPD、TPM，超出返回 429。\n- 适合对速度敏感的场景，不适合需要闭源前沿模型的任务。\n\n典型使用场景：实时聊天、语音助手、批量摘要、低延迟 agent。",
   "capabilities": [
    "低延迟推理",
    "OpenAI 协议兼容",
@@ -225,7 +225,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Mistral 的 API 在 https://api.mistral.ai/v1，认证用 Authorization: Bearer。端点不止对话：/chat/completions、/fim/completions（代码中间填充）、/embeddings、/batch、/ocr、/audio/transcriptions 与 /audio/speech、/classifiers、/models，另有 agents、conversations、workflows 处于 beta。\n\n请求格式接近 OpenAI，现成 SDK 改 base URL 和模型 ID 大多能跑，但参数有差异：随机种子叫 random_seed 不是 seed，另有 safe_prompt 这类独有字段，迁移时要逐个测。流式加 stream:true，返回 SSE 的 data: 行。FIM 同时传 prompt 和 suffix，模型补中间缺失的一段。\n\n模型线按用途分：Large 4（1M 上下文、开放权重多模态）、Medium 3.5（256k、Modified MIT，但已于 2026-10-31 弃用，官方建议换 Large 4）、Small 4、Ministral 端侧、Codestral 代码、Embed 向量、OCR 4.1、Voxtral 语音。开放权重和 Premier 要分开看：前者可自托管（多为 Apache 2.0，个别是带附加条款的 Modified MIT），后者只能走 API。\n\n计费按 token，Batch 和提示缓存有折扣；免费实验档限速，且免费档数据可能被用于改进服务，敏感内容先看条款。数据区域可选，欧盟区给 GDPR 场景用，但不是默认，要按 Regional inference 配置。\n\n适合要欧洲供应商、或想把权重拿回自己机房的公司；只要闭源前沿模型，它的模型线没有 OpenAI 全。",
+  "intro": "Mistral API 是法国 AI 公司 Mistral AI 通过 La Plateforme 开放的大模型接口。开发者申请 API Key 后，用 HTTP 请求或官方 SDK（Python、TypeScript）即可调用，无需自己部署推理基础设施。\n\n## 主要能力\n- **对话补全（Chat Completions）**：支持多轮对话、系统提示词和流式输出，接口风格与主流大模型相近，迁移成本低。\n- **函数调用与结构化输出**：可让模型调用外部工具，或按指定 JSON 格式返回结果。\n- **文本嵌入（Embeddings）**：用于语义搜索、RAG、聚类和推荐。\n- **代码与多模态**：Codestral 做代码补全，FIM 端点支持中间填充；Large 4 支持图像输入。\n- **微调与定制**：支持针对特定任务或领域微调；另有 OCR、语音、内容审核等专用端点。\n\n## 特点\n- 产品线同时包含开放权重模型和商业模型，可在性能、成本和部署方式之间取舍。\n- 多语言能力较强，欧洲语言表现突出。\n- 作为欧洲公司，数据合规与隐私策略对 GDPR 团队有吸引力；区域推理需按文档配置。\n\n典型使用场景：智能客服、内容生成与摘要、代码助手、企业知识库问答、文档信息抽取。",
   "capabilities": [
    "通用对话",
    "代码补全",
@@ -257,7 +257,7 @@
     "a": "能，base_url 换 https://api.mistral.ai/v1；代码补全走 /fim/completions，参数是 prompt 加 suffix。"
    }
   ],
-  "plain_intro": "发文字让它聊天、补代码或转向量，也能读文档、做语音转写。"
+  "plain_intro": "Mistral 提供对话、嵌入、代码补全、OCR 和语音接口，部分模型权重开放可自托管。"
  },
  {
   "slug": "cohere",
@@ -277,7 +277,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Cohere 的接口围绕检索设计，v2 三个主力端点：POST /v2/chat 对话、/v2/embed 向量、/v2/rerank 重排，都在 https://api.cohere.com 下。\n\n重排是最有差异的功能：给一个 query 和一批文档，返回每篇的相关性分数与排序，插在向量召回后面，能明显提升 RAG 命中率。embed 要传 input_type，文档端用 search_document、查询端用 search_query，两边用错向量空间就对不齐。\n\n认证 Authorization: Bearer，免费试用 Key 有每月额度，超出按 token 计费。\n\n它不适合当通用聊天模型，强项是检索链路；已经用别家对话模型的，只把 rerank 接过来也能立刻见效。",
+  "intro": "Cohere API 是加拿大公司 Cohere 通过 dashboard.cohere.com 开放的模型接口。开发者申请 Key 后，用 HTTP 请求或官方 SDK 调用，无需自己部署。\n\n## 主要能力\n- **对话（Chat）**：/v2/chat 支持多轮对话、工具调用和流式输出。\n- **文本嵌入（Embed）**：多语言向量，支持 search_document 与 search_query 两种输入类型。\n- **重排（Rerank）**：给查询和候选文档打分排序，直接提升 RAG 命中率。\n- **检索增强**：可与向量库组合，做企业知识库问答。\n- **私有部署**：企业版支持私有化部署。\n\n## 特点\n- 强项在检索链路，不是通用聊天。\n- 重排是差异点，已有对话模型时也能单独接。\n- 有试用额度，正式按 token 计费。\n\n典型使用场景：企业搜索、知识库问答、文档检索、推荐排序。",
   "capabilities": [
    "检索增强对话",
    "多语言嵌入",
@@ -328,7 +328,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Hugging Face 的推理入口换过一次：老的 api-inference.huggingface.co 逐步退场，现在推荐走 Inference Providers，OpenAI 兼容端点是 https://router.huggingface.co/v1/chat/completions，一个 HF Token 就能路由到多家推理商。\n\n请求格式同 OpenAI，model 字段写仓库名，比如 meta-llama/Llama-3.1-8B-Instruct。冷门模型可能没有 Provider 承接，会返回 404 或 model not supported。\n\n免费额度按账号限速，Pro 账号更高；文本生成、文生图、语音、嵌入都能调，可用性取决于模型有没有被收录。\n\n价值在选型：几十万个模型可以横向试，找到合适的再迁到专用服务。生产环境别直连，冷启动和排队时间不可控。",
+  "intro": "Hugging Face Inference 是 Hugging Face 提供的模型推理服务，通过 Inference Providers 对外开放。开发者用 HF Token 即可调用，无需自己部署。\n\n## 主要能力\n- **多模型推理**：文本生成、文生图、语音、嵌入都能调，模型写仓库名。\n- **统一路由**：OpenAI 兼容端点自动路由到多家推理提供商。\n- **模型与数据集检索**：可查询模型卡、许可和下载量。\n- **本地推理**：可与 Transformers、TGI 配合，切到自托管。\n- **社区生态**：模型、数据集、Spaces 一体化。\n\n## 特点\n- 价值在选型：几十万个模型可横向试。\n- 免费额度按账号限速，生产环境不建议直连。\n- 冷门模型可能没有 Provider 承接，返回 model not supported。\n\n典型使用场景：模型选型对比、开源模型原型验证、文生图与语音试验。",
   "capabilities": [
    "开源模型推理",
    "文生图与语音",
@@ -381,7 +381,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenRouter 是聚合网关，端点 https://openrouter.ai/api/v1/chat/completions，协议与 OpenAI 一致，model 写 provider/model，比如 anthropic/claude-sonnet-4、google/gemini-2.5-pro。\n\n一个 Key 打通各家模型，按 token 计费并加少量手续费，面板能看到每个模型的实时价格、上下文长度和可用性。模型列表直接 GET /api/v1/models。\n\n带 :free 后缀的免费模型可以零成本调，代价是限速严、排队久、可能被用于训练。请求头可带 HTTP-Referer 和 X-Title，用于在排行榜里归属你的应用。\n\n坑是不同 provider 对同一模型的参数支持不一致，关键业务要固定路由，别让它随机挑。",
+  "intro": "OpenRouter API 是 OpenRouter 提供的模型聚合接口，通过 openrouter.ai 对外开放。开发者申请 API Key 后，用一个 OpenAI 兼容端点调用多家厂商的模型，无需分别接入。\n\n## 主要能力\n- **多模型对话**：/chat/completions 兼容 OpenAI，model 写 provider/model 即可切换厂商。\n- **模型目录**：/models 返回全部模型、上下文长度和实时价格。\n- **免费模型池**：带 :free 后缀的模型可零成本调用，有速率限制。\n- **自动回退**：某个 provider 不可用时按配置切换，减少中断。\n- **用量统计**：面板可看每个模型的花费和请求量。\n\n## 特点\n- 一个 Key 打通 OpenAI、Anthropic、Google 和开源模型。\n- 按 token 计费并加少量手续费，价格透明。\n- 不同 provider 对同一模型的参数支持不一致，关键业务要固定路由。\n\n典型使用场景：多模型对比、成本优化、原型阶段快速试模型。",
   "capabilities": [
    "单 Key 多模型",
    "价格与可用性对比",
@@ -434,7 +434,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Together 的端点 https://api.together.xyz/v1/chat/completions，兼容 OpenAI；另有 /v1/images/generations 生图、/v1/embeddings、/v1/finetune 微调。\n\n它托管开源权重模型：Llama、Qwen、DeepSeek、Mixtral 等，按 token 计费；也可以租专用 GPU 端点，按小时算。微调接口上传 JSONL 就能跑，产出直接部署成专用端点。\n\n认证 Authorization: Bearer，新户赠金用完转按量。\n\n适合想把开源模型跑成稳定 API、又不想运维 vLLM 的团队；只试模型用 serverless 就够，别一上来开专用实例，成本差一个量级。",
+  "intro": "Together AI API 是 Together 提供的开源模型托管接口，通过 api.together.xyz 对外开放。开发者申请 Key 后即可调用，无需自己部署 GPU。\n\n## 主要能力\n- **对话补全**：/v1/chat/completions 兼容 OpenAI，模型以开放权重为主。\n- **图像生成**：/v1/images/generations 支持 Flux、Stable Diffusion 等。\n- **文本嵌入**：/v1/embeddings 提供多种开源嵌入模型。\n- **微调**：上传 JSONL 训练，产出可部署成专用端点。\n- **专用部署**：按小时租 GPU，延迟稳定，适合生产负载。\n\n## 特点\n- 模型线以 Llama、Qwen、DeepSeek 等开放权重为主。\n- serverless 按 token 计费，专用端点按小时计费。\n- 新户有赠额，用完后转按量。\n\n典型使用场景：开源模型生产部署、模型微调、图像生成、批量推理。",
   "capabilities": [
    "开源模型推理",
    "微调训练",
@@ -485,7 +485,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "DeepSeek 的接口在 https://api.deepseek.com，兼容 OpenAI，base_url 写 https://api.deepseek.com/v1。主力模型是 deepseek-chat 通用对话和 deepseek-reasoner 推理，后者响应里多一个 reasoning_content 字段。\n\n认证 Authorization: Bearer，请求和 OpenAI 的 chat/completions 一样。推理模型先出思维链再给答案，客户端要能处理多出来的字段，别把整个响应直接丢给用户。\n\n计费按 token，输入命中上下文缓存时价格明显更低，长对话和重复前缀能省不少。国内可直连，海外也有节点。\n\n限制是模型线少、没有多模态，需要图像理解的场景得换别家。",
+  "intro": "DeepSeek API 是深度求索通过 platform.deepseek.com 开放的大模型接口。开发者申请 Key 后，用 OpenAI 兼容的 HTTP 请求调用，无需自己部署。\n\n## 主要能力\n- **对话补全**：兼容 OpenAI 的 /chat/completions，base_url 换成 api.deepseek.com 即可。\n- **推理模型**：deepseek-reasoner 在回答前输出思维链，响应里带 reasoning_content 字段。\n- **上下文缓存**：重复前缀命中缓存后，输入 token 价格明显降低。\n- **代码生成**：对中文和常见编程语言支持较好。\n- **模型列表**：/models 查询当前可用模型。\n\n## 特点\n- 价格低于同级闭源模型，适合成本敏感的应用。\n- 国内可直连，海外也有节点。\n- 模型线较少，不支持多模态。\n\n典型使用场景：中文对话、代码助手、批量文本处理、成本敏感型应用。",
   "capabilities": [
    "对话与推理",
    "代码生成",
@@ -536,7 +536,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "xAI 的 Grok 接口在 https://api.x.ai/v1，兼容 OpenAI：/chat/completions、/models、/images/generations，另有实时搜索端点。\n\n认证 Authorization: Bearer，Key 在 console.x.ai 创建。请求体同 OpenAI，模型名以 grok- 开头，带视觉能力的版本可以传 image_url。\n\n特点是能接 X 上的实时信息，适合新闻、舆情类应用；图像生成参数比 OpenAI 少，风格控制有限。\n\n免费额度有限，基本按量计费。生态比 OpenAI 小，SDK 靠 OpenAI 那套兼容，遇到新参数要查它自己的文档。",
+  "intro": "xAI Grok API 是 xAI 通过 console.x.ai 开放的模型接口。开发者申请 Key 后，用 OpenAI 兼容的请求调用，无需自己部署。\n\n## 主要能力\n- **对话补全**：/v1/chat/completions 兼容 OpenAI，模型名以 grok- 开头。\n- **图像生成**：/v1/images/generations 提供文生图能力。\n- **实时搜索**：可接入 X 平台上的实时信息，适合新闻与舆情。\n- **函数调用**：支持工具调用，返回结构化参数。\n- **模型列表**：/v1/models 查询可用模型。\n\n## 特点\n- 优势在实时信息，不是模型规模。\n- 按 token 计费，免费额度有限。\n- 生态比 OpenAI 小，新参数以官方文档为准。\n\n典型使用场景：新闻与舆情分析、社交媒体助手、多模型对比。",
   "capabilities": [
    "对话与推理",
    "图像生成",
@@ -587,7 +587,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Replicate 把开源模型封装成 HTTP 接口，核心端点是 POST https://api.replicate.com/v1/models/{owner}/{name}/predictions，body 里放 input，返回 prediction 对象，带 id 和 status。\n\n它是异步的：创建后拿 id 轮询 GET /v1/predictions/{id}，创建时传 webhook 也能让服务端回调。status 从 starting 到 processing 再到 succeeded，输出在 output，图片是临时 URL，要自己转存。\n\n认证 Authorization: Bearer $REPLICATE_API_TOKEN。按运行秒数计费，GPU 型号不同单价不同，冷启动第一次可能等几十秒。\n\n适合快速接图像、视频、语音类开源模型；延迟不可控、成本随推理时长浮动，高并发要自己做队列。",
+  "intro": "Replicate API 是 Replicate 提供的模型托管接口，通过 replicate.com 对外开放。开发者申请 Token 后，用 HTTP 请求调用开源模型，无需自己部署。\n\n## 主要能力\n- **图像生成**：Flux、SDXL 等模型一条请求即可运行。\n- **视频与语音**：支持视频生成、语音克隆、音乐生成等模型。\n- **异步预测**：创建 prediction 后轮询状态，或通过 webhook 回调。\n- **自定义模型**：可上传自己的模型或 Cog 包。\n- **模型目录**：按热度、任务类型检索社区模型。\n\n## 特点\n- 按推理运行秒数计费，GPU 型号不同单价不同。\n- 冷启动会让第一次请求多等几十秒。\n- 延迟不可控，高并发需要自己做队列。\n\n典型使用场景：图像与视频生成、语音克隆、开源模型快速验证。",
   "capabilities": [
    "图像与视频生成",
    "语音与音乐",
@@ -618,7 +618,7 @@
     "a": "是异步的：创建 prediction 拿 id，再轮询 /v1/predictions/{id}，或创建时传 webhook。"
    }
   ],
-  "plain_intro": "想生图、生视频或克隆声音，发个请求它就帮你跑开源模型。"
+  "plain_intro": "Replicate 托管开源图像、视频和语音模型，通过 HTTP 请求调用。"
  },
  {
   "slug": "ollama",
@@ -638,7 +638,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Ollama 是在本机跑模型的运行时，装完默认监听 http://localhost:11434，不经过任何云端。一条 \n`ollama run qwen3:8b` 会把模型从 registry 拉到本地，之后离线可用。\n\nHTTP 接口有两个体系：原生 /api/chat、/api/generate、/api/tags；以及 OpenAI 兼容的 /v1/chat/completions，现成 SDK 改 base_url 就能接。请求体同 OpenAI，model 写本地模型名。\n\n模型是量化过的 GGUF，显存不够会自动把部分层放 CPU，速度掉但能跑。OLLAMA_HOST 可以改监听地址，OLLAMA_NUM_PARALLEL 控制并发。\n\n它没有鉴权，别直接暴露到公网；多用户场景要自己在前面加代理。适合本地开发、隐私数据、断网环境，不适合高并发生产。",
+  "intro": "Ollama 是本地运行开源大模型的工具。安装后通过 localhost:11434 提供 HTTP 接口，无需申请 Key，也无需联网。\n\n## 主要能力\n- **本地对话**：/api/chat 与 /api/generate 提供对话和补全。\n- **OpenAI 兼容**：/v1/chat/completions 可直接接现成 SDK。\n- **模型管理**：/api/tags 列出本地模型，命令行可拉取和删除。\n- **嵌入**：/api/embeddings 提供本地向量计算。\n- **硬件自适应**：显存不足时自动把部分层放到 CPU。\n\n## 特点\n- 数据不出机器，适合隐私和离线场景。\n- 默认无鉴权，不要暴露到公网。\n- 模型是量化 GGUF，速度取决于本机硬件。\n\n典型使用场景：本地开发、离线环境、隐私数据处理、模型试验。",
   "capabilities": [
    "本地模型运行",
    "OpenAI 兼容端口",
@@ -690,7 +690,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Stability 的生成接口在 https://api.stability.ai/v2beta，分 stable-image/generate/core、sd3、ultra 三档，另有 /edit 做图生图和局部重绘、/upscale 放大。\n\n请求是 multipart/form-data，不是 JSON：prompt、aspect_ratio、output_format 都是表单字段，Accept 头决定返回是图片二进制还是 JSON（application/json 时给 base64）。认证 Authorization: Bearer。\n\n生成按张计费，不同档位单价差几倍；注册赠少量 credits。内容审核会拦敏感词，返回 403 并给原因。\n\n它是少数允许商用、且提供明确许可条款的生成服务；但风格控制不如自己跑 LoRA，要固定画风还是自托管更划算。",
+  "intro": "Stability AI API 是 Stability 通过 platform.stability.ai 开放的生成接口。开发者申请 Key 后即可调用，无需自己部署模型。\n\n## 主要能力\n- **文生图**：stable-image/generate 下分 core、sd3、ultra 三档。\n- **图生图与重绘**：/edit 支持局部重绘和参考图。\n- **放大**：/upscale 提供超分辨率。\n- **3D 生成**：提供点云与网格生成接口。\n- **多格式输出**：默认返回图片二进制，也可请求 base64 JSON。\n\n## 特点\n- 注册赠少量 credits，之后按张或按秒计费。\n- 商用有明确许可条款。\n- 风格控制不如自己跑 LoRA，固定画风建议自托管。\n\n典型使用场景：图像生成、电商主图、设计素材、游戏美术。",
   "capabilities": [
    "文生图",
    "图生图与重绘",
@@ -742,7 +742,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "ElevenLabs 的语音接口在 https://api.elevenlabs.io/v1，合成端点是 POST /text-to-speech/{voice_id}，body 里 text 加 model_id，返回音频二进制（默认 mp3）。认证用 xi-api-key 头。\n\n声音克隆分两种：instant 上传一段样本即可，professional 要几十分钟干净录音、训练更久但更像。克隆需要账号有对应权限，且要做声音所有权确认。\n\n另有 /speech-to-text 转写、/v1/convai 做实时语音对话。计费按字符，免费档每月固定字符数，超出按量。\n\n坑是长文本要分段，单次请求有字符上限；多语种模型对中文的语调不如英文自然，重要配音要人工试听。",
+  "intro": "ElevenLabs API 是 ElevenLabs 开放的语音接口，通过 elevenlabs.io 提供。开发者申请 Key 后即可调用，无需自己部署语音模型。\n\n## 主要能力\n- **语音合成（TTS）**：/text-to-speech/{voice_id} 返回音频二进制，支持多语种和情感控制。\n- **声音克隆**：上传样本即可生成克隆音色，需做所有权确认。\n- **语音转写（STT）**：/speech-to-text 支持多语种转写。\n- **对话式语音**：/convai 提供实时语音 Agent 能力。\n- **音色库**：预置音色可按语言、性别、风格筛选。\n\n## 特点\n- 按字符计费，每月有免费额度。\n- 长文本需分段，单次请求有字符上限。\n- 中文语调不如英文自然，重要配音要人工试听。\n\n典型使用场景：有声书与播客、视频配音、语音助手、多语种客服。",
   "capabilities": [
    "多语种语音合成",
    "声音克隆",
@@ -795,7 +795,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "AssemblyAI 的转写是异步两步：先 POST https://api.assemblyai.com/v2/transcript，body 传 {\"audio_url\":\"...\"}，拿到 id；再轮询 GET /v2/transcript/{id}，status 为 completed 时取 text 和 words。认证只要 Authorization: <key>，不带 Bearer。\n\n除转写外，一次请求可以勾选说话人分离、情感分析、章节摘要、实体识别、自动语言检测，结果是结构化 JSON，不用自己再跑 NLP。\n\n实时场景走 WebSocket wss://api.assemblyai.com/v2/realtime/ws，先换临时 token。按音频时长计费，免费额度够跑几小时。\n\n限制是只接受可公开访问的音频 URL 或先上传，不能直接传本地文件；中文识别可用但不如英文准。",
+  "intro": "AssemblyAI API 是 AssemblyAI 提供的语音理解接口，通过 assemblyai.com 对外开放。开发者申请 Key 后即可调用，无需自己部署模型。\n\n## 主要能力\n- **语音转写**：提交音频 URL，轮询结果，返回文本和词级时间戳。\n- **说话人分离**：自动标注每句话是谁说的。\n- **音频理解**：情感分析、章节摘要、实体识别、自动语言检测。\n- **实时转写**：WebSocket 流式接口，适合会议和客服。\n- **内容审核**：可检测敏感内容。\n\n## 特点\n- 按音频时长计费，有免费额度。\n- 只接受可公开访问的 URL 或先上传。\n- 中文可用，但准确率不如英文。\n\n典型使用场景：会议记录、播客转写、客服质检、字幕生成。",
   "capabilities": [
    "语音转写",
    "说话人分离",
@@ -844,7 +844,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Deepgram 的识别端点是 POST https://api.deepgram.com/v1/listen，语音文件直接放 body（binary），认证 Authorization: Token $DEEPGRAM_API_KEY，query 里指定 model=nova-3、language、smart_format=true。\n\n返回是 results.channels[0].alternatives[0].transcript，词级时间戳在 words 数组里。实时场景连 wss://api.deepgram.com/v1/listen，边发音频边收部分结果，延迟常在几百毫秒。\n\n另有 /v1/speak 做 TTS、/v1/read 做音频理解。按秒计费，注册赠 $200 额度，用完按量。\n\n它的强项是延迟和价格，弱点是小语种覆盖不如大厂；中文建议先小样本测准确率再上量。",
+  "intro": "Deepgram API 是 Deepgram 提供的语音接口，通过 deepgram.com 对外开放。开发者申请 Key 后即可调用，无需自己部署。\n\n## 主要能力\n- **语音识别（STT）**：/v1/listen 接受音频二进制，支持多语种和词级时间戳。\n- **实时转写**：WebSocket 流式接口，延迟常在几百毫秒。\n- **语音合成（TTS）**：/v1/speak 返回音频。\n- **音频智能**：说话人分离、关键词检测、摘要。\n- **模型选择**：nova 系列按精度和成本分档。\n\n## 特点\n- 按秒计费，注册赠 $200 额度。\n- 延迟和价格是强项，小语种覆盖不如大厂。\n- 中文建议先小样本测准确率。\n\n典型使用场景：实时字幕、电话机器人、语音助手、会议转写。",
   "capabilities": [
    "实时转写",
    "多语种识别",
@@ -896,7 +896,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Workers AI 的调用有两种形态：在 Worker 里直接 `env.AI.run('@cf/meta/llama-3.1-8b-instruct', {messages})`，或者用 REST POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/@cf/...，认证 Bearer。\n\n模型按 @cf/ 前缀区分，文本、图像生成、嵌入、语音识别都有，列表在 /ai/models/search。返回是 JSON，流式加 stream:true 走 SSE。\n\n计费单位是 Neurons，每天有免费额度，超出按量。优势是推理跑在 Cloudflare 边缘，和 Worker、R2、D1 同网，延迟低且不用管出口。\n\n限制是模型以中小参数开源模型为主，复杂推理比不过前沿闭源模型；上下文长度也偏小，长文档任务不适合。",
+  "intro": "Cloudflare Workers AI 是 Cloudflare 提供的边缘推理服务，通过 Workers 或 REST 对外开放。开发者用账号凭证调用，无需自己部署 GPU。\n\n## 主要能力\n- **文本生成**：env.AI.run 可调用 Llama、Qwen 等开源模型。\n- **图像生成**：支持 Stable Diffusion 等文生图模型。\n- **嵌入与语音**：提供文本嵌入和语音识别模型。\n- **流式输出**：支持 SSE，适合聊天界面。\n- **REST 调用**：也可通过 /accounts/{id}/ai/run/@cf/... 调用。\n\n## 特点\n- 按 Neurons 计费，每天有免费额度。\n- 推理跑在边缘节点，和站点同网、延迟低。\n- 模型以中小参数开源模型为主，复杂推理不如前沿闭源模型。\n\n典型使用场景：网站内嵌 AI 功能、边缘聊天、图像生成、低延迟推理。",
   "capabilities": [
    "边缘推理",
    "文本与图像模型",
@@ -949,7 +949,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Fireworks 的推理端点 https://api.fireworks.ai/inference/v1/chat/completions，完全兼容 OpenAI，model 字段写 accounts/fireworks/models/... 这种路径。\n\n它做的是开源模型的推理优化，支持函数调用、结构化输出、投机解码；也可以创建 dedicated deployment，把模型钉在专属 GPU 上，按小时计费，延迟稳定。\n\n微调走 /v1/fine_tuning/jobs，上传 JSONL 后训练，产出可以直接部署。认证 Authorization: Bearer。\n\nserverless 按 token 计费、新户有赠额；专用部署贵，但适合有稳定 QPS 的生产负载。模型更新不如聚合平台快，选型前先查它当前支持的权重版本。",
+  "intro": "Fireworks AI API 是 Fireworks 提供的开源模型推理服务，通过 fireworks.ai 对外开放。开发者申请 Key 后即可调用，无需自己部署 GPU。\n\n## 主要能力\n- **对话补全**：/inference/v1/chat/completions 兼容 OpenAI。\n- **函数调用与结构化输出**：支持工具调用和 JSON 约束。\n- **微调**：/v1/fine_tuning/jobs 上传 JSONL 训练。\n- **专用部署**：把模型钉在专属 GPU 上，延迟稳定。\n- **投机解码**：提供推理加速选项。\n\n## 特点\n- 强项是推理优化和专用部署。\n- serverless 按 token，专用部署按小时。\n- 模型更新不如聚合平台快，选型前查支持的权重版本。\n\n典型使用场景：生产级开源模型服务、微调后部署、高并发推理。",
   "capabilities": [
    "开源模型推理",
    "专用部署",
@@ -981,7 +981,7 @@
     "a": "能，走 /v1/fine_tuning/jobs，上传 JSONL 训练，产出可直接部署。"
    }
   ],
-  "plain_intro": "把开源模型部署在它的 GPU 上，发请求就能用，也能微调。"
+  "plain_intro": "Fireworks 提供开源模型的推理、微调和专用部署接口。"
  },
  {
   "slug": "cerebras-inference",
@@ -1001,7 +1001,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Cerebras 的端点 https://api.cerebras.ai/v1/chat/completions，兼容 OpenAI，model 写 llama3.1-8b、llama-3.3-70b 这类名字。认证 Authorization: Bearer。\n\n它跑在晶圆级芯片上，卖点是输出速度——同样是 70B 模型，每秒 token 数常比 GPU 服务高一个量级，首字延迟也低。适合需要长输出、高吞吐的场景。\n\n免费档按模型限 RPM 和 TPM，额度不大，适合压测和 demo；正式用按 token 计费。\n\n限制是模型选择很少，只有主流开源权重；不支持微调和专用部署。要闭源模型或多模态，得换别家。",
+  "intro": "Cerebras Inference API 是 Cerebras 提供的推理接口，通过 cloud.cerebras.ai 对外开放。开发者申请 Key 后即可调用，无需自己部署。\n\n## 主要能力\n- **对话补全**：/v1/chat/completions 兼容 OpenAI。\n- **高速生成**：用晶圆级芯片推理，输出速度明显高于常见 GPU 服务。\n- **流式输出**：支持 SSE。\n- **代码生成**：对代码类任务支持较好。\n- **模型列表**：/v1/models 查询可用模型。\n\n## 特点\n- 速度是核心卖点，适合长输出和高吞吐。\n- 模型选择少，只覆盖主流开源权重。\n- 免费档按模型限速，正式按 token。\n\n典型使用场景：批量摘要、实时对话、代码生成、高吞吐任务。",
   "capabilities": [
    "高速推理",
    "OpenAI 兼容",
@@ -1050,7 +1050,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Perplexity 的端点 https://api.perplexity.ai/chat/completions，协议接近 OpenAI，model 写 sonar、sonar-pro 这类名字。认证 Authorization: Bearer。\n\n和普通对话模型不同的是返回里带 citations 数组，列出答案引用的网页 URL；请求里可以用 search_domain_filter 限定站点、search_recency_filter 限定时间范围。\n\n另有 /search 端点只返回检索结果不生成答案，适合自己拼装 RAG；/embeddings 提供向量。按请求计费，价格随模型和搜索深度变化。\n\n限制是不能自定义 system prompt 到任意程度，输出风格受它自己的检索流程约束；要完全控制提示词，用搜索 API 自己接模型。",
+  "intro": "Perplexity API 是 Perplexity 提供的搜索增强接口，通过 perplexity.ai 对外开放。开发者申请 Key 后即可调用，无需自己搭检索。\n\n## 主要能力\n- **联网问答**：/chat/completions 先检索再回答，响应里带 citations 引用。\n- **搜索接口**：/search 只返回检索结果，不生成答案，适合自己拼 RAG。\n- **时间与站点过滤**：可按时间范围和站点白名单限制检索。\n- **嵌入**：提供文本向量接口。\n- **模型分档**：sonar 系列按深度和成本区分。\n\n## 特点\n- 答案带来源，适合做可信度要求高的场景。\n- 按请求计费，搜索深度影响价格。\n- 输出风格受其检索流程约束，完全自定义提示词要用 /search。\n\n典型使用场景：实时资讯助手、研究型问答、舆情追踪、带引用的报告生成。",
   "capabilities": [
    "联网问答",
    "引用来源",
@@ -1082,7 +1082,7 @@
     "a": "响应里有 citations 数组，列出引用的网页；只要检索结果可以调 /search。"
    }
   ],
-  "plain_intro": "问它一个问题，它先上网搜，再给出答案和引用链接。"
+  "plain_intro": "Perplexity 提供联网检索与带引用来源的问答接口。"
  },
  {
   "slug": "wolframalpha-api",
@@ -1102,7 +1102,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "WolframAlpha 有两个入口：完整结果用 GET https://api.wolframalpha.com/v2/query?input=...&appid=...，返回 XML，里面 pods 按主题分组，每个 pod 有 plaintext 和 img；只要一句短答案用 /v1/result?i=...&appid=...，直接返回纯文本。\n\n它不解自然语言闲聊，强在计算：解方程、积分、单位换算、物理常数、股票汇率、天气、人口数据。查询语法可以写得很具体，比如 \"integrate x^2 from 0 to 1\"。\n\n免费 appid 每月 2000 次，超出按量；商用要授权。返回的图片 pod 可以直接嵌网页。\n\n坑是它对输入措辞敏感，同一问题换个说法可能查不到；错误处理要看 XML 里的 success=false 和 error 节点。",
+  "intro": "WolframAlpha API 是 Wolfram Research 提供的计算知识接口，通过 developer.wolframalpha.com 对外开放。开发者申请 AppID 后即可调用。\n\n## 主要能力\n- **完整结果**：/v2/query 返回 XML，按 pod 分组，含文本和图片。\n- **短答案**：/v1/result 直接返回一句纯文本结果。\n- **数学与符号计算**：解方程、积分、矩阵、单位换算。\n- **实时数据**：汇率、天气、人口、物理常数。\n- **图片输出**：pod 里的图片可直接嵌入网页。\n\n## 特点\n- 强在计算和结构化知识，不是聊天。\n- 免费 AppID 每月 2000 次，商用需授权。\n- 对输入措辞敏感，换个说法可能查不到。\n\n典型使用场景：数学解题、单位换算、数据查询、教育类应用。",
   "capabilities": [
    "数学与符号计算",
    "单位换算",
@@ -1423,7 +1423,7 @@
     "a": "经纬度最稳，写成 31.23,121.47；城市名匹配经常出错。"
    }
   ],
-  "plain_intro": "给它坐标，它告诉你接下来几分钟会不会下雨、雨多大。"
+  "plain_intro": "Tomorrow.io 提供分钟级降水和短期天气预报接口。"
  },
  {
   "slug": "visual-crossing",
@@ -2290,7 +2290,7 @@
     "a": "不要，完全免费；IPv6 用 api64.ipify.org。"
    }
   ],
-  "plain_intro": "问它一句，它只回你当前的公网 IP，别的什么都不给。"
+  "plain_intro": "ipify 只提供公网 IP 查询，返回请求方的出口地址。"
  },
  {
   "slug": "rest-countries",
@@ -3597,7 +3597,7 @@
     "a": "Advanced Trade API，和 v2 是两套，文档别混。"
    }
   ],
-  "plain_intro": "问它价格不用 Key；要交易和账户就走另一套接口。"
+  "plain_intro": "Coinbase 提供价格查询与交易接口，交易需单独认证。"
  },
  {
   "slug": "cryptocompare",
@@ -4627,7 +4627,7 @@
     "a": "源站 Cloudflare 超时，重试即可；它没有 SLA。"
    }
   ],
-  "plain_intro": "问它发射，它返回 SpaceX 的发射记录、火箭和星链。"
+  "plain_intro": "SpaceX API 提供发射记录、火箭和星链数据。"
  },
  {
   "slug": "open-notify",
@@ -4677,7 +4677,7 @@
     "a": "约每分钟，但缓存可能延迟，做动画要自己插值。"
    }
   ],
-  "plain_intro": "问它一句，它返回现在谁在太空、ISS 在哪。"
+  "plain_intro": "Open Notify 提供在轨宇航员名单和国际空间站实时位置。"
  },
  {
   "slug": "launch-library-2",
@@ -5063,7 +5063,7 @@
     "a": "不能，bronze 是出版商免费开放但无明确许可。"
    }
   ],
-  "plain_intro": "给它 DOI，它告诉你有没有合法免费全文。"
+  "plain_intro": "Unpaywall 根据 DOI 返回论文的开放获取状态和全文链接。"
  },
  {
   "slug": "usgs-earthquake",
@@ -5662,7 +5662,7 @@
     "a": "不能，签名必须在服务端生成，Secret 不能进浏览器。"
    }
   ],
-  "plain_intro": "传图片给它，它帮你裁剪、转码并走 CDN 分发。"
+  "plain_intro": "Cloudinary 提供图片与视频的存储、裁剪、转码和 CDN 分发。"
  },
  {
   "slug": "dicebear",
@@ -6915,7 +6915,7 @@
     "a": "/delay/10 是 10 秒上限。"
    }
   ],
-  "plain_intro": "请求它任意端点，它把请求原样回显给你。"
+  "plain_intro": "httpbin 把收到的 HTTP 请求原样回显，用于调试和测试。"
  },
  {
   "slug": "jsonplaceholder",
@@ -7068,7 +7068,7 @@
     "a": "不能，必须是已验证域名；测试阶段只能用 onboarding@resend.dev 发给自己。"
    }
   ],
-  "plain_intro": "传收件人和内容给它，它帮你发出邮件。"
+  "plain_intro": "Resend 提供事务邮件发送接口，支持模板和 webhook。"
  },
  {
   "slug": "sendgrid",
@@ -7216,7 +7216,7 @@
     "a": "不安全，要配域名白名单和限流，收件人写死在模板里。"
    }
   ],
-  "plain_intro": "前端调它，它用你的模板把邮件发出去。"
+  "plain_intro": "EmailJS 提供前端直接发信的接口，无需自建后端。"
  },
  {
   "slug": "cloudflare-api",
@@ -8916,7 +8916,7 @@
     "a": "access_token 6 小时，要用 refresh_token 换新的。"
    }
   ],
-  "plain_intro": "给它授权，它返回你的跑步骑行记录、路段和排行榜。"
+  "plain_intro": "Strava 提供运动记录、路段和排行榜接口，需 OAuth 授权。"
  },
  {
   "slug": "opensky-network",
@@ -9800,7 +9800,7 @@
     "a": "不是，只说明这个 IP 在全网扫描，不代表针对你。"
    }
   ],
-  "plain_intro": "给它 IP，它告诉你这是全网扫描还是冲你来的。"
+  "plain_intro": "GreyNoise 提供 IP 扫描行为分类，区分背景噪音与针对性攻击。"
  },
  {
   "slug": "un-comtrade",

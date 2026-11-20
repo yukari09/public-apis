@@ -639,7 +639,7 @@
   }
 
   .detail-intro {
-    @apply max-w-[72ch] text-[16px] font-medium leading-[1.75] text-[#3f3b34];
+    @apply max-w-[72ch] text-[16px] font-normal leading-[1.75] text-[#3f3b34];
   }
 
   .detail-intro p {
@@ -648,6 +648,43 @@
 
   .detail-intro p + p {
     @apply mt-3;
+  }
+
+  .detail-intro h2 {
+    @apply mb-2 mt-6 text-[17px] font-semibold tracking-tight text-ink;
+  }
+
+  .detail-intro h3 {
+    @apply mb-1.5 mt-5 text-[15px] font-semibold text-ink;
+  }
+
+  .detail-intro ul {
+    @apply mb-0 mt-2 list-disc pl-5;
+  }
+
+  .detail-intro li {
+    @apply pl-1 text-[16px] leading-[1.7] text-[#3f3b34];
+  }
+
+  .detail-intro li::marker {
+    color: var(--color-accent);
+  }
+
+  .detail-intro li + li {
+    @apply mt-1;
+  }
+
+  .detail-intro strong {
+    @apply font-semibold text-ink;
+  }
+
+  .detail-intro code {
+    @apply rounded-[2px] border border-line bg-raised px-1.5 py-0.5 font-mono text-[0.88em] font-medium text-ink;
+  }
+
+  .detail-intro a {
+    @apply font-medium text-ink underline;
+    text-decoration-color: var(--color-line-strong);
   }
 
   .best-for {

@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { marked } from 'marked';
 import {
   apis,
   authLabel,
@@ -27,10 +28,7 @@ const { api, related } = Astro.props;
 const category = getCategory(api.category);
 const status = statusOf(api);
 const auth = authLabel(api);
-const introParagraphs = api.intro
-  .split(/\n\s*\n/)
-  .map((paragraph) => paragraph.trim())
-  .filter(Boolean);
+const introHtml = marked.parse(api.intro, { async: false });
 const intentTags = api.intent_tags ?? [];
 const faq = api.faq ?? [];
 const title = `${api.name} 免费额度、认证方式与调用示例 · 免费 API 中文索引`;
@@ -100,11 +98,8 @@ const jsonLd = faqJsonLd ? [applicationJsonLd, faqJsonLd] : applicationJsonLd;
 
     <div class="detail-body">
       <div class="detail-main">
-        <section class="detail-section" aria-labelledby="intro-title">
-          <h2 id="intro-title">介绍</h2>
-          <div class="detail-intro">
-            {introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
-          </div>
+        <section class="detail-section" aria-label="接口介绍">
+          <div class="detail-intro" set:html={introHtml}></div>
           <p class="best-for"><span>适合：</span>{api.best_for}</p>
           {intentTags.length > 0 && (
             <ul class="intent-tags" aria-label="相关意图">
