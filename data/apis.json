@@ -6326,7 +6326,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Spotify Web API 的端点在 https://api.spotify.com/v1，检索 /search?q=radiohead&type=track,artist,album，单曲 /tracks/{id}，播放列表 /playlists/{id}/tracks。\n\n认证走 OAuth2：读公开数据用 Client Credentials 换 access_token，访问用户数据用 Authorization Code。播放控制（/me/player/play）还要求 Premium 账号和额外 scope。\n\n免费，但新应用要在 Dashboard 申请配额扩展，默认限制很严（开发模式 25 个用户）。\n\n坑是返回里的 preview_url 常为 null（版权原因），30 秒试听不一定有；分页用 offset 加 limit，limit 上限 50。",
+  "intro": "Spotify Web API 是 Spotify 的音乐数据与控制接口，通过 api.spotify.com 对外开放。开发者创建应用获取凭证后调用。\n\n## 主要能力\n- **曲目与专辑**：/v1/tracks、/v1/albums 返回元数据与图片。\n- **搜索**：/v1/search 按歌名、歌手、专辑查。\n- **播放列表**：增删曲目、修改顺序。\n- **播放控制**：需用户授权，可播放、暂停、切歌。\n- **推荐**：基于种子曲目和艺人生成推荐。\n\n## 特点\n- 免费，按应用限速滚动窗口。\n- 搜索接口需先取 access token，有效期 1 小时。\n- 播放控制要求 Premium 账号。\n\n典型使用场景：歌单工具、音乐推荐、听歌统计、播放控制面板。",
   "capabilities": [
    "曲库元数据",
    "播放列表",
@@ -6379,7 +6379,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Last.fm 的接口只有一个入口 https://ws.audioscrobbler.com/2.0/，靠 method 参数切换：artist.getinfo、artist.getsimilar、track.getsimilar、user.getrecenttracks、chart.gettoptracks。\n\n参数 api_key、format=json 必填。返回 artist 里有 stats.listeners、playcount、bio.summary，similar 给相似艺人列表。\n\n免费 Key，限速约 5 次/秒。\n\n坑是不带 format=json 默认返回 XML；bio 里有 HTML 标签要清洗；中文艺人名查不到，要用英文或 MBID。",
+  "intro": "Last.fm API 是音乐社交数据接口，通过 ws.audioscrobbler.com 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **艺人信息**：/2.0/?method=artist.getinfo 返回简介和相似艺人。\n- **热门曲目**：artist.gettoptracks。\n- **专辑**：album.getinfo 返回曲目和发行信息。\n- **标签**：tag.gettopartists 按风格查。\n- **用户收听**：user.getrecenttracks 返回 scrobble 记录。\n\n## 特点\n- 免费，需申请 API Key。\n- 标签体系由用户共建，粒度粗但实用。\n- 音频不提供，只有元数据。\n\n典型使用场景：音乐推荐、相似艺人、收听统计、歌单生成。",
   "capabilities": [
    "音乐元数据",
    "相似艺人",
@@ -6431,7 +6431,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "MusicBrainz 的接口在 https://musicbrainz.org/ws/2，资源有 artist、release、recording、work、label，搜索 /artist/?query=radiohead&fmt=json，单条 /artist/{mbid}?inc=releases+genres&fmt=json。\n\ninc 参数决定返回的关联数据（releases、recordings、artist-rels），不写只给基本信息。\n\n完全免费、免 Key，但要求 User-Agent 带联系方式，且限 1 次/秒。\n\n坑是它是社区数据库，冷门唱片可能缺数据或重复；MBID 是 UUID，不是名字；封面要另查 Cover Art Archive。",
+  "intro": "MusicBrainz API 是开放音乐元数据库，通过 musicbrainz.org/ws/2 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **艺人**：/artist?query= 返回 MBID、别名和关联。\n- **专辑**：/release 返回发行版本、曲目和厂牌。\n- **录音**：/recording 返回 ISRC 和出现专辑。\n- **关联**：可查成员、合作和翻唱关系。\n- **封面**：通过 Cover Art Archive 取图。\n\n## 特点\n- 免费无 Key，限每秒 1 次，必须设 User-Agent。\n- MBID 是稳定主键，适合做音乐库对齐。\n- 数据靠社区录入，冷门发行可能缺失。\n\n典型使用场景：音乐库整理、元数据补全、版权信息查询。",
   "capabilities": [
    "艺人专辑",
    "录音关系",
@@ -6484,7 +6484,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Discogs 的接口在 https://api.discogs.com，搜索 /database/search?q=kind+of+blue&type=release&token=KEY，发行 /releases/{id}，艺人 /artists/{id}，市场 /marketplace/stats/{id}。\n\n返回 release 有 title、year、formats、tracklist、labels、identifiers（条形码、矩阵码），市场部分给最低价和在售数量。\n\n免费 Token，限 60 次/分；图片和部分数据要 OAuth。\n\n坑是 token 要放 query 或 Authorization 头，两种写法都行但别混；搜索结果的 id 有 release、master、artist 多种类型，要按 type 过滤。",
+  "intro": "Discogs API 是唱片数据库接口，通过 api.discogs.com 对外开放。开发者申请 Token 后调用。\n\n## 主要能力\n- **发行检索**：/database/search 按艺人、专辑、条码查。\n- **发行详情**：/releases/{id} 返回曲目、厂牌和版本。\n- **艺人**：/artists/{id} 返回简介与作品列表。\n- **市场价**：/marketplace/stats 返回成交区间。\n- **收藏**：需 OAuth，读写用户收藏。\n\n## 特点\n- 免费，限每分钟 25 次未认证、60 次认证。\n- 版本信息极细，适合黑胶与实体唱片。\n- 市场价格仅供参考，不含手续费。\n\n典型使用场景：唱片收藏、版本比对、二手定价、音乐资料库。",
   "capabilities": [
    "唱片发行",
    "艺人厂牌",
@@ -6537,7 +6537,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Genius 的接口在 https://api.genius.com，搜索 /search?q=bohemian+rhapsody，歌曲 /songs/{id}，艺人 /artists/{id}/songs。\n\n认证 Authorization: Bearer TOKEN（在 genius.com/api-clients 创建）。返回 hit 里有 result.title、primary_artist.name、url、song_art_image_url。\n\n注意：官方 API 不返回歌词正文，只给页面 URL 和元数据，要歌词得自己解析页面，这受它的服务条款限制。\n\n坑是搜索对拼写敏感，错一个词就查不到；歌词抓取容易触发反爬，商用必须走授权。",
+  "intro": "Genius API 是歌词与歌曲注释接口，通过 api.genius.com 对外开放。开发者申请 Token 后调用。\n\n## 主要能力\n- **搜索**：/search 按歌词片段或歌名查。\n- **歌曲详情**：/songs/{id} 返回标题、艺人和封面。\n- **歌词**：返回歌词页地址，需自行解析 HTML。\n- **艺人**：/artists/{id} 返回作品列表。\n- **注释**：部分歌词有社区解读。\n\n## 特点\n- 免费，需申请 Client Access Token。\n- 不直接返回歌词全文，只给页面链接。\n- 商用展示歌词有版权限制。\n\n典型使用场景：歌词搜索、歌曲资料、乐评引用。",
   "capabilities": [
    "歌词搜索",
    "注释",
@@ -6590,7 +6590,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Lyrics.ovh 只有一个端点：https://api.lyrics.ovh/v1/{艺人}/{歌名}，比如 /v1/Coldplay/Yellow，返回 {\"lyrics\":\"...\"}。\n\n没有 Key、没有分页、没有搜索接口，必须知道艺人名和歌名才能查。\n\n完全免费，服务由个人维护，没有 SLA。\n\n坑是中文歌基本没有，覆盖以欧美流行为主；歌名里有斜杠或空格要编码；返回的歌词带 \\r\\n，展示前要处理；服务偶尔挂。",
+  "intro": "lyrics.ovh API 是歌词查询接口，通过 api.lyrics.ovh 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **按歌手歌名查**：/v1/{artist}/{title} 返回歌词文本。\n- **搜索建议**：/suggest/{query} 返回匹配的歌曲。\n- **纯文本**：返回字段为 lyrics。\n- **轻量**：响应小，适合移动端。\n- **多语言**：覆盖英文与部分欧洲语种。\n\n## 特点\n- 免费无 Key，限速较宽松。\n- 歌词来源为公开抓取，可能有错漏。\n- 中文歌曲覆盖差。\n\n典型使用场景：歌词展示、K 歌应用、音乐搜索。",
   "capabilities": [
    "歌词查询",
    "免 Key",
@@ -6638,7 +6638,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Deezer 的公开接口在 https://api.deezer.com，搜索 /search?q=daft+punk，单曲 /track/{id}，专辑 /album/{id}，艺人 /artist/{id}/top。\n\n返回 data 数组，track 有 title、duration、preview（30 秒 mp3 直链）、artist.name、album.cover_medium。\n\n公开数据免 Key，限 50 次/5 秒；用户数据要 OAuth。\n\n坑是 preview 是 30 秒片段，不是完整曲目；中文歌覆盖一般；返回错误时仍是 200，要看 error 字段。",
+  "intro": "Deezer API 是音乐流媒体数据接口，通过 api.deezer.com 对外开放。无需 Key 即可读公开数据。\n\n## 主要能力\n- **搜索**：/search 按曲目、专辑、艺人查。\n- **专辑**：/album/{id} 返回曲目列表和封面。\n- **艺人**：/artist/{id} 返回热门曲目和相关艺人。\n- **榜单**：/chart 返回各地区热门。\n- **试听**：preview 字段给 30 秒试听地址。\n\n## 特点\n- 读接口免费无 Key，写操作需 OAuth。\n- 30 秒试听可直接播放。\n- 部分地区内容受限。\n\n典型使用场景：音乐检索、试听组件、榜单展示、歌单工具。",
   "capabilities": [
    "曲库检索",
    "试听片段",
@@ -6690,7 +6690,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Freesound 的接口在 https://freesound.org/apiv2，搜索 /search/text/?query=rain&fields=id,name,previews,duration&token=KEY，详情 /sounds/{id}/。\n\n返回 results 数组，每项有 name、duration、previews.preview-hq-mp3（可直接播）、license、username、tags。\n\n免费 Key，限 2000 次/天；下载原文件要 OAuth2 并遵守各音效的许可（CC0、CC BY、CC BY-NC）。\n\n坑是 preview 和原文件不同，商用要看 license 字段；CC BY-NC 不能用于商业项目；批量下载会被限速。",
+  "intro": "Freesound API 是音效素材库接口，通过 freesound.org/apiv2 对外开放。开发者申请 Key 后调用。\n\n## 主要能力\n- **搜索**：/search/text/ 按关键词、时长、许可筛选。\n- **音频详情**：/sounds/{id}/ 返回时长、采样率和标签。\n- **下载**：/sounds/{id}/download/ 返回原文件。\n- **相似音效**：/similar/ 按声学特征推荐。\n- **预览**：提供低码率 MP3 试听。\n\n## 特点\n- 免费，需注册应用获取 Key。\n- 许可分 CC0、CC BY 等，商用要逐个确认。\n- 下载需 OAuth2 授权。\n\n典型使用场景：视频配乐、游戏音效、播客素材。",
   "capabilities": [
    "音效搜索",
    "许可证过滤",
@@ -9601,7 +9601,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Google Books 的接口是 https://www.googleapis.com/books/v1/volumes?q=isbn:9780262033848，q 支持 intitle:、inauthor:、isbn:、subject: 和自由词组合。\n\n返回 items 数组，volumeInfo 有 title、authors、publishedDate、description、pageCount、categories、imageLinks.thumbnail、averageRating。\n\n免 Key 有配额（约每天 1000 次），带 Key 更高；无 Key 时部分请求会被限。\n\n坑是 thumbnail 是 http 链接，要换 https；中文书的描述常为空；同一本书有多个 edition，要按 industryIdentifiers 去重。",
+  "intro": "Google Books API 是图书检索接口，通过 www.googleapis.com/books 对外开放。无需 Key 即可低频调用。\n\n## 主要能力\n- **检索**：/v1/volumes?q= 按书名、作者、ISBN 查。\n- **卷册详情**：/v1/volumes/{id} 返回简介、页数和分类。\n- **预览**：accessInfo 给试读链接。\n- **封面**：imageLinks 含多尺寸缩略图。\n- **书架**：需 OAuth，读写用户书架。\n\n## 特点\n- 无 Key 有限流，注册后提高。\n- 中文书目覆盖一般，港台版更少。\n- 简介来自出版商，长度不一。\n\n典型使用场景：图书搜索、ISBN 查书、书单工具、封面补全。",
   "capabilities": [
    "图书搜索",
    "ISBN 查询",
@@ -9655,7 +9655,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Open Library 的接口在 https://openlibrary.org，书目 /api/books?bibkeys=ISBN:9780262033848&format=json&jscmd=data，搜索 /search.json?q=design+patterns&limit=20。\n\njscmd=data 给结构化字段（title、authors、publishers、publish_date、cover），jscmd=viewapi 给最简版本。另有 /works/{id}.json、/authors/{id}.json。\n\n完全免费、免 Key，官方要求限速并带 User-Agent。\n\n坑是 ISBN 查不到的书写 not found；封面有 default 和 medium 两种尺寸；中文书目覆盖弱于豆瓣（但豆瓣无公开 API）。",
+  "intro": "Open Library API 是开放图书数据库，通过 openlibrary.org 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **按 ISBN 查**：/isbn/{isbn}.json 返回书目信息。\n- **搜索**：/search.json?q= 按标题、作者查。\n- **作者**：/authors/{id}.json 返回生平与作品。\n- **封面**：/b/id/{id}-{size}.jpg 取封面图。\n- **版本**：/works/{id}/editions 返回各版本。\n\n## 特点\n- 免费无 Key，批量请限速。\n- 数据由社区维护，字段完整度参差。\n- 封面覆盖率不如商业数据库。\n\n典型使用场景：图书元数据补全、ISBN 校验、开放书库应用。",
   "capabilities": [
    "ISBN 查询",
    "书目与版本",
@@ -9708,7 +9708,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Gutendex 是 Project Gutenberg 的 JSON 封装，接口 https://gutendex.com/books?search=dickens&languages=en&page=2。\n\n返回 results 数组，每项有 id、title、authors、subjects、languages、download_count、formats（txt、epub、html 的下载链接）。\n\n完全免费、免 Key，7 万多本公版书，支持按语言、版权状态、主题过滤。\n\n坑是它是缓存 Gutenberg 的元数据，新书有延迟；formats 里的链接直接指向 gutenberg.org，可能被限速；中文书很少。",
+  "intro": "Gutendex 是古腾堡计划电子书接口，通过 gutendex.com 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **书目列表**：/books 返回书名、作者、语言和下载量。\n- **搜索**：?search= 按标题或作者查。\n- **按语言**：?languages=zh 筛中文书。\n- **下载链接**：formats 含 txt、epub、html。\n- **分页**：page 参数翻页。\n\n## 特点\n- 免费无 Key，限速较宽松。\n- 全部为公版书，可自由下载。\n- 中文书目少，以古典小说为主。\n\n典型使用场景：公版电子书下载、阅读应用、文本语料。",
   "capabilities": [
    "公版书检索",
    "多语言",
@@ -9752,7 +9752,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "TheMealDB 的接口在 https://www.themealdb.com/api/json/v1/{key}，测试 Key 是 1。\n\n端点有 /search.php?s=Arrabiata、/lookup.php?i=52772、/random.php、/filter.php?c=Seafood、/categories.php、/list.php?i=list。\n\nmeal 对象有 strMeal、strCategory、strArea、strInstructions、strMealThumb，食材是 strIngredient1..20 加 strMeasure1..20 的平铺字段。\n\n免费 Key 1 限速，正式用要 Patreon 订阅。\n\n坑是食材和用量是 20 组固定字段，要自己配对；中文菜谱没有；图片是它的 CDN，热链可用。",
+  "intro": "TheMealDB 是菜谱数据库接口，通过 www.themealdb.com/api 对外开放。测试用 Key 为 1。\n\n## 主要能力\n- **按名称查**：/search.php?s= 返回菜谱和食材。\n- **随机菜谱**：/random.php。\n- **分类**：/filter.php?c=Seafood 按类别筛。\n- **详情**：/lookup.php?i={id} 返回步骤和用量。\n- **图片**：返回成品图地址。\n\n## 特点\n- 测试 Key 免费，正式使用需付费。\n- 菜谱以西餐为主，中文菜很少。\n- 食材用量为家庭份，需自行换算。\n\n典型使用场景：菜谱应用、随机推荐、美食博客。",
   "capabilities": [
    "菜谱检索",
    "分类地区",
@@ -9803,7 +9803,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "TheCocktailDB 的接口与 TheMealDB 同构：https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita，测试 Key 是 1。\n\n端点有 /lookup.php?i=11007、/random.php、/filter.php?i=Gin、/filter.php?a=Alcoholic、/list.php?c=list。\n\ndrink 对象有 strDrink、strCategory、strAlcoholic、strGlass、strInstructions、strDrinkThumb，配料同样是 strIngredient1..15 加 strMeasure1..15。\n\n免费 Key 限速，商用要订阅。\n\n坑是配料字段数比 MealDB 少（15 组）；按配料搜是精确匹配，大小写不敏感但拼写要对；部分配方缺用量。",
+  "intro": "TheCocktailDB 是鸡尾酒配方接口，通过 www.thecocktaildb.com/api 对外开放。测试用 Key 为 1。\n\n## 主要能力\n- **按名称查**：/search.php?s= 返回配方与用料。\n- **随机配方**：/random.php。\n- **按原料查**：/filter.php?i=Gin 返回可调酒款。\n- **详情**：/lookup.php?i={id} 返回步骤和杯型。\n- **图片**：返回成品图。\n\n## 特点\n- 测试 Key 免费，商用需付费。\n- 配方为英文，度量单位不统一。\n- 无酒精版本覆盖有限。\n\n典型使用场景：调酒应用、酒吧菜单、聚会推荐。",
   "capabilities": [
    "鸡尾酒配方",
    "配料检索",
@@ -9847,7 +9847,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Open Food Facts 的接口在 https://world.openfoodfacts.org/api/v2/product/{barcode}.json，条码查 product，搜索用 /cgi/search.pl?search_terms=&json=1。\n\n返回 product 有 product_name、brands、ingredients_text、nutriments（energy-kcal_100g、fat_100g、sugars_100g、salt_100g）、nutriscore_grade、allergens_tags、image_url。\n\n完全免费、免 Key，开放许可（ODbL），要求注明来源。\n\n坑是条码查不到时 status 为 0；数据由用户众包，营养值可能缺失或填错；不同国家的 product 字段语言不同。",
+  "intro": "Open Food Facts API 是食品数据库接口，通过 world.openfoodfacts.org 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **条码查询**：/api/v2/product/{barcode}.json 返回成分与营养。\n- **搜索**：/cgi/search.pl 按名称、品牌、类别查。\n- **营养评分**：nutriscore_grade 字段。\n- **添加剂**：additives_tags 返回添加剂列表。\n- **图片**：返回包装正面和营养成分表照片。\n\n## 特点\n- 免费无 Key，读接口限速较宽松。\n- 数据由用户众包上传，准确度参差。\n- 中国产品覆盖在增长，但仍有缺口。\n\n典型使用场景：食品成分查询、营养对比、扫码应用。",
   "capabilities": [
    "条码查询",
    "营养成分",
@@ -9901,7 +9901,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Fake Store API 的接口在 https://fakestoreapi.com，商品 /products、单个 /products/1、分类 /products/categories、按分类 /products/category/electronics。\n\n登录 POST /auth/login {username, password} 返回 JWT，下单 POST /carts。\n\n完全免费、免 Key，CORS 开放；写操作不持久化。\n\n坑是商品只有 20 个，图片是占位图；登录只校验格式不校验真实账号；返回结构接近真实电商但不含库存和运费字段。",
+  "intro": "Fake Store API 是模拟电商数据接口，通过 fakestoreapi.com 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **商品**：/products 返回标题、价格、分类和图片。\n- **分类**：/products/categories。\n- **购物车**：/carts 支持增删改查。\n- **用户**：/users 返回模拟账号。\n- **登录**：/auth/login 返回假 token。\n\n## 特点\n- 免费无 Key，数据固定。\n- 写操作不持久化，刷新即还原。\n- 图片为占位图，不适合正式展示。\n\n典型使用场景：电商前端原型、购物车联调、教学示例。",
   "capabilities": [
    "商品数据",
    "分类",
