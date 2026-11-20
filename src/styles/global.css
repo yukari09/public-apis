@@ -658,16 +658,20 @@
     @apply mt-3;
   }
 
-  .detail-intro h2 {
+  .detail-section .detail-intro h2 {
     @apply mb-2 mt-6 text-[17px] font-semibold tracking-tight text-ink;
   }
 
-  .detail-intro h3 {
+  .detail-section .detail-intro h3 {
     @apply mb-1.5 mt-5 text-[15px] font-semibold text-ink;
   }
 
   .detail-intro ul {
     @apply mb-0 mt-2 list-disc pl-5;
+  }
+
+  .detail-intro ul + p {
+    @apply mt-4;
   }
 
   .detail-intro li {
