@@ -30,7 +30,7 @@ Visitors arrive from search, bookmarks, or a colleague's link, usually while eva
 
 - 244 API entries across 17 categories; `data/*.json` is read-only product data.
 - Home search, category browsing, authentication filter, explicit-quota filter, 20-per-page pagination, CSV export, and JSON feeds are in scope.
-- Each entry has a stable `slug`, a short Chinese list label, a detail intro, a capability list, a best-for line, free tier, authentication method, measured status, last-checked date, and a curl example.
+- Each entry has a stable `slug`, a short Chinese list label, a plain-language lead, a multi-paragraph detail intro, a capability list, a best-for line, search-intent tags, a two-question FAQ, free tier, authentication method, measured status, last-checked date, and a curl example.
 - The site is static, deployable to Cloudflare Pages with `npm ci && npm run build`.
 - No user accounts, comments, admin surface, API proxy, English edition, or runtime backend.
 - AdSense is present as a placeholder until a real slot ID exists.

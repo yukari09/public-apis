@@ -634,8 +634,20 @@
     @apply mt-3 max-w-[70ch] text-[14px] font-medium text-muted;
   }
 
+  .detail-lead {
+    @apply mt-4 max-w-[70ch] text-[18px] font-medium leading-[1.55] text-ink;
+  }
+
   .detail-intro {
-    @apply mt-4 max-w-[72ch] text-[16px] font-medium leading-[1.75] text-[#3f3b34];
+    @apply max-w-[72ch] text-[16px] font-medium leading-[1.75] text-[#3f3b34];
+  }
+
+  .detail-intro p {
+    @apply m-0;
+  }
+
+  .detail-intro p + p {
+    @apply mt-3;
   }
 
   .best-for {
@@ -644,6 +656,14 @@
 
   .best-for span {
     @apply inline-block bg-accent px-1.5 py-0.5 font-mono text-[11px] font-medium text-accent-ink;
+  }
+
+  .intent-tags {
+    @apply mt-4 flex list-none flex-wrap gap-1.5 p-0;
+  }
+
+  .intent-tags li {
+    @apply border border-line px-2 py-0.5 font-mono text-[11px] font-medium text-muted;
   }
 
   .capability-list {
@@ -661,6 +681,22 @@
     height: 5px;
     margin-top: 7px;
     background: var(--color-accent);
+  }
+
+  .faq-list {
+    @apply m-0 border-t border-line;
+  }
+
+  .faq-list > div {
+    @apply border-b border-line py-3;
+  }
+
+  .faq-list dt {
+    @apply text-[14px] font-medium text-ink;
+  }
+
+  .faq-list dd {
+    @apply mt-1 text-[14px] font-medium leading-[1.7] text-muted;
   }
 
   .detail-body {

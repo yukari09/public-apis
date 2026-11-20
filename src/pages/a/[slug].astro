@@ -27,16 +27,23 @@ const { api, related } = Astro.props;
 const category = getCategory(api.category);
 const status = statusOf(api);
 const auth = authLabel(api);
+const introParagraphs = api.intro
+  .split(/\n\s*\n/)
+  .map((paragraph) => paragraph.trim())
+  .filter(Boolean);
+const intentTags = api.intent_tags ?? [];
+const faq = api.faq ?? [];
 const title = `${api.name} 免费额度、认证方式与调用示例 · 免费 API 中文索引`;
-const description = `${api.name}：${api.intro} ${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
+const description = `${api.name}：${api.plain_intro} ${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
 const canonicalPath = `/a/${api.slug}/`;
 const officialHost = new URL(api.url).hostname;
 const correctionUrl = `https://github.com/yukari09/public-apis/issues/new?title=[纠错]%20${api.slug}`;
-const jsonLd = {
+const applicationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: api.name,
-  description: api.intro,
+  description: api.plain_intro,
+  keywords: [...intentTags, ...(api.intent_queries ?? [])].join(', '),
   applicationCategory: category?.name ?? 'DeveloperApplication',
   operatingSystem: 'Any',
   url: `${SITE_URL}${canonicalPath}`,
@@ -46,6 +53,18 @@ const jsonLd = {
     priceCurrency: 'CNY',
   },
 };
+const faqJsonLd = faq.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    }
+  : null;
+const jsonLd = faqJsonLd ? [applicationJsonLd, faqJsonLd] : applicationJsonLd;
 ---
 
 <Base title={title} description={description} canonicalPath={canonicalPath} jsonLd={jsonLd}>
@@ -76,12 +95,24 @@ const jsonLd = {
         <span class={`stamp ${status.cls}`}>{status.label}</span>
       </div>
       <p class="detail-desc">{api.description_zh}</p>
-      <p class="detail-intro">{api.intro}</p>
-      <p class="best-for"><span>适合：</span>{api.best_for}</p>
+      <p class="detail-lead">{api.plain_intro}</p>
     </header>
 
     <div class="detail-body">
       <div class="detail-main">
+        <section class="detail-section" aria-labelledby="intro-title">
+          <h2 id="intro-title">介绍</h2>
+          <div class="detail-intro">
+            {introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+          <p class="best-for"><span>适合：</span>{api.best_for}</p>
+          {intentTags.length > 0 && (
+            <ul class="intent-tags" aria-label="相关意图">
+              {intentTags.map((tag) => <li>{tag}</li>)}
+            </ul>
+          )}
+        </section>
+
         <section class="detail-section" aria-labelledby="info-title">
           <h2 id="info-title">基本信息</h2>
           <div class="spec-panel">
@@ -108,6 +139,20 @@ const jsonLd = {
             ))}
           </ul>
         </section>
+
+        {faq.length > 0 && (
+          <section class="detail-section" aria-labelledby="faq-title">
+            <h2 id="faq-title">常见问题</h2>
+            <dl class="faq-list">
+              {faq.map((item) => (
+                <div>
+                  <dt>{item.q}</dt>
+                  <dd>{item.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
 
         <div class="detail-actions">
           <a class="official-link" href={api.url} target="_blank" rel="noopener">访问官网</a>
