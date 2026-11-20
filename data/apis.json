@@ -225,7 +225,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Mistral 的 API 在 https://api.mistral.ai/v1，端点结构和 OpenAI 基本一致：/chat/completions、/embeddings、/models，另有 /fim/completions 专门做代码中间填充。认证用 Authorization: Bearer，请求带 model、messages、temperature；流式加 stream:true，返回 SSE 的 data: 行。用 FIM 补代码时同时传 prompt 和 suffix，模型补中间缺失的一段。\n\n产品线现在分五块：Mistral Large 4 是开放权重的多模态通用模型，Mistral Small 4 把 instruct、推理和代码合在一个模型里，Codestral 负责代码补全，Embed 做向量，OCR 4.1 做文档解析，另外 Voxtral 系列做语音转写和 TTS。平台还托管了第三方开放权重模型（如 Z.ai GLM、DeepSeek），一个 Key 可以调。\n\n定价按 token，批量处理（Batch API）和提示缓存都有折扣；免费实验档有速率限制，正式用要绑结算。数据区域可以选，欧盟区是给 GDPR 场景准备的，但不是默认，要按 Regional inference 文档配置。\n\n适合想要欧洲供应商、或者要把权重拿回自己机房的公司；只用闭源前沿模型的话，它的模型线没有 OpenAI 全。",
+  "intro": "Mistral 的 API 在 https://api.mistral.ai/v1，认证用 Authorization: Bearer。端点不止对话：/chat/completions、/fim/completions（代码中间填充）、/embeddings、/batch、/ocr、/audio/transcriptions 与 /audio/speech、/classifiers、/models，另有 agents、conversations、workflows 处于 beta。\n\n请求格式接近 OpenAI，现成 SDK 改 base URL 和模型 ID 大多能跑，但参数有差异：随机种子叫 random_seed 不是 seed，另有 safe_prompt 这类独有字段，迁移时要逐个测。流式加 stream:true，返回 SSE 的 data: 行。FIM 同时传 prompt 和 suffix，模型补中间缺失的一段。\n\n模型线按用途分：Large 4（1M 上下文、开放权重多模态）、Medium 3.5（256k、Modified MIT，但已于 2026-10-31 弃用，官方建议换 Large 4）、Small 4、Ministral 端侧、Codestral 代码、Embed 向量、OCR 4.1、Voxtral 语音。开放权重和 Premier 要分开看：前者可自托管（多为 Apache 2.0，个别是带附加条款的 Modified MIT），后者只能走 API。\n\n计费按 token，Batch 和提示缓存有折扣；免费实验档限速，且免费档数据可能被用于改进服务，敏感内容先看条款。数据区域可选，欧盟区给 GDPR 场景用，但不是默认，要按 Regional inference 配置。\n\n适合要欧洲供应商、或想把权重拿回自己机房的公司；只要闭源前沿模型，它的模型线没有 OpenAI 全。",
   "capabilities": [
    "通用对话",
    "代码补全",
