@@ -1152,7 +1152,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenWeatherMap 的经典端点是 GET https://api.openweathermap.org/data/2.5/weather?q=Shanghai&appid=KEY&units=metric&lang=zh_cn，返回当前温度、湿度、风、云量和天气描述。\n\n预报用 /data/2.5/forecast（3 小时粒度、5 天），一次性拿全用 One Call 3.0：/data/3.0/onecall?lat=&lon=&exclude=minutely&appid=，返回 current、hourly、daily 和 alerts。历史数据走 /data/3.0/onecall/timemachine。\n\n免费档 60 次/分、100 万次/月；One Call 3.0 的免费额度是 1000 次/天，需要单独订阅（0 元档也要绑卡）。\n\n坑是中文城市名要 URL 编码，重名城市要加 country code；返回的温度默认开尔文，units=metric 才是摄氏度。",
+  "intro": "OpenWeatherMap 是 OpenWeather 提供的天气数据接口，通过 openweathermap.org 对外开放。开发者申请 API Key 后即可调用，无需自己部署数据源。\n\n## 主要能力\n- **当前天气**：/data/2.5/weather 返回温度、湿度、风、云量和天气描述。\n- **预报**：/data/2.5/forecast 提供 3 小时粒度、5 天预报；One Call 3.0 一次返回当前、逐小时、逐日和预警。\n- **历史数据**：timemachine 接口按时间点查历史天气。\n- **地图图层**：提供云量、降水、温度等瓦片图层。\n- **多语言与单位**：lang=zh_cn 出中文描述，units=metric 用摄氏度。\n\n## 特点\n- 免费档 60 次/分、100 万次/月。\n- One Call 3.0 单独订阅，1000 次/天，0 元档也要绑卡。\n- 默认单位是开尔文，不传 units 会得到温度数值异常。\n\n典型使用场景：通用天气展示、多城市批量查询、天气地图、历史天气回看。",
   "capabilities": [
    "当前与预报",
    "分钟级降水",
@@ -1205,7 +1205,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Open-Meteo 是德国团队做的开源天气 API，把 ECMWF、NOAA GFS、DWD ICON、JMA、Météo-France 等二十多个数值模式的输出统一成一套 JSON，不需要注册，也不用 Key。\n\n四个主力端点：/v1/forecast 预报，/v1/archive 是 1940 年至今的历史再分析，/v1/air-quality 是 CAMS 空气质量，/v1/marine 是海浪和海温。请求全靠 query 参数拼：\n`GET https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&hourly=temperature_2m,precipitation&timezone=auto`\n返回是并行数组：hourly.time 存时间戳，hourly.temperature_2m 存对应值，按索引对齐；timezone=auto 直接给本地时间。\n\n免费限非商用，官方额度约每天 1 万次，超了返回 429；商用要订阅。数据 CC BY 4.0，页面必须署名。短板是没有分钟级降水，这个要看 Tomorrow.io 或 OpenWeatherMap。",
+  "intro": "Open-Meteo 是开源天气 API，由德国团队维护，通过 open-meteo.com 对外开放。无需注册和 Key，直接发 HTTP 请求即可调用。\n\n## 主要能力\n- **天气预报**：/v1/forecast 按经纬度返回逐小时和逐日预报。\n- **历史再分析**：/v1/archive 覆盖 1940 年至今。\n- **空气质量**：/v1/air-quality 提供 CAMS 的污染物数据。\n- **海洋数据**：/v1/marine 提供海浪、海温和洋流。\n- **多模式对比**：可指定 ECMWF、GFS、ICON 等模式，比较不同来源。\n\n## 特点\n- 聚合 20 多个数值模式，分辨率 1–11 公里。\n- 非商用免费，官方额度约每天 1 万次，超出返回 429。\n- 数据 CC BY 4.0，页面必须署名；商用需订阅。\n\n典型使用场景：天气应用、历史回测、空气质量展示、气候分析。",
   "capabilities": [
    "逐小时预报",
    "历史再分析",
@@ -1257,7 +1257,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "WeatherAPI 的接口在 https://api.weatherapi.com/v1，端点按需求分：current.json 当前天气、forecast.json 预报（days 参数最多 14 天，可同时要 aqi=yes 和 alerts=yes）、history.json 历史（dt 指定日期）、marine.json 海洋、astronomy.json 天文。\n\n请求就三个必需参数：key、q（城市名、邮编、经纬度都行）、以及各端点自己的参数。返回 JSON 里 location 和 current 分开，温度同时给摄氏和华氏，省得自己换算。\n\n免费档每月 100 万次、每天 100 万次上限，是所有天气 API 里额度最宽松的之一；超出按量。\n\n坑是 q 传中文城市名偶尔匹配不准，用经纬度最稳；预报天数越多，末端准确度越差，这是所有模式的通病。",
+  "intro": "WeatherAPI 是 WeatherAPI.com 提供的天气接口，通过 weatherapi.com 对外开放。开发者申请 Key 后即可调用，无需自己部署。\n\n## 主要能力\n- **当前天气**：current.json 返回温度、体感、湿度、风和能见度。\n- **预报**：forecast.json 支持 1–14 天，可同时返回空气质量和预警。\n- **历史天气**：history.json 按日期查询。\n- **海洋与天文**：marine.json 给海浪，astronomy.json 给日月升落。\n- **多地点查询**：q 支持城市名、邮编和经纬度。\n\n## 特点\n- 免费档每月 100 万次，是同类里额度最宽松的。\n- 一个 Key 覆盖天气、空气质量、天文和海洋。\n- 预报天数越长，末端准确度越差。\n\n典型使用场景：多城市天气展示、出行应用、空气质量与预警展示。",
   "capabilities": [
    "实时与预报",
    "历史天气",
@@ -1302,7 +1302,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "wttr.in 是给终端用的天气服务，没有 API Key，也没有 JSON 文档，全靠 URL 约定：\n`curl wttr.in/Shanghai` 给彩色终端天气，`?format=3` 只输出一行，`?m` 用公制，`?0` 只要当前天气，`?T` 去掉颜色。要结构化数据用 `?format=j1`，返回完整 JSON。\n\n底层数据来自 World Weather Online，更新频率一般，城市覆盖以大城市为主。中文城市名要 URL 编码，`wttr.in/北京` 直接写会 404。\n\n它适合塞进脚本、tmux 状态栏、启动问候，不适合做产品：没有 SLA、没有配额说明、偶尔超时。要做正经天气展示，换 Open-Meteo 或 WeatherAPI。",
+  "intro": "wttr.in 是给终端用的天气服务，通过 wttr.in 提供。无需 Key，直接用 curl 或浏览器访问 URL 即可。\n\n## 主要能力\n- **终端天气图**：默认返回带颜色的 ASCII 天气图。\n- **单行输出**：?format=3 只输出一行摘要。\n- **结构化数据**：?format=j1 返回完整 JSON。\n- **图片输出**：路径加 .png 返回 PNG 图片。\n- **参数控制**：?m 公制、?0 只要当前、?T 去掉颜色。\n\n## 特点\n- 无官方 API 文档，全靠 URL 约定。\n- 数据源更新频率一般，城市覆盖以大城市为主。\n- 没有 SLA 和配额说明，不适合生产。\n\n典型使用场景：终端状态栏、脚本问候、机器人播报、命令行查天气。",
   "capabilities": [
    "终端天气图",
    "纯文本输出",
@@ -1347,7 +1347,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Pirate Weather 的目标是复刻已停服的 Dark Sky：端点 https://api.pirateweather.net/forecast/{APIKEY}/{lat},{lon}，返回结构和 Dark Sky 一致——currently、minutely、hourly、daily 四段，字段名也一样。\n\n老项目迁移基本只改域名和 Key。参数 units=si 或 us，exclude 可以去掉不需要的段。minutely 给未来一小时的分钟级降水，这是它保留的核心卖点。\n\n免费档每月 1 万次，个人用量足够；超出按量。数据源是公开气象模式，美国境内最准。\n\n它的价值就是兼容性：手上有一堆解析 Dark Sky 字段的代码，换它最省事。新项目没有历史包袱，可以直接用 Open-Meteo。",
+  "intro": "Pirate Weather 是兼容 Dark Sky 格式的天气接口，通过 pirateweather.net 对外开放。开发者申请 Key 后即可调用。\n\n## 主要能力\n- **当前天气**：currently 段返回温度、降水、风和云量。\n- **分钟级降水**：minutely 段给未来一小时的分钟级预报。\n- **逐小时与逐日**：hourly 和 daily 段结构与 Dark Sky 一致。\n- **天气预警**：alerts 段返回官方预警。\n- **MCP 接入**：除 REST 外提供 MCP 接口。\n\n## 特点\n- 字段和结构与已停服的 Dark Sky 一致，迁移只改域名和 Key。\n- 免费档每月 1 万次。\n- 数据源是公开气象模式，美国境内最准。\n\n典型使用场景：从 Dark Sky 迁移、分钟级降水提示、个人天气应用。",
   "capabilities": [
    "Dark Sky 兼容字段",
    "分钟级降水",
@@ -1397,7 +1397,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Tomorrow.io 的接口在 https://api.tomorrow.io/v4，核心是 /weather/forecast?location=31.23,24.47&apikey=KEY，返回 timelines 数组，按 timesteps 给 1m、1h、1d 三种粒度。\n\n它的强项是分钟级降水：返回 precipitationIntensity 和 precipitationProbability，能做“20 分钟后下雨”这类提示。另有 /weather/realtime、/weather/history 和 /timelines 事件接口。\n\n免费档每天 500 次、限 3 天预报和 1 小时分钟级数据；企业版才有气候风险和长周期。\n\n坑是 location 用经纬度最稳，城市名匹配常出错；字段是驼峰命名，和别家不一样，解析时注意。",
+  "intro": "Tomorrow.io 是商业天气数据接口，通过 tomorrow.io 对外开放。开发者申请 Key 后即可调用，无需自己部署。\n\n## 主要能力\n- **预报**：/v4/weather/forecast 按 timesteps 返回 1 分钟、1 小时或 1 天粒度。\n- **实时天气**：/v4/weather/realtime 返回当前观测。\n- **历史数据**：/v4/weather/history 按时间范围查询。\n- **分钟级降水**：precipitationIntensity 和概率字段支持短时预报。\n- **天气图层**：提供地图瓦片和气候风险数据（企业版）。\n\n## 特点\n- 免费档每天 500 次，限 3 天预报和 1 小时分钟级。\n- 字段是驼峰命名，和多数天气 API 不同。\n- location 用经纬度最稳，城市名匹配常出错。\n\n典型使用场景：出行与配送调度、短时降水提醒、物流天气风控。",
   "capabilities": [
    "分钟级降水",
    "短期预报",
@@ -1443,7 +1443,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Visual Crossing 的端点是 https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{start}/{end}，location 可以是城市、邮编或经纬度，日期省略就返回预报加当天。\n\n参数 unitGroup=metric 换公制，include=days,hours 控制返回粒度，elements= 只取需要的字段，能显著减小响应体积。返回是按天的数组，每天里嵌 hours。\n\n它的核心优势是历史：1940 年至今的逐日、逐小时数据，还有长期气候平均，做回测和气候分析比别家全。\n\n免费档每天 1000 条记录（按天数×地点算，不是请求数），容易超；商用要买授权。免 Key 的试跑只给样例数据。",
+  "intro": "Visual Crossing 是天气数据服务，通过 visualcrossing.com 对外开放。开发者申请 Key 后即可调用。\n\n## 主要能力\n- **时间线查询**：/rest/services/timeline/{location}/{start}/{end} 一次取多天。\n- **历史天气**：覆盖 1970 年至今，逐日和逐小时。\n- **长期气候**：提供气候平均和异常值。\n- **多地点批量**：支持一次查询多个地点。\n- **字段裁剪**：elements 参数只取需要的字段，减小响应体积。\n\n## 特点\n- 历史数据是强项，适合回测和气候分析。\n- 免费档每天 1000 条记录，按天数乘地点计算。\n- 商用需要购买授权。\n\n典型使用场景：气候分析、历史回测、农业与能源选址、长期趋势研究。",
   "capabilities": [
    "历史天气",
    "长期气候平均",
@@ -1490,7 +1490,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Weatherstack 的端点是 http://api.weatherstack.com/current?access_key=KEY&query=Shanghai，另有 forecast 和 historical 两个端点，参数结构一致。\n\n返回里 location、current、request 三段，current 含温度、体感、湿度、风、气压、能见度和天气图标码。免费档只有 current，预报和历史要付费档。\n\n免费档每月 1000 次，且只支持 HTTP——不是 HTTPS，意味着前端直接调会被浏览器拦（混合内容），只能走后端代理。\n\n它适合做简单展示或原型，不适合生产：额度小、协议不安全、数据更新频率一般。要免费又量大，用 Open-Meteo。",
+  "intro": "Weatherstack 是天气数据接口，通过 weatherstack.com 对外开放。开发者申请 Key 后即可调用。\n\n## 主要能力\n- **当前天气**：/current 返回温度、体感、湿度、风和能见度。\n- **预报**：/forecast 提供多日预报（付费档）。\n- **历史天气**：/historical 按日期查询（付费档）。\n- **多地点查询**：query 支持城市名和经纬度。\n- **轻量 JSON**：返回结构简单，字段少。\n\n## 特点\n- 免费档每月 1000 次，且只支持 HTTP。\n- 自由档只有 current，预报和历史需付费。\n- HTTP 意味着前端直连会被混合内容策略拦截。\n\n典型使用场景：原型阶段快速接入、后端代理的简单天气展示。",
   "capabilities": [
    "实时天气",
    "历史天气",
@@ -1543,7 +1543,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "和风天气的 API 在 https://devapi.qweather.com/v7（免费版域名，商业版是 api.qweather.com），端点分 weather/now、weather/3d、weather/7d、warning/now、air/now、indices/1d、tropical/storm 等。\n\n请求参数是 location（LocationID 或经纬度）加 key，LocationID 要先调 /v2/city/lookup 换。返回 gzip 压缩的 JSON，字段全中文文档，code 为 200 才算成功。\n\n免费开发版有每日调用上限和 QPM 限制，且只能用免费域名；商业用途要买套餐。数据在国内的准确度和预警覆盖是它的优势。\n\n坑是返回默认 gzip，curl 要加 --compressed；LocationID 和经纬度混用容易查错城市。",
+  "intro": "和风天气是中文天气数据服务，通过 dev.qweather.com 对外开放。开发者注册后申请 Key 即可调用。\n\n## 主要能力\n- **实时天气**：/v7/weather/now 返回温度、天气现象和风。\n- **预报**：/v7/weather/3d、7d、10d、15d 分档。\n- **灾害预警**：/v7/warning/now 返回官方预警。\n- **空气质量**：/v7/air/now 返回 AQI 和污染物。\n- **生活指数**：/v7/indices/1d 提供穿衣、洗车等指数；另有城市查询 /v2/city/lookup。\n\n## 特点\n- 中文文档和字段，国内数据准确度高。\n- 免费开发版有每日上限和 QPM，且只能用免费域名。\n- 返回默认 gzip 压缩，客户端要能解压。\n\n典型使用场景：中文天气应用、预警推送、生活指数、台风与潮汐展示。",
   "capabilities": [
    "中文天气数据",
    "灾害预警推送",
@@ -1593,7 +1593,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "AQICN 的世界空气质量接口在 https://api.waqi.info，按城市查是 /feed/{city}/?token=KEY，city 可以写城市名、@站点 ID 或 geo:lat;lon。\n\n返回 data.aqi 是总指数，data.iaqi 是按污染物的分项（pm25、pm10、o3、no2、so2、co、t、h 等），每个分项带 v 值。另有 /map/bounds 返回地图范围内的站点。\n\n免费 Token 是按需申请的，额度不公开写明，超了返回 over quota。数据来自各国官方监测站加社区贡献，中国城市覆盖较好。\n\n坑是 aqi 可能返回字符串 \"-\" 表示无数据，解析要先判类型；不同国家的 AQI 标准不同，展示时要说明用的是哪套。",
+  "intro": "AQICN 是世界空气质量指数项目提供的接口，通过 api.waqi.info 对外开放。开发者申请免费 Token 后即可调用。\n\n## 主要能力\n- **城市查询**：/feed/{city}/ 返回该城市 AQI 和污染物分项。\n- **坐标查询**：支持 geo:lat;lon 形式。\n- **站点数据**：按监测站 ID 查询。\n- **地图范围**：/map/bounds 返回地图视野内的站点。\n- **污染物分项**：iaqi 里含 pm25、pm10、o3、no2、so2、co。\n\n## 特点\n- 数据来自各国官方监测站加社区贡献。\n- 免费 Token 有调用上限，超出返回 over quota。\n- aqi 可能返回字符串 \"-\" 表示无数据。\n\n典型使用场景：空气质量地图、环保应用、城市 AQI 看板。",
   "capabilities": [
    "实时 AQI",
    "污染物分项",
@@ -1640,7 +1640,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenAQ 汇总各国官方监测站的原始测量值，v3 接口在 https://api.openaq.org/v3，常用 /locations（按坐标和半径找站）、/sensors（取传感器）、/measurements（拉时间序列）。\n\n查询参数有 coordinates、radius、parameter（pm25、no2 等）、date_from/date_to、limit 和 page。返回是分页的 JSON，每条测量带 value、unit 和时间戳。\n\nv2 已停用，老代码要迁到 v3，字段结构变了：站点和传感器拆开，先查 location 再查它下面的 sensor。\n\n免费 Key 有速率限制，数据是 CC BY 4.0。它的价值是原始值和历史，不是实时性——更新频率取决于各国站点的上报节奏。",
+  "intro": "OpenAQ 是开放空气质量数据平台，通过 api.openaq.org 对外开放。开发者申请免费 Key 后即可调用。\n\n## 主要能力\n- **站点查询**：/v3/locations 按坐标和半径找监测站。\n- **传感器**：/v3/sensors 返回站点下的测量项。\n- **测量数据**：/v3/measurements 拉时间序列。\n- **多参数过滤**：支持 pm25、no2 等参数筛选。\n- **分页**：limit 和 page 控制返回量。\n\n## 特点\n- v2 已停用，v3 把站点和传感器拆开。\n- 数据是原始测量值，更新频率取决于各国站点。\n- 数据许可为 CC BY 4.0。\n\n典型使用场景：空气质量研究、长期趋势分析、环境数据可视化。",
   "capabilities": [
    "监测站原始数据",
    "历史序列",
@@ -1690,7 +1690,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Google Maps Platform 不是一个 API，是一组按 SKU 计费的服务：Geocoding 地址互转、Directions 路线、Places 地点搜索、Maps JavaScript 前端地图、Static Maps 静态图、3D Tiles 等。\n\n以地理编码为例：GET https://maps.googleapis.com/maps/api/geocode/json?address=Shanghai&key=KEY，返回 results 数组，每项含 formatted_address、geometry.location 和 address_components。\n\n每个 SKU 每月有独立免费额度（比如 Geocoding 每月 1 万次），超出按量；必须绑卡，且要自己设预算告警，否则被刷会真扣钱。\n\n坑是国内地图数据偏移，坐标要转 GCJ-02；另外前端 Key 必须加 referer 限制，后端 Key 加 IP 限制，这是被刷爆的常见原因。",
+  "intro": "Google Maps Platform 是 Google 的地图与位置服务，通过 console.cloud.google.com 对外开放。开发者启用 API 并申请 Key 后即可调用。\n\n## 主要能力\n- **地理编码**：/maps/api/geocode 地址与坐标互转。\n- **路线规划**：Directions API 支持驾车、步行、骑行和公交。\n- **地点搜索**：Places API 查 POI、评分和营业状态。\n- **地图展示**：Maps JavaScript、Static Maps 和 3D Tiles。\n- **路况与距离**：提供实时路况和 Distance Matrix。\n\n## 特点\n- 按 SKU 分别计费，每项有月度免费额度。\n- 必须绑卡并设置预算告警，否则被刷会真扣钱。\n- 国内坐标有偏移，GPS 坐标要转 GCJ-02。\n\n典型使用场景：地图展示、地址解析、配送路线、门店查询、物流追踪。",
   "capabilities": [
    "地理编码",
    "路线与路况",
@@ -1741,7 +1741,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Mapbox 的产品分两块：前端地图库（Mapbox GL JS、Mobile SDK）和后端 API（Geocoding、Directions、Matrix、Static Images）。\n\n地理编码：GET https://api.mapbox.com/geocoding/v5/mapbox.places/Shanghai.json?access_token=KEY，返回 features 数组，带 center 坐标和 place_type。路线：/directions/v5/mapbox/driving/{lon,lat;lon,lat}，返回 GeoJSON 几何和分段时间。\n\n前端样式用 style URL 引用，可以自己在 Studio 里改配色、图层，这是它比 Google 灵活的地方。\n\n免费 5 万次/月（按 map load 计），超出按千次计费。坑是坐标顺序是经度在前，和很多库相反；中文地址匹配不如高德、百度。",
+  "intro": "Mapbox 是地图与位置服务平台，通过 mapbox.com 对外开放。开发者申请 Access Token 后即可调用。\n\n## 主要能力\n- **地图瓦片与样式**：支持在 Studio 自定义配色和图层。\n- **地理编码**：/geocoding/v5 地址与坐标互转。\n- **路线规划**：/directions/v5 支持多种出行方式。\n- **距离矩阵**：/matrix/v1 计算多点距离和时长。\n- **静态地图**：/styles/v1 生成图片。\n\n## 特点\n- 免费 5 万次/月，按 map load 计。\n- 坐标顺序是经度在前，和很多库相反。\n- 中文地址匹配不如国内地图服务。\n\n典型使用场景：定制化地图前端、配送路线、门店地图、行程规划。",
   "capabilities": [
    "自定义地图样式",
    "地理编码",
@@ -1793,7 +1793,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Nominatim 是 OpenStreetMap 的官方地理编码服务，两个端点：/search?q=上海外滩&format=jsonv2 做正向，/reverse?lat=31.23&lon=121.47&format=jsonv2 做反向。\n\n参数有 limit、addressdetails=1、accept-language=zh，返回带 display_name、lat、lon、boundingbox 和 address 分解。\n\n公共实例 https://nominatim.openstreetmap.org 限制 1 次/秒，必须带能识别应用的 User-Agent，禁止批量抓取；违反会被封 IP。量大就自己搭，数据和代码都开源。\n\n它的地址覆盖在中国偏弱，门牌级常有缺失；适合低频调用、内部工具，不适合做面向用户的地理编码。",
+  "intro": "Nominatim 是 OpenStreetMap 官方的地理编码服务，通过 nominatim.openstreetmap.org 对外开放。无需 Key，直接发 HTTP 请求。\n\n## 主要能力\n- **正向地理编码**：/search?q= 地址转坐标。\n- **反向地理编码**：/reverse?lat=&lon= 坐标转地址。\n- **结构化地址**：addressdetails=1 返回分层地址。\n- **多语言**：accept-language 控制返回语言。\n- **边界框**：返回 boundingbox 用于地图定位。\n\n## 特点\n- 公共实例限 1 次/秒，必须带自定义 User-Agent。\n- 禁止批量抓取，量大要自建。\n- 中国门牌级数据较弱。\n\n典型使用场景：低频地理编码、内部工具、原型验证、OSM 数据应用。",
   "capabilities": [
    "地址转坐标",
    "坐标转地址",
@@ -1843,7 +1843,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "OpenCage 的地理编码端点是 https://api.opencagedata.com/geocode/v1/json?q=上海外滩&key=KEY&language=zh&limit=5，正向反向共用一个入口：反向就把 q 换成 lat,lon。\n\n返回的 results 数组里，每项给 geometry.lat/lng、formatted、components（拆到国家、省、市、街道、门牌）和 confidence（0–10 的置信度）。confidence 低于 7 基本要人工核。\n\n它背后聚合了 OpenStreetMap、OpenCage 自有数据和多个开放源，覆盖比单用 Nominatim 好。免费 2500 次/天、1 次/秒，要求页面上署名 OpenCage。\n\n坑是 q 参数要 URL 编码，中文直接用 curl 会出错；免费档不支持批量请求，批量要付费。",
+  "intro": "OpenCage 是地理编码服务，通过 opencagedata.com 对外开放。开发者申请 Key 后即可调用。\n\n## 主要能力\n- **正向地理编码**：/geocode/v1/json?q= 地址转坐标。\n- **反向地理编码**：q 传经纬度即可反查地址。\n- **置信度**：返回 0–10 的 confidence，便于判断结果质量。\n- **地址分解**：components 拆分到国家、省、市、街道、门牌。\n- **多语言**：支持指定返回语言。\n\n## 特点\n- 聚合 OpenStreetMap 和多个开放数据源。\n- 免费 2500 次/天、1 次/秒，要求署名。\n- 免费档不支持批量请求。\n\n典型使用场景：地址解析、表单补全、物流地址校验、地图标注。",
   "capabilities": [
    "正向地理编码",
    "反向地理编码",
