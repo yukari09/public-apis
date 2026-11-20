@@ -1121,6 +1121,16 @@
   display: none;
 }
 
+/* AdSense 没填到广告时不保留预留高度，避免正文中间出现一大块空白 */
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
+
+.ad-item:has(ins[data-ad-status="unfilled"]),
+.detail-ad:has(ins[data-ad-status="unfilled"]) {
+  display: none;
+}
+
 /* API 图标 */
 .api-icon {
   flex: none;
