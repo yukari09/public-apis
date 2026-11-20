@@ -417,7 +417,7 @@
   ],
   "faq": [
    {
-    "q": "OpenRouter API 怎么用？",
+    "q": "OpenRouter 怎么接入现有 OpenAI 代码？",
     "a": "兼容 OpenAI，base_url 用 https://openrouter.ai/api/v1，model 写 provider/model，比如 anthropic/claude-sonnet-4。"
    },
    {
@@ -4298,7 +4298,7 @@
     "a": "非商用免费，商用要订阅。"
    },
    {
-    "q": "match 接口怎么用？",
+    "q": "match 接口怎么传参？",
     "a": "POST /match/default，传 schema 和 properties（name、birthDate），返回候选和分数。"
    }
   ],
@@ -10854,7 +10854,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "HDX 是什么接口？",
+    "q": "HDX 的数据怎么调？",
     "a": "CKAN：/api/3/action/package_search。"
    },
    {
@@ -11056,7 +11056,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "data.gov.uk 是什么接口？",
+    "q": "data.gov.uk 有 API 吗？",
     "a": "CKAN：/api/3/action/package_search。"
    },
    {
@@ -11211,7 +11211,7 @@
   ],
   "faq": [
    {
-    "q": "GovData 是什么接口？",
+    "q": "GovData 有 API 吗？",
     "a": "CKAN：govdata.de/ckan/api/3/action/package_search，另有 SPARQL。"
    },
    {
@@ -11357,7 +11357,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "data.go.kr 的 Key 怎么用？",
+    "q": "data.go.kr 的 serviceKey 怎么传？",
     "a": "serviceKey 要用 Encoding 版本，用错会 401。"
    },
    {
@@ -11510,7 +11510,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "data.gov.hk 是什么接口？",
+    "q": "data.gov.hk 的接口怎么调？",
     "a": "CKAN：/en-data/api/3/action/package_search。"
    },
    {
@@ -11561,7 +11561,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "加拿大开放数据是什么接口？",
+    "q": "加拿大开放数据有 API 吗？",
     "a": "CKAN：open.canada.ca/data/api/3/action/package_search。"
    },
    {
@@ -11612,7 +11612,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "data.gov.au 是什么接口？",
+    "q": "data.gov.au 的接口怎么调？",
     "a": "CKAN：data.gov.au/data/api/3/action/package_search。"
    },
    {
@@ -11907,7 +11907,7 @@
   "intent_tags": [],
   "faq": [
    {
-    "q": "浙江平台要什么？",
+    "q": "浙江省数据开放平台怎么申请 API？",
     "a": "注册并申请数据集，部分要单位资质或场景说明。"
    },
    {
@@ -11960,7 +11960,7 @@
   ],
   "faq": [
    {
-    "q": "CDC 是什么接口？",
+    "q": "CDC Open Data 的接口怎么调？",
     "a": "Socrata：data.cdc.gov/resource/{id}.json。"
    },
    {
