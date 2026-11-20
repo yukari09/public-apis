@@ -51,8 +51,9 @@
    }
   ],
   "plain_intro": "OpenAI 提供对话、嵌入、语音转写和图像生成接口，按 token 计费。",
-  "seo_title": "OpenAI API：价格、模型，附调用示例",
-  "seo_description": "OpenAI 提供对话、嵌入、语音转写和图像生成接口，按 token 计费。按量付费，新户偶有赠额；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenAI API 按 token 怎么收费？模型、端点与限流",
+  "seo_description": "按量计费、无长期免费层。整理 GPT 系列的端点、token 计价、429 限流与模型弃用节奏。",
+  "icon": "/icons/openai-api.png"
  },
  {
   "slug": "anthropic-claude-api",
@@ -106,8 +107,9 @@
    }
   ],
   "plain_intro": "Anthropic 的对话接口，支持长上下文、工具调用和流式输出。",
-  "seo_title": "Anthropic Claude API：Key 申请、价格，附调用示例",
-  "seo_description": "Anthropic 的对话接口，支持长上下文、工具调用和流式输出。按量付费，无长期免费层；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Claude API 有免费层吗？Messages 端点与迁移要点",
+  "seo_description": "注册赠额有限、无长期免费层。讲清 /v1/messages 的请求格式、system 字段、工具调用与长上下文计费。",
+  "icon": "/icons/anthropic-claude-api.png"
  },
  {
   "slug": "google-gemini-api",
@@ -159,8 +161,9 @@
    }
   ],
   "plain_intro": "发一段视频或几张图给它，它能描述内容、回答问题、提取信息。",
-  "seo_title": "Google Gemini API：Key 申请、免费额度，附调用示例",
-  "seo_description": "发一段视频或几张图给它，它能描述内容、回答问题、提取信息。免费档含每日配额；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Gemini API 免费档每天多少？配额与多模态输入",
+  "seo_description": "免费档按模型给每日请求配额。含 generateContent 调用、图片与视频输入、地区限制与 preview 下线规则。",
+  "icon": "/icons/google-gemini-api.png"
  },
  {
   "slug": "groq-cloud",
@@ -213,8 +216,9 @@
    }
   ],
   "plain_intro": "Groq 的推理接口，用 LPU 跑开源模型，返回低延迟的对话结果。",
-  "seo_title": "Groq Cloud API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Groq 的推理接口，用 LPU 跑开源模型，返回低延迟的对话结果。免费档，限速；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Groq API Key 怎么拿？免费档 RPM 与 OpenAI 兼容接法",
+  "seo_description": "免费档按模型限 RPM、RPD、TPM。含取 Key 步骤、base_url 替换、流式输出与 429 处理。",
+  "icon": "/icons/groq-cloud.png"
  },
  {
   "slug": "mistral-ai",
@@ -270,8 +274,9 @@
    }
   ],
   "plain_intro": "Mistral 提供对话、嵌入、代码补全、OCR 和语音接口，部分模型权重开放可自托管。",
-  "seo_title": "Mistral AI API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Mistral 提供对话、嵌入、代码补全、OCR 和语音接口，部分模型权重开放可自托管。有免费实验档；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Mistral API 免费档能做什么？Key、模型线与价格",
+  "seo_description": "有免费实验档。含 La Plateforme 取 Key、Large 4 与 Medium 3.5 的区别、FIM 端点与 token 计价。",
+  "icon": "/icons/mistral-ai.png"
  },
  {
   "slug": "cohere",
@@ -325,8 +330,9 @@
    }
   ],
   "plain_intro": "Cohere 提供对话、文本嵌入和重排接口，偏检索与排序场景。",
-  "seo_title": "Cohere API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Cohere 提供对话、文本嵌入和重排接口，偏检索与排序场景。免费试用额度；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Cohere 试用额度怎么用？Embed、Rerank 与 Key 申请",
+  "seo_description": "注册赠试用额度。重点在嵌入与重排两条检索链路，附 Key 申请和按 token 计费说明。",
+  "icon": "/icons/cohere.png"
  },
  {
   "slug": "hugging-face-inference",
@@ -372,8 +378,9 @@
    }
   ],
   "plain_intro": "Hugging Face 的模型推理接口，覆盖文本、图像、语音和嵌入。",
-  "seo_title": "Hugging Face Inference API：Key 申请、免费额度",
-  "seo_description": "Hugging Face 的模型推理接口，覆盖文本、图像、语音和嵌入。免费额度（限速）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Hugging Face Inference API 免费额度多少？Key 与路由",
+  "seo_description": "免费额度限速。说明 Token 申请、Inference Providers 路由、模型仓库名写法和冷门模型报错。",
+  "icon": "/icons/hugging-face-inference.png"
  },
  {
   "slug": "openrouter",
@@ -426,8 +433,9 @@
    }
   ],
   "plain_intro": "一个账号发给它，它转给 OpenAI、Claude 或开源模型，按用量计费。",
-  "seo_title": "OpenRouter API：Key 申请、免费额度，附调用示例",
-  "seo_description": "一个账号发给它，它转给 OpenAI、Claude 或开源模型，按用量计费。有免费模型池；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenRouter base_url 是什么？一个 Key 调多家的接法",
+  "seo_description": "有免费模型池。给出 base_url、provider/model 写法、自动回退与手续费计算方式。",
+  "icon": "/icons/openrouter.png"
  },
  {
   "slug": "together-ai",
@@ -482,8 +490,9 @@
    }
   ],
   "plain_intro": "Together 托管开源模型的对话、图像、嵌入和微调接口。",
-  "seo_title": "Together AI API：Key 申请、价格，附调用示例",
-  "seo_description": "Together 托管开源模型的对话、图像、嵌入和微调接口。按量付费，偶有赠额；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Together API 怎么调开源模型？Key、价格与示例",
+  "seo_description": "按 token 计费，新户有赠额。覆盖 Llama、Qwen、DeepSeek 的调用、微调与专用端点计费。",
+  "icon": "/icons/together-ai.png"
  },
  {
   "slug": "deepseek-api",
@@ -537,8 +546,9 @@
    }
   ],
   "plain_intro": "发中文或代码给它，价格比 OpenAI 低，接口格式也一样。",
-  "seo_title": "DeepSeek API：价格、模型，附调用示例",
-  "seo_description": "发中文或代码给它，价格比 OpenAI 低，接口格式也一样。按量付费，单价极低；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "DeepSeek API 为什么便宜？状态页、Key 与缓存计费",
+  "seo_description": "单价低于同级闭源模型。含 platform 取 Key、reasoner 的 reasoning_content、上下文缓存折扣与 status 页。",
+  "icon": "/icons/deepseek-api.png"
  },
  {
   "slug": "xai-grok-api",
@@ -586,8 +596,9 @@
    }
   ],
   "plain_intro": "发消息给 Grok，它能回答、生图，也能查 X 上的最新讨论。",
-  "seo_title": "xAI Grok API：Key 申请、价格，附调用示例",
-  "seo_description": "发消息给 Grok，它能回答、生图，也能查 X 上的最新讨论。按量付费，偶有赠额；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Grok API Key 怎么申请？价格、模型与实时搜索",
+  "seo_description": "按 token 计费、赠额有限。说明 console.x.ai 取 Key、grok 模型名、图像生成与实时信息接入。",
+  "icon": "/icons/xai-grok-api.png"
  },
  {
   "slug": "replicate",
@@ -642,8 +653,9 @@
    }
   ],
   "plain_intro": "Replicate 托管开源图像、视频和语音模型，通过 HTTP 请求调用。",
-  "seo_title": "Replicate API：Key 申请、模型，附调用示例",
-  "seo_description": "Replicate 托管开源图像、视频和语音模型，通过 HTTP 请求调用。按秒计费，有免费试跑；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Replicate 怎么按秒计费？Token、异步预测与冷启动",
+  "seo_description": "按 GPU 运行秒数计费。含 Token 配置、prediction 轮询、webhook 回调和冷启动等待。",
+  "icon": "/icons/replicate.png"
  },
  {
   "slug": "ollama",
@@ -697,8 +709,9 @@
    }
   ],
   "plain_intro": "在自己电脑上装好，断网也能跟大模型对话，数据不出本机。",
-  "seo_title": "Ollama API：免 Key、文档，附调用示例",
-  "seo_description": "在自己电脑上装好，断网也能跟大模型对话，数据不出本机。完全免费（本地）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Ollama 本地 API 怎么调？端口、模型管理与免 Key",
+  "seo_description": "本地运行、完全免费。给出 11434 端口、/api/chat 与 OpenAI 兼容端点、模型拉取与显存不足时的降级。",
+  "icon": "/icons/ollama.png"
  },
  {
   "slug": "stability-ai",
@@ -753,8 +766,9 @@
    }
   ],
   "plain_intro": "输入一句描述，它生成图片；也能上传图片改风格或去掉一部分。",
-  "seo_title": "Stability AI API：Key 申请、免费额度，附调用示例",
-  "seo_description": "输入一句描述，它生成图片；也能上传图片改风格或去掉一部分。注册赠 25 credits；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Stability API 送多少 credits？生成、放大与商用许可",
+  "seo_description": "注册赠 25 credits。含 core、sd3、ultra 三档、图生图、放大接口与商用许可边界。",
+  "icon": "/icons/stability-ai.png"
  },
  {
   "slug": "elevenlabs",
@@ -809,8 +823,9 @@
    }
   ],
   "plain_intro": "ElevenLabs 提供语音合成、声音克隆和转写接口。",
-  "seo_title": "ElevenLabs API：Key 申请、免费额度，附调用示例",
-  "seo_description": "ElevenLabs 提供语音合成、声音克隆和转写接口。每月免费字符额度；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "ElevenLabs 免费字符额度多少？TTS、克隆与计费",
+  "seo_description": "每月免费字符额度。讲清 voice_id 用法、声音克隆的所有权确认、STT 与按字符计费。",
+  "icon": "/icons/elevenlabs.png"
  },
  {
   "slug": "assemblyai",
@@ -858,8 +873,9 @@
    }
   ],
   "plain_intro": "上传一段录音，它转成文字，并标出谁在说话、重点是什么。",
-  "seo_title": "AssemblyAI API：Key 申请、免费额度，附调用示例",
-  "seo_description": "上传一段录音，它转成文字，并标出谁在说话、重点是什么。免费额度（按小时）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "AssemblyAI 转写怎么收费？免费时长与说话人分离",
+  "seo_description": "按音频时长计费、有免费额度。含提交 URL、轮询结果、说话人分离与实时 WebSocket。",
+  "icon": "/icons/assemblyai.png"
  },
  {
   "slug": "deepgram",
@@ -914,8 +930,9 @@
    }
   ],
   "plain_intro": "Deepgram 提供语音识别、实时转写和语音合成接口。",
-  "seo_title": "Deepgram API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Deepgram 提供语音识别、实时转写和语音合成接口。注册赠 $200 额度；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Deepgram 的 $200 额度怎么用？实时转写与 TTS",
+  "seo_description": "注册赠 $200。含 /v1/listen 调用、WebSocket 实时流、nova 模型分档与按秒计费。",
+  "icon": "/icons/deepgram.png"
  },
  {
   "slug": "cloudflare-workers-ai",
@@ -968,8 +985,9 @@
    }
   ],
   "plain_intro": "在 Cloudflare 上发一个请求，它用边缘 GPU 跑模型并把结果返回。",
-  "seo_title": "Cloudflare Workers AI API：Key 申请、免费额度，",
-  "seo_description": "在 Cloudflare 上发一个请求，它用边缘 GPU 跑模型并把结果返回。每日免费 Neurons；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Workers AI 每天多少 Neurons？模型、绑定与 REST 调用",
+  "seo_description": "每日免费 Neurons。含 env.AI.run 绑定、REST 路径、流式输出与中小模型的能力边界。",
+  "icon": "/icons/cloudflare-workers-ai.png"
  },
  {
   "slug": "fireworks-ai",
@@ -1016,8 +1034,9 @@
    }
   ],
   "plain_intro": "Fireworks 提供开源模型的推理、微调和专用部署接口。",
-  "seo_title": "Fireworks AI API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Fireworks 提供开源模型的推理、微调和专用部署接口。新户赠额，之后按量；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Fireworks 怎么部署开源模型？赠额、微调与专用端点",
+  "seo_description": "新户赠额、之后按量。覆盖 OpenAI 兼容推理、微调 job、专用 GPU 部署与计费差异。",
+  "icon": "/icons/fireworks-ai.png"
  },
  {
   "slug": "cerebras-inference",
@@ -1072,8 +1091,9 @@
    }
   ],
   "plain_intro": "发请求给开源模型，它用特制芯片算，输出速度比 GPU 快很多。",
-  "seo_title": "Cerebras Inference API：Key 申请、免费额度，附调用",
-  "seo_description": "发请求给开源模型，它用特制芯片算，输出速度比 GPU 快很多。免费档（限速）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Cerebras 推理为什么快？免费档限速与兼容端点",
+  "seo_description": "免费档按模型限速。说明晶圆级芯片的速度优势、/v1/chat/completions 兼容写法与模型覆盖。",
+  "icon": "/icons/cerebras-inference.png"
  },
  {
   "slug": "perplexity-api",
@@ -1127,8 +1147,9 @@
    }
   ],
   "plain_intro": "Perplexity 提供联网检索与带引用来源的问答接口。",
-  "seo_title": "Perplexity API：免费额度、价格，附调用示例",
-  "seo_description": "Perplexity 提供联网检索与带引用来源的问答接口。注册赠 $5/月（Pro）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Perplexity API 的 $5 赠额怎么用？联网搜索与引用",
+  "seo_description": "Pro 用户每月赠 $5。含 sonar 模型、citations 字段、/search 只检索不生成与按请求计费。",
+  "icon": "/icons/perplexity-api.png"
  },
  {
   "slug": "wolframalpha-api",
@@ -1179,8 +1200,9 @@
    }
   ],
   "plain_intro": "WolframAlpha 提供数学计算、单位换算和结构化知识查询。",
-  "seo_title": "WolframAlpha API：Key 申请、免费额度，附调用示例",
-  "seo_description": "WolframAlpha 提供数学计算、单位换算和结构化知识查询。免费 2000 次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "WolframAlpha API 免费 2000 次够吗？Pod 与短答案",
+  "seo_description": "免费 AppID 每月 2000 次。讲清 /v2/query 的 pod 结构、/v1/result 短答案与输入措辞的敏感性。",
+  "icon": "/icons/wolframalpha-api.png"
  },
  {
   "slug": "openweathermap",
@@ -1234,8 +1256,9 @@
    }
   ],
   "plain_intro": "OpenWeather 提供当前天气、预报和历史天气接口。",
-  "seo_title": "OpenWeatherMap API：Key 申请、免费额度，附预报参数",
-  "seo_description": "OpenWeather 提供当前天气、预报和历史天气接口。免费 1000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenWeatherMap 免费 1000 次/天怎么算？Key 与单位",
+  "seo_description": "免费档 60 次/分、100 万次/月。含 One Call 3.0 订阅、units 参数与默认开尔文的坑。",
+  "icon": "/icons/openweathermap.png"
  },
  {
   "slug": "open-meteo",
@@ -1281,8 +1304,9 @@
    }
   ],
   "plain_intro": "Open-Meteo 提供逐小时预报、历史再分析和空气质量数据。",
-  "seo_title": "Open-Meteo API：免 Key、文档，附预报参数",
-  "seo_description": "Open-Meteo 提供逐小时预报、历史再分析和空气质量数据。完全免费，非商用无限；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Open-Meteo 真的不用 Key？额度与 1–11km 分辨率",
+  "seo_description": "免注册、非商用免费。含 forecast/archive/air-quality 端点、模式选择、日限与 CC BY 署名要求。",
+  "icon": "/icons/open-meteo.png"
  },
  {
   "slug": "weatherapi-com",
@@ -1327,8 +1351,9 @@
    }
   ],
   "plain_intro": "一个 Key 查天气、空气质量、天文和海洋数据，月调用量给得大。",
-  "seo_title": "WeatherAPI.com API：Key 申请、免费额度，附预报参数",
-  "seo_description": "一个 Key 查天气、空气质量、天文和海洋数据，月调用量给得大。免费 100 万次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "WeatherAPI 免费 100 万次/月？Key 与预报天数",
+  "seo_description": "免费档每月 100 万次。含 current/forecast/history 三类端点、14 天预报与空气质量和天文数据。",
+  "icon": "/icons/weatherapi-com.png"
  },
  {
   "slug": "wttr-in",
@@ -1377,8 +1402,9 @@
    }
   ],
   "plain_intro": "wttr.in 把天气渲染成终端文本图或 PNG，也提供 JSON。",
-  "seo_title": "wttr.in API：免 Key、参数，附预报参数",
-  "seo_description": "wttr.in 把天气渲染成终端文本图或 PNG，也提供 JSON。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "wttr.in 怎么用 curl 查天气？格式参数与 JSON",
+  "seo_description": "免 Key、无文档。给出 ?format=3、?format=j1、.png 输出与终端颜色参数。",
+  "icon": "/icons/wttr-in.png"
  },
  {
   "slug": "pirate-weather",
@@ -1430,8 +1456,9 @@
    }
   ],
   "plain_intro": "Pirate Weather 提供兼容 Dark Sky 格式的天气与分钟级降水。",
-  "seo_title": "Pirate Weather API：Key 申请、免费额度，附预报参数",
-  "seo_description": "Pirate Weather 提供兼容 Dark Sky 格式的天气与分钟级降水。免费档 1 万次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Pirate Weather 和 Dark Sky 一样吗？免费额度与迁移",
+  "seo_description": "兼容 Dark Sky 字段，免费档 1 万次/月。说明迁移只改域名和 Key，以及分钟级降水的用法。",
+  "icon": "/icons/pirate-weather.png"
  },
  {
   "slug": "tomorrow-io",
@@ -1477,8 +1504,9 @@
    }
   ],
   "plain_intro": "Tomorrow.io 提供分钟级降水和短期天气预报接口。",
-  "seo_title": "Tomorrow.io API：Key 申请、免费额度，附预报参数",
-  "seo_description": "Tomorrow.io 提供分钟级降水和短期天气预报接口。免费 500 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Tomorrow.io 免费 500 次/天？分钟级降水与字段",
+  "seo_description": "免费档每天 500 次。含 timesteps 参数、驼峰字段命名、location 用经纬度更稳的原因。",
+  "icon": "/icons/tomorrow-io.png"
  },
  {
   "slug": "visual-crossing",
@@ -1532,8 +1560,9 @@
    }
   ],
   "plain_intro": "Visual Crossing 提供历史天气、长期气候和多地点批量查询。",
-  "seo_title": "Visual Crossing API：Key 申请、免费额度，附预报参数",
-  "seo_description": "Visual Crossing 提供历史天气、长期气候和多地点批量查询。免费 1000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Visual Crossing 历史天气能查多远？1970 至今与计费",
+  "seo_description": "历史数据回溯到 1970 年。含 timeline 路径、elements 字段裁剪、按记录数计费与商用授权。",
+  "icon": "/icons/visual-crossing.png"
  },
  {
   "slug": "weatherstack",
@@ -1589,8 +1618,9 @@
    }
   ],
   "plain_intro": "Weatherstack 提供当前天气、预报和历史天气接口。",
-  "seo_title": "Weatherstack API：Key 申请、免费额度，附预报参数",
-  "seo_description": "Weatherstack 提供当前天气、预报和历史天气接口。免费 1000 次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Weatherstack 免费档为什么只能 HTTP？限额与升级",
+  "seo_description": "免费档每月 1000 次且仅 HTTP。说明混合内容拦截、预报与历史需付费、字段结构。",
+  "icon": "/icons/weatherstack.png"
  },
  {
   "slug": "qweather",
@@ -1633,8 +1663,9 @@
    }
   ],
   "plain_intro": "和风天气提供中国实时天气、预报、预警和空气质量接口。",
-  "seo_title": "和风天气 QWeather API：Key 申请、免费额度，附预报参数",
-  "seo_description": "和风天气提供中国实时天气、预报、预警和空气质量接口。免费开发版；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "和风天气免费版够用吗？Key、QPM 与城市 ID",
+  "seo_description": "免费开发版有每日上限和 QPM。含 now/3d/7d 端点、预警与空气质量、城市 ID 查询和 gzip 解压。",
+  "icon": "/icons/qweather.png"
  },
  {
   "slug": "aqicn-waqi",
@@ -1681,8 +1712,9 @@
    }
   ],
   "plain_intro": "AQICN 提供全球城市与监测站的实时空气质量指数。",
-  "seo_title": "AQICN / WAQI API：免费额度、参数，附预报参数",
-  "seo_description": "AQICN 提供全球城市与监测站的实时空气质量指数。免费（需 token）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "AQICN 的 token 怎么申请？AQI 与污染物字段",
+  "seo_description": "免费 token 有调用上限。含 /feed/{city} 与 geo 查询、iaqi 分项、无数据时返回 \"-\" 的处理。",
+  "icon": "/icons/aqicn-waqi.png"
  },
  {
   "slug": "openaq",
@@ -1732,8 +1764,9 @@
    }
   ],
   "plain_intro": "OpenAQ 提供全球空气质量监测站的原始测量数据。",
-  "seo_title": "OpenAQ API：Key 申请、免费额度，附预报参数",
-  "seo_description": "OpenAQ 提供全球空气质量监测站的原始测量数据。免费开放数据；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenAQ v3 怎么查监测站？免费 Key 与传感器拆分",
+  "seo_description": "v3 需免费 Key，v2 已停用。讲清 locations、sensors、measurements 三层结构与分页。",
+  "icon": "/icons/openaq.png"
  },
  {
   "slug": "google-maps-platform",
@@ -1785,8 +1818,9 @@
    }
   ],
   "plain_intro": "Google Maps Platform 提供地理编码、路线、地点和地图展示接口。",
-  "seo_title": "Google Maps Platform API：Key 申请、免费额度，附",
-  "seo_description": "Google Maps Platform 提供地理编码、路线、地点和地图展示接口。每月按 SKU 的免费调用额度；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Google Maps 每月免费额度多少？SKU 计费与绑卡",
+  "seo_description": "按 SKU 分别计费、每项有月度免费额度。含地理编码、路线、Places、静态图与 GCJ-02 偏移。",
+  "icon": "/icons/google-maps-platform.png"
  },
  {
   "slug": "mapbox",
@@ -1840,8 +1874,9 @@
    }
   ],
   "plain_intro": "Mapbox 提供地图瓦片、地理编码、路线规划和静态地图接口。",
-  "seo_title": "Mapbox API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "Mapbox 提供地图瓦片、地理编码、路线规划和静态地图接口。免费 5 万次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Mapbox 免费 5 万次怎么算？Token 与经纬度顺序",
+  "seo_description": "免费 5 万次 map load/月。含 access token、样式定制、地理编码与经纬度顺序反直觉的坑。",
+  "icon": "/icons/mapbox.png"
  },
  {
   "slug": "openstreetmap-nominatim",
@@ -1898,8 +1933,9 @@
    }
   ],
   "plain_intro": "Nominatim 提供基于 OpenStreetMap 的地址与坐标互转。",
-  "seo_title": "OpenStreetMap Nominatim API：免 Key、参数",
-  "seo_description": "Nominatim 提供基于 OpenStreetMap 的地址与坐标互转。免费（限 1 req/s）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Nominatim 能商用吗？1 req/s 限制与自建方案",
+  "seo_description": "公共实例限 1 次/秒、必须带 User-Agent。说明禁止批量抓取、自建方案与中国门牌数据弱点。",
+  "icon": "/icons/openstreetmap-nominatim.png"
  },
  {
   "slug": "opencage",
@@ -1955,8 +1991,9 @@
    }
   ],
   "plain_intro": "OpenCage 提供正向与反向地理编码，返回结构化地址和置信度。",
-  "seo_title": "OpenCage API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "OpenCage 提供正向与反向地理编码，返回结构化地址和置信度。免费 2500 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenCage 免费 2500 次/天？置信度与地址拆分",
+  "seo_description": "免费 2500 次/天、1 次/秒。含正反向编码、confidence 判读、components 拆分与署名要求。",
+  "icon": "/icons/opencage.png"
  },
  {
   "slug": "here-maps",
@@ -2011,8 +2048,9 @@
    }
   ],
   "plain_intro": "HERE 提供地理编码、路线规划、等时圈和实时路况接口。",
-  "seo_title": "HERE Maps API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "HERE 提供地理编码、路线规划、等时圈和实时路况接口。免费 1000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "HERE 地图 API 免费 1000 次/天？Key 与货车路线",
+  "seo_description": "免费档每天 1000 次、需绑卡。含 geocode、routing、等时圈、实时路况与货车限高限重。",
+  "icon": "/icons/here-maps.png"
  },
  {
   "slug": "locationiq",
@@ -2059,8 +2097,9 @@
    }
   ],
   "plain_intro": "LocationIQ 提供地理编码、地址补全和静态地图接口。",
-  "seo_title": "LocationIQ API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "LocationIQ 提供地理编码、地址补全和静态地图接口。免费 5000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "LocationIQ 免费 5000 次/天？Key 与自动补全",
+  "seo_description": "免费 5000 次/天、2 次/秒。含 search/reverse/autocomplete、静态图与 Nominatim 兼容写法。",
+  "icon": "/icons/locationiq.png"
  },
  {
   "slug": "geoapify",
@@ -2111,8 +2150,9 @@
    }
   ],
   "plain_intro": "Geoapify 提供地理编码、POI 检索、路线和等时圈接口。",
-  "seo_title": "Geoapify API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "Geoapify 提供地理编码、POI 检索、路线和等时圈接口。免费 3000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Geoapify 的 credits 怎么算？POI 分类与等时圈",
+  "seo_description": "免费 3000 credits/天。含 geocode、places 分类检索、routing 与 isoline 的调用方式。",
+  "icon": "/icons/geoapify.png"
  },
  {
   "slug": "openrouteservice",
@@ -2158,8 +2198,9 @@
    }
   ],
   "plain_intro": "openrouteservice 提供路线规划、等时圈、距离矩阵和路径优化。",
-  "seo_title": "OpenRouteService API：Key 申请、免费额度，附坐标与返",
-  "seo_description": "openrouteservice 提供路线规划、等时圈、距离矩阵和路径优化。免费 2000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "openrouteservice 免费 2000 次/天？路线与自建",
+  "seo_description": "免费 2000 次/天、40 次/分。含 directions、isochrones、matrix、优化接口与 OSM 自建。",
+  "icon": "/icons/openrouteservice.png"
  },
  {
   "slug": "graphhopper",
@@ -2207,8 +2248,9 @@
    }
   ],
   "plain_intro": "GraphHopper 提供路线规划、路径优化、等时圈和轨迹匹配。",
-  "seo_title": "GraphHopper API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "GraphHopper 提供路线规划、路径优化、等时圈和轨迹匹配。免费 500 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "GraphHopper 免费 500 次/天？路径优化与自建",
+  "seo_description": "免费档每天 500 次。含 route、VRP、isochrone、地图匹配与开源引擎自托管。",
+  "icon": "/icons/graphhopper.png"
  },
  {
   "slug": "ipinfo-io",
@@ -2258,8 +2300,9 @@
    }
   ],
   "plain_intro": "IPinfo 提供 IP 归属、ASN、公司信息和隐私检测接口。",
-  "seo_title": "ipinfo.io API：Key 申请、免费额度，附坐标与返回字段",
-  "seo_description": "IPinfo 提供 IP 归属、ASN、公司信息和隐私检测接口。免费 5 万次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "ipinfo 免费 5 万次/月？ASN、隐私检测与批量",
+  "seo_description": "免费每月 5 万次。含 /json、/asn、company、privacy 四类字段与 batch 批量查询。",
+  "icon": "/icons/ipinfo-io.png"
  },
  {
   "slug": "ipapi-co",
@@ -2304,8 +2347,9 @@
    }
   ],
   "plain_intro": "ipapi.co 提供 IP 归属地、时区、货币和网络信息查询。",
-  "seo_title": "ipapi.co API：免 Key、参数，附坐标与返回字段",
-  "seo_description": "ipapi.co 提供 IP 归属地、时区、货币和网络信息查询。免费 1000 次/天；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "ipapi.co 不传 IP 会返回什么？免费额度与字段",
+  "seo_description": "免费 1000 次/天、支持 HTTPS。说明空参返回请求方 IP、货币与时区字段、429 限速。",
+  "icon": "/icons/ipapi-co.png"
  },
  {
   "slug": "ip-api-com",
@@ -2359,8 +2403,9 @@
    }
   ],
   "plain_intro": "ip-api 提供 IP 归属地、运营商和代理标记查询。",
-  "seo_title": "ip-api.com API：免 Key、参数，附坐标与返回字段",
-  "seo_description": "ip-api 提供 IP 归属地、运营商和代理标记查询。免费（非商用 45 次/分）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "ip-api 为什么只能 HTTP？45 次/分与 HTTPS 付费",
+  "seo_description": "免费 45 次/分且仅 HTTP。含 /json/{ip}、fields 裁剪、lang=zh-CN 与代理标记字段。",
+  "icon": "/icons/ip-api-com.png"
  },
  {
   "slug": "ipify",
@@ -2403,8 +2448,9 @@
    }
   ],
   "plain_intro": "ipify 只提供公网 IP 查询，返回请求方的出口地址。",
-  "seo_title": "ipify API：免 Key、参数，附坐标与返回字段",
-  "seo_description": "ipify 只提供公网 IP 查询，返回请求方的出口地址。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "ipify 只能查自己的 IP 吗？返回格式与 IPv6",
+  "seo_description": "只返回请求方的出口 IP，不给归属地。含纯文本与 JSON 两种返回、api64 走 IPv6 的用法。",
+  "icon": "/icons/ipify.png"
  },
  {
   "slug": "rest-countries",
@@ -2447,8 +2493,9 @@
    }
   ],
   "plain_intro": "REST Countries 提供国家基本信息、货币、语言和国旗数据。",
-  "seo_title": "REST Countries API：免 Key、参数，附坐标与返回字段",
-  "seo_description": "REST Countries 提供国家基本信息、货币、语言和国旗数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "REST Countries 怎么查国家？v3.1 字段与中文名",
+  "seo_description": "免 Key、无配额。含 /all、/name、/region 三种查法、fields 裁剪与 translations 里的中文名。",
+  "icon": "/icons/rest-countries.png"
  },
  {
   "slug": "postcodes-io",
@@ -2491,8 +2538,9 @@
    }
   ],
   "plain_intro": "postcodes.io 提供英国邮编与坐标、行政区的互查。",
-  "seo_title": "Postcodes.io API：免 Key、参数，附坐标与返回字段",
-  "seo_description": "postcodes.io 提供英国邮编与坐标、行政区的互查。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "英国邮编怎么转坐标？postcodes.io 批量与反查",
+  "seo_description": "只覆盖英国、免 Key。含单条查询、100 条批量、经纬度反查最近邮编与自动补全。",
+  "icon": "/icons/postcodes-io.png"
  },
  {
   "slug": "newsapi",
@@ -2548,8 +2596,9 @@
    }
   ],
   "plain_intro": "NewsAPI 提供新闻头条、关键词检索和来源列表接口。",
-  "seo_title": "News API：Key 申请、免费额度，附检索参数",
-  "seo_description": "NewsAPI 提供新闻头条、关键词检索和来源列表接口。免费开发档 100 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "NewsAPI 免费 100 次/天够吗？延迟与 localhost 限制",
+  "seo_description": "免费开发者档每天 100 次、延迟 24 小时。含 top-headlines 与 everything 的差异、上线必须付费的原因。",
+  "icon": "/icons/newsapi.png"
  },
  {
   "slug": "gnews",
@@ -2604,8 +2653,9 @@
    }
   ],
   "plain_intro": "GNews 提供多语种新闻检索和头条接口。",
-  "seo_title": "GNews API：Key 申请、免费额度，附检索参数",
-  "seo_description": "GNews 提供多语种新闻检索和头条接口。免费 100 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "GNews 免费 100 次/天？多语种与 12 小时延迟",
+  "seo_description": "免费档每天 100 次、延迟 12 小时。含 80 多种语言的检索、时间与来源过滤、返回字段。",
+  "icon": "/icons/gnews.png"
  },
  {
   "slug": "newsdata-io",
@@ -2653,8 +2703,9 @@
    }
   ],
   "plain_intro": "NewsData.io 提供多语种新闻检索、分类和来源过滤。",
-  "seo_title": "NewsData.io API：Key 申请、免费额度，附检索参数",
-  "seo_description": "NewsData.io 提供多语种新闻检索、分类和来源过滤。免费 200 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "NewsData 免费 200 credits 怎么算？多语种与去重",
+  "seo_description": "免费每天 200 credits、单次最多 10 条。含 archive 历史档、duplicate 标记与语言覆盖。",
+  "icon": "/icons/newsdata-io.png"
  },
  {
   "slug": "the-guardian-open-platform",
@@ -2704,8 +2755,9 @@
    }
   ],
   "plain_intro": "Guardian Open Platform 提供卫报文章的检索、正文和元数据。",
-  "seo_title": "The Guardian Open Platform API：免费额度、调用",
-  "seo_description": "Guardian Open Platform 提供卫报文章的检索、正文和元数据。免费（含 test key）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "卫报 API 能拿全文吗？test key 与每日额度",
+  "seo_description": "免费每天 5000 次、注册即用。含 /search 检索、bodyText 全文、图片版权与署名要求。",
+  "icon": "/icons/the-guardian-open-platform.png"
  },
  {
   "slug": "new-york-times-api",
@@ -2751,8 +2803,9 @@
    }
   ],
   "plain_intro": "NYT API 提供头条、文章检索、书评和影评数据。",
-  "seo_title": "New York Times API：免费额度、参数，附检索参数",
-  "seo_description": "NYT API 提供头条、文章检索、书评和影评数据。免费 500 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "NYT API 免费 500 次/天？书评影评与正文限制",
+  "seo_description": "免费档每分钟 5 次、每天 500 次。含 article search、top stories、books 与 movies 四类端点。",
+  "icon": "/icons/new-york-times-api.png"
  },
  {
   "slug": "hacker-news-api",
@@ -2795,8 +2848,9 @@
    }
   ],
   "plain_intro": "Hacker News API 提供榜单、条目、评论和用户数据。",
-  "seo_title": "Hacker News API：免 Key、参数，附检索参数",
-  "seo_description": "Hacker News API 提供榜单、条目、评论和用户数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Hacker News API 为什么只返回 ID？条目与评论",
+  "seo_description": "官方接口只给 ID 列表，正文要逐条再取。含 topstories、item、user 与评论树展开。",
+  "icon": "/icons/hacker-news-api.png"
  },
  {
   "slug": "hn-algolia-search",
@@ -2839,8 +2893,9 @@
    }
   ],
   "plain_intro": "HN Algolia 提供 Hacker News 的全文检索和历史讨论查询。",
-  "seo_title": "HN Algolia Search API：免 Key、参数，附检索参数",
-  "seo_description": "HN Algolia 提供 Hacker News 的全文检索和历史讨论查询。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "HN Algolia 怎么按时间搜？tags 与数值过滤",
+  "seo_description": "免 Key 全文检索。含 search 与 search_by_date 的区别、numericFilters 按分数筛、分页。",
+  "icon": "/icons/hn-algolia-search.png"
  },
  {
   "slug": "reddit-api",
@@ -2895,8 +2950,9 @@
    }
   ],
   "plain_intro": "Reddit API 提供版块帖子、评论、搜索和用户数据。",
-  "seo_title": "Reddit API：免费额度、价格，附检索参数",
-  "seo_description": "Reddit API 提供版块帖子、评论、搜索和用户数据。免费（需注册应用）；需 OAuth。含端点、调用示例与常见问题。"
+  "seo_title": "Reddit API 现在收费吗？OAuth 与 100 次/分",
+  "seo_description": "免费档每分钟 100 次，商用需付费。含应用注册、OAuth 流程、User-Agent 与 subreddit 列表接口。",
+  "icon": "/icons/reddit-api.png"
  },
  {
   "slug": "dev-community-api",
@@ -2941,8 +2997,9 @@
    }
   ],
   "plain_intro": "DEV Community API 提供文章列表、正文、评论和发布接口。",
-  "seo_title": "DEV Community API：免 Key、参数，附检索参数",
-  "seo_description": "DEV Community API 提供文章列表、正文、评论和发布接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "DEV API 能自动发文吗？Key 与频率限制",
+  "seo_description": "读接口免 Key，发文需 API Key。含 /articles 检索、Markdown 正文、POST 发布与频率限制。",
+  "icon": "/icons/dev-community-api.png"
  },
  {
   "slug": "spaceflight-news-api",
@@ -2985,8 +3042,9 @@
    }
   ],
   "plain_intro": "Spaceflight News API 提供航天新闻、博客和报告的聚合数据。",
-  "seo_title": "Spaceflight News API：免 Key、参数，附检索参数",
-  "seo_description": "Spaceflight News API 提供航天新闻、博客和报告的聚合数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Spaceflight News 怎么按时间查？分页与来源",
+  "seo_description": "免 Key 聚合航天媒体。含 /v4/articles、limit 与 offset 分页、博客与报告分开的端点。",
+  "icon": "/icons/spaceflight-news-api.png"
  },
  {
   "slug": "alpha-vantage",
@@ -3039,8 +3097,9 @@
    }
   ],
   "plain_intro": "Alpha Vantage 提供股票、外汇、加密行情和技术指标接口。",
-  "seo_title": "Alpha Vantage API：Key 申请、免费额度，附行情字段",
-  "seo_description": "Alpha Vantage 提供股票、外汇、加密行情和技术指标接口。免费 25 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Alpha Vantage 免费 25 次/天够吗？指标与复权",
+  "seo_description": "免费每天 25 次、每分钟 5 次。含 TIME_SERIES_DAILY、50 多个技术指标与复权处理的坑。",
+  "icon": "/icons/alpha-vantage.png"
  },
  {
   "slug": "finnhub",
@@ -3094,8 +3153,9 @@
    }
   ],
   "plain_intro": "Finnhub 提供美股行情、公司资料、财报和新闻接口。",
-  "seo_title": "Finnhub API：Key 申请、免费额度，附行情字段",
-  "seo_description": "Finnhub 提供美股行情、公司资料、财报和新闻接口。免费 60 次/分；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Finnhub 免费 60 次/分？财报、新闻与 WebSocket",
+  "seo_description": "免费每分钟 60 次。含 /quote、profile2、财报与新闻、WebSocket 实时成交与美股覆盖优势。",
+  "icon": "/icons/finnhub.png"
  },
  {
   "slug": "twelve-data",
@@ -3150,8 +3210,9 @@
    }
   ],
   "plain_intro": "Twelve Data 提供多市场行情、技术指标和基本面数据。",
-  "seo_title": "Twelve Data API：Key 申请、免费额度，附行情字段",
-  "seo_description": "Twelve Data 提供多市场行情、技术指标和基本面数据。免费 800 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Twelve Data 免费 800 次/天？多市场与指标",
+  "seo_description": "免费每天 800 次、每分钟 8 次。含 time_series 多周期、100 多个指标与全球市场覆盖。",
+  "icon": "/icons/twelve-data.png"
  },
  {
   "slug": "polygon-io",
@@ -3206,8 +3267,9 @@
    }
   ],
   "plain_intro": "Polygon.io 提供股票、期权和外汇的行情与参考数据。",
-  "seo_title": "Polygon.io API：Key 申请、免费额度，附行情字段",
-  "seo_description": "Polygon.io 提供股票、期权和外汇的行情与参考数据。免费 5 次/分；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Polygon 免费档延迟多久？5 次/分与付费档",
+  "seo_description": "免费每分钟 5 次、数据延迟 15 分钟。含 aggregates K 线、期权链、WebSocket 与付费档差异。",
+  "icon": "/icons/polygon-io.png"
  },
  {
   "slug": "financial-modeling-prep",
@@ -3261,8 +3323,9 @@
    }
   ],
   "plain_intro": "FMP 提供财务报表、比率、行情和公司资料接口。",
-  "seo_title": "Financial Modeling Prep API：Key 申请、免费额",
-  "seo_description": "FMP 提供财务报表、比率、行情和公司资料接口。免费 250 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "FMP 免费 250 次/天？三张报表与批量接口",
+  "seo_description": "免费每天 250 次。含利润表、资产负债表、现金流、比率指标与一次取多公司的批量写法。",
+  "icon": "/icons/financial-modeling-prep.png"
  },
  {
   "slug": "alpaca",
@@ -3317,8 +3380,9 @@
    }
   ],
   "plain_intro": "写程序下单买卖美股，先用模拟盘跑策略，不用真钱。",
-  "seo_title": "Alpaca API：Key 申请、免费额度，附行情字段",
-  "seo_description": "写程序下单买卖美股，先用模拟盘跑策略，不用真钱。免费模拟盘；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Alpaca 模拟盘怎么开？免费行情只有 IEX",
+  "seo_description": "Paper 账户免费。含 paper 下单、持仓查询、IEX 行情的局限与实盘开户的合规要求。",
+  "icon": "/icons/alpaca.png"
  },
  {
   "slug": "fred",
@@ -3372,8 +3436,9 @@
    }
   ],
   "plain_intro": "FRED 提供美国及国际经济指标的时间序列数据。",
-  "seo_title": "FRED API：Key 申请、免费额度，附行情字段",
-  "seo_description": "FRED 提供美国及国际经济指标的时间序列数据。完全免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "FRED Key 怎么申请？80 万条指标与版权",
+  "seo_description": "免费 Key、无硬配额。含 series observations、搜索、分类浏览与部分序列的商用限制。",
+  "icon": "/icons/fred.png"
  },
  {
   "slug": "yahoo-finance",
@@ -3427,8 +3492,9 @@
    }
   ],
   "plain_intro": "Yahoo Finance 提供行情、历史 K 线和证券搜索接口。",
-  "seo_title": "Yahoo Finance（非官方） API：免 Key、参数，附行情字",
-  "seo_description": "Yahoo Finance 提供行情、历史 K 线和证券搜索接口。免费（非官方）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Yahoo Finance 非官方接口还能用吗？crumb 与 UA",
+  "seo_description": "免 Key 但非官方。含 chart 报价、search 找代码、quoteSummary 要 crumb 与 UA 的现状。",
+  "icon": "/icons/yahoo-finance.png"
  },
  {
   "slug": "coingecko",
@@ -3482,8 +3548,9 @@
    }
   ],
   "plain_intro": "CoinGecko 提供加密币价格、市值、历史行情和交易所数据。",
-  "seo_title": "CoinGecko API：Key 申请、免费额度，附行情字段",
-  "seo_description": "CoinGecko 提供加密币价格、市值、历史行情和交易所数据。免费 30 次/分；需申请。含端点、调用示例与常见问题。"
+  "seo_title": "CoinGecko Key 怎么申请？免费 30 次/分与 Demo 档",
+  "seo_description": "公共档 30 次/分，注册 Demo Key 给 1 万次/月。含 simple/price、markets、历史走势与币种 ID 映射。",
+  "icon": "/icons/coingecko.png"
  },
  {
   "slug": "coincap-v3",
@@ -3529,8 +3596,9 @@
    }
   ],
   "plain_intro": "CoinCap 提供加密资产价格、市值、成交量和历史数据。",
-  "seo_title": "CoinCap v3 API：Key 申请、免费额度，附行情字段",
-  "seo_description": "CoinCap 提供加密资产价格、市值、成交量和历史数据。需 API Key（旧 v2 已下线）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "CoinCap v3 要 Key 吗？v2 下线与迁移",
+  "seo_description": "v2 已停用，v3 需 Key。含 assets、markets、history 端点与老代码迁移要改的路径。",
+  "icon": "/icons/coincap-v3.png"
  },
  {
   "slug": "coinmarketcap",
@@ -3550,7 +3618,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "CoinMarketCap API 是加密资产数据接口，通过 coinmarketcap.com/api 对外开放。开发者申请 Key 后即可调用。\n\n## 主要能力\n- **最新报价**：/v1/cryptocurrency/quotes/latest 按符号取价。\n- ** listings**：一次返回市值前 N 的币种。\n- **历史数据**：按日或按小时取 OHLC。\n- **交易所与衍生品**：覆盖现货和合约市场。\n- **元数据**：币种简介、标签、合约地址。\n\n## 特点\n- 免费档每月 1 万 credits，按接口消耗不同。\n- 字段命名偏冗长，USD 报价嵌在 quote 对象里。\n- 历史分钟级数据需付费。\n\n典型使用场景：币价展示、市值排行、资产研究、行情 API 后端。",
+  "intro": "CoinMarketCap API 是加密资产数据接口，通过 coinmarketcap.com/api 对外开放。开发者申请 Key 后即可调用。\n\n## 主要能力\n- **最新报价**：/v1/cryptocurrency/quotes/latest 按符号取价。\n- **listings**：一次返回市值前 N 的币种。\n- **历史数据**：按日或按小时取 OHLC。\n- **交易所与衍生品**：覆盖现货和合约市场。\n- **元数据**：币种简介、标签、合约地址。\n\n## 特点\n- 免费档每月 1 万 credits，按接口消耗不同。\n- 字段命名偏冗长，USD 报价嵌在 quote 对象里。\n- 历史分钟级数据需付费。\n\n典型使用场景：币价展示、市值排行、资产研究、行情 API 后端。",
   "capabilities": [
    "币种排名",
    "实时行情",
@@ -3585,8 +3653,9 @@
    }
   ],
   "plain_intro": "CoinMarketCap 提供币种报价、市值排行和历史行情。",
-  "seo_title": "CoinMarketCap API：Key 申请、免费额度，附行情字段",
-  "seo_description": "CoinMarketCap 提供币种报价、市值排行和历史行情。免费 1 万 credit/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "CoinMarketCap 1 万 credits 怎么算？免费档字段",
+  "seo_description": "免费每月 1 万 credits、按接口消耗不同。含 quotes/latest、listings、历史 OHLC 与嵌套字段解析。",
+  "icon": "/icons/coinmarketcap.png"
  },
  {
   "slug": "binance-api",
@@ -3640,8 +3709,9 @@
    }
   ],
   "plain_intro": "Binance API 提供现货行情、K 线、盘口和交易接口。",
-  "seo_title": "Binance API：免 Key、参数，附行情字段",
-  "seo_description": "Binance API 提供现货行情、K 线、盘口和交易接口。免费（限速）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Binance API 免 Key 能做什么？签名与 -1022 报错",
+  "seo_description": "公共行情免 Key，下单要 HMAC 签名。含 ticker、klines、盘口与时间戳不同步导致的 -1022。",
+  "icon": "/icons/binance-api.png"
  },
  {
   "slug": "kraken-api",
@@ -3696,8 +3766,9 @@
    }
   ],
   "plain_intro": "Kraken API 提供现货行情、K 线、交易对和下单接口。",
-  "seo_title": "Kraken API：免 Key、参数，附行情字段",
-  "seo_description": "Kraken API 提供现货行情、K 线、交易对和下单接口。免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Kraken 交易对为什么叫 XBTUSD？公共接口与签名",
+  "seo_description": "公共行情免 Key。含 XBT 命名、Ticker/OHLC、AssetPairs 对照与私有接口的签名流程。",
+  "icon": "/icons/kraken-api.png"
  },
  {
   "slug": "coinbase-api",
@@ -3751,8 +3822,9 @@
    }
   ],
   "plain_intro": "Coinbase 提供价格查询与交易接口，交易需单独认证。",
-  "seo_title": "Coinbase API：免 Key、参数，附行情字段",
-  "seo_description": "Coinbase 提供价格查询与交易接口，交易需单独认证。免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Coinbase 两种 API 怎么选？Advanced Trade 与旧版",
+  "seo_description": "公共价格免 Key。含 v2 prices、Exchange candles、Advanced Trade 鉴权与两套文档并存的坑。",
+  "icon": "/icons/coinbase-api.png"
  },
  {
   "slug": "cryptocompare",
@@ -3800,8 +3872,9 @@
    }
   ],
   "plain_intro": "CryptoCompare 提供多币种价格、K 线、交易所和新闻数据。",
-  "seo_title": "CryptoCompare API：Key 申请、免费额度，附行情字段",
-  "seo_description": "CryptoCompare 提供多币种价格、K 线、交易所和新闻数据。免费 10 万次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "CryptoCompare 免费 10 万次/月？限流与历史",
+  "seo_description": "免费每月 10 万次。含 price 多币换算、histoday/histohour、coinlist 与高频 429。",
+  "icon": "/icons/cryptocompare.png"
  },
  {
   "slug": "defillama",
@@ -3847,8 +3920,9 @@
    }
   ],
   "plain_intro": "DefiLlama 提供 DeFi 协议与公链的 TVL、稳定币和收益池数据。",
-  "seo_title": "DefiLlama API：免 Key、参数，附行情字段",
-  "seo_description": "DefiLlama 提供 DeFi 协议与公链的 TVL、稳定币和收益池数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "DefiLlama 的 TVL 怎么查？协议、链与收益池",
+  "seo_description": "免 Key、数据开源。含 /protocols、/protocol/{slug}、/v2/chains、稳定币与收益池。",
+  "icon": "/icons/defillama.png"
  },
  {
   "slug": "etherscan",
@@ -3903,15 +3977,16 @@
    }
   ],
   "plain_intro": "Etherscan 提供以太坊账户、交易、合约和 Gas 查询接口。",
-  "seo_title": "Etherscan API：Key 申请、免费额度，附行情字段",
-  "seo_description": "Etherscan 提供以太坊账户、交易、合约和 Gas 查询接口。免费 5 次/秒；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Etherscan 免费 5 次/秒？v2 迁移与多链",
+  "seo_description": "免费每秒 5 次、每天 10 万次。含账户、合约 ABI、交易回执、Gas 与 v2 统一路径。",
+  "icon": "/icons/etherscan.png"
  },
  {
   "slug": "frankfurter",
   "name": "Frankfurter",
   "category": "finance",
   "description_zh": "欧洲央行汇率",
-  "url": "https://www.frankfurter.app",
+  "url": "https://api.frankfurter.dev/",
   "probe": "https://api.frankfurter.app/latest",
   "auth": "none",
   "free_tier": "完全免费",
@@ -3924,7 +3999,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Frankfurter API 是汇率接口，通过 api.frankfurter.app 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **最新汇率**：/latest?from=USD 返回多币种汇率。\n- **历史汇率**：/2024-01-01?from=EUR。\n- **时间序列**：/2024-01-01..2024-01-31 取区间。\n- **币种列表**：/currencies 返回支持的货币。\n- **换算**：amount 参数直接换算。\n\n## 特点\n- 数据来自欧洲央行，每天更新一次。\n- 免费无 Key，无限额说明。\n- 不含加密货币和贵金属。\n\n典型使用场景：汇率换算、财务折算、多币种定价。",
+  "intro": "Frankfurter API 是汇率接口，通过 api.frankfurter.dev/v1 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **最新汇率**：/latest?from=USD 返回多币种汇率。\n- **历史汇率**：/2024-01-01?from=EUR。\n- **时间序列**：/2024-01-01..2024-01-31 取区间。\n- **币种列表**：/currencies 返回支持的货币。\n- **换算**：amount 参数直接换算。\n\n## 特点\n- 数据来自欧洲央行，每天更新一次。\n- 免费无 Key，无限额说明。\n- 不含加密货币和贵金属。\n\n典型使用场景：汇率换算、财务折算、多币种定价。",
   "capabilities": [
    "实时汇率",
    "历史汇率",
@@ -3952,9 +4027,10 @@
     "a": "数据来自央行日终价，周末和节假日沿用上一个工作日。"
    }
   ],
-  "plain_intro": "Frankfurter 提供基于欧洲央行数据的汇率与历史汇率查询。",
-  "seo_title": "Frankfurter API：免 Key、参数，附行情字段",
-  "seo_description": "Frankfurter 提供基于欧洲央行数据的汇率与历史汇率查询。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "plain_intro": "Frankfurter（现迁至 api.frankfurter.dev）提供基于欧洲央行数据的汇率与历史汇率查询。",
+  "seo_title": "Frankfurter 汇率从哪来？欧央行日更与历史",
+  "seo_description": "数据来自欧洲央行、每日更新。含 latest、历史日期、时间序列与 30 多种货币。",
+  "icon": "/icons/frankfurter.png"
  },
  {
   "slug": "exchangerate-api",
@@ -4004,8 +4080,9 @@
    }
   ],
   "plain_intro": "ExchangeRate-API 提供 160 多种货币的汇率与历史汇率。",
-  "seo_title": "ExchangeRate- API：Key 申请、免费额度，附行情字段",
-  "seo_description": "ExchangeRate-API 提供 160 多种货币的汇率与历史汇率。免费 1500 次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "ExchangeRate-API 免费 1500 次/月？币种与历史",
+  "seo_description": "免费每月 1500 次、每日更新。含 latest、pair、history 与 160 多种货币代码。",
+  "icon": "/icons/exchangerate-api.png"
  },
  {
   "slug": "data-gov",
@@ -4055,8 +4132,9 @@
    }
   ],
   "plain_intro": "Data.gov 提供美国政府开放数据集的目录检索与元数据。",
-  "seo_title": "Data.gov API：Key 申请、免费额度，附数据范围",
-  "seo_description": "Data.gov 提供美国政府开放数据集的目录检索与元数据。免费（DEMO_KEY）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Data.gov 怎么找数据集？CKAN 检索与资源",
+  "seo_description": "免 Key 目录检索。含 package_search、package_show、组织与主题浏览、资源链接校验。",
+  "icon": "/icons/data-gov.png"
  },
  {
   "slug": "world-bank-open-data",
@@ -4106,8 +4184,9 @@
    }
   ],
   "plain_intro": "世界银行提供各国经济、人口和发展指标的时间序列。",
-  "seo_title": "World Bank Open Data API：免 Key、参数，附数",
-  "seo_description": "世界银行提供各国经济、人口和发展指标的时间序列。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "世界银行 API 怎么查指标？国家代码与年份",
+  "seo_description": "免 Key、200 多个经济体。含 indicator 路径、date 区间、JSON/XML/CSV 与年度更新节奏。",
+  "icon": "/icons/world-bank-open-data.png"
  },
  {
   "slug": "us-census-bureau",
@@ -4153,8 +4232,9 @@
    }
   ],
   "plain_intro": "美国人口普查局提供人口、收入、企业和地理边界数据。",
-  "seo_title": "US Census Bureau API：Key 申请、免费额度，附数据范围",
-  "seo_description": "美国人口普查局提供人口、收入、企业和地理边界数据。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "美国人口普查 API 怎么取 ACS？变量名与配额",
+  "seo_description": "无 Key 按 IP 限流，注册后更高。含 ACS 变量目录、get 多字段、州/县/邮编地理层级。",
+  "icon": "/icons/us-census-bureau.png"
  },
  {
   "slug": "uk-companies-house",
@@ -4200,8 +4280,9 @@
    }
   ],
   "plain_intro": "英国公司注册库提供公司、董事、财报和受益所有人查询。",
-  "seo_title": "UK Companies House API：Key 申请、免费额度，附数据",
-  "seo_description": "英国公司注册库提供公司、董事、财报和受益所有人查询。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "英国公司查册 API 怎么用？董事与 PSC",
+  "seo_description": "免费、按应用限速。含公司检索、officers、filing history 与受益所有人 PSC 接口。",
+  "icon": "/icons/uk-companies-house.png"
  },
  {
   "slug": "opencorporates",
@@ -4254,8 +4335,9 @@
    }
   ],
   "plain_intro": "OpenCorporates 提供全球 140 多个辖区的公司注册数据。",
-  "seo_title": "OpenCorporates API：Key 申请、免费额度，附数据范围",
-  "seo_description": "OpenCorporates 提供全球 140 多个辖区的公司注册数据。免费档有限额；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenCorporates 免费档能查什么？140 辖区与许可",
+  "seo_description": "免费档需署名、非商用。含公司检索、司法辖区代码、高管与商用授权。",
+  "icon": "/icons/opencorporates.png"
  },
  {
   "slug": "opensanctions",
@@ -4303,8 +4385,9 @@
    }
   ],
   "plain_intro": "OpenSanctions 提供制裁名单、政治人物和风险实体的匹配查询。",
-  "seo_title": "OpenSanctions API：Key 申请、免费额度，附数据范围",
-  "seo_description": "OpenSanctions 提供制裁名单、政治人物和风险实体的匹配查询。免费非商用；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenSanctions 怎么匹配制裁名单？阈值与误报",
+  "seo_description": "免费非商用、需 Key。含 /search、/match 的相似度、数据集来源与误报处理。",
+  "icon": "/icons/opensanctions.png"
  },
  {
   "slug": "fec-api",
@@ -4351,8 +4434,9 @@
    }
   ],
   "plain_intro": "FEC API 提供美国联邦竞选筹款、支出和候选人数据。",
-  "seo_title": "FEC API：Key 申请、免费额度，附数据范围",
-  "seo_description": "FEC API 提供美国联邦竞选筹款、支出和候选人数据。免费（DEMO_KEY）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "FEC API 的 DEMO_KEY 够用吗？捐款与候选人",
+  "seo_description": "DEMO_KEY 限速很低，正式 Key 免费。含 candidates、committees、schedule_a 捐款与汇总。",
+  "icon": "/icons/fec-api.png"
  },
  {
   "slug": "federal-register",
@@ -4401,8 +4485,9 @@
    }
   ],
   "plain_intro": "Federal Register 提供美国联邦公报的文件、规则和公告检索。",
-  "seo_title": "Federal Register API：免 Key、参数，附数据范围",
-  "seo_description": "Federal Register 提供美国联邦公报的文件、规则和公告检索。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Federal Register 怎么查规则？日期与机构过滤",
+  "seo_description": "免 Key。含 documents 检索、rule/proposed rule/notice 类型、机构过滤与全文地址。",
+  "icon": "/icons/federal-register.png"
  },
  {
   "slug": "usaspending",
@@ -4456,8 +4541,9 @@
    }
   ],
   "plain_intro": "USAspending 提供美国联邦政府的合同、拨款和支出数据。",
-  "seo_title": "USAspending API：免 Key、文档，附数据范围",
-  "seo_description": "USAspending 提供美国联邦政府的合同、拨款和支出数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "USAspending 怎么查合同？奖项与承包商",
+  "seo_description": "免 Key。含 spending_by_award、agency、recipient 与按州统计，合同和拨款分开查。",
+  "icon": "/icons/usaspending.png"
  },
  {
   "slug": "nyc-open-data-socrata",
@@ -4504,8 +4590,9 @@
    }
   ],
   "plain_intro": "NYC Open Data 提供纽约市交通、住房、投诉等公开数据集。",
-  "seo_title": "NYC Open Data (Socrata) API：免费额度、参数，",
-  "seo_description": "NYC Open Data 提供纽约市交通、住房、投诉等公开数据集。免费；需申请。含端点、调用示例与常见问题。"
+  "seo_title": "NYC Open Data 怎么用 SoQL 聚合？$group 与地理",
+  "seo_description": "免 Key 有限流。含 catalog 检索、$select/$group/$order、地理范围筛选与 CSV 导出。",
+  "icon": "/icons/nyc-open-data-socrata.png"
  },
  {
   "slug": "wikidata",
@@ -4552,8 +4639,9 @@
    }
   ],
   "plain_intro": "Wikidata 提供结构化知识与实体关系的 SPARQL 查询接口。",
-  "seo_title": "Wikidata API：免 Key、参数，附数据范围",
-  "seo_description": "Wikidata 提供结构化知识与实体关系的 SPARQL 查询接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Wikidata SPARQL 怎么查？实体 ID 与限制",
+  "seo_description": "免 Key。含 EntityData JSON、wbsearchentities、SPARQL 查询时长限制与多语言标签。",
+  "icon": "/icons/wikidata.png"
  },
  {
   "slug": "wikipedia-rest-api",
@@ -4608,8 +4696,9 @@
    }
   ],
   "plain_intro": "Wikipedia REST API 提供条目摘要、正文、媒体和搜索接口。",
-  "seo_title": "Wikipedia REST API：免 Key、参数，附数据范围",
-  "seo_description": "Wikipedia REST API 提供条目摘要、正文、媒体和搜索接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Wikipedia API 怎么取摘要？REST 与 action 两种",
+  "seo_description": "免 Key、需设 UA。含 summary 卡片、page/html 正文、action=query 搜索与多语言子域。",
+  "icon": "/icons/wikipedia-rest-api.png"
  },
  {
   "slug": "kaggle-api",
@@ -4663,8 +4752,9 @@
    }
   ],
   "plain_intro": "Kaggle API 提供数据集与竞赛的检索、下载和提交接口。",
-  "seo_title": "Kaggle API：Key 申请、免费额度，附数据范围",
-  "seo_description": "Kaggle API 提供数据集与竞赛的检索、下载和提交接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Kaggle API Token 怎么配？数据集与竞赛提交",
+  "seo_description": "免费、需账号 Token。含 datasets list/download、competitions 提交与 kernel 拉取。",
+  "icon": "/icons/kaggle-api.png"
  },
  {
   "slug": "internet-archive",
@@ -4717,8 +4807,9 @@
    }
   ],
   "plain_intro": "Internet Archive 提供网页存档、文本和媒体资源的检索与下载。",
-  "seo_title": "Internet Archive API：免 Key、参数，附数据范围",
-  "seo_description": "Internet Archive 提供网页存档、文本和媒体资源的检索与下载。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Internet Archive 怎么找历史网页？CDX 与快照",
+  "seo_description": "免 Key。含 wayback available、CDX 索引、metadata 与文件下载、批量限速。",
+  "icon": "/icons/internet-archive.png"
  },
  {
   "slug": "nasa-api",
@@ -4772,8 +4863,9 @@
    }
   ],
   "plain_intro": "NASA API 提供天文图、火星照片、近地天体和地球影像数据。",
-  "seo_title": "NASA API：Key 申请、免费额度，附数据集",
-  "seo_description": "NASA API 提供天文图、火星照片、近地天体和地球影像数据。DEMO_KEY 免费限流；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "NASA API 的 DEMO_KEY 能干什么？限流与正式 Key",
+  "seo_description": "DEMO_KEY 免注册但按 IP 限流。含 APOD、Mars Photos、NEO 与正式 Key 的每小时 1000 次。",
+  "icon": "/icons/nasa-api.png"
  },
  {
   "slug": "spacex-api",
@@ -4787,8 +4879,8 @@
   "limit_source": "manual",
   "commercial": "",
   "status": "unreachable",
-  "status_code": "000",
-  "checked_at": "2026-11-18",
+  "status_code": "522",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://api.spacexdata.com/v4/launches/latest\"",
   "tags": [],
   "featured": true,
@@ -4825,15 +4917,16 @@
    }
   ],
   "plain_intro": "SpaceX API 提供发射记录、火箭和星链数据。",
-  "seo_title": "SpaceX API：免 Key、参数，附数据集",
-  "seo_description": "SpaceX API 提供发射记录、火箭和星链数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "SpaceX API 是官方的吗？v4 字段与社区维护",
+  "seo_description": "社区维护、免 Key。含 launches、rockets、starlink、launchpads 与 query 分页写法。",
+  "icon": "/icons/spacex-api.png"
  },
  {
   "slug": "open-notify",
   "name": "Open Notify",
   "category": "science",
   "description_zh": "ISS 实时位置",
-  "url": "http://open-notify.org",
+  "url": "https://open-notify.org",
   "probe": "http://api.open-notify.org/iss-now.json",
   "auth": "none",
   "free_tier": "完全免费",
@@ -4877,8 +4970,9 @@
    }
   ],
   "plain_intro": "Open Notify 提供在轨宇航员名单和国际空间站实时位置。",
-  "seo_title": "Open Notify API：免 Key、参数，附数据集",
-  "seo_description": "Open Notify 提供在轨宇航员名单和国际空间站实时位置。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Open Notify 怎么查 ISS 位置？过境预测",
+  "seo_description": "免 Key。含 astros、iss-now、iss-pass 三个端点与过境预测的精度边界。",
+  "icon": "/icons/open-notify.png"
  },
  {
   "slug": "launch-library-2",
@@ -4926,8 +5020,9 @@
    }
   ],
   "plain_intro": "Launch Library 2 提供火箭发射计划、场地和航天器数据。",
-  "seo_title": "Launch Library 2 API：免 Key、参数，附数据集",
-  "seo_description": "Launch Library 2 提供火箭发射计划、场地和航天器数据。免费（限速）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Launch Library 2 免费额度多少？发射与场地",
+  "seo_description": "免费每小时 15 次。含 upcoming/previous、vehicles、locations 与 UTC 时间处理。",
+  "icon": "/icons/launch-library-2.png"
  },
  {
   "slug": "arxiv-api",
@@ -4984,8 +5079,9 @@
    }
   ],
   "plain_intro": "arXiv API 提供论文的检索、元数据和分类浏览。",
-  "seo_title": "arXiv API：免 Key、参数，附数据集",
-  "seo_description": "arXiv API 提供论文的检索、元数据和分类浏览。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "arXiv API 怎么按分类查论文？查询语法与限速",
+  "seo_description": "免 Key、建议 3 秒一次。含 search_query 的字段语法、cat 分类、Atom 解析与 PDF 链接。",
+  "icon": "/icons/arxiv-api.png"
  },
  {
   "slug": "crossref-api",
@@ -5039,8 +5135,9 @@
    }
   ],
   "plain_intro": "Crossref 提供学术文献的 DOI 元数据、引用和期刊信息。",
-  "seo_title": "Crossref API：免 Key、文档，附数据集",
-  "seo_description": "Crossref 提供学术文献的 DOI 元数据、引用和期刊信息。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Crossref 怎么用 DOI 查文献？polite pool 与引用",
+  "seo_description": "免 Key。含 /works/{doi}、query 检索、is-referenced-by-count 与 UA 留邮箱进 polite pool。",
+  "icon": "/icons/crossref-api.png"
  },
  {
   "slug": "openalex",
@@ -5094,8 +5191,9 @@
    }
   ],
   "plain_intro": "OpenAlex 提供学术论文、作者、机构和引用的开放数据。",
-  "seo_title": "OpenAlex API：免 Key、参数，附数据集",
-  "seo_description": "OpenAlex 提供学术论文、作者、机构和引用的开放数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenAlex 免费 10 万次/天？作者消歧与引用网络",
+  "seo_description": "免 Key、每天 10 万次。含 works、authors、institutions、引用关系与同名作者核对。",
+  "icon": "/icons/openalex.png"
  },
  {
   "slug": "semantic-scholar",
@@ -5149,8 +5247,9 @@
    }
   ],
   "plain_intro": "Semantic Scholar 提供论文检索、引用网络和摘要数据。",
-  "seo_title": "Semantic Scholar API：Key 申请、免费额度，附数据集",
-  "seo_description": "Semantic Scholar 提供论文检索、引用网络和摘要数据。免费（限速）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Semantic Scholar 无 Key 限速多少？引用与推荐",
+  "seo_description": "无 Key 每秒 1 次，申请后提高。含 paper/search、citations、recommendations 与摘要来源。",
+  "icon": "/icons/semantic-scholar.png"
  },
  {
   "slug": "pubmed-e-utilities",
@@ -5204,8 +5303,9 @@
    }
   ],
   "plain_intro": "PubMed E-utilities 提供生物医学文献的检索与摘要接口。",
-  "seo_title": "PubMed E-utilities API：免 Key、参数，附数据集",
-  "seo_description": "PubMed E-utilities 提供生物医学文献的检索与摘要接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "PubMed API 怎么批量取摘要？esearch 与 efetch",
+  "seo_description": "免 Key、每秒 3 次。含 esearch 取 PMID、efetch 取摘要、elink 关联 PMC 全文与 XML 解析。",
+  "icon": "/icons/pubmed-e-utilities.png"
  },
  {
   "slug": "europe-pmc",
@@ -5248,8 +5348,9 @@
    }
   ],
   "plain_intro": "Europe PMC 提供生命科学文献、全文和引用数据。",
-  "seo_title": "Europe PMC API：免 Key、参数，附数据集",
-  "seo_description": "Europe PMC 提供生命科学文献、全文和引用数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Europe PMC 和 PubMed 差在哪？全文与基金",
+  "seo_description": "免 Key。含 search 检索、core 返回全文、citedByCount 与基金资助字段。",
+  "icon": "/icons/europe-pmc.png"
  },
  {
   "slug": "unpaywall",
@@ -5292,8 +5393,9 @@
    }
   ],
   "plain_intro": "Unpaywall 根据 DOI 返回论文的开放获取状态和全文链接。",
-  "seo_title": "Unpaywall API：免费额度、参数，附数据集",
-  "seo_description": "Unpaywall 根据 DOI 返回论文的开放获取状态和全文链接。完全免费；需申请。含端点、调用示例与常见问题。"
+  "seo_title": "Unpaywall 为什么要填邮箱？OA 全文与版本区分",
+  "seo_description": "免费、每天 10 万次，必须带 email。含 best_oa_location、预印本与接收稿的版本区分、许可字段。",
+  "icon": "/icons/unpaywall.png"
  },
  {
   "slug": "usgs-earthquake",
@@ -5346,8 +5448,9 @@
    }
   ],
   "plain_intro": "USGS 提供全球地震的实时目录、震级和烈度数据。",
-  "seo_title": "USGS Earthquake API：免 Key、参数，附数据集",
-  "seo_description": "USGS 提供全球地震的实时目录、震级和烈度数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "USGS 地震接口怎么按震级筛？GeoJSON 与延迟",
+  "seo_description": "免 Key。含 fdsnws query 参数、format=geojson、DYFI 震感与几分钟更新延迟。",
+  "icon": "/icons/usgs-earthquake.png"
  },
  {
   "slug": "gbif",
@@ -5392,8 +5495,9 @@
    }
   ],
   "plain_intro": "GBIF 提供全球物种分布记录和分类学数据。",
-  "seo_title": "GBIF API：免 Key、参数，附数据集",
-  "seo_description": "GBIF 提供全球物种分布记录和分类学数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "GBIF 怎么查物种分布？occurrence 与采样偏差",
+  "seo_description": "免 Key。含 species/search、occurrence/search、数据集许可与公民科学的采样偏差。",
+  "icon": "/icons/gbif.png"
  },
  {
   "slug": "inaturalist",
@@ -5447,8 +5551,9 @@
    }
   ],
   "plain_intro": "iNaturalist 提供物种观察记录、照片和鉴定数据。",
-  "seo_title": "iNaturalist API：免 Key、文档，附数据集",
-  "seo_description": "iNaturalist 提供物种观察记录、照片和鉴定数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "iNaturalist 怎么按坐标找观察记录？照片许可",
+  "seo_description": "读接口免 Key。含 observations 地理筛选、taxa、项目与照片版权归属。",
+  "icon": "/icons/inaturalist.png"
  },
  {
   "slug": "rcsb-pdb",
@@ -5493,8 +5598,9 @@
    }
   ],
   "plain_intro": "RCSB PDB 提供蛋白质三维结构文件和实验元数据。",
-  "seo_title": "RCSB PDB API：免 Key、参数，附数据集",
-  "seo_description": "RCSB PDB 提供蛋白质三维结构文件和实验元数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "RCSB PDB 怎么下载结构文件？mmCIF 与配体",
+  "seo_description": "免 Key。含 core/entry 元数据、search API、files.rcsb.org 下载与配体结合位点。",
+  "icon": "/icons/rcsb-pdb.png"
  },
  {
   "slug": "unsplash-api",
@@ -5549,8 +5655,9 @@
    }
   ],
   "plain_intro": "Unsplash 提供图片搜索、随机图和摄影师作品接口。",
-  "seo_title": "Unsplash API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Unsplash 提供图片搜索、随机图和摄影师作品接口。免费 50 次/小时；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Unsplash 免费 50 次/小时？Demo 与生产 Key",
+  "seo_description": "Demo 应用每小时 50 次，生产 5000 次。含 search/photos、random、download_location 统计与署名。",
+  "icon": "/icons/unsplash-api.png"
  },
  {
   "slug": "pexels-api",
@@ -5606,8 +5713,9 @@
    }
   ],
   "plain_intro": "Pexels 提供图片与视频素材的搜索和下载接口。",
-  "seo_title": "Pexels API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Pexels 提供图片与视频素材的搜索和下载接口。免费 200 次/小时；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Pexels 免费 200 次/小时？图片与视频搜索",
+  "seo_description": "免费每小时 200 次、每月 2 万次。含 /v1/search、videos/search、多尺寸 src 与免署名政策。",
+  "icon": "/icons/pexels-api.png"
  },
  {
   "slug": "pixabay-api",
@@ -5661,8 +5769,9 @@
    }
   ],
   "plain_intro": "Pixabay 提供图片、插画和视频素材的搜索接口。",
-  "seo_title": "Pixabay API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Pixabay 提供图片、插画和视频素材的搜索接口。免费 100 次/分；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Pixabay 100 次/分怎么算？中文关键词命中率",
+  "seo_description": "免费每分钟 100 次。含图片与视频搜索、category/colors 过滤、英文关键词更准的原因。",
+  "icon": "/icons/pixabay-api.png"
  },
  {
   "slug": "lorem-picsum",
@@ -5711,8 +5820,9 @@
    }
   ],
   "plain_intro": "Lorem Picsum 提供可指定尺寸的占位图生成接口。",
-  "seo_title": "Lorem Picsum API：免 Key、参数，附调用示例",
-  "seo_description": "Lorem Picsum 提供可指定尺寸的占位图生成接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Lorem Picsum 怎么固定同一张图？seed 与灰度",
+  "seo_description": "免 Key。含 /id/{id} 固定图、seed 复现、grayscale 与 blur 参数。",
+  "icon": "/icons/lorem-picsum.png"
  },
  {
   "slug": "giphy-api",
@@ -5768,8 +5878,9 @@
    }
   ],
   "plain_intro": "GIPHY 提供动图搜索、热门榜和随机动图接口。",
-  "seo_title": "GIPHY API：Key 申请、免费额度，附调用示例",
-  "seo_description": "GIPHY 提供动图搜索、热门榜和随机动图接口。免费（beta key）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "GIPHY beta key 限多少？42 次/小时与标识",
+  "seo_description": "Beta Key 每小时 42 次、每天 1000 次。含 search、trending、translate 与必须展示 GIPHY 标识。",
+  "icon": "/icons/giphy-api.png"
  },
  {
   "slug": "imgur-api",
@@ -5821,8 +5932,9 @@
    }
   ],
   "plain_intro": "Imgur 提供图片上传、相册管理和画廊浏览接口。",
-  "seo_title": "Imgur API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Imgur 提供图片上传、相册管理和画廊浏览接口。免费 1250 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Imgur 匿名上传限额多少？Client ID 与相册",
+  "seo_description": "匿名有日限额，OAuth 后更高。含 /3/image 上传、相册管理、画廊与免费图被清理的风险。",
+  "icon": "/icons/imgur-api.png"
  },
  {
   "slug": "remove-bg",
@@ -5872,8 +5984,9 @@
    }
   ],
   "plain_intro": "remove.bg 提供自动抠图，返回透明背景的 PNG。",
-  "seo_title": "remove.bg API：Key 申请、免费额度，附调用示例",
-  "seo_description": "remove.bg 提供自动抠图，返回透明背景的 PNG。免费 50 次/月（预览）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "remove.bg 免费 50 次/月够吗？预览分辨率",
+  "seo_description": "免费每月 50 次、预览尺寸受限。含 /v1/removebg、size 参数、批量与发丝边缘的局限。",
+  "icon": "/icons/remove-bg.png"
  },
  {
   "slug": "cloudinary",
@@ -5926,8 +6039,9 @@
    }
   ],
   "plain_intro": "Cloudinary 提供图片与视频的存储、裁剪、转码和 CDN 分发。",
-  "seo_title": "Cloudinary API：Key 申请、免费额度，附调用示例",
-  "seo_description": "Cloudinary 提供图片与视频的存储、裁剪、转码和 CDN 分发。免费 25 credit/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Cloudinary 25 credits 能做什么？URL 变换与 CDN",
+  "seo_description": "免费每月 25 credits。含上传、URL 变换、f_auto 自动格式与超额降级。",
+  "icon": "/icons/cloudinary.png"
  },
  {
   "slug": "dicebear",
@@ -5970,8 +6084,9 @@
    }
   ],
   "plain_intro": "DiceBear 提供可复现的矢量头像生成接口。",
-  "seo_title": "DiceBear API：免 Key、参数，附调用示例",
-  "seo_description": "DiceBear 提供可复现的矢量头像生成接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "DiceBear 头像怎么保证不变？seed 与风格参数",
+  "seo_description": "免 Key。含 api.dicebear.com 路径、seed 复现、30 多种风格与 SVG/PNG 输出。",
+  "icon": "/icons/dicebear.png"
  },
  {
   "slug": "robohash",
@@ -6014,8 +6129,9 @@
    }
   ],
   "plain_intro": "RoboHash 提供由字符串生成的机器人头像接口。",
-  "seo_title": "RoboHash API：免 Key、参数，附调用示例",
-  "seo_description": "RoboHash 提供由字符串生成的机器人头像接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "RoboHash 怎么换皮肤？set1–set5 与尺寸",
+  "seo_description": "免 Key。含文本生成头像、set 皮肤、size 与 bgset 背景参数。",
+  "icon": "/icons/robohash.png"
  },
  {
   "slug": "qr-server",
@@ -6058,8 +6174,9 @@
    }
   ],
   "plain_intro": "QR Server 提供二维码生成，支持尺寸、颜色和容错级别。",
-  "seo_title": "QR Server API：免 Key、参数，附调用示例",
-  "seo_description": "QR Server 提供二维码生成，支持尺寸、颜色和容错级别。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "QR Server 二维码怎么调颜色？ecc 与 SVG",
+  "seo_description": "免 Key。含 create-qr-code 路径、size、color/bgcolor、ecc 容错与 SVG 输出。",
+  "icon": "/icons/qr-server.png"
  },
  {
   "slug": "tmdb-api",
@@ -6113,8 +6230,9 @@
    }
   ],
   "plain_intro": "TMDb 提供电影、剧集、演员和图片的检索接口。",
-  "seo_title": "TMDb API：Key 申请、免费额度，附调用示例",
-  "seo_description": "TMDb 提供电影、剧集、演员和图片的检索接口。免费（非商用）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TMDb 免费但要署名？v3 Key 与图片地址",
+  "seo_description": "免费、每秒约 50 次。含 search、discover、poster_path 拼 base_url 与署名要求。",
+  "icon": "/icons/tmdb-api.png"
  },
  {
   "slug": "omdb-api",
@@ -6170,8 +6288,9 @@
    }
   ],
   "plain_intro": "OMDb 提供影视作品信息与多源评分查询。",
-  "seo_title": "OMDb API：Key 申请、免费额度，附调用示例",
-  "seo_description": "OMDb 提供影视作品信息与多源评分查询。免费 1000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OMDb 免费 1000 次/天？海报与多源评分",
+  "seo_description": "免费每天 1000 次。含 t/i/s 三种查法、Season 分集与 IMDb/烂番茄/Metacritic 评分。",
+  "icon": "/icons/omdb-api.png"
  },
  {
   "slug": "tvmaze-api",
@@ -6217,8 +6336,9 @@
    }
   ],
   "plain_intro": "TVmaze 提供剧集、分集、播出日程和演员数据。",
-  "seo_title": "TVMaze API：免 Key、参数，附调用示例",
-  "seo_description": "TVmaze 提供剧集、分集、播出日程和演员数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "TVmaze 怎么查今晚播什么？schedule 与分集",
+  "seo_description": "免 Key。含 search/shows、episodes、schedule 按日期与演员作品查询。",
+  "icon": "/icons/tvmaze-api.png"
  },
  {
   "slug": "youtube-data-api",
@@ -6272,8 +6392,9 @@
    }
   ],
   "plain_intro": "YouTube Data API 提供视频、频道、评论和播放列表数据。",
-  "seo_title": "YouTube Data API：免费额度、价格，附调用示例",
-  "seo_description": "YouTube Data API 提供视频、频道、评论和播放列表数据。免费 1 万 unit/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "YouTube API 1 万 units 怎么省？search 一次 100",
+  "seo_description": "每天 1 万 units，search 一次耗 100。含 videos、channels、commentThreads 与配额分配策略。",
+  "icon": "/icons/youtube-data-api.png"
  },
  {
   "slug": "opensubtitles",
@@ -6319,8 +6440,9 @@
    }
   ],
   "plain_intro": "OpenSubtitles 提供多语种字幕的检索与下载接口。",
-  "seo_title": "OpenSubtitles API：Key 申请、免费额度，附调用示例",
-  "seo_description": "OpenSubtitles 提供多语种字幕的检索与下载接口。免费 5 次/天（匿名）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenSubtitles 免费 5 次/天？UA 与下载流程",
+  "seo_description": "免费每天 5 次下载。含 /subtitles 检索、/download 取链、必须设置 User-Agent 与商用限制。",
+  "icon": "/icons/opensubtitles.png"
  },
  {
   "slug": "spotify-web-api",
@@ -6375,8 +6497,9 @@
    }
   ],
   "plain_intro": "Spotify Web API 提供曲目、专辑、播放列表和播放控制接口。",
-  "seo_title": "Spotify Web API：免费额度、参数，附曲库检索",
-  "seo_description": "Spotify Web API 提供曲目、专辑、播放列表和播放控制接口。免费（需应用授权）；需 OAuth。含端点、调用示例与常见问题。"
+  "seo_title": "Spotify API 免费吗？OAuth、token 与播放限制",
+  "seo_description": "免费、按应用限速。含 client credentials 与授权码两种流程、token 1 小时过期、播放控制需 Premium。",
+  "icon": "/icons/spotify-web-api.png"
  },
  {
   "slug": "last-fm-api",
@@ -6426,8 +6549,9 @@
    }
   ],
   "plain_intro": "Last.fm 提供音乐标签、艺人资料、相似推荐和收听统计。",
-  "seo_title": "Last.fm API：Key 申请、免费额度，附曲库检索",
-  "seo_description": "Last.fm 提供音乐标签、艺人资料、相似推荐和收听统计。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Last.fm API Key 怎么申请？相似艺人与 scrobble",
+  "seo_description": "免费、需 Key。含 artist.getinfo、gettoptracks、相似艺人与 user.getrecenttracks。",
+  "icon": "/icons/last-fm-api.png"
  },
  {
   "slug": "musicbrainz",
@@ -6479,8 +6603,9 @@
    }
   ],
   "plain_intro": "MusicBrainz 提供艺人、专辑、录音和发行版本的元数据。",
-  "seo_title": "MusicBrainz API：免 Key、参数，附曲库检索",
-  "seo_description": "MusicBrainz 提供艺人、专辑、录音和发行版本的元数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "MusicBrainz 为什么要设 UA？1 次/秒与 MBID",
+  "seo_description": "免 Key、每秒 1 次、必须设 UA。含 MBID 主键、release 版本与 Cover Art Archive。",
+  "icon": "/icons/musicbrainz.png"
  },
  {
   "slug": "discogs-api",
@@ -6533,8 +6658,9 @@
    }
   ],
   "plain_intro": "Discogs 提供唱片、艺人、厂牌和发行版本的数据库接口。",
-  "seo_title": "Discogs API：Key 申请、免费额度，附曲库检索",
-  "seo_description": "Discogs 提供唱片、艺人、厂牌和发行版本的数据库接口。免费（限速）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Discogs 25 次/分够吗？Token 与市场价",
+  "seo_description": "未认证 25 次/分、认证 60 次。含 database/search、releases、marketplace/stats 与 OAuth 收藏。",
+  "icon": "/icons/discogs-api.png"
  },
  {
   "slug": "genius-api",
@@ -6588,15 +6714,16 @@
    }
   ],
   "plain_intro": "Genius 提供歌词、歌曲信息和搜索接口。",
-  "seo_title": "Genius API：Key 申请、免费额度，附曲库检索",
-  "seo_description": "Genius 提供歌词、歌曲信息和搜索接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Genius API 给歌词全文吗？Token 与页面解析",
+  "seo_description": "免费、需 Token。含 /search、/songs 元数据，歌词只给页面地址需要自行解析。",
+  "icon": "/icons/genius-api.png"
  },
  {
   "slug": "lyrics-ovh",
   "name": "Lyrics.ovh",
   "category": "music",
   "description_zh": "歌词查询",
-  "url": "https://lyricsovh.docs.apiary.io",
+  "url": "https://api.lyrics.ovh/",
   "probe": "https://api.lyrics.ovh/v1/coldplay/yellow",
   "auth": "none",
   "free_tier": "完全免费",
@@ -6637,8 +6764,9 @@
    }
   ],
   "plain_intro": "lyrics.ovh 提供按歌手和歌名查询歌词的接口。",
-  "seo_title": "Lyrics.ovh API：免 Key、参数，附曲库检索",
-  "seo_description": "lyrics.ovh 提供按歌手和歌名查询歌词的接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "lyrics.ovh 怎么按歌手查歌词？免费与覆盖",
+  "seo_description": "免 Key。含 /v1/{artist}/{title}、suggest 接口、返回纯文本与中文歌覆盖差。",
+  "icon": "/icons/lyrics-ovh.png"
  },
  {
   "slug": "deezer-api",
@@ -6690,8 +6818,9 @@
    }
   ],
   "plain_intro": "Deezer 提供曲目、专辑、艺人和搜索接口。",
-  "seo_title": "Deezer API：免 Key、参数，附曲库检索",
-  "seo_description": "Deezer 提供曲目、专辑、艺人和搜索接口。免费（公开接口）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Deezer 免 Key 能读什么？30 秒试听与榜单",
+  "seo_description": "读接口免 Key。含 search、album、chart、preview 30 秒试听与地区限制。",
+  "icon": "/icons/deezer-api.png"
  },
  {
   "slug": "freesound",
@@ -6740,8 +6869,9 @@
    }
   ],
   "plain_intro": "Freesound 提供音效素材的检索、试听和下载接口。",
-  "seo_title": "Freesound API：Key 申请、免费额度，附曲库检索",
-  "seo_description": "Freesound 提供音效素材的检索、试听和下载接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Freesound 下载要 OAuth？许可与相似音效",
+  "seo_description": "需 Key，下载走 OAuth2。含 search/text、similar、CC0 与 CC BY 许可区分。",
+  "icon": "/icons/freesound.png"
  },
  {
   "slug": "github-rest-api",
@@ -6796,8 +6926,9 @@
    }
   ],
   "plain_intro": "GitHub REST API 提供仓库、Issue、PR、Actions 和用户数据。",
-  "seo_title": "GitHub REST API：免费额度、文档，附端点与认证",
-  "seo_description": "GitHub REST API 提供仓库、Issue、PR、Actions 和用户数据。免费 5000 次/小时；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "GitHub API 60 次/小时怎么提到 5000？Token 与搜索",
+  "seo_description": "未认证 60 次/小时，Token 后 5000。含分页 Link 头、search 独立配额与 Actions 查询。",
+  "icon": "/icons/github-rest-api.png"
  },
  {
   "slug": "gitlab-api",
@@ -6850,8 +6981,9 @@
    }
   ],
   "plain_intro": "GitLab API 提供项目、Issue、MR、流水线和仓库文件接口。",
-  "seo_title": "GitLab API：免费额度、端点，附端点与认证",
-  "seo_description": "GitLab API 提供项目、Issue、MR、流水线和仓库文件接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "GitLab 自建实例 API 怎么换域名？分页头",
+  "seo_description": "公开项目免认证，私有需 Token。含 /api/v4 路径、X-Next-Page 分页与自建实例替换域名。",
+  "icon": "/icons/gitlab-api.png"
  },
  {
   "slug": "npm-registry-api",
@@ -6900,8 +7032,9 @@
    }
   ],
   "plain_intro": "npm Registry 提供包元数据、版本、依赖和下载量数据。",
-  "seo_title": "npm Registry API：免 Key、端点，附端点与认证",
-  "seo_description": "npm Registry 提供包元数据、版本、依赖和下载量数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "npm Registry 怎么查包下载量？两个域名别混",
+  "seo_description": "免 Key。含 registry.npmjs.org 元数据、api.npmjs.org 下载统计与单版本裁剪。",
+  "icon": "/icons/npm-registry-api.png"
  },
  {
   "slug": "pypi-json-api",
@@ -6949,8 +7082,9 @@
    }
   ],
   "plain_intro": "PyPI 提供 Python 包的元数据、版本和发布文件信息。",
-  "seo_title": "PyPI JSON API：免 Key、端点，附端点与认证",
-  "seo_description": "PyPI 提供 Python 包的元数据、版本和发布文件信息。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "PyPI JSON API 怎么查依赖？requires_dist 与 wheel",
+  "seo_description": "免 Key。含 /pypi/{pkg}/json、指定版本、requires_dist 与 urls 里的 wheel/sdist。",
+  "icon": "/icons/pypi-json-api.png"
  },
  {
   "slug": "docker-hub-api",
@@ -7003,8 +7137,9 @@
    }
   ],
   "plain_intro": "Docker Hub 提供镜像仓库、标签、大小和拉取数查询。",
-  "seo_title": "Docker Hub API：免 Key、端点，附端点与认证",
-  "seo_description": "Docker Hub 提供镜像仓库、标签、大小和拉取数查询。免费（有限速）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Docker Hub 拉取限额多少？100 次/6 小时与 API",
+  "seo_description": "匿名 100 次/6 小时、登录 200 次。含 repositories、tags 与 API 不消耗拉取配额。",
+  "icon": "/icons/docker-hub-api.png"
  },
  {
   "slug": "crates-io-api",
@@ -7053,8 +7188,9 @@
    }
   ],
   "plain_intro": "crates.io 提供 Rust 包的元数据、版本、依赖和下载量。",
-  "seo_title": "crates.io API：免 Key、端点，附端点与认证",
-  "seo_description": "crates.io 提供 Rust 包的元数据、版本、依赖和下载量。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "crates.io 为什么要 UA？1 次/秒与 sparse 索引",
+  "seo_description": "免 Key、必须带 UA。含 /api/v1/crates、versions、dependencies 与 sparse 索引批量同步。",
+  "icon": "/icons/crates-io-api.png"
  },
  {
   "slug": "stackexchange-api",
@@ -7105,8 +7241,9 @@
    }
   ],
   "plain_intro": "Stack Exchange API 提供问答、答案、标签和用户数据。",
-  "seo_title": "StackExchange API：免 Key、端点，附端点与认证",
-  "seo_description": "Stack Exchange API 提供问答、答案、标签和用户数据。免费 300 次/天；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Stack Exchange API 300 次/天？backoff 与 gzip",
+  "seo_description": "无 Key 每天 300 次、注册后 1 万。含 questions、answers、backoff 退避与 gzip 返回。",
+  "icon": "/icons/stackexchange-api.png"
  },
  {
   "slug": "codeforces-api",
@@ -7155,8 +7292,9 @@
    }
   ],
   "plain_intro": "Codeforces API 提供比赛、题库、提交和 rating 数据。",
-  "seo_title": "Codeforces API：免 Key、端点，附端点与认证",
-  "seo_description": "Codeforces API 提供比赛、题库、提交和 rating 数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Codeforces API 限 2 秒 1 次？contest 与 rating",
+  "seo_description": "免 Key、每秒 1 次。含 contest.list、problemset.problems、user.status 与 status 字段判断。",
+  "icon": "/icons/codeforces-api.png"
  },
  {
   "slug": "judge0-ce",
@@ -7210,8 +7348,9 @@
    }
   ],
   "plain_intro": "Judge0 提供多语言代码执行与评测接口。",
-  "seo_title": "Judge0 CE API：Key 申请、免费额度，附端点与认证",
-  "seo_description": "Judge0 提供多语言代码执行与评测接口。免费（限速）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Judge0 自建还是云版？50 次/月与沙箱",
+  "seo_description": "自建免费无限制，云版每月 50 次。含 submissions、batch、语言列表与不开网络的沙箱边界。",
+  "icon": "/icons/judge0-ce.png"
  },
  {
   "slug": "httpbin",
@@ -7254,8 +7393,9 @@
    }
   ],
   "plain_intro": "httpbin 把收到的 HTTP 请求原样回显，用于调试和测试。",
-  "seo_title": "httpbin API：免 Key、端点，附端点与认证",
-  "seo_description": "httpbin 把收到的 HTTP 请求原样回显，用于调试和测试。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "httpbin 能测什么？回显、延迟与状态码",
+  "seo_description": "免 Key。含 /anything 回显、/status 指定码、/delay 模拟超时与自建方式。",
+  "icon": "/icons/httpbin.png"
  },
  {
   "slug": "jsonplaceholder",
@@ -7308,8 +7448,9 @@
    }
   ],
   "plain_intro": "JSONPlaceholder 提供帖子、评论、用户等假数据接口。",
-  "seo_title": "JSONPlaceholder API：免 Key、端点，附端点与认证",
-  "seo_description": "JSONPlaceholder 提供帖子、评论、用户等假数据接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "JSONPlaceholder 写操作会保存吗？假数据边界",
+  "seo_description": "免 Key。含 posts/comments/users 六类资源、嵌套查询与写操作不持久化。",
+  "icon": "/icons/jsonplaceholder.png"
  },
  {
   "slug": "reqres",
@@ -7363,8 +7504,9 @@
    }
   ],
   "plain_intro": "ReqRes 提供模拟用户、登录和注册的测试接口。",
-  "seo_title": "ReqRes API：Key 申请、免费额度，附端点与认证",
-  "seo_description": "ReqRes 提供模拟用户、登录和注册的测试接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "ReqRes 登录接口返回什么？测试用 token",
+  "seo_description": "免 Key、数据固定。含 /api/users 分页、login/register 返回的假 token 与写操作不落库。",
+  "icon": "/icons/reqres.png"
  },
  {
   "slug": "resend",
@@ -7419,8 +7561,9 @@
    }
   ],
   "plain_intro": "Resend 提供事务邮件发送接口，支持模板和 webhook。",
-  "seo_title": "Resend API：Key 申请、免费额度，附端点与认证",
-  "seo_description": "Resend 提供事务邮件发送接口，支持模板和 webhook。免费 3000 封/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Resend 免费 3000 封/月？域名验证与模板",
+  "seo_description": "免费每天 100 封、每月 3000。含 /emails 发送、React Email 模板、SPF/DKIM 与 webhook。",
+  "icon": "/icons/resend.png"
  },
  {
   "slug": "sendgrid",
@@ -7474,8 +7617,9 @@
    }
   ],
   "plain_intro": "SendGrid 提供事务邮件与营销邮件的发送和统计接口。",
-  "seo_title": "SendGrid API：Key 申请、免费额度，附端点与认证",
-  "seo_description": "SendGrid 提供事务邮件与营销邮件的发送和统计接口。免费 100 封/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "SendGrid 免费 100 封/天？发件人验证与共享 IP",
+  "seo_description": "免费每天 100 封。含 /v3/mail/send、动态模板、发件人验证与共享 IP 的送达率。",
+  "icon": "/icons/sendgrid.png"
  },
  {
   "slug": "mailgun",
@@ -7528,8 +7672,9 @@
    }
   ],
   "plain_intro": "Mailgun 提供邮件发送、模板、事件查询和地址校验接口。",
-  "seo_title": "Mailgun API：Key 申请、免费额度，附端点与认证",
-  "seo_description": "Mailgun 提供邮件发送、模板、事件查询和地址校验接口。免费试用额度（限时）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Mailgun 沙箱域名为什么发不出去？区域与授权",
+  "seo_description": "试用期每月 100 封。含 US/EU 区域、沙箱只能发授权收件人、events 日志与入站路由。",
+  "icon": "/icons/mailgun.png"
  },
  {
   "slug": "emailjs",
@@ -7575,8 +7720,9 @@
    }
   ],
   "plain_intro": "EmailJS 提供前端直接发信的接口，无需自建后端。",
-  "seo_title": "EmailJS API：Key 申请、免费额度，附端点与认证",
-  "seo_description": "EmailJS 提供前端直接发信的接口，无需自建后端。免费 200 封/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "EmailJS 前端直接发信安全吗？200 封/月与白名单",
+  "seo_description": "免费每月 200 封。Public Key 会暴露，必须配域名白名单，不适合发敏感信息。",
+  "icon": "/icons/emailjs.png"
  },
  {
   "slug": "cloudflare-api",
@@ -7629,8 +7775,9 @@
    }
   ],
   "plain_intro": "Cloudflare API 提供 DNS、缓存、Workers 和 WAF 管理接口。",
-  "seo_title": "Cloudflare API：免费额度、端点，附端点与认证",
-  "seo_description": "Cloudflare API 提供 DNS、缓存、Workers 和 WAF 管理接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Cloudflare API Token 和 Global Key 怎么选？权限与限速",
+  "seo_description": "Token 可细化到单 Zone，Global Key 权限过大。含 DNS、缓存清理、Workers 与约 1200 次/5 分钟限速。",
+  "icon": "/icons/cloudflare-api.png"
  },
  {
   "slug": "telegram-bot-api",
@@ -7682,8 +7829,9 @@
    }
   ],
   "plain_intro": "Telegram Bot API 提供消息、媒体、回调和群管理接口。",
-  "seo_title": "Telegram Bot API：免费额度、端点，附端点与认证",
-  "seo_description": "Telegram Bot API 提供消息、媒体、回调和群管理接口。完全免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Telegram Bot Token 怎么申请？sendMessage 与 Webhook",
+  "seo_description": "免费无调用费。含 BotFather 取 Token、sendMessage、Inline Keyboard 与 setWebhook。",
+  "icon": "/icons/telegram-bot-api.png"
  },
  {
   "slug": "discord-api",
@@ -7737,8 +7885,9 @@
    }
   ],
   "plain_intro": "Discord API 提供消息、频道、交互和 Webhook 接口。",
-  "seo_title": "Discord API：免费额度、端点，附端点与认证",
-  "seo_description": "Discord API 提供消息、频道、交互和 Webhook 接口。完全免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Discord Bot 收不到消息？intents 与 50 次/秒",
+  "seo_description": "免费。含应用创建、Bot Token、必须声明 intents、Webhook 单向通知与路由限速。",
+  "icon": "/icons/discord-api.png"
  },
  {
   "slug": "slack-api",
@@ -7791,8 +7940,9 @@
    }
   ],
   "plain_intro": "Slack API 提供消息、Block Kit、文件、用户和事件订阅接口。",
-  "seo_title": "Slack API：免费额度、端点，附端点与认证",
-  "seo_description": "Slack API 提供消息、Block Kit、文件、用户和事件订阅接口。免费；需 OAuth。含端点、调用示例与常见问题。"
+  "seo_title": "Slack Bot Token 有几种？xoxb 与 Block Kit",
+  "seo_description": "免费、按方法分 Tier 限速。含 xoxb/xoxp 区别、chat.postMessage、Block Kit 与 Events API。",
+  "icon": "/icons/slack-api.png"
  },
  {
   "slug": "hunter-io",
@@ -7845,8 +7995,9 @@
    }
   ],
   "plain_intro": "Hunter 提供邮箱地址查找、验证和域名搜索接口。",
-  "seo_title": "Hunter.io API：Key 申请、免费额度，附调用参数",
-  "seo_description": "Hunter 提供邮箱地址查找、验证和域名搜索接口。免费 50 次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Hunter 免费 50 次/月怎么用？邮箱验证与 GDPR",
+  "seo_description": "免费每月 25 次搜索、50 次验证。含 email-finder、verifier、domain-search 与合规边界。",
+  "icon": "/icons/hunter-io.png"
  },
  {
   "slug": "numverify",
@@ -7900,8 +8051,9 @@
    }
   ],
   "plain_intro": "NumVerify 提供手机号归属地、运营商和有效性校验。",
-  "seo_title": "Numverify API：Key 申请、免费额度，附调用参数",
-  "seo_description": "NumVerify 提供手机号归属地、运营商和有效性校验。免费 100 次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "NumVerify 100 次/月够吗？号码类型与归属地",
+  "seo_description": "免费每月 100 次。含 /validate 返回有效性、号码类型、运营商与 E.164 格式。",
+  "icon": "/icons/numverify.png"
  },
  {
   "slug": "nager-date",
@@ -7954,8 +8106,9 @@
    }
   ],
   "plain_intro": "Nager.Date 提供全球公共假日和长周末查询。",
-  "seo_title": "Nager.Date API：免 Key、参数，附调用参数",
-  "seo_description": "Nager.Date 提供全球公共假日和长周末查询。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Nager.Date 怎么查长周末？100 多国假日",
+  "seo_description": "免 Key。含 PublicHolidays、LongWeekend、IsTodayPublicHoliday 与不含调休的边界。",
+  "icon": "/icons/nager-date.png"
  },
  {
   "slug": "timezonedb",
@@ -8001,8 +8154,9 @@
    }
   ],
   "plain_intro": "TimeZoneDB 提供时区、UTC 偏移和夏令时查询。",
-  "seo_title": "TimezoneDB API：Key 申请、免费额度，附调用参数",
-  "seo_description": "TimeZoneDB 提供时区、UTC 偏移和夏令时查询。免费（限速）；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TimeZoneDB 怎么按坐标查时区？DST 与限速",
+  "seo_description": "免费、有限速。含 lat/lng 查询、zone 查询、dst 标记与 IANA 时区名。",
+  "icon": "/icons/timezonedb.png"
  },
  {
   "slug": "sunrise-sunset-api",
@@ -8015,9 +8169,9 @@
   "free_tier": "完全免费",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
-  "status_code": "000",
-  "checked_at": "2026-11-18",
+  "status": "ok",
+  "status_code": "200",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://api.sunrise-sunset.org/json?lat=36.72&lng=-4.42\"",
   "tags": [],
   "featured": true,
@@ -8049,8 +8203,9 @@
    }
   ],
   "plain_intro": "Sunrise-Sunset 提供按经纬度计算的日出日落和昼长。",
-  "seo_title": "Sunrise-Sunset API：免 Key、参数，附调用参数",
-  "seo_description": "Sunrise-Sunset 提供按经纬度计算的日出日落和昼长。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "日出日落 API 怎么算黄金时刻？三种蒙影",
+  "seo_description": "免 Key。含 lat/lng 查询、civil/nautical/astronomical 蒙影与极昼极夜的空值。",
+  "icon": "/icons/sunrise-sunset-api.png"
  },
  {
   "slug": "tinyurl-api",
@@ -8097,8 +8252,9 @@
    }
   ],
   "plain_intro": "TinyURL 提供长链接转短链接口。",
-  "seo_title": "TinyURL API：Key 申请、免费额度，附调用参数",
-  "seo_description": "TinyURL 提供长链接转短链接口。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TinyURL 能自定义短码吗？免 Key 与无统计",
+  "seo_description": "免 Key。含 api-create、api-alias 自定义后缀、长期有效与没有点击统计的限制。",
+  "icon": "/icons/tinyurl-api.png"
  },
  {
   "slug": "is-gd",
@@ -8150,8 +8306,9 @@
    }
   ],
   "plain_intro": "is.gd 提供短链生成和点击统计接口。",
-  "seo_title": "is.gd API：免 Key、参数，附调用参数",
-  "seo_description": "is.gd 提供短链生成和点击统计接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "is.gd 短链能看点击吗？自定义后缀与限制",
+  "seo_description": "免 Key。含 create.php 的 JSON 输出、shorturl 自定义后缀与无批量接口。",
+  "icon": "/icons/is-gd.png"
  },
  {
   "slug": "microlink",
@@ -8164,9 +8321,9 @@
   "free_tier": "免费 50 次/天",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
-  "status_code": "000",
-  "checked_at": "2026-11-18",
+  "status": "ok",
+  "status_code": "200",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://api.microlink.io/?url=https://example.com\"",
   "tags": [],
   "featured": true,
@@ -8194,8 +8351,9 @@
    }
   ],
   "plain_intro": "Microlink 提供网页元数据、截图和 PDF 生成接口。",
-  "seo_title": "Microlink API：免 Key、参数，附调用参数",
-  "seo_description": "Microlink 提供网页元数据、截图和 PDF 生成接口。免费 50 次/天；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Microlink 免费 50 次/天？截图与 PDF 生成",
+  "seo_description": "免费每天 50 次。含元数据提取、screenshot、pdf 与反爬站点的空返回。",
+  "icon": "/icons/microlink.png"
  },
  {
   "slug": "languagetool",
@@ -8241,8 +8399,9 @@
    }
   ],
   "plain_intro": "LanguageTool 提供多语种拼写与语法检查接口。",
-  "seo_title": "LanguageTool API：免 Key、参数，附调用参数",
-  "seo_description": "LanguageTool 提供多语种拼写与语法检查接口。免费 20 次/分；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "LanguageTool 20 次/分够吗？中文规则与自建",
+  "seo_description": "公共实例每分钟 20 次、单文本 2 万字符。含 /v2/check、中文规则少与自托管。",
+  "icon": "/icons/languagetool.png"
  },
  {
   "slug": "libretranslate",
@@ -8292,8 +8451,9 @@
    }
   ],
   "plain_intro": "LibreTranslate 提供开源自托管的机器翻译接口。",
-  "seo_title": "LibreTranslate API：Key 申请、免费额度，附调用参数",
-  "seo_description": "LibreTranslate 提供开源自托管的机器翻译接口。免费自建 / 云版限量；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "LibreTranslate 公共实例限多少？自建与质量",
+  "seo_description": "公共实例约每分钟 20 次。含 /translate、/detect、HTML 保留与 Docker 自建。",
+  "icon": "/icons/libretranslate.png"
  },
  {
   "slug": "deepl-api-free",
@@ -8348,8 +8508,9 @@
    }
   ],
   "plain_intro": "DeepL API 提供多语种文本翻译，免费档每月 50 万字符。",
-  "seo_title": "DeepL API Free API：Key 申请、免费额度，附调用参数",
-  "seo_description": "DeepL API 提供多语种文本翻译，免费档每月 50 万字符。免费 50 万字符/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "DeepL 免费 50 万字符怎么算？绑卡与文档翻译",
+  "seo_description": "免费每月 50 万字符、需绑卡。含 /v2/translate、多目标语言、术语表与文档翻译限制。",
+  "icon": "/icons/deepl-api-free.png"
  },
  {
   "slug": "pok-api",
@@ -8399,8 +8560,9 @@
    }
   ],
   "plain_intro": "PokéAPI 提供宝可梦、属性、技能和进化链数据。",
-  "seo_title": "Poké API：免 Key、参数，附调用示例",
-  "seo_description": "PokéAPI 提供宝可梦、属性、技能和进化链数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "PokéAPI 为什么这么慢？缓存、sprites 与分页",
+  "seo_description": "免 Key。含 /pokemon/{id} 大响应、sprites 多世代图、分页与本地缓存建议。",
+  "icon": "/icons/pok-api.png"
  },
  {
   "slug": "swapi",
@@ -8451,8 +8613,9 @@
    }
   ],
   "plain_intro": "SWAPI 提供星球大战的人物、星球、飞船和电影数据。",
-  "seo_title": "SW API：免 Key、参数，附调用示例",
-  "seo_description": "SWAPI 提供星球大战的人物、星球、飞船和电影数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "SWAPI 还在维护吗？关联资源与分页",
+  "seo_description": "免 Key、数据静态。含 people/planets/films、URL 关联需二次请求与分页。",
+  "icon": "/icons/swapi.png"
  },
  {
   "slug": "jikan-myanimelist",
@@ -8465,9 +8628,9 @@
   "free_tier": "完全免费",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
-  "status_code": "000",
-  "checked_at": "2026-11-18",
+  "status": "ok",
+  "status_code": "200",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://api.jikan.moe/v4/anime/1\"",
   "tags": [],
   "featured": true,
@@ -8504,8 +8667,9 @@
    }
   ],
   "plain_intro": "Jikan 提供 MyAnimeList 的动画、漫画和角色数据。",
-  "seo_title": "Jikan (MyAnimeList) API：免 Key、参数，附调用",
-  "seo_description": "Jikan 提供 MyAnimeList 的动画、漫画和角色数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Jikan 每秒 3 次怎么排？MAL 数据与季度榜",
+  "seo_description": "免 Key、每秒 3 次、每天 6 万。含 /v4/anime、seasons、top 与数据滞后。",
+  "icon": "/icons/jikan-myanimelist.png"
  },
  {
   "slug": "anilist-graphql",
@@ -8553,8 +8717,9 @@
    }
   ],
   "plain_intro": "AniList 提供动画、漫画、角色和用户列表的 GraphQL 接口。",
-  "seo_title": "AniList GraphQL API：免 Key、参数，附调用示例",
-  "seo_description": "AniList 提供动画、漫画、角色和用户列表的 GraphQL 接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "AniList GraphQL 怎么拼查询？90 次/分与 OAuth",
+  "seo_description": "免 Key 读公开数据、约 90 次/分。含 GraphQL 查询结构、用户列表需 OAuth 与趋势榜。",
+  "icon": "/icons/anilist-graphql.png"
  },
  {
   "slug": "studio-ghibli-api",
@@ -8607,8 +8772,9 @@
    }
   ],
   "plain_intro": "Studio Ghibli API 提供吉卜力电影、角色和场景数据。",
-  "seo_title": "Studio Ghibli API：免 Key、参数，附调用示例",
-  "seo_description": "Studio Ghibli API 提供吉卜力电影、角色和场景数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "吉卜力 API 能商用吗？数据范围与图片版权",
+  "seo_description": "免 Key、社区维护。含 films/people/locations、数据量小与不含剧照版权。",
+  "icon": "/icons/studio-ghibli-api.png"
  },
  {
   "slug": "rick-and-morty-api",
@@ -8659,8 +8825,9 @@
    }
   ],
   "plain_intro": "Rick and Morty API 提供角色、剧集和地点数据。",
-  "seo_title": "Rick and Morty API：免 Key、参数，附调用示例",
-  "seo_description": "Rick and Morty API 提供角色、剧集和地点数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Rick and Morty API 怎么按剧集筛角色？",
+  "seo_description": "免 Key。含 character/episode/location 三类资源、状态与物种过滤、头像地址。",
+  "icon": "/icons/rick-and-morty-api.png"
  },
  {
   "slug": "open-trivia-db",
@@ -8712,8 +8879,9 @@
    }
   ],
   "plain_intro": "Open Trivia DB 提供多分类、多难度的问答题库。",
-  "seo_title": "Open Trivia DB API：免 Key、参数，附调用示例",
-  "seo_description": "Open Trivia DB 提供多分类、多难度的问答题库。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Open Trivia DB 怎么避免重复题？token 机制",
+  "seo_description": "免 Key、5 秒 1 次。含 amount/category/difficulty、boolean 题型与 api_token 去重。",
+  "icon": "/icons/open-trivia-db.png"
  },
  {
   "slug": "jokeapi",
@@ -8766,8 +8934,9 @@
    }
   ],
   "plain_intro": "JokeAPI 提供多语言、多分类的笑话接口。",
-  "seo_title": "Joke API：免 Key、参数，附调用示例",
-  "seo_description": "JokeAPI 提供多语言、多分类的笑话接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "JokeAPI 怎么过滤成人内容？分类与安全模式",
+  "seo_description": "免 Key、每秒 120 次。含分类、blacklistFlags、多语言与单段/双段格式。",
+  "icon": "/icons/jokeapi.png"
  },
  {
   "slug": "icanhazdadjoke",
@@ -8813,8 +8982,9 @@
    }
   ],
   "plain_intro": "icanhazdadjoke 提供随机英文冷笑话接口。",
-  "seo_title": "icanhazdadjoke API：免 Key、参数，附调用示例",
-  "seo_description": "icanhazdadjoke 提供随机英文冷笑话接口。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "icanhazdadjoke 怎么搜笑话？JSON 与图片",
+  "seo_description": "免 Key。含 Accept 头取 JSON、/search、/j/{id}.png 生成图片与英文限定。",
+  "icon": "/icons/icanhazdadjoke.png"
  },
  {
   "slug": "chuck-norris-api",
@@ -8860,8 +9030,9 @@
    }
   ],
   "plain_intro": "Chuck Norris API 提供随机 Chuck Norris 笑话。",
-  "seo_title": "Chuck Norris API：免 Key、参数，附调用示例",
-  "seo_description": "Chuck Norris API 提供随机 Chuck Norris 笑话。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Chuck Norris API 有哪些分类？随机与搜索",
+  "seo_description": "免 Key。含 /jokes/random、categories、search 与重复率较高的特点。",
+  "icon": "/icons/chuck-norris-api.png"
  },
  {
   "slug": "kanye-rest",
@@ -8903,8 +9074,9 @@
    }
   ],
   "plain_intro": "kanye.rest 提供随机 Kanye West 语录。",
-  "seo_title": "kanye.rest API：免 Key、参数，附调用示例",
-  "seo_description": "kanye.rest 提供随机 Kanye West 语录。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "kanye.rest 怎么返回纯文本？CORS 与限制",
+  "seo_description": "免 Key、允许浏览器直连。含 ?format=text、JSON 结构与只有语录没有出处的限制。",
+  "icon": "/icons/kanye-rest.png"
  },
  {
   "slug": "dog-ceo-api",
@@ -8958,8 +9130,9 @@
    }
   ],
   "plain_intro": "Dog CEO API 提供按品种检索的随机狗图。",
-  "seo_title": "Dog CEO API：免 Key、参数，附调用示例",
-  "seo_description": "Dog CEO API 提供按品种检索的随机狗图。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Dog CEO API 怎么按品种取图？子品种与批量",
+  "seo_description": "免 Key。含 breeds/list、breed/{breed}/images、random/10 与品种标注的小错误。",
+  "icon": "/icons/dog-ceo-api.png"
  },
  {
   "slug": "cat-fact-api",
@@ -9009,8 +9182,9 @@
    }
   ],
   "plain_intro": "Cat Fact API 提供随机猫知识条目。",
-  "seo_title": "Cat Fact API：免 Key、文档，附调用示例",
-  "seo_description": "Cat Fact API 提供随机猫知识条目。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Cat Fact API 怎么批量取？分页与品种",
+  "seo_description": "免 Key。含 /fact、/facts?limit、分页与 /breeds 品种字段。",
+  "icon": "/icons/cat-fact-api.png"
  },
  {
   "slug": "random-user-generator",
@@ -9030,7 +9204,7 @@
   "tags": [],
   "featured": true,
   "source": "manual",
-  "intro": "Random User Generator 是随机用户数据接口，通过 randomuser.me 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **随机用户**：/api 返回姓名、性别、邮箱、地址和头像。\n- **批量**：?results=10 一次取多个。\n- **字段裁剪**：?inc=name,email 只取需要的字段。\n- ** nationality**：按国家生成对应资料。\n- **种子**：?seed= 保证结果可复现。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 头像是真实照片，仅限演示用途。\n- 数据为合成，不对应真实个人。\n\n典型使用场景：测试数据、前端列表、演示账号、UI 原型。",
+  "intro": "Random User Generator 是随机用户数据接口，通过 randomuser.me 对外开放。无需 Key，直接请求即可。\n\n## 主要能力\n- **随机用户**：/api 返回姓名、性别、邮箱、地址和头像。\n- **批量**：?results=10 一次取多个。\n- **字段裁剪**：?inc=name,email 只取需要的字段。\n- **nationality**：按国家生成对应资料。\n- **种子**：?seed= 保证结果可复现。\n\n## 特点\n- 免费无 Key，限速宽松。\n- 头像是真实照片，仅限演示用途。\n- 数据为合成，不对应真实个人。\n\n典型使用场景：测试数据、前端列表、演示账号、UI 原型。",
   "capabilities": [
    "随机用户",
    "头像",
@@ -9063,8 +9237,9 @@
    }
   ],
   "plain_intro": "Random User Generator 提供随机用户资料与头像。",
-  "seo_title": "Random User Generator API：免 Key、参数，附",
-  "seo_description": "Random User Generator 提供随机用户资料与头像。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Random User 怎么固定同一批数据？seed 与字段",
+  "seo_description": "免 Key。含 results、seed 复现、inc 字段裁剪与 nationality 选择。",
+  "icon": "/icons/random-user-generator.png"
  },
  {
   "slug": "xkcd-api",
@@ -9107,8 +9282,9 @@
    }
   ],
   "plain_intro": "xkcd API 提供漫画条目、图片和元数据。",
-  "seo_title": "xkcd API：免 Key、参数，附调用示例",
-  "seo_description": "xkcd API 提供漫画条目、图片和元数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "xkcd API 怎么取随机一期？编号与 alt 文本",
+  "seo_description": "免 Key。含 /info.0.json、按期号取图与 alt 里的隐藏笑点。",
+  "icon": "/icons/xkcd-api.png"
  },
  {
   "slug": "api-football",
@@ -9153,8 +9329,9 @@
    }
   ],
   "plain_intro": "API-Football 提供赛程、比分、阵容、赔率和联赛积分数据。",
-  "seo_title": "API-Football API：Key 申请、免费额度，附赛程数据",
-  "seo_description": "API-Football 提供赛程、比分、阵容、赔率和联赛积分数据。免费 100 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "API-Football 100 次/天怎么省？RapidAPI 与联赛 ID",
+  "seo_description": "免费每天 100 次、走 RapidAPI。含 fixtures、standings、赔率与联赛/球队 ID 查询。",
+  "icon": "/icons/api-football.png"
  },
  {
   "slug": "thesportsdb",
@@ -9200,8 +9377,9 @@
    }
   ],
   "plain_intro": "TheSportsDB 提供球队、球员、赛事和场馆数据。",
-  "seo_title": "TheSportsDB API：Key 申请、免费额度，附赛程数据",
-  "seo_description": "TheSportsDB 提供球队、球员、赛事和场馆数据。免费档需 Patreon Key；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TheSportsDB 测试 Key 是 3？Patreon 与队徽",
+  "seo_description": "测试 Key 为 3，正式需 Patreon。含 searchteams、eventsday、队徽与联赛列表。",
+  "icon": "/icons/thesportsdb.png"
  },
  {
   "slug": "balldontlie-nba",
@@ -9255,8 +9433,9 @@
    }
   ],
   "plain_intro": "Ball Dont Lie 提供 NBA 球队、球员、比赛和统计数据。",
-  "seo_title": "BALLDONTLIE (NBA) API：Key 申请、免费额度，附赛程数",
-  "seo_description": "Ball Dont Lie 提供 NBA 球队、球员、比赛和统计数据。免费档有限额；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "BALLDONTLIE 免费 5 次/分？NBA 数据与赛季",
+  "seo_description": "免费每分钟 5 次。含 teams/players/games/stats、赛季参数与数据延迟。",
+  "icon": "/icons/balldontlie-nba.png"
  },
  {
   "slug": "jolpica-f1-ergast",
@@ -9300,8 +9479,9 @@
    }
   ],
   "plain_intro": "Jolpica 提供 F1 赛程、车手、车队和比赛结果数据。",
-  "seo_title": "Jolpica F1（Ergast 继任） API：免 Key、参数，附",
-  "seo_description": "Jolpica 提供 F1 赛程、车手、车队和比赛结果数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Jolpica 还能替代 Ergast 吗？路径与限速",
+  "seo_description": "免 Key、约每秒 4 次。含 Ergast 兼容路径、results、qualifying 与 standings。",
+  "icon": "/icons/jolpica-f1-ergast.png"
  },
  {
   "slug": "openf1",
@@ -9344,8 +9524,9 @@
    }
   ],
   "plain_intro": "OpenF1 提供 F1 实时遥测、圈速、进站和车手无线电。",
-  "seo_title": "OpenF1 API：免 Key、参数，附赛程数据",
-  "seo_description": "OpenF1 提供 F1 实时遥测、圈速、进站和车手无线电。免费（需注册）；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenF1 实时数据延迟多少？遥测与无线电",
+  "seo_description": "免 Key、实时延迟几十秒。含 car_data、laps、position、pit 与 team_radio。",
+  "icon": "/icons/openf1.png"
  },
  {
   "slug": "strava-api",
@@ -9401,15 +9582,16 @@
    }
   ],
   "plain_intro": "Strava 提供运动记录、路段和排行榜接口，需 OAuth 授权。",
-  "seo_title": "Strava API：Key 申请、免费额度，附赛程数据",
-  "seo_description": "Strava 提供运动记录、路段和排行榜接口，需 OAuth 授权。免费；需 OAuth。含端点、调用示例与常见问题。"
+  "seo_title": "Strava API 1000 次/天够吗？OAuth 与分段",
+  "seo_description": "免费、每 15 分钟 100 次、每天 1000。含 OAuth、activities、segments 与 GPX 上传。",
+  "icon": "/icons/strava-api.png"
  },
  {
   "slug": "opensky-network",
   "name": "OpenSky Network",
   "category": "transport",
   "description_zh": "实时航班 ADS-B",
-  "url": "https://opensky-network.org/api/",
+  "url": "https://opensky-network.org/",
   "probe": "https://opensky-network.org/api/states/all",
   "auth": "other",
   "free_tier": "免费（限速）",
@@ -9452,8 +9634,9 @@
    }
   ],
   "plain_intro": "OpenSky 提供全球航班实时位置、航迹和历史数据。",
-  "seo_title": "OpenSky Network API：Key 申请、免费额度，附实时数据",
-  "seo_description": "OpenSky 提供全球航班实时位置、航迹和历史数据。免费（限速）；需申请。含端点、调用示例与常见问题。"
+  "seo_title": "OpenSky 匿名 400 次/天？注册与覆盖盲区",
+  "seo_description": "匿名每天 400 次、注册后 4000。含 states/all、 lamin/lomin 范围与 ADS-B 覆盖盲区。",
+  "icon": "/icons/opensky-network.png"
  },
  {
   "slug": "aviationstack",
@@ -9496,8 +9679,9 @@
    }
   ],
   "plain_intro": "AviationStack 提供航班状态、航线、机场和飞机数据。",
-  "seo_title": "Aviationstack API：Key 申请、免费额度，附实时数据",
-  "seo_description": "AviationStack 提供航班状态、航线、机场和飞机数据。免费 100 次/月；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "AviationStack 免费 100 次/月？实时数据限制",
+  "seo_description": "免费每月 100 次且仅 HTTP。含 flights、routes、airports 与免费档不含实时。",
+  "icon": "/icons/aviationstack.png"
  },
  {
   "slug": "transport-for-london",
@@ -9549,8 +9733,9 @@
    }
   ],
   "plain_intro": "TfL API 提供伦敦地铁、公交、路况和到站预测。",
-  "seo_title": "Transport for London API：免费额度、参数，附实时",
-  "seo_description": "TfL API 提供伦敦地铁、公交、路况和到站预测。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TfL API 免 Key 能用吗？到站预测与线路状态",
+  "seo_description": "无 Key 限每秒 50 次。含 StopPoint/Arrivals、Line Status、JourneyResults 与大伦敦范围。",
+  "icon": "/icons/transport-for-london.png"
  },
  {
   "slug": "open-charge-map",
@@ -9596,8 +9781,9 @@
    }
   ],
   "plain_intro": "Open Charge Map 提供全球充电桩位置、接口和状态数据。",
-  "seo_title": "Open Charge Map API：Key 申请、免费额度，附实时数据",
-  "seo_description": "Open Charge Map 提供全球充电桩位置、接口和状态数据。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Open Charge Map 充电桩数据准吗？社区维护",
+  "seo_description": "免 Key。含 boundingbox 查询、接口类型与功率、占用状态不可靠的边界。",
+  "icon": "/icons/open-charge-map.png"
  },
  {
   "slug": "amadeus-for-developers",
@@ -9652,8 +9838,9 @@
    }
   ],
   "plain_intro": "Amadeus 提供航班搜索、酒店、机票预订和旅行数据接口。",
-  "seo_title": "Amadeus for Developers API：免费额度、参数，附",
-  "seo_description": "Amadeus 提供航班搜索、酒店、机票预订和旅行数据接口。免费测试环境；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Amadeus 测试环境能查真实机票吗？沙箱与计费",
+  "seo_description": "测试环境免费但为沙箱数据。含 flight-offers、hotel-offers、地点查询与生产计费。",
+  "icon": "/icons/amadeus-for-developers.png"
  },
  {
   "slug": "google-books-api",
@@ -9705,8 +9892,9 @@
    }
   ],
   "plain_intro": "Google Books 提供图书检索、卷册信息和预览链接。",
-  "seo_title": "Google Books API：Key 申请、免费额度，附数据范围",
-  "seo_description": "Google Books 提供图书检索、卷册信息和预览链接。免费 1000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Google Books API 中文书全吗？ISBN 与预览",
+  "seo_description": "无 Key 有限流。含 volumes?q=、ISBN 查询、imageLinks 与中文书目覆盖一般。",
+  "icon": "/icons/google-books-api.png"
  },
  {
   "slug": "open-library",
@@ -9751,8 +9939,9 @@
    }
   ],
   "plain_intro": "Open Library 提供图书、作者、版本和封面数据。",
-  "seo_title": "Open Library API：免 Key、参数，附数据范围",
-  "seo_description": "Open Library 提供图书、作者、版本和封面数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Open Library 怎么按 ISBN 查书？封面与版本",
+  "seo_description": "免 Key。含 /isbn/{isbn}.json、search.json、封面尺寸与版本列表。",
+  "icon": "/icons/open-library.png"
  },
  {
   "slug": "gutendex",
@@ -9765,9 +9954,9 @@
   "free_tier": "完全免费",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
-  "status_code": "000",
-  "checked_at": "2026-11-18",
+  "status": "ok",
+  "status_code": "200",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://gutendex.com/books?search=api\"",
   "tags": [],
   "featured": true,
@@ -9795,8 +9984,9 @@
    }
   ],
   "plain_intro": "Gutendex 提供古腾堡计划电子书的检索与下载链接。",
-  "seo_title": "Gutendex API：免 Key、参数，附数据范围",
-  "seo_description": "Gutendex 提供古腾堡计划电子书的检索与下载链接。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Gutendex 怎么筛中文公版书？languages 与格式",
+  "seo_description": "免 Key。含 /books?languages=zh、formats 里的 txt/epub、下载量与分页。",
+  "icon": "/icons/gutendex.png"
  },
  {
   "slug": "themealdb",
@@ -9847,8 +10037,9 @@
    }
   ],
   "plain_intro": "TheMealDB 提供菜谱、食材、分类和步骤数据。",
-  "seo_title": "TheMealDB API：免费额度、参数，附数据范围",
-  "seo_description": "TheMealDB 提供菜谱、食材、分类和步骤数据。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TheMealDB 测试 Key 是 1？菜谱与食材",
+  "seo_description": "测试 Key 为 1，商用需付费。含 search.php、random.php、filter.php 与以西餐为主。",
+  "icon": "/icons/themealdb.png"
  },
  {
   "slug": "thecocktaildb",
@@ -9891,8 +10082,9 @@
    }
   ],
   "plain_intro": "TheCocktailDB 提供鸡尾酒配方、原料和调制步骤。",
-  "seo_title": "TheCocktailDB API：免费额度、参数，附数据范围",
-  "seo_description": "TheCocktailDB 提供鸡尾酒配方、原料和调制步骤。免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "TheCocktailDB 怎么按原料找酒？filter 与杯型",
+  "seo_description": "测试 Key 为 1。含 search.php、filter.php?i=Gin、lookup 与英文配方。",
+  "icon": "/icons/thecocktaildb.png"
  },
  {
   "slug": "open-food-facts",
@@ -9938,8 +10130,9 @@
    }
   ],
   "plain_intro": "Open Food Facts 提供食品成分、营养值和包装信息。",
-  "seo_title": "Open Food Facts API：免 Key、参数，附数据范围",
-  "seo_description": "Open Food Facts 提供食品成分、营养值和包装信息。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Open Food Facts 扫码查成分？众包与覆盖",
+  "seo_description": "免 Key。含 /api/v2/product/{barcode}、Nutri-Score、添加剂与中国产品覆盖缺口。",
+  "icon": "/icons/open-food-facts.png"
  },
  {
   "slug": "fake-store-api",
@@ -9992,8 +10185,9 @@
    }
   ],
   "plain_intro": "Fake Store API 提供模拟商品、购物车和用户数据。",
-  "seo_title": "Fake Store API：免 Key、参数，附数据范围",
-  "seo_description": "Fake Store API 提供模拟商品、购物车和用户数据。完全免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Fake Store API 能当后端用吗？写操作不持久",
+  "seo_description": "免 Key、数据固定。含 products/carts/users、假登录 token 与写操作不落库。",
+  "icon": "/icons/fake-store-api.png"
  },
  {
   "slug": "virustotal",
@@ -10048,8 +10242,9 @@
    }
   ],
   "plain_intro": "VirusTotal 提供文件哈希、URL 和域名的多引擎扫描结果。",
-  "seo_title": "VirusTotal API：Key 申请、免费额度，附查询字段",
-  "seo_description": "VirusTotal 提供文件哈希、URL 和域名的多引擎扫描结果。免费 4 次/分；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "VirusTotal 免费 4 次/分够吗？哈希与上传限制",
+  "seo_description": "免费每分钟 4 次、每天 500。含 files/{hash}、URL 扫描、32MB 上传与样本共享。",
+  "icon": "/icons/virustotal.png"
  },
  {
   "slug": "shodan",
@@ -10105,8 +10300,9 @@
    }
   ],
   "plain_intro": "Shodan 提供联网设备、开放端口和服务指纹搜索。",
-  "seo_title": "Shodan API：Key 申请、免费额度，附查询字段",
-  "seo_description": "Shodan 提供联网设备、开放端口和服务指纹搜索。免费有限查询；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Shodan 免费档能查多少？API 配额与搜索语法",
+  "seo_description": "免费档限速低、部分接口需付费。含 host 查询、搜索过滤、DNS 子域与授权范围提醒。",
+  "icon": "/icons/shodan.png"
  },
  {
   "slug": "have-i-been-pwned",
@@ -10152,8 +10348,9 @@
    }
   ],
   "plain_intro": "HIBP 提供邮箱与密码是否出现在泄露库的查询。",
-  "seo_title": "Have I Been Pwned API：Key 申请、免费额度，附查询字",
-  "seo_description": "HIBP 提供邮箱与密码是否出现在泄露库的查询。密码查询免费，其余需付费 Key；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "HIBP 邮箱查询为什么要付费？密码接口免费",
+  "seo_description": "密码查询免费，邮箱查询需付费 Key。含 k-anonymity 原理、breaches 清单与不能撞库的边界。",
+  "icon": "/icons/have-i-been-pwned.png"
  },
  {
   "slug": "abuseipdb",
@@ -10209,8 +10406,9 @@
    }
   ],
   "plain_intro": "AbuseIPDB 提供 IP 滥用举报、信誉分和地理位置。",
-  "seo_title": "AbuseIPDB API：Key 申请、免费额度，附查询字段",
-  "seo_description": "AbuseIPDB 提供 IP 滥用举报、信誉分和地理位置。免费 1000 次/天；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "AbuseIPDB 免费 1000 次/天？信誉分与举报",
+  "seo_description": "免费每天 1000 次。含 check、blacklist、check-block 与社区举报导致的误判。",
+  "icon": "/icons/abuseipdb.png"
  },
  {
   "slug": "alienvault-otx",
@@ -10261,8 +10459,9 @@
    }
   ],
   "plain_intro": "AlienVault OTX 提供威胁情报、IOC 和攻击者画像。",
-  "seo_title": "AlienVault OTX API：免 Key、参数，附查询字段",
-  "seo_description": "AlienVault OTX 提供威胁情报、IOC 和攻击者画像。免费；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "AlienVault OTX 免 Key 能查什么？IOC 与 pulse",
+  "seo_description": "免费、注册提高额度。含 indicators、pulses、passive_dns 与情报时效性。",
+  "icon": "/icons/alienvault-otx.png"
  },
  {
   "slug": "greynoise",
@@ -10313,18 +10512,19 @@
    }
   ],
   "plain_intro": "GreyNoise 提供 IP 扫描行为分类，区分背景噪音与针对性攻击。",
-  "seo_title": "GreyNoise API：Key 申请、免费额度，附查询字段",
-  "seo_description": "GreyNoise 提供 IP 扫描行为分类，区分背景噪音与针对性攻击。社区版免费；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "GreyNoise 怎么分辨扫描噪音？社区版额度",
+  "seo_description": "社区版免费、每天 50 次。含 /v3/ip 判断扫描器、context 富化与 GNQL 查询。",
+  "icon": "/icons/greynoise.png"
  },
  {
   "slug": "un-comtrade",
   "name": "UN Comtrade",
   "category": "public-data",
   "description_zh": "全球贸易流，预览档免费",
-  "url": "https://comtradeapi.un.org/",
+  "url": "https://comtradeplus.un.org/",
   "probe": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=842&period=2022&cmdCode=85",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10359,8 +10559,9 @@
    }
   ],
   "plain_intro": "UN Comtrade 提供各国进出口贸易额和商品分类数据。",
-  "seo_title": "UN Comtrade API：Key 申请、免费额度，附数据范围",
-  "seo_description": "UN Comtrade 提供各国进出口贸易额和商品分类数据。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "UN Comtrade 免费 500 次/天？HS 编码与滞后",
+  "seo_description": "免费每天 500 次、每次 500 条。含 HS 编码、双边贸易、年度与月度数据及 6–18 个月滞后。",
+  "icon": "/icons/un-comtrade.png"
  },
  {
   "slug": "imf-datamapper",
@@ -10370,7 +10571,7 @@
   "url": "https://www.imf.org/external/datamapper/",
   "probe": "https://www.imf.org/external/datamapper/api/v1/NGDPD",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "key_required",
@@ -10414,8 +10615,9 @@
    }
   ],
   "plain_intro": "IMF DataMapper 提供各国宏观经济指标的年度数据。",
-  "seo_title": "IMF DataMapper API：免 Key、参数，附数据范围",
-  "seo_description": "IMF DataMapper 提供各国宏观经济指标的年度数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "IMF DataMapper 怎么取一国 GDP？指标代码",
+  "seo_description": "免 Key。含 /v1/{indicator}、国家代码、indicators 目录与年度数据边界。",
+  "icon": "/icons/imf-datamapper.png"
  },
  {
   "slug": "imf-sdmx-api",
@@ -10425,7 +10627,7 @@
   "url": "https://data.imf.org/",
   "probe": "https://api.imf.org/external/sdmx/2.1/dataflow",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10469,8 +10671,9 @@
    }
   ],
   "plain_intro": "IMF SDMX 提供国际收支、汇率和金融统计的标准数据集。",
-  "seo_title": "IMF SDMX API：免 Key、参数，附数据范围",
-  "seo_description": "IMF SDMX 提供国际收支、汇率和金融统计的标准数据集。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "IMF SDMX 维度怎么拼？dataflow 与 codelist",
+  "seo_description": "免 Key。含 dataflow 目录、data 路径的维度 key、结构定义与 SDMX-JSON 解析。",
+  "icon": "/icons/imf-sdmx-api.png"
  },
  {
   "slug": "eurostat-api",
@@ -10480,7 +10683,7 @@
   "url": "https://ec.europa.eu/eurostat/web/main/data/web-services",
   "probe": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10519,8 +10722,9 @@
    }
   ],
   "plain_intro": "Eurostat 提供欧盟成员国的人口、经济和就业统计数据。",
-  "seo_title": "Eurostat API：免 Key、参数，附数据范围",
-  "seo_description": "Eurostat 提供欧盟成员国的人口、经济和就业统计数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Eurostat 数据集代码怎么找？JSON 与维度过滤",
+  "seo_description": "免 Key。含 dataflow 目录、/data/{dataset}、geo/time 过滤与 TSV 批量下载。",
+  "icon": "/icons/eurostat-api.png"
  },
  {
   "slug": "oecd-sdmx",
@@ -10530,7 +10734,7 @@
   "url": "https://data-explorer.oecd.org/",
   "probe": "https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.STES",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10572,8 +10776,9 @@
    }
   ],
   "plain_intro": "OECD SDMX 提供成员国经济、教育、健康和社会指标。",
-  "seo_title": "OECD SDMX API：免 Key、参数，附数据范围",
-  "seo_description": "OECD SDMX 提供成员国经济、教育、健康和社会指标。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "OECD SDMX 怎么取跨国指标？代码表层级",
+  "seo_description": "免 Key。含 sdmx.oecd.org 的 dataflow、维度 key、结构查询与 CSV 输出。",
+  "icon": "/icons/oecd-sdmx.png"
  },
  {
   "slug": "ecb-data-portal",
@@ -10583,7 +10788,7 @@
   "url": "https://data.ecb.europa.eu/",
   "probe": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10622,8 +10827,9 @@
    }
   ],
   "plain_intro": "ECB 提供欧元区利率、汇率、货币和金融统计。",
-  "seo_title": "ECB Data Portal API：免 Key、参数，附数据范围",
-  "seo_description": "ECB 提供欧元区利率、汇率、货币和金融统计。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "ECB 汇率接口怎么查？EXR 数据流与 CSV",
+  "seo_description": "免 Key。含 /service/data/EXR、利率 FM 数据流、维度 key 与 SDMX/CSV 格式。",
+  "icon": "/icons/ecb-data-portal.png"
  },
  {
   "slug": "bis-statistics",
@@ -10636,9 +10842,9 @@
   "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
-  "status_code": "406",
-  "checked_at": "2026-11-18",
+  "status": "ok",
+  "status_code": "200",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://stats.bis.org/api/v1/data/WS_LONG_CPI?format=json\"",
   "tags": [],
   "featured": false,
@@ -10671,8 +10877,9 @@
    }
   ],
   "plain_intro": "BIS 提供国际银行、信贷和跨境资本流动统计。",
-  "seo_title": "BIS Statistics API：免 Key、参数，附数据范围",
-  "seo_description": "BIS 提供国际银行、信贷和跨境资本流动统计。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "BIS 统计 API 怎么取跨境信贷？dataflow 目录",
+  "seo_description": "免 Key、无公开配额。含 dataflow/BIS/all、BIS_CBS、BIS_LONG_CPI、维度点号与 CSV 取数。",
+  "icon": "/icons/bis-statistics.png"
  },
  {
   "slug": "who-gho-odata",
@@ -10682,7 +10889,7 @@
   "url": "https://www.who.int/data/gho/info/gho-odata-api",
   "probe": "https://ghoapi.azureedge.net/api/Indicator",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10721,8 +10928,9 @@
    }
   ],
   "plain_intro": "WHO GHO 提供全球健康、疾病和卫生系统指标。",
-  "seo_title": "WHO GHO OData API：免 Key、参数，附数据范围",
-  "seo_description": "WHO GHO 提供全球健康、疾病和卫生系统指标。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "WHO GHO 怎么按国家查指标？OData 过滤",
+  "seo_description": "免 Key。含 Indicator 目录、$filter=SpatialDim、TimeDim 与 $select 裁剪。",
+  "icon": "/icons/who-gho-odata.png"
  },
  {
   "slug": "un-sdg-api",
@@ -10732,7 +10940,7 @@
   "url": "https://unstats.un.org/sdgapi/swagger/",
   "probe": "https://unstats.un.org/SDGAPI/v1/sdg/Goal/List",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10775,8 +10983,9 @@
    }
   ],
   "plain_intro": "UN SDG API 提供可持续发展目标的各国指标数据。",
-  "seo_title": "UN SDG API：免 Key、参数，附数据范围",
-  "seo_description": "UN SDG API 提供可持续发展目标的各国指标数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "UN SDG API 怎么查 231 个指标？国家与年份",
+  "seo_description": "免 Key。含 GetIndicators、GetCountryData、GetRegionData 与各国口径差异。",
+  "icon": "/icons/un-sdg-api.png"
  },
  {
   "slug": "unhcr-refugee-data",
@@ -10786,7 +10995,7 @@
   "url": "https://api.unhcr.org/docs/",
   "probe": "https://api.unhcr.org/population/v1/population/?limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10819,8 +11028,9 @@
    }
   ],
   "plain_intro": "UNHCR 提供难民、庇护和流离失所人口统计。",
-  "seo_title": "UNHCR Refugee Data API：免 Key、参数，附数据范",
-  "seo_description": "UNHCR 提供难民、庇护和流离失所人口统计。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "UNHCR 难民数据怎么按来源国查？年度滞后",
+  "seo_description": "免 Key。含 /population、来源国与庇护国维度、年度发布与估算数据。",
+  "icon": "/icons/unhcr-refugee-data.png"
  },
  {
   "slug": "hdx-ocha",
@@ -10830,7 +11040,7 @@
   "url": "https://data.humdata.org/",
   "probe": "https://data.humdata.org/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10863,8 +11073,9 @@
    }
   ],
   "plain_intro": "HDX 提供人道主义危机数据集与元数据。",
-  "seo_title": "HDX (OCHA) API：免 Key、参数，附数据范围",
-  "seo_description": "HDX 提供人道主义危机数据集与元数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "HDX 危机数据集怎么找？CKAN 与资源链接",
+  "seo_description": "免 Key。含 package_search、资源格式、更新时间与数据质量差异。",
+  "icon": "/icons/hdx-ocha.png"
  },
  {
   "slug": "undata",
@@ -10874,7 +11085,7 @@
   "url": "https://data.un.org/",
   "probe": "https://data.un.org/ws/rest/dataflow",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -10908,8 +11119,9 @@
    }
   ],
   "plain_intro": "UN Data 提供联合国各机构的统计数据库检索。",
-  "seo_title": "UNdata API：免 Key、参数，附数据范围",
-  "seo_description": "UN Data 提供联合国各机构的统计数据库检索。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "UNdata 有哪些数据库？检索与下载",
+  "seo_description": "免 Key。含人口、贸易、能源等库、检索参数与部分库只能文件下载。",
+  "icon": "/icons/undata.png"
  },
  {
   "slug": "us-congress-api",
@@ -10919,7 +11131,7 @@
   "url": "https://api.congress.gov/",
   "probe": "https://api.congress.gov/v3/bill?limit=1",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "key_required",
@@ -10961,8 +11173,9 @@
    }
   ],
   "plain_intro": "Congress.gov API 提供法案、议员、投票和委员会数据。",
-  "seo_title": "US Congress API：Key 申请、免费额度，附数据范围",
-  "seo_description": "Congress.gov API 提供法案、议员、投票和委员会数据。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Congress.gov API 5000 次/小时？法案与投票",
+  "seo_description": "免费 Key、每小时 5000 次。含 bill、member、house-vote 与 PDF 全文。",
+  "icon": "/icons/us-congress-api.png"
  },
  {
   "slug": "bea-api",
@@ -10972,7 +11185,7 @@
   "url": "https://apps.bea.gov/API/",
   "probe": "https://apps.bea.gov/api/data/?method=GETDATASETLIST",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11014,8 +11227,9 @@
    }
   ],
   "plain_intro": "BEA 提供美国 GDP、收入、消费和行业经济数据。",
-  "seo_title": "BEA API：Key 申请、免费额度，附数据范围",
-  "seo_description": "BEA 提供美国 GDP、收入、消费和行业经济数据。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "BEA API 怎么查州 GDP？数据集与 Key",
+  "seo_description": "免费 Key、每天 1000 次。含 DataSetName=GDP、PIT、地区维度与季度修订。",
+  "icon": "/icons/bea-api.png"
  },
  {
   "slug": "data-gov-uk-ckan",
@@ -11025,7 +11239,7 @@
   "url": "https://data.gov.uk/",
   "probe": "https://data.gov.uk/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11065,8 +11279,9 @@
    }
   ],
   "plain_intro": "data.gov.uk 提供英国政府开放数据集的 CKAN 检索接口。",
-  "seo_title": "Data.gov.uk (CKAN) API：免 Key、参数，附数据范",
-  "seo_description": "data.gov.uk 提供英国政府开放数据集的 CKAN 检索接口。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.gov.uk 的 CKAN 接口怎么调？资源校验",
+  "seo_description": "免 Key。含 package_search、package_show、组织列表与失效资源排查。",
+  "icon": "/icons/data-gov-uk-ckan.png"
  },
  {
   "slug": "uk-ons-api",
@@ -11076,7 +11291,7 @@
   "url": "https://developer.ons.gov.uk/",
   "probe": "https://api.beta.ons.gov.uk/v1/datasets?limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11118,8 +11333,9 @@
    }
   ],
   "plain_intro": "UK ONS 提供英国人口、就业、物价和区域统计。",
-  "seo_title": "UK ONS API：免 Key、参数，附数据范围",
-  "seo_description": "UK ONS 提供英国人口、就业、物价和区域统计。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "UK ONS API 还是 beta？数据集与观测值",
+  "seo_description": "免 Key、接口为 beta。含 datasets、editions、observations 与维度代码。",
+  "icon": "/icons/uk-ons-api.png"
  },
  {
   "slug": "data-gouv-fr",
@@ -11129,7 +11345,7 @@
   "url": "https://www.data.gouv.fr/",
   "probe": "https://www.data.gouv.fr/api/1/datasets/?page_size=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11169,8 +11385,9 @@
    }
   ],
   "plain_intro": "data.gouv.fr 提供法国政府开放数据集与元数据。",
-  "seo_title": "data.gouv.fr API：免 Key、参数，附数据范围",
-  "seo_description": "data.gouv.fr 提供法国政府开放数据集与元数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.gouv.fr 数据集怎么检索？API 与组织",
+  "seo_description": "免 Key。含 /1/datasets/、组织与复用案例、资源格式与分页。",
+  "icon": "/icons/data-gouv-fr.png"
  },
  {
   "slug": "govdata-de",
@@ -11180,7 +11397,7 @@
   "url": "https://www.govdata.de/",
   "probe": "https://www.govdata.de/ckan/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11220,8 +11437,9 @@
    }
   ],
   "plain_intro": "GovData 提供德国联邦与州政府的开放数据集目录。",
-  "seo_title": "GovData DE API：免 Key、参数，附数据范围",
-  "seo_description": "GovData 提供德国联邦与州政府的开放数据集目录。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "GovData 有 API 吗？CKAN 与 DCAT 导出",
+  "seo_description": "免 Key。含 CKAN 检索、16 州数据、DCAT 元数据与德语关键词建议。",
+  "icon": "/icons/govdata-de.png"
  },
  {
   "slug": "destatis-genesis",
@@ -11231,7 +11449,7 @@
   "url": "https://www-genesis.destatis.de/",
   "probe": "https://www-genesis.destatis.de/genesisWS/rest/2020/catalogue/tables?username=&password=&selection=*",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11267,8 +11485,9 @@
    }
   ],
   "plain_intro": "Destatis Genesis 提供德国官方统计数据库查询。",
-  "seo_title": "Destatis GENESIS API：免费额度、参数，附数据范围",
-  "seo_description": "Destatis Genesis 提供德国官方统计数据库查询。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Destatis GENESIS 怎么申请 API？德语表代码",
+  "seo_description": "免费、需注册申请。含 catalogue/tables、data/table、德语表名与权限层级。",
+  "icon": "/icons/destatis-genesis.png"
  },
  {
   "slug": "e-stat-jp",
@@ -11278,7 +11497,7 @@
   "url": "https://www.e-stat.go.jp/api/",
   "probe": "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsList?appId=DUMMY",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11315,8 +11534,9 @@
    }
   ],
   "plain_intro": "e-Stat 提供日本人口、经济和社会统计指标。",
-  "seo_title": "e-Stat (JP) API：免费额度、参数，附数据范围",
-  "seo_description": "e-Stat 提供日本人口、经济和社会统计指标。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "e-Stat 怎么拿 App ID？统计表与区域",
+  "seo_description": "免费、需 App ID。含 getStatsList、getStatsData、都道府县维度与 Excel-only 的表。",
+  "icon": "/icons/e-stat-jp.png"
  },
  {
   "slug": "data-go-kr",
@@ -11326,7 +11546,7 @@
   "url": "https://www.data.go.kr/",
   "probe": "https://www.data.go.kr/",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11366,8 +11586,9 @@
    }
   ],
   "plain_intro": "data.go.kr 提供韩国政府开放数据与公共 API 目录。",
-  "seo_title": "data.go.kr API：免费额度、参数，附数据范围",
-  "seo_description": "data.go.kr 提供韩国政府开放数据与公共 API 目录。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.go.kr 的 serviceKey 怎么传？Encoding 坑",
+  "seo_description": "免费、需申请权限。含 serviceKey 的 Encoding 版本、各数据集独立端点与韩文文档。",
+  "icon": "/icons/data-go-kr.png"
  },
  {
   "slug": "data-gov-sg",
@@ -11377,7 +11598,7 @@
   "url": "https://guide.data.gov.sg/",
   "probe": "https://api-production.data.gov.sg/v2/public/api/collections",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11417,8 +11638,9 @@
    }
   ],
   "plain_intro": "data.gov.sg 提供新加坡政府开放数据集与接口。",
-  "seo_title": "data.gov.sg API：免 Key、参数，附数据范围",
-  "seo_description": "data.gov.sg 提供新加坡政府开放数据集与接口。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.gov.sg 怎么查数据集？query 端点",
+  "seo_description": "免 Key。含 /v1/public/api/datasets、query 取数、CSV/GeoJSON 与更新频率。",
+  "icon": "/icons/data-gov-sg.png"
  },
  {
   "slug": "data-gov-tw",
@@ -11428,7 +11650,7 @@
   "url": "https://data.gov.tw/",
   "probe": "https://data.gov.tw/api/v2/rest/dataset?limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11468,8 +11690,9 @@
    }
   ],
   "plain_intro": "data.gov.tw 提供台湾政府开放数据集目录。",
-  "seo_title": "data.gov.tw API：免 Key、参数，附数据范围",
-  "seo_description": "data.gov.tw 提供台湾政府开放数据集目录。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.gov.tw 数据集怎么下载？JSON 与文件",
+  "seo_description": "免 Key。含 /api/v2/rest/dataset、提供机关、格式与部分仅文件下载。",
+  "icon": "/icons/data-gov-tw.png"
  },
  {
   "slug": "data-gov-hk",
@@ -11479,7 +11702,7 @@
   "url": "https://data.gov.hk/",
   "probe": "https://data.gov.hk/en-data/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11519,8 +11742,9 @@
    }
   ],
   "plain_intro": "data.gov.hk 提供香港政府开放数据与文件下载。",
-  "seo_title": "data.gov.hk API：免 Key、参数，附数据范围",
-  "seo_description": "data.gov.hk 提供香港政府开放数据与文件下载。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.gov.hk 接口怎么调？中英双语元数据",
+  "seo_description": "免 Key。含数据集目录、CSV/JSON 下载、中英文名与部门申请边界。",
+  "icon": "/icons/data-gov-hk.png"
  },
  {
   "slug": "canada-open-data",
@@ -11530,7 +11754,7 @@
   "url": "https://open.canada.ca/en/open-data",
   "probe": "https://open.canada.ca/data/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11570,8 +11794,9 @@
    }
   ],
   "plain_intro": "加拿大开放数据提供联邦数据集、地理和统计资源。",
-  "seo_title": "加拿大开放数据 API：免 Key、参数，附数据范围",
-  "seo_description": "加拿大开放数据提供联邦数据集、地理和统计资源。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "加拿大开放数据有 API 吗？CKAN 与英法重复",
+  "seo_description": "免 Key。含 open.canada.ca 的 CKAN 接口、英法双语重复与地理数据。",
+  "icon": "/icons/canada-open-data.png"
  },
  {
   "slug": "data-gov-au",
@@ -11581,7 +11806,7 @@
   "url": "https://data.gov.au/",
   "probe": "https://data.gov.au/data/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11621,8 +11846,9 @@
    }
   ],
   "plain_intro": "data.gov.au 提供澳大利亚政府开放数据集检索。",
-  "seo_title": "data.gov.au API：免 Key、参数，附数据范围",
-  "seo_description": "data.gov.au 提供澳大利亚政府开放数据集检索。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.gov.au 怎么检索？CKAN 与州级数据",
+  "seo_description": "免 Key。含 package_search、联邦与州数据、CSV/GeoJSON 与部分 PDF。",
+  "icon": "/icons/data-gov-au.png"
  },
  {
   "slug": "data-govt-nz",
@@ -11632,7 +11858,7 @@
   "url": "https://www.data.govt.nz/",
   "probe": "https://catalogue.data.govt.nz/api/3/action/package_search?rows=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11672,8 +11898,9 @@
    }
   ],
   "plain_intro": "data.govt.nz 提供新西兰政府开放数据目录。",
-  "seo_title": "data.govt.nz API：免 Key、参数，附数据范围",
-  "seo_description": "data.govt.nz 提供新西兰政府开放数据目录。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "data.govt.nz 有 API 吗？CKAN 检索",
+  "seo_description": "免 Key。含 CKAN 接口、中央与地方数据、许可与更新周期。",
+  "icon": "/icons/data-govt-nz.png"
  },
  {
   "slug": "dados-gov-br",
@@ -11683,7 +11910,7 @@
   "url": "https://dados.gov.br/",
   "probe": "https://dados.gov.br/dados/api/publico/conjuntos-dados?pagina=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "key_required",
@@ -11719,8 +11946,9 @@
    }
   ],
   "plain_intro": "dados.gov.br 提供巴西政府开放数据集目录。",
-  "seo_title": "dados.gov.br API：免 Key、参数，附数据范围",
-  "seo_description": "dados.gov.br 提供巴西政府开放数据集目录。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "dados.gov.br 怎么查？葡语关键词与 CKAN",
+  "seo_description": "免 Key。含 CKAN 检索、葡语关键词、联邦部委数据与更新滞后。",
+  "icon": "/icons/dados-gov-br.png"
  },
  {
   "slug": "china-nbs",
@@ -11730,7 +11958,7 @@
   "url": "https://data.stats.gov.cn/",
   "probe": "https://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode=hgnd&rowcode=zb&colcode=sj&wds=[]&dfwds=[]",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "key_required",
@@ -11769,8 +11997,9 @@
    }
   ],
   "plain_intro": "国家统计局提供中国人口、经济、价格和行业统计数据。",
-  "seo_title": "国家统计局 API：免 Key、参数，附数据范围",
-  "seo_description": "国家统计局提供中国人口、经济、价格和行业统计数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "国家统计局有 API 吗？easyquery 与 Cookie",
+  "seo_description": "无正式文档。含 easyquery.htm 取数、必须带 Referer/Cookie、指标代码获取与限流。",
+  "icon": "/icons/china-nbs.png"
  },
  {
   "slug": "shanghai-open-data",
@@ -11780,12 +12009,12 @@
   "url": "https://data.sh.gov.cn/",
   "probe": "https://data.sh.gov.cn/",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
+  "status": "ok",
   "status_code": "412",
-  "checked_at": "2026-11-18",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://data.sh.gov.cn/\"",
   "tags": [],
   "featured": false,
@@ -11818,8 +12047,9 @@
    }
   ],
   "plain_intro": "上海开放数据提供市政、交通、环境和民生数据集。",
-  "seo_title": "上海市公共数据开放平台 API：免 Key、参数，附数据范围",
-  "seo_description": "上海开放数据提供市政、交通、环境和民生数据集。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "上海开放数据怎么申请接口？实名与资质",
+  "seo_description": "免费、需实名注册。含数据集目录、接口申请、部分限本地机构与文件格式。",
+  "icon": "/icons/shanghai-open-data.png"
  },
  {
   "slug": "shenzhen-open-data",
@@ -11829,7 +12059,7 @@
   "url": "https://opendata.sz.gov.cn/",
   "probe": "https://opendata.sz.gov.cn/",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11867,8 +12097,9 @@
    }
   ],
   "plain_intro": "深圳开放数据提供政务、交通和城市运行数据集。",
-  "seo_title": "深圳市开放数据平台 API：免 Key、参数，附数据范围",
-  "seo_description": "深圳开放数据提供政务、交通和城市运行数据集。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "深圳开放数据平台怎么调 API？申请流程",
+  "seo_description": "免费、需注册申请。含目录浏览、REST 接口申请、资质审核与文档位置。",
+  "icon": "/icons/shenzhen-open-data.png"
  },
  {
   "slug": "zhejiang-open-data",
@@ -11878,7 +12109,7 @@
   "url": "https://data.zjzwfw.gov.cn/",
   "probe": "https://data.zjzwfw.gov.cn/",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11916,8 +12147,9 @@
    }
   ],
   "plain_intro": "浙江开放数据提供省级政务与民生数据集。",
-  "seo_title": "浙江省公共数据开放平台 API：免 Key、参数，附数据范围",
-  "seo_description": "浙江开放数据提供省级政务与民生数据集。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "浙江省数据开放平台怎么申请 API？资质要求",
+  "seo_description": "免费、需实名。含省级部门数据、接口与文件两种方式、部分限本地机构。",
+  "icon": "/icons/zhejiang-open-data.png"
  },
  {
   "slug": "cdc-open-data",
@@ -11927,7 +12159,7 @@
   "url": "https://data.cdc.gov/",
   "probe": "https://data.cdc.gov/api/views.json?limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -11969,8 +12201,9 @@
    }
   ],
   "plain_intro": "CDC Open Data 提供美国疾病、健康和公共卫生数据集。",
-  "seo_title": "CDC Open Data API：免 Key、参数，附数据范围",
-  "seo_description": "CDC Open Data 提供美国疾病、健康和公共卫生数据集。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "CDC Open Data 怎么用 Socrata 查？$where 与地理",
+  "seo_description": "无 Key 有限流。含 catalog、resource/{id}.json、SoQL 过滤与数据集停更问题。",
+  "icon": "/icons/cdc-open-data.png"
  },
  {
   "slug": "noaa-ncei",
@@ -11980,7 +12213,7 @@
   "url": "https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation",
   "probe": "https://www.ncei.noaa.gov/access/services/data/v1?dataset=global-summary-of-the-year&limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "key_required",
@@ -12025,8 +12258,9 @@
    }
   ],
   "plain_intro": "NOAA NCEI 提供气候、海洋和气象的历史观测数据。",
-  "seo_title": "NOAA NCEI API：免 Key、参数，附数据范围",
-  "seo_description": "NOAA NCEI 提供气候、海洋和气象的历史观测数据。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "NOAA NCEI 怎么取历史观测？站点与 NetCDF",
+  "seo_description": "免 Key。含 access/services/data/v1、stations、CSV/JSON 与 NetCDF 工具。",
+  "icon": "/icons/noaa-ncei.png"
  },
  {
   "slug": "datacite-api",
@@ -12036,7 +12270,7 @@
   "url": "https://support.datacite.org/docs/api",
   "probe": "https://api.datacite.org/dois?page%5Bsize%5D=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12073,8 +12307,9 @@
    }
   ],
   "plain_intro": "DataCite 提供研究数据的 DOI 元数据和引用信息。",
-  "seo_title": "DataCite API：免 Key、参数，附数据范围",
-  "seo_description": "DataCite 提供研究数据的 DOI 元数据和引用信息。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "DataCite 怎么查数据集 DOI？元数据与引用",
+  "seo_description": "免 Key。含 /dois/{doi}、query 检索、providers 与关联论文。",
+  "icon": "/icons/datacite-api.png"
  },
  {
   "slug": "zenodo-api",
@@ -12084,7 +12319,7 @@
   "url": "https://developers.zenodo.org/",
   "probe": "https://zenodo.org/api/records?size=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12117,8 +12352,9 @@
    }
   ],
   "plain_intro": "Zenodo 提供研究数据、软件和预印本的存储与检索。",
-  "seo_title": "Zenodo API：免 Key、参数，附数据范围",
-  "seo_description": "Zenodo 提供研究数据、软件和预印本的存储与检索。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Zenodo 怎么上传数据集？Token 与 50GB",
+  "seo_description": "免 Key 读，上传需 Token。含 /records、depositions、50GB 单文件与 DOI 分配。",
+  "icon": "/icons/zenodo-api.png"
  },
  {
   "slug": "figshare-api",
@@ -12128,7 +12364,7 @@
   "url": "https://docs.figshare.com/",
   "probe": "https://api.figshare.com/v2/articles?page_size=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12165,8 +12401,9 @@
    }
   ],
   "plain_intro": "Figshare 提供研究数据、图表和论文的公开存储接口。",
-  "seo_title": "Figshare API：免 Key、参数，附数据范围",
-  "seo_description": "Figshare 提供研究数据、图表和论文的公开存储接口。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Figshare 怎么发布数据？DOI 与分片上传",
+  "seo_description": "免 Key 读，上传需 Token。含 /v2/articles、文件分片、DOI 与机构门户。",
+  "icon": "/icons/figshare-api.png"
  },
  {
   "slug": "dryad-api",
@@ -12176,7 +12413,7 @@
   "url": "https://datadryad.org/api/v2/docs/",
   "probe": "https://datadryad.org/api/v2/datasets?per_page=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12209,8 +12446,9 @@
    }
   ],
   "plain_intro": "Dryad 提供生态与进化生物学研究数据的检索和下载。",
-  "seo_title": "Dryad API：免 Key、参数，附数据范围",
-  "seo_description": "Dryad 提供生态与进化生物学研究数据的检索和下载。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Dryad 数据怎么下载？embargo 与版本",
+  "seo_description": "免 Key 读。含 /v2/search、数据集文件、embargo 期与版本更新。",
+  "icon": "/icons/dryad-api.png"
  },
  {
   "slug": "openaire-api",
@@ -12220,7 +12458,7 @@
   "url": "https://graph.openaire.eu/docs/",
   "probe": "https://api.openaire.eu/search/publications?size=1&format=json",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12253,8 +12491,9 @@
    }
   ],
   "plain_intro": "OpenAIRE 提供欧盟研究项目、论文和数据集的关联检索。",
-  "seo_title": "OpenAIRE API：免 Key、参数，附数据范围",
-  "seo_description": "OpenAIRE 提供欧盟研究项目、论文和数据集的关联检索。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "OpenAIRE 怎么关联论文与项目？欧盟资助",
+  "seo_description": "免 Key。含 publications、projects、关联关系与欧盟框架覆盖。",
+  "icon": "/icons/openaire-api.png"
  },
  {
   "slug": "common-crawl-index",
@@ -12264,7 +12503,7 @@
   "url": "https://commoncrawl.org/",
   "probe": "https://index.commoncrawl.org/CC-MAIN-2024-10-index?url=example.com",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12309,8 +12548,9 @@
    }
   ],
   "plain_intro": "Common Crawl 提供网页抓取档案的索引与 WARC 文件。",
-  "seo_title": "Common Crawl Index API：免 Key、参数，附数据范",
-  "seo_description": "Common Crawl 提供网页抓取档案的索引与 WARC 文件。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Common Crawl 怎么取网页原文？索引与 WARC",
+  "seo_description": "免 Key。含 index.commoncrawl.org 查询、WARC 偏移读取与抓取批次。",
+  "icon": "/icons/common-crawl-index.png"
  },
  {
   "slug": "overpass-api-osm",
@@ -12320,12 +12560,12 @@
   "url": "https://overpass-api.de/",
   "probe": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3Bnode(1)%3Bout%3B",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
-  "status": "unreachable",
-  "status_code": "406",
-  "checked_at": "2026-11-18",
+  "status": "ok",
+  "status_code": "200",
+  "checked_at": "2026-11-20",
   "example": "curl -s \"https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3Bnode(1)%3Bout%3B\"",
   "tags": [],
   "featured": false,
@@ -12364,8 +12604,9 @@
    }
   ],
   "plain_intro": "Overpass API 提供 OpenStreetMap 要素的查询与导出。",
-  "seo_title": "Overpass API (OSM) API：免 Key、参数，附数据范",
-  "seo_description": "Overpass API 提供 OpenStreetMap 要素的查询与导出。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Overpass QL 怎么查 POI？范围与超时",
+  "seo_description": "免 Key。含标签查询、bounding box、输出 JSON 与公共实例限速。",
+  "icon": "/icons/overpass-api-osm.png"
  },
  {
   "slug": "socrata-discovery",
@@ -12375,7 +12616,7 @@
   "url": "https://api.us.socrata.com/api/catalog/v1",
   "probe": "https://api.us.socrata.com/api/catalog/v1?limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12418,8 +12659,9 @@
    }
   ],
   "plain_intro": "Socrata Discovery 提供各政府门户数据集的统一检索。",
-  "seo_title": "Socrata Discovery API：免 Key、参数，附数据范围",
-  "seo_description": "Socrata Discovery 提供各政府门户数据集的统一检索。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Socrata 怎么跨门户搜数据集？Discovery API",
+  "seo_description": "无 Key 有限流。含 /api/catalog/v1、domains 限定、列定义与取数到各门户。",
+  "icon": "/icons/socrata-discovery.png"
  },
  {
   "slug": "opendatasoft-catalog",
@@ -12429,7 +12671,7 @@
   "url": "https://data.opendatasoft.com/api/v2/catalog/datasets",
   "probe": "https://data.opendatasoft.com/api/v2/catalog/datasets?limit=1",
   "auth": "none",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12464,8 +12706,9 @@
    }
   ],
   "plain_intro": "Opendatasoft 提供公共数据门户的数据集目录接口。",
-  "seo_title": "Opendatasoft Catalog API：免 Key、参数，附数",
-  "seo_description": "Opendatasoft 提供公共数据门户的数据集目录接口。以官网为准；免 Key。含端点、调用示例与常见问题。"
+  "seo_title": "Opendatasoft 目录怎么查？catalog v1",
+  "seo_description": "免 Key。含 /catalog/v1、数据集元数据、法国与欧洲城市覆盖。",
+  "icon": "/icons/opendatasoft-catalog.png"
  },
  {
   "slug": "global-forest-watch",
@@ -12475,7 +12718,7 @@
   "url": "https://data-api.globalforestwatch.org/",
   "probe": "https://data-api.globalforestwatch.org/",
   "auth": "api_key",
-  "free_tier": "以官网为准",
+  "free_tier": "免费，无公开配额",
   "limit_source": "manual",
   "commercial": "",
   "status": "ok",
@@ -12517,7 +12760,8 @@
    }
   ],
   "plain_intro": "Global Forest Watch 提供森林覆盖变化、火灾和毁林数据。",
-  "seo_title": "Global Forest Watch API：Key 申请、免费额度，附数",
-  "seo_description": "Global Forest Watch 提供森林覆盖变化、火灾和毁林数据。以官网为准；需 API Key。含端点、调用示例与常见问题。"
+  "seo_title": "Global Forest Watch 怎么查毁林警报？Key 与分辨率",
+  "seo_description": "免费、需注册 Key。含森林损失、GLAD 警报、10–30 米分辨率与人工核实。",
+  "icon": "/icons/global-forest-watch.png"
  }
 ]
