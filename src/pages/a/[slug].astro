@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import { breadcrumbJsonLd } from '../../lib/structured-data.js';
 import { marked } from 'marked';
 import {
   apis,
@@ -44,11 +45,15 @@ const applicationJsonLd = {
   keywords: [...intentTags, ...(api.intent_queries ?? [])].join(', '),
   applicationCategory: category?.name ?? 'DeveloperApplication',
   operatingSystem: 'Any',
+  inLanguage: 'zh-CN',
   url: `${SITE_URL}${canonicalPath}`,
+  mainEntityOfPage: `${SITE_URL}${canonicalPath}`,
+  dateModified: api.checked_at,
   offers: {
     '@type': 'Offer',
     price: 0,
     priceCurrency: 'CNY',
+    description: api.free_tier,
   },
 };
 const faqJsonLd = faq.length
@@ -62,18 +67,17 @@ const faqJsonLd = faq.length
       })),
     }
   : null;
-const jsonLd = faqJsonLd ? [applicationJsonLd, faqJsonLd] : applicationJsonLd;
+const crumbs = [
+  { label: '首页', href: '/' },
+  { label: category.name, href: `/c/${category.slug}/` },
+  { label: api.name, href: canonicalPath },
+];
+const jsonLd = [applicationJsonLd, breadcrumbJsonLd(crumbs), faqJsonLd].filter(Boolean);
 ---
 
 <Base title={title} description={description} canonicalPath={canonicalPath} jsonLd={jsonLd}>
   <div class="shell detail-shell">
-    <Breadcrumb
-      items={[
-        { label: '首页', href: '/' },
-        { label: category.name, href: `/c/${category.slug}/` },
-        { label: api.name, href: canonicalPath },
-      ]}
-    />
+    <Breadcrumb items={crumbs} />
 
     {api.status === 'dead' && (
       <div class="notice-banner" role="status">该接口疑似停止服务</div>
