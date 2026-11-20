@@ -28,6 +28,8 @@
 - `intent_queries`：Bing 联想词原样保存（`api.bing.com/qsonhs.aspx` 抓取），最多 6 条，抓不到就留空数组，不编。
 - `intent_tags`：从联想词归纳的意图标签，取值见需求文档 §7.1。
 - `faq`：2 条问答，问题取自真实搜索词，答案只能用正文已核实的事实，不确定就写「以官网为准」。
+- `seo_title`：详情页 SEO 标题，不含站点后缀。
+- `seo_description`：详情页 SEO 描述，控制长度并写清免费方式与调用价值。
 - `free_tier`：免费额度。写具体数字（`1000 次/天`），没有公开数字就写 `以官网为准`，不许留空。
 - `limit_source`：`manual`（人工核实）/ `scraped`（官网原文摘录）/ `none`（未标注）。
 - `status`：`ok`（可直接调）/ `key_required`（需要 Key）/ `unreachable`（本次连不上）/ `dead`（连续 3 次失败）。

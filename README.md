@@ -29,7 +29,7 @@ Cloudflare Pages 使用 `npm ci && npm run build` 构建，输出目录为 `dist
 
 | 路径 | 内容 |
 |---|---|
-| `data/apis.json` | 244 条 API 条目，24 个字段（含 intro / capabilities / best_for / faq） |
+| `data/apis.json` | 244 条 API 条目，26 个字段（含 intro / capabilities / best_for / faq / seo_title） |
 | `data/categories.json` | 17 个分类与说明 |
 | `data/sources.json` | 9 个数据来源的登记表（含许可） |
 | `data/README.md` | 字段口径与来源说明 |

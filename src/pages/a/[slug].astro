@@ -31,8 +31,8 @@ const auth = authLabel(api);
 const introHtml = marked.parse(api.intro, { async: false });
 const intentTags = api.intent_tags ?? [];
 const faq = api.faq ?? [];
-const title = `${api.name} 免费额度、认证方式与调用示例 · 免费 API 中文索引`;
-const description = `${api.name}：${api.plain_intro} ${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
+const title = `${api.seo_title ?? `${api.name} 免费额度、认证方式与调用示例`} · 免费 API 中文索引`;
+const description = api.seo_description ?? `${api.name}：${api.plain_intro} ${api.free_tier}，${auth}。附 curl 示例与实测状态。`;
 const canonicalPath = `/a/${api.slug}/`;
 const officialHost = new URL(api.url).hostname;
 const correctionUrl = `https://github.com/yukari09/public-apis/issues/new?title=[纠错]%20${api.slug}`;
@@ -40,7 +40,7 @@ const applicationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: api.name,
-  description: api.plain_intro,
+  description: api.seo_description ?? api.plain_intro,
   keywords: [...intentTags, ...(api.intent_queries ?? [])].join(', '),
   applicationCategory: category?.name ?? 'DeveloperApplication',
   operatingSystem: 'Any',

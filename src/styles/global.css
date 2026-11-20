@@ -521,6 +521,14 @@
     @apply m-0 font-medium text-muted;
   }
 
+  .empty-reset {
+    @apply mt-5 cursor-pointer rounded-full border border-ink bg-ink px-4 py-2 text-[12.5px] font-medium text-paper;
+  }
+
+  .empty-reset:hover {
+    @apply border-accent bg-accent text-paper;
+  }
+
   .popular-chips {
     @apply mt-5 flex flex-wrap justify-center gap-2;
   }
